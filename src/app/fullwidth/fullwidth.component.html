@@ -1,0 +1,46 @@
+
+<!--<div >
+    <carousel class="text-center">
+      <slide>
+        <img class="img-size" src="{{IMAGES[0].url}}" alt="First slide">
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </slide>
+      <slide>
+        <img class="img-size" src="{{IMAGES[1].url}}" alt="Second slide">
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </slide>
+      <slide>
+        <img class="img-size" src="{{IMAGES[2].url}}" alt="Third slide">
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </slide>
+            <slide>
+        <img class="img-size" src="{{IMAGES[3].url}}" alt="Third slide">
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </slide>
+    </carousel>
+  </div> -->
+  <div class="container">
+  <div class="col-md-8 col-xs-12 col-md-offset-2 push-md-2">
+    <carousel>
+      <slide *ngFor="let slide of IMAGES; let index=index">
+        <img [src]="slide.url" class="img-responsive center-block">
+        <div class="carousel-caption">
+          <h4>Slide {{index}}</h4>
+          <p>{{slide.title}}</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
