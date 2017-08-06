@@ -1,46 +1,50 @@
 
-<!--<div >
-    <carousel class="text-center">
-      <slide>
-        <img class="img-size" src="{{IMAGES[0].url}}" alt="First slide">
-        <div class="carousel-caption">
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </slide>
-      <slide>
-        <img class="img-size" src="{{IMAGES[1].url}}" alt="Second slide">
-        <div class="carousel-caption">
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </slide>
-      <slide>
-        <img class="img-size" src="{{IMAGES[2].url}}" alt="Third slide">
-        <div class="carousel-caption">
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
-      </slide>
-            <slide>
-        <img class="img-size" src="{{IMAGES[3].url}}" alt="Third slide">
-        <div class="carousel-caption">
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
-      </slide>
-    </carousel>
-  </div> -->
   <div class="container">
   <div class="col-md-8 col-xs-12 col-md-offset-2 push-md-2">
     <carousel>
       <slide *ngFor="let slide of IMAGES; let index=index">
-        <img [src]="slide.url" class="img-responsive center-block">
+        <img [src]="slide.url" class="img-responsive center-block img-fluid">
         <div class="carousel-caption">
-          <h4>Slide {{index}}</h4>
-          <p>{{slide.title}}</p>
+          <h3>{{slide.title}}</h3>
         </div>
       </slide>
     </carousel>
   </div>
-</div>
+</div>   
+
+<!--
+<section id="hero">
+    <div id="hero-carousel">
+        <div class="container-fluid">
+            <div id="slider">
+                <div id="carousel-bounding-box">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- main slider carousel items 
+                        <div class="carousel-inner">
+                            <div class="active item carousel-item" data-slide-number="0">
+                                <img src="../../assets/images/fair.jpg" class="img-fluid">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="1">
+                                <img src="http://placehold.it/1200x480/888/FFF" class="img-fluid">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="2">
+                                <img src="http://placehold.it/1200x480&amp;text=three" class="img-fluid">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="3">
+                                <img src="http://placehold.it/1200x480&amp;text=four" class="img-fluid">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="4">
+                                <img src="http://placehold.it/1200x480&amp;text=five" class="img-fluid">
+                            </div>
+                        </div>
+                        <a class="carousel-control left display-1"  data-slide="prev">‹</a>
+                        <a class="carousel-control right display-1" data-slide="next">›</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+

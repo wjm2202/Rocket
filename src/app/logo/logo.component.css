@@ -1,0 +1,12 @@
+
+#header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#logo {
+    margin: 20px;
+    float: left;
+    width: 200px;
+    height: 60px;
+}

@@ -1,5 +1,27 @@
-.img-size {
-    max-height: 800px;
+section {
+    position: relative;
+}
+.selected img {
+	opacity:0.5;
+}
+#hero-carousel {
+    position: relative;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+#hero {
+    overflow: hidden;
+    margin-top: 20px;
+}
+#hero .lead {
+    width: 60%;
     margin: 0 auto;
-     
+}
+.carousel-item {
+    width: 100%;
+    background: #000;
+}
+.img-fluid{
+    width: 100%;
 }
