@@ -17,6 +17,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { FooterComponent } from './footer/footer.component';
 import { SafeHtmlPipe } from './pipes/safe-html-pipe.pipe';
 import { FullwidthComponent } from './fullwidth/fullwidth.component';
+import { ThreeDComponent } from './three-d/three-d.component';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EmptyComponent } from './empty/empty.component';
@@ -36,7 +37,9 @@ import { EmptyComponent } from './empty/empty.component';
     FooterComponent,
     SafeHtmlPipe,
     FullwidthComponent,
-    EmptyComponent
+    EmptyComponent,
+    ThreeDComponent
+
   ],
   imports: [
     BrowserModule,

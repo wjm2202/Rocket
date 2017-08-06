@@ -1,0 +1,171 @@
+section {
+    display: block;
+}
+img {
+  margin: 0;
+    
+}
+.container {
+  width: 210px;
+  height: 140px;
+  position: relative;
+  margin: 0 auto 40px;
+  -webkit-perspective: 1100px;
+         -moz-perspective: 1100px;
+           -o-perspective: 1100px;
+              perspective: 1100px;
+}
+
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+         -moz-transition: opacity 1s, -moz-transform 1s;
+           -o-transition: opacity 1s, -o-transform 1s;
+              transition: opacity 1s, transform 1s;
+}
+
+  /*mobile and tablet small view*/
+  #carousel img {
+    display: block;
+    position: absolute;
+    width: 186px; /*372px;  /*186px */
+    height: 116px; /*232px;  /*116px*/
+    left: 10px;
+    top: 10px;
+    border: 2px solid black;
+  }
+
+                                                                  /*577px /*288px*/
+  #carousel img:nth-child(1) { transform: rotateY(   0deg ) translateZ( 288px ); }
+  #carousel img:nth-child(2) { transform: rotateY(  40deg ) translateZ( 288px ); }
+  #carousel img:nth-child(3) { transform: rotateY(  80deg ) translateZ( 288px ); }
+  #carousel img:nth-child(4) { transform: rotateY( 120deg ) translateZ( 288px ); }
+  #carousel img:nth-child(5) { transform: rotateY( 160deg ) translateZ( 288px ); }
+  #carousel img:nth-child(6) { transform: rotateY( 200deg ) translateZ( 288px ); }
+  #carousel img:nth-child(7) { transform: rotateY( 240deg ) translateZ( 288px ); }
+  #carousel img:nth-child(8) { transform: rotateY( 280deg ) translateZ( 288px ); }
+  #carousel img:nth-child(9) { transform: rotateY( 320deg ) translateZ( 288px ); }
+
+  #carousel.show-one {transform: translateZ( -288px ) rotateY( 0deg );}
+  #carousel.show-two {transform: translateZ( -288px ) rotateY( -40deg );}
+  #carousel.show-three {transform: translateZ( -288px ) rotateY( -80deg );}
+  #carousel.show-four {transform: translateZ( -288px ) rotateY( -120deg );}
+  #carousel.show-five {transform: translateZ( -288px ) rotateY( -160deg );}
+  #carousel.show-six {transform: translateZ( -288px ) rotateY( -200deg );}
+  #carousel.show-seven {transform: translateZ( -288px ) rotateY( -240deg );}
+  #carousel.show-eight {transform: translateZ( -288px ) rotateY( -280deg );}
+  #carousel.show-nine {transform: translateZ( -288px ) rotateY( -320deg );}
+
+
+@media only screen and (min-width: 1130px){
+    /* laptop large view*/
+  
+.container {
+  width: 315px;
+  height: 210px;
+  position: relative;
+  margin: 0 auto 58px;
+  -webkit-perspective: 1100px;
+         -moz-perspective: 1100px;
+           -o-perspective: 1100px;
+              perspective: 1100px;
+}
+
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+         -moz-transition: opacity 1s, -moz-transform 1s;
+           -o-transition: opacity 1s, -o-transform 1s;
+              transition: opacity 1s, transform 1s;
+}  
+  #carousel img {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 279px; /*372px;  /*186px */
+  height: 174px; /*232px;  /*116px*/
+  left: 10px;
+  top: 10px;
+  border: 2px solid black;
+  }                                                                  /*577px /*288px*/
+  #carousel img:nth-child(1) { transform: rotateY(   0deg ) translateZ( 433px ); }
+  #carousel img:nth-child(2) { transform: rotateY(  40deg ) translateZ( 433px ); }
+  #carousel img:nth-child(3) { transform: rotateY(  80deg ) translateZ( 433px ); }
+  #carousel img:nth-child(4) { transform: rotateY( 120deg ) translateZ( 433px ); }
+  #carousel img:nth-child(5) { transform: rotateY( 160deg ) translateZ( 433px ); }
+  #carousel img:nth-child(6) { transform: rotateY( 200deg ) translateZ( 433px ); }
+  #carousel img:nth-child(7) { transform: rotateY( 240deg ) translateZ( 433px ); }
+  #carousel img:nth-child(8) { transform: rotateY( 280deg ) translateZ( 433px ); }
+  #carousel img:nth-child(9) { transform: rotateY( 320deg ) translateZ( 433px ); }
+
+  #carousel.show-one {transform: translateZ( -433px ) rotateY( 0deg );}
+  #carousel.show-two {transform: translateZ( -433px ) rotateY( -40deg );}
+  #carousel.show-three {transform: translateZ( -433px ) rotateY( -80deg );}
+  #carousel.show-four {transform: translateZ( -433px ) rotateY( -120deg );}
+  #carousel.show-five {transform: translateZ( -433px ) rotateY( -160deg );}
+  #carousel.show-six {transform: translateZ( -433px ) rotateY( -200deg );}
+  #carousel.show-seven {transform: translateZ( -433px ) rotateY( -240deg );}
+  #carousel.show-eight {transform: translateZ( -433px ) rotateY( -280deg );}
+  #carousel.show-nine {transform: translateZ( -433px ) rotateY( -320deg );}
+
+
+}
+/*
+@media only screen and (max-width: 309px){
+    /* mobile  S
+    section{transform: translateX(-10%);}
+}
+@media only screen and (min-width: 310px){
+    /* mobile  S
+    section{transform: translateX(-10%);}
+}
+@media only screen and (min-width: 480px){
+    /* mobile M
+    section{transform: translateX(-12%);}
+}
+@media only screen and (min-width: 550px){
+    /* mobile M
+    section{transform: translateX(-13%);}
+}
+@media only screen and (min-width: 560px){
+    /* mobile Iphone 5 landscape
+    section{transform: translateX(-11%);}
+}
+@media only screen and (min-width: 620px){
+    /* mobile S landscape
+    section{transform: translateX(-12%);}
+}
+@media only screen and (min-width: 729px){
+    /* mobile S landscape
+    section{transform: translateX(-8%);}
+}
+@media only screen and (min-width: 750px){
+    /* Tablet   S
+    section{transform: translateX(-5%);}
+}   
+@media only screen and (min-width: 810px){
+    /* Tablet   M
+    section{transform: translateX(-11%);}
+}
+@media only screen and (min-width: 1130px){
+    /*   laptop   
+    section{transform: translateX(-10%);}
+}  
+@media only screen and (min-width: 1260px){
+    /*   laptop   
+    section{transform: translateX(-10%);}
+} */
