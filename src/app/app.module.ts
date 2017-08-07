@@ -15,9 +15,7 @@ import { AwardsComponent } from './awards/awards.component';
 import { PhotosComponent } from './photos/photos.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { FooterComponent } from './footer/footer.component';
-import { SafeHtmlPipe } from './pipes/safe-html-pipe.pipe';
 import { FullwidthComponent } from './fullwidth/fullwidth.component';
-import { ThreeDComponent } from './three-d/three-d.component';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EmptyComponent } from './empty/empty.component';
@@ -35,10 +33,8 @@ import { EmptyComponent } from './empty/empty.component';
     PhotosComponent,
     ContactusComponent,
     FooterComponent,
-    SafeHtmlPipe,
     FullwidthComponent,
     EmptyComponent,
-    ThreeDComponent
 
   ],
   imports: [
