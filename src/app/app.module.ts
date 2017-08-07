@@ -36,12 +36,10 @@ import { WaterwheelComponent } from './waterwheel/waterwheel.component';
     FooterComponent,
     FullwidthComponent,
     EmptyComponent,
-<<<<<<< HEAD
-=======
     WaterwheelComponent,
     TccOwlCarouselDirective
 
->>>>>>> 9af1a989491589e12c57d2742129bffe6346e51b
+
 
   ],
   imports: [
