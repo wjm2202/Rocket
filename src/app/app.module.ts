@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { appRoutes } from './approutes/routes';
-
+import { TccOwlCarouselDirective } from 'tcc-ng-owl-carousel';
 import { AppComponent } from './app.component';
 import { BackgroundComponent } from './background/background.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,10 +17,10 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { FooterComponent } from './footer/footer.component';
 import { SafeHtmlPipe } from './pipes/safe-html-pipe.pipe';
 import { FullwidthComponent } from './fullwidth/fullwidth.component';
-import { ThreeDComponent } from './three-d/three-d.component';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EmptyComponent } from './empty/empty.component';
+import { WaterwheelComponent } from './waterwheel/waterwheel.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,9 @@ import { EmptyComponent } from './empty/empty.component';
     SafeHtmlPipe,
     FullwidthComponent,
     EmptyComponent,
-    ThreeDComponent
+    WaterwheelComponent,
+    TccOwlCarouselDirective
+
 
   ],
   imports: [
