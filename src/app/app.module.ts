@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { appRoutes } from './approutes/routes';
-import { TccOwlCarouselDirective } from 'tcc-ng-owl-carousel';
 import { AppComponent } from './app.component';
 import { BackgroundComponent } from './background/background.component';
 import { HeaderComponent } from './header/header.component';
@@ -37,10 +36,7 @@ import { WaterwheelComponent } from './waterwheel/waterwheel.component';
     FullwidthComponent,
     EmptyComponent,
     WaterwheelComponent,
-    TccOwlCarouselDirective
-
-
-
+    
   ],
   imports: [
     BrowserModule,

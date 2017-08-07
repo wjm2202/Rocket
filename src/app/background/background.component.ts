@@ -12,6 +12,26 @@ export class BackgroundComponent implements OnInit {
   mobile:number = 5;
   width: any;
   ismobile:boolean;
+  configs = {
+    loop: true,
+    margin: 1,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      }
+    }
+
+  };
   onResize(event){
     if(event.target.innerWidth <= 768){
       this.ismobile = true;
