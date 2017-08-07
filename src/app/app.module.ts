@@ -40,6 +40,8 @@ import { WaterwheelComponent } from './waterwheel/waterwheel.component';
     EmptyComponent,
     WaterwheelComponent,
     TccOwlCarouselDirective
+
+
   ],
   imports: [
     BrowserModule,
