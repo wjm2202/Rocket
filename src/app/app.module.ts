@@ -18,7 +18,6 @@ import { FullwidthComponent } from './fullwidth/fullwidth.component';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EmptyComponent } from './empty/empty.component';
-import { WaterwheelComponent } from './waterwheel/waterwheel.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +33,7 @@ import { WaterwheelComponent } from './waterwheel/waterwheel.component';
     ContactusComponent,
     FooterComponent,
     FullwidthComponent,
-    EmptyComponent,
-    WaterwheelComponent,
+    EmptyComponent
     
   ],
   imports: [
