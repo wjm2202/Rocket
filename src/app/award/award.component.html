@@ -1,0 +1,26 @@
+
+<div class="card">
+  <section class="holder">
+    <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
+      <!-- front -->
+      <figure class="front" (click)="cardFlip()">
+        <img class="image" src="../../assets/images/i1.jpg" alt="Card image cap">
+        <h5>{{award.awardName}}</h5>
+        <h5>{{award.studentName}}</h5>
+        <h6>{{award.studentMajor}}</h6>
+        <p>{{award.awardBlub}}</p>
+      </figure>
+      <!-- back  -->
+      <figure class="back" (click)="cardFlip()">
+        <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
+        <h5 style="margin-top:20px;">{{award.sponsorName}}</h5>
+        <p>{{award.sponsorBlurb}}</p>
+        <h6>{{award.sponsorLink}}</h6>
+      </figure>
+    </div>
+  </section>
+</div>
+  
+
+
+

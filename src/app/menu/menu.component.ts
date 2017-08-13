@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  @Output() mobile = new EventEmitter();
+  constructor() { 
 
-  constructor() { }
-
+  }
+  onboxChange(box:number){
+    this.mobile.emit(box);
+  }
   ngOnInit() {
   }
 

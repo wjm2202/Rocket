@@ -1,12 +1,14 @@
 
 <!-- header -->
 <section class="header">
-    <app-menu></app-menu>
+    <app-menu
+    (mobile)="open($event)"></app-menu>
 </section>
 <!-- end of header -->
 <!-- event slider -->
 <section class="event">
     <app-fullwidth></app-fullwidth>
+
 </section>
 <!-- end of event slider -->
 <!-- drawer boxes -->
@@ -17,7 +19,6 @@
 <div *ngIf="ismobile">
     <div *ngIf="mobile == 1">
         <router-outlet></router-outlet>
-        
     </div>
 </div>
 <section role="button" (click)="open(2)" routerLink="home/awards" class="one-fourth" id="css">
@@ -42,7 +43,7 @@
     <i class="fa fa-users"></i>
     <h3 class="disable_text_highlighting" >CONTACT</h3>
 </section>
-<div *ngIf="ismobile">
+<div *ngIf="ismobile" >
     <div *ngIf="mobile == 4">
         <router-outlet></router-outlet>
     </div>
@@ -84,13 +85,10 @@
 <section class="sponsorCara" id="spcara">
     <div>
 
-
     </div>
 </section>
 <section class="footer" id="foot">
     <div>
-
        <app-footer></app-footer>  
-
     </div>
 </section>

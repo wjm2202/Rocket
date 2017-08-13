@@ -1,4 +1,11 @@
-<p>
-  awards works!
-</p>
-<a routerLink="">close</a>
+<H3 style="text-align:center">ECMS Awards</H3>
+<div class="container">
+  <div class="cards" *ngFor="let award of awards">
+    <app-award
+    [award]="award">
+    </app-award>
+  </div>
+</div>
+<ngb-pagination [collectionSize]="4" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+<pre>Current page: {{page}}</pre>
+

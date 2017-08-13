@@ -1,13 +1,13 @@
     <div id="banner">
-        <a href="index.html" id="logo"></a>
+        <a routerLink="" id="logo"></a>
         <nav>
-            <a href="#" id="menu-icon"></a>
+            <a  id="menu-icon"></a>
             <ul>
-                <li><a href="index.html" class="current">Home</a></li>
-                <li><a href="#">Sponsors</a></li>
-                <li><a href="#">Awards</a></li>
-                <li><a href="#">Photos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a routerLink="" class="current">Home</a></li>
+                <li><a routerLink="sponsors" (click)="onboxChange(1)">Sponsors</a></li>
+                <li><a routerLink="awards" (click)="onboxChange(2)">Awards</a></li>
+                <li><a routerLink="photos" (click)="onboxChange(3)">Photos</a></li>
+                <li><a routerLink="contact" (click)="onboxChange(4)">Contact</a></li>
             </ul>
         </nav>
     </div>

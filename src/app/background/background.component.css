@@ -11,14 +11,21 @@ user-select: none;
     padding: 0;
     border: 0;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .event {
     background-color: lightsteelblue;
 }
+
 body {
     background: #F5F5F5;
     color: #67727A;
     font-family: 'Alegreya', Sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -201,6 +208,7 @@ nav ul li a:hover {
     -ms-transition: .1s ease-in-out;
     -o-transition: .1s ease-in-out;
     transition: .1s ease-in-out;
+    
 }
 #social:hover {
     -webkit-transform: scale(1.1);
@@ -230,18 +238,16 @@ nav ul li a:hover {
     background-color: #C3D7DF;
 }
 
+#tablet {
+    background-color: #C3D7DF;
+    max-height: 800px;
+}
 article {
     float: left;
     margin: 0 auto;
     width: 50%;
     height: auto;
 }
-
-#tablet {
-    background-color: #C3D7DF;
-    max-height: 800px;
-}
-
 aside {
     float: right;
     margin: 0 auto;

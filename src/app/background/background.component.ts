@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-background',
   templateUrl: './background.component.html',
   styleUrls: ['./background.component.css'],
+  animations: [],
   host: {
     '(window:resize)': 'onResize($event)'
   }
@@ -41,16 +42,22 @@ export class BackgroundComponent implements OnInit {
     }
   }
   constructor() {
+    this.checkIsMobile();
+   }
+  checkIsMobile(){
     this.width = window.screen.width;
-    if(this.width<768){
+    //console.log('screen size: '+this.width);
+    if(this.width < 767){
       this.ismobile = true;
     }else{
       this.ismobile = false;
     }
-   }
+  }
 
   open(box:number){
+    this.checkIsMobile();
     this.mobile = box;
+    console.log('ismobile: '+this.ismobile);
   }
   ngOnInit() {
 
