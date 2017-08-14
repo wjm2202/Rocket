@@ -1,5 +1,5 @@
 import { Component, OnInit, trigger, state, style, transition, animate} from '@angular/core';
-import { fadeInAnimation } from '../animations/fadeInAnimation';
+import { routerTransition } from '../animations/fadeInAnimation';
 import { fade } from '../animations/fade';
 
 @Component({

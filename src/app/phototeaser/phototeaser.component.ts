@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { routerTransition } from '../animations/fadeInAnimation';
 import { fade } from '../animations/fade';
 
 @Component({

@@ -1,10 +1,13 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { fade } from '../animations/fade';
+import { animate, state, style, transition, trigger} from '@angular/animations';
+import { routerAnimation } from '../animations/fadeInAnimation'
 
 @Component({
   selector: 'app-background',
   templateUrl: './background.component.html',
   styleUrls: ['./background.component.css'],
-  animations: [],
+  animations: [routerAnimation],
   host: {
     '(window:resize)': 'onResize($event)'
   }
@@ -33,6 +36,7 @@ export class BackgroundComponent implements OnInit {
     }
 
   };
+  
   onResize(event){
     if(event.target.innerWidth <= 768){
       this.ismobile = true;
@@ -57,7 +61,7 @@ export class BackgroundComponent implements OnInit {
   open(box:number){
     this.checkIsMobile();
     this.mobile = box;
-    console.log('ismobile: '+this.ismobile);
+    //console.log('ismobile: '+this.ismobile);
   }
   ngOnInit() {
 

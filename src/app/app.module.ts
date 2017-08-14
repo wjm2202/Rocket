@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { appRoutes } from './approutes/routes';
+import { appRouting } from './approutes/routes';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -63,7 +63,7 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     HttpClientModule,
     NgbModule.forRoot(),
     CarouselModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
+    appRouting
 
   ],
   providers: [GetawardsService],

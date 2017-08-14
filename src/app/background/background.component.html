@@ -12,7 +12,7 @@
 </section>
 <!-- end of event slider -->
 <!-- drawer boxes -->
-<section role="button" (click)="open(1)" routerLink="home/sponsors" class="one-fourth" id="html">
+<section role="button" (click)="open(1)" routerLink="home/sponsors" routerLinkActive="active" class="one-fourth" id="html">
     <i class="fa fa-html5"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
 </section>
@@ -21,7 +21,7 @@
         <router-outlet></router-outlet>
     </div>
 </div>
-<section role="button" (click)="open(2)" routerLink="home/awards" class="one-fourth" id="css">
+<section role="button" (click)="open(2)" routerLink="home/awards" routerLinkActive="active" class="one-fourth" id="css">
     <i class="fa fa-css3"></i>
     <h3 class="disable_text_highlighting">AWARDS</h3>
 </section>
@@ -30,7 +30,7 @@
         <router-outlet></router-outlet>
     </div>
 </div>
-<section role="button" (click)="open(3)" routerLink="home/photos" class="one-fourth" id="seo">
+<section role="button" (click)="open(3)" routerLink="home/photos" routerLinkActive="active" class="one-fourth" id="seo">
     <i class="fa fa-search"></i>
     <h3 class="disable_text_highlighting">PHOTOS</h3>
 </section>
@@ -39,7 +39,7 @@
         <router-outlet></router-outlet>
     </div>
 </div>
-<section role="button" (click)="open(4)" routerLink="home/contact" class="one-fourth" id="social">
+<section role="button" (click)="open(4)" routerLink="home/contact" routerLinkActive="active" class="one-fourth" id="social">
     <i class="fa fa-users"></i>
     <h3 class="disable_text_highlighting" >CONTACT</h3>
 </section>
@@ -50,7 +50,7 @@
 </div>
 <!-- router outlet desktop -->
 <div *ngIf="!ismobile">
-    <router-outlet></router-outlet>
+    <router-outlet #routerOutlet="outlet"></router-outlet>
 </div>
 <!-- end of drawer boxes -->
 <section class="inner-wrapper">
@@ -84,7 +84,7 @@
 <!-- sponsor carasouel -->
 <section class="sponsorCara" id="spcara">
     <div>
-
+        
     </div>
 </section>
 <section class="footer" id="foot">

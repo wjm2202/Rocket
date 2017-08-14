@@ -2,13 +2,13 @@ article {
     float: right;
     margin: 0 auto;
     width: 60%;
-    height: auto;
+    height: 200px;
 }
 aside {
     float: left;
     margin: 0 auto;
     width: 25%;
-    height: auto;
+    height: 400px;
 }
 .inner-wrapper {
     float: left;

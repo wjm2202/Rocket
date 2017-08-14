@@ -38,17 +38,22 @@ article {
     float: right;
     margin: 0 auto;
     width: 75%;
-    height: auto;
+    height: 310px;
     padding: 20px;
 }
 aside {
     float: left;
     margin: 0 auto;
     width: 25%;
-    height: auto;
+    height: 200px;
 }
 .img {
     width:auto;
+}
+.inner-wrapper {
+    float: left;
+    width: 100%;
+    background-color: #C3D7DF;
 }
   
 /*----------MEDIA!!!-------*/

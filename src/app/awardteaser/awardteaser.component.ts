@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fade } from '../animations/fade';
+import { routerTransition } from '../animations/fadeInAnimation';
 
 @Component({
   selector: 'app-awardteaser',
