@@ -50,7 +50,7 @@
 </div>
 <!-- router outlet desktop -->
 <div *ngIf="!ismobile">
-    <router-outlet #routerOutlet="outlet"></router-outlet>
+    <router-outlet></router-outlet>
 </div>
 <!-- end of drawer boxes -->
 <section class="inner-wrapper">
@@ -84,7 +84,18 @@
 <!-- sponsor carasouel -->
 <section class="sponsorCara" id="spcara">
     <div>
-        
+        <div class="test1" [@dropdown] *ngIf="ismobile && mobile == 1">
+            sponsors is open
+        </div>
+        <div class="test2" [@dropdown] *ngIf="ismobile && mobile == 2">
+            awards is open
+        </div>
+        <div class="test3" [@dropdown] *ngIf="ismobile && mobile == 3">
+            photos is open
+        </div>
+        <div class="test4" [@dropdown] *ngIf="ismobile && mobile == 4">
+            conatact is open
+        </div>
     </div>
 </section>
 <section class="footer" id="foot">

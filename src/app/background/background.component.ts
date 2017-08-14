@@ -7,7 +7,7 @@ import { routerAnimation } from '../animations/fadeInAnimation'
   selector: 'app-background',
   templateUrl: './background.component.html',
   styleUrls: ['./background.component.css'],
-  animations: [routerAnimation],
+  animations: [routerAnimation, fade],
   host: {
     '(window:resize)': 'onResize($event)'
   }
