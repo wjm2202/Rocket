@@ -287,25 +287,25 @@ aside {
 #photoaside {
     float: left;
     margin: 0 auto;
-    width: 30%;
+    width: 50%;
     height: 400px;
 }
 #photoarticle {
     float: right;
     margin: 0 auto;
-    width: 70%;
+    width: 50%;
     height: 400px;
 }
 #contactarticle {
     float: right;
     margin: 0 auto;
-    width: 70%;
+    width: 50%;
     height: 400px;
 }
 #contactaside {
     float: left;
     margin: 0 auto;
-    width: 30%;
+    width: 50%;
     height: 400px;
 }
 #tablet2 {
