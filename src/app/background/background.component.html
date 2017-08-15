@@ -135,9 +135,11 @@
 
 <!--sponsor teaser laptop-->
 
-<div [@ngIfAnimation] *ngIf="!ismobile && mobile == 1">
+<div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 1">
+ 
   <section class="inner-wrapper">
     <article id="sponsorarticle">
+      <button type="button" style="text-align:center; float:right; height:50px;width:50px;" class="btn btn-primary" (click)="open(0)">close</button>
       <h2 style="text-align:center;"> Become a Sponsor </h2>
       <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
               ipsum appareat no mea, mei bonorum principes ne. 
@@ -147,6 +149,7 @@
               ipsum appareat no mea, mei bonorum principes ne. 
               Mandamus iudicabit intellegebat eos ne,
                 cetero impedit offendit vis ea.</p>
+                
     </article> 
     <aside id="sponsoraside">
       <div class="card">
@@ -159,15 +162,17 @@
     
         <a href="#" class="btn btn-primary" style="height:55px;">Go somewhere</a>
     
-  </div>
+      </div>
     </aside>
   </section> 
 </div>
+
 <!--awards teaser laptop-->
 
-<div [@ngIfAnimation] *ngIf="!ismobile && mobile == 2">
+<div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 2">
   <section class="inner-wrapper">
     <article id="awardsarticle">
+       <button type="button" style="text-align:center; float:right; height:50px; width:50px;" class="btn btn-primary" (click)="open(0)">close</button>
       <h2 style="text-align:center;"> ECMS Awards </h2>
         <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
               ipsum appareat no mea, mei bonorum principes ne. 
@@ -177,6 +182,7 @@
               ipsum appareat no mea, mei bonorum principes ne. 
               Mandamus iudicabit intellegebat eos ne,
                 cetero impedit offendit vis ea.</p>
+               
     </article>  
     <aside id="awardsaside">
       <div class="card">
@@ -203,32 +209,34 @@
     </aside>
   </section>
 </div>
-
 <!--photos teaser laptop-->
 
-<div [@ngIfAnimation] *ngIf="!ismobile && mobile == 3">
+<div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 3">
+ 
     <section class="inner-wrapper">
     <article id="photoarticle">
+       <button style="text-align:center; float:left; height:50px;width:50px;" type="button" class="btn btn-primary" (click)="open(0)">close</button>
       <h2> ECMS Photos</h2>
       <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
              ipsum appareat no mea, mei bonorum principes ne. 
              Mandamus iudicabit intellegebat eos ne,
               cetero impedit offendit vis ea.</p>
+             
     </article>
     <aside id="photoaside">
       <img src="../../assets/images/i1.jpg">
     </aside>
 </section>
 </div>
-
 <!--contacts teaser laptop-->
 
-<div [@ngIfAnimation] *ngIf="!ismobile && mobile == 4">
+<div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 4">
     <section class="inner-wrapper">
     <aside id="contactaside">
       <img src="../../assets/images/i3.jpg">
     </aside>
     <article id="contactarticle">
+       <button style="text-align:center; float:left; height:50px; width:50px;" type="button" class="btn btn-primary" (click)="open(0)">close</button>
       <h2> Contact </h2>
       <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
              ipsum appareat no mea, mei bonorum principes ne. 
@@ -238,13 +246,13 @@
              ipsum appareat no mea, mei bonorum principes ne. 
              Mandamus iudicabit intellegebat eos ne,
               cetero impedit offendit vis ea.</p>
+             
     </article>
 </section>
 </div>
-
 <!-- end of drawer boxes -->
 
-<section class="inner-wrapper">
+<section class="inner-wrapper-2">
     <article id="tablet">
         <img src="../../assets/images/i1.jpg">
     </article>

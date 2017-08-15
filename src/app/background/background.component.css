@@ -125,6 +125,7 @@ nav ul li a:hover {
     float: left;
     text-align: center;
     border: 1px solid black;
+    z-index: 500;
 }
 #html {
     background-color: #F1AA90;
@@ -238,6 +239,7 @@ nav ul li a:hover {
     width: 100%;
     height: 400px;
     background-color: #C3D7DF;
+    z-index: 0;
 }
 
 #tablet {
@@ -341,6 +343,7 @@ aside {
 }
 
 .inner-wrapper-2 {
+    
     float: left;
     width: 100%;
     background-color: #C3D7DF;

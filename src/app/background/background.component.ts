@@ -1,15 +1,15 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { fade } from '../animations/fade';
-import { animate, state, style, transition, trigger} from '@angular/animations';
+import { Observable } from 'rxjs/Rx';
 import { routerAnimation } from '../animations/fadeInAnimation'
-import { teaser } from '../animations/teaserDownUp';
+import { teaser, heightdown, heightup } from '../animations/teaserDownUp';
 import { smoothDropper } from '../animations/smoothHeight';
 
 @Component({
   selector: 'app-background',
   templateUrl: './background.component.html',
   styleUrls: ['./background.component.css'],
-  animations: [routerAnimation, fade, teaser, smoothDropper],
+  animations: [routerAnimation, fade, teaser, smoothDropper, heightdown, heightup],
   host: {
     '(window:resize)': 'onResize($event)'
   }
@@ -38,7 +38,8 @@ export class BackgroundComponent implements OnInit {
       }
     }
 
-  };
+  }
+
   cardFlip(){
     this.isFlipped = !this.isFlipped;
   }
@@ -66,7 +67,6 @@ export class BackgroundComponent implements OnInit {
   open(box:number){
     this.checkIsMobile();
     this.mobile = box;
-    //console.log('ismobile: '+this.ismobile);
   }
   ngOnInit() {
 
