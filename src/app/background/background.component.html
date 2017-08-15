@@ -6,53 +6,244 @@
 </section>
 <!-- end of header -->
 <!-- event slider -->
-<section class="event">
+<section class="event" *ngIf="!ismobile">
     <app-fullwidth></app-fullwidth>
 
 </section>
 <!-- end of event slider -->
 <!-- drawer boxes -->
-<section role="button" (click)="open(1)" routerLink="home/sponsors" routerLinkActive="active" class="one-fourth" id="html">
+
+<!--sponsor teaser mobile-->
+<section role="button" (click)="open(1)" class="one-fourth" id="html">
     <i class="fa fa-html5"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
 </section>
-<div *ngIf="ismobile">
-    <div *ngIf="mobile == 1">
-        <router-outlet></router-outlet>
-    </div>
+<div [@dropdown] *ngIf="ismobile && mobile == 1">
+   <section class="inner-wrapper">
+    <aside id="sponsoraside">
+      <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
+      <h5 style="margin-top:20px;">Your Orginization here</h5>
+      <p>the details about your orginization and products here</p>
+      <h6>WWW.YourWebSite.co.nz</h6>
+    </aside>
+    <article id="sponsorarticle">
+      <h2 style="text-align:center;"> Become a Sponsor </h2>
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+              ipsum appareat no mea, mei bonorum principes ne. 
+              Mandamus iudicabit intellegebat eos ne,
+                cetero impedit offendit vis ea.
+              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+              ipsum appareat no mea, mei bonorum principes ne. 
+              Mandamus iudicabit intellegebat eos ne,
+                cetero impedit offendit vis ea.</p>
+    </article>
+  </section> 
 </div>
-<section role="button" (click)="open(2)" routerLink="home/awards" routerLinkActive="active" class="one-fourth" id="css">
+
+<!--awards teaser mobile-->
+
+<section role="button" (click)="open(2)" class="one-fourth" id="css">
     <i class="fa fa-css3"></i>
     <h3 class="disable_text_highlighting">AWARDS</h3>
 </section>
-<div *ngIf="ismobile">
-    <div *ngIf="mobile == 2">
-        <router-outlet></router-outlet>
-    </div>
+<div [@dropdown] *ngIf="ismobile && mobile == 2">
+    <section class="inner-wrapper">
+        <article id="awardsarticle">
+      <h2 style="text-align:center;"> ECMS Awards </h2>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+              ipsum appareat no mea, mei bonorum principes ne. 
+              Mandamus iudicabit intellegebat eos ne,
+                cetero impedit offendit vis ea.
+              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+              ipsum appareat no mea, mei bonorum principes ne. 
+              Mandamus iudicabit intellegebat eos ne,
+                cetero impedit offendit vis ea.</p>
+    </article>  
+    <aside id="awardsaside">
+      <div class="card">
+        <section class="holder">
+          <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
+        <!-- front -->
+            <figure class="front" (click)="cardFlip()">
+              <img class="image" src="../../assets/images/i1.jpg" alt="Card image cap">
+              <h5>Name an award</h5>
+              <h5>given to a student</h5>
+              <h6>who majors in</h6>
+              <p>Create an award blurb to show support</p>
+            </figure>
+        <!-- back  -->
+            <figure class="back" (click)="cardFlip()">
+              <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
+              <h5 style="margin-top:20px;">Your Orginization here</h5>
+              <p>the details about your orginization and products here</p>
+              <h6>WWW.YourWebSite.co.nz</h6>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </aside>
+
+  </section>
 </div>
-<section role="button" (click)="open(3)" routerLink="home/photos" routerLinkActive="active" class="one-fourth" id="seo">
+
+<!--photos teaser mobile-->
+
+<section role="button" (click)="open(3)" class="one-fourth" id="seo">
     <i class="fa fa-search"></i>
     <h3 class="disable_text_highlighting">PHOTOS</h3>
 </section>
-<div *ngIf="ismobile">
-    <div *ngIf="mobile == 3">
-        <router-outlet></router-outlet>
-    </div>
+<div class="test3" [@dropdown] *ngIf="ismobile && mobile == 3">
+    <section class="inner-wrapper">
+    <aside id="photoaside">
+        <img src="../../assets/images/i1.jpg">
+    </aside>
+    <article id="photoarticle">
+        <h2> Photos</h2>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+             ipsum appareat no mea, mei bonorum principes ne. 
+             Mandamus iudicabit intellegebat eos ne,
+              cetero impedit offendit vis ea.</p>
+    </article>
+</section>
 </div>
-<section role="button" (click)="open(4)" routerLink="home/contact" routerLinkActive="active" class="one-fourth" id="social">
+
+<!--contact teaser mobile-->
+
+<section role="button" (click)="open(4)" class="one-fourth" id="social">
     <i class="fa fa-users"></i>
     <h3 class="disable_text_highlighting" >CONTACT</h3>
 </section>
-<div *ngIf="ismobile" >
-    <div *ngIf="mobile == 4">
-        <router-outlet></router-outlet>
-    </div>
+<div class="test4" [@dropdown] *ngIf="ismobile && mobile == 4">
+    <section class="inner-wrapper-2">
+    <article id="contactarticle">
+        <h2> Contacts </h2>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+             ipsum appareat no mea, mei bonorum principes ne. 
+             Mandamus iudicabit intellegebat eos ne,
+              cetero impedit offendit vis ea.
+            Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+             ipsum appareat no mea, mei bonorum principes ne. 
+             Mandamus iudicabit intellegebat eos ne,
+              cetero impedit offendit vis ea.</p>
+    </article>
+    <aside id="contactaside">
+        <img src="../../assets/images/i3.jpg">
+    </aside>
+</section>
 </div>
 <!-- router outlet desktop -->
-<div *ngIf="!ismobile">
-    <router-outlet></router-outlet>
+
+<!--sponsor teaser laptop-->
+
+<div [@ngIfAnimation] *ngIf="!ismobile && mobile == 1">
+  <section class="inner-wrapper">
+    <article id="sponsorarticle">
+      <h2 style="text-align:center;"> Become a Sponsor </h2>
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+              ipsum appareat no mea, mei bonorum principes ne. 
+              Mandamus iudicabit intellegebat eos ne,
+                cetero impedit offendit vis ea.
+              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+              ipsum appareat no mea, mei bonorum principes ne. 
+              Mandamus iudicabit intellegebat eos ne,
+                cetero impedit offendit vis ea.</p>
+    </article> 
+    <aside id="sponsoraside">
+      <div class="card">
+        <img class="card-img-top" src="../../assets/images/frucor.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align:center;">Card title</h4>
+          <p class="card-text" style="color:black;">Your orginization can use this oportunity to promote your brand
+             or to explain your business and links to the University.</p>
+        </div>
+    
+        <a href="#" class="btn btn-primary" style="height:55px;">Go somewhere</a>
+    
+  </div>
+    </aside>
+  </section> 
 </div>
+<!--awards teaser laptop-->
+
+<div [@ngIfAnimation] *ngIf="!ismobile && mobile == 2">
+  <section class="inner-wrapper">
+    <article id="awardsarticle">
+      <h2 style="text-align:center;"> ECMS Awards </h2>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+              ipsum appareat no mea, mei bonorum principes ne. 
+              Mandamus iudicabit intellegebat eos ne,
+                cetero impedit offendit vis ea.
+              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+              ipsum appareat no mea, mei bonorum principes ne. 
+              Mandamus iudicabit intellegebat eos ne,
+                cetero impedit offendit vis ea.</p>
+    </article>  
+    <aside id="awardsaside">
+      <div class="card">
+        <div class="holder">
+          <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
+        <!-- front -->
+            <figure class="front" (click)="cardFlip()">
+              <img class="image" src="../../assets/images/i1.jpg" alt="Card image cap">
+              <h5>Name an award</h5>
+              <h5>given to a student</h5>
+              <h6>who majors in</h6>
+              Create an award blurb to show support
+            </figure>
+        <!-- back  -->
+            <figure class="back" (click)="cardFlip()">
+              <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
+              <h5 style="margin-top:20px;">Your Orginization here</h5>
+              the details about your orginization and products here<br>
+              <h6>WWW.YourWebSite.co.nz</h6>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
+</div>
+
+<!--photos teaser laptop-->
+
+<div [@ngIfAnimation] *ngIf="!ismobile && mobile == 3">
+    <section class="inner-wrapper">
+    <article id="photoarticle">
+      <h2> ECMS Photos</h2>
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+             ipsum appareat no mea, mei bonorum principes ne. 
+             Mandamus iudicabit intellegebat eos ne,
+              cetero impedit offendit vis ea.</p>
+    </article>
+    <aside id="photoaside">
+      <img src="../../assets/images/i1.jpg">
+    </aside>
+</section>
+</div>
+
+<!--contacts teaser laptop-->
+
+<div [@ngIfAnimation] *ngIf="!ismobile && mobile == 4">
+    <section class="inner-wrapper">
+    <aside id="contactaside">
+      <img src="../../assets/images/i3.jpg">
+    </aside>
+    <article id="contactarticle">
+      <h2> Contact </h2>
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+             ipsum appareat no mea, mei bonorum principes ne. 
+             Mandamus iudicabit intellegebat eos ne,
+              cetero impedit offendit vis ea.
+            Lorem ipsum dolor sit amet, prima option eleifend cu mei,
+             ipsum appareat no mea, mei bonorum principes ne. 
+             Mandamus iudicabit intellegebat eos ne,
+              cetero impedit offendit vis ea.</p>
+    </article>
+</section>
+</div>
+
 <!-- end of drawer boxes -->
+
 <section class="inner-wrapper">
     <article id="tablet">
         <img src="../../assets/images/i1.jpg">
@@ -84,18 +275,10 @@
 <!-- sponsor carasouel -->
 <section class="sponsorCara" id="spcara">
     <div>
-        <div class="test1" [@dropdown] *ngIf="ismobile && mobile == 1">
-            sponsors is open
-        </div>
-        <div class="test2" [@dropdown] *ngIf="ismobile && mobile == 2">
-            awards is open
-        </div>
-        <div class="test3" [@dropdown] *ngIf="ismobile && mobile == 3">
-            photos is open
-        </div>
-        <div class="test4" [@dropdown] *ngIf="ismobile && mobile == 4">
-            conatact is open
-        </div>
+        
+        
+        
+        
     </div>
 </section>
 <section class="footer" id="foot">

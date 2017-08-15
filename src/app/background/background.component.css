@@ -83,6 +83,7 @@ ul {
     list-style-type: none;
 }
 
+
 nav ul li {
     font-family: 'Alegreya Sans', Sans-serif;
     font-size: 150%;
@@ -123,6 +124,7 @@ nav ul li a:hover {
     width: 25%;
     float: left;
     text-align: center;
+    border: 1px solid black;
 }
 #html {
     background-color: #F1AA90;
@@ -133,12 +135,11 @@ nav ul li a:hover {
     transition: .1s ease-in-out;
 }
 #html:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -160,10 +161,10 @@ nav ul li a:hover {
     transition: .1s ease-in-out;
 }
 #css:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -185,10 +186,10 @@ nav ul li a:hover {
     transition: .1s ease-in-out;
 }
 #seo:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -211,10 +212,10 @@ nav ul li a:hover {
     
 }
 #social:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -235,6 +236,7 @@ nav ul li a:hover {
 .inner-wrapper {
     float: left;
     width: 100%;
+    height: 400px;
     background-color: #C3D7DF;
 }
 
@@ -242,6 +244,7 @@ nav ul li a:hover {
     background-color: #C3D7DF;
     max-height: 800px;
 }
+
 article {
     float: left;
     margin: 0 auto;
@@ -254,7 +257,55 @@ aside {
     width: 50%;
     height: auto;
 }
+#sponsorarticle {
+    float: left;
+    margin: 0 auto;
+    width: 70%;
+    height: 400px;
+}
+#sponsoraside {
+    float: right;
+    margin: 0 auto;
+    width: 30%;
+    height: 400px;
+}
+#awardsarticle {
+    float: left;
+    margin: 0 auto;
+    width: 70%;
+    height: 400px;
+}
+#awardsaside {
+    float: right;
+    margin: 0 auto;
+    width: 30%;
+    height: 400px;
+}
 
+#photoaside {
+    float: left;
+    margin: 0 auto;
+    width: 30%;
+    height: 400px;
+}
+#photoarticle {
+    float: right;
+    margin: 0 auto;
+    width: 70%;
+    height: 400px;
+}
+#contactarticle {
+    float: right;
+    margin: 0 auto;
+    width: 70%;
+    height: 400px;
+}
+#contactaside {
+    float: left;
+    margin: 0 auto;
+    width: 30%;
+    height: 400px;
+}
 #tablet2 {
     background-color: #A2B2C1;
     max-height: 800px;
@@ -263,9 +314,30 @@ aside {
 #mobile {
     background-color: #BEB9AD;
 }
-
 #desktop {
     background-color: #F1AA90;
+}
+#photos {
+    background-color: #AADCD2;
+}
+#contact {
+    background-color: #A2B2C1;
+}
+#awardtext {
+    background-color: #BEB9AD;
+    height:400px;
+}
+#awardsarticle {
+    background-color: #BEB9AD;
+}
+#sponsorarticle {
+    background-color: #F1AA90;
+}
+#photoarticle {
+    background-color: #AADCD2;
+}
+#contactarticle {
+    background-color: #A2B2C1;
 }
 
 .inner-wrapper-2 {
@@ -342,7 +414,44 @@ footer.second p {
     padding: 5px 0 9px 0;
     text-align: center;
 }
-
+.holder{ 
+  height:300px;
+  width:auto;
+  position: relative; 
+  perspective: 800px;
+  text-align: center;
+}
+#card {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+#card figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+#card .front {
+  background: whitesmoke;
+  min-height: 400px;
+}
+#card .back {
+  background: white;
+  transform: rotateY( 180deg );
+  min-height: 400px;
+}
+#card.flipped {
+  transform: rotateY( 180deg );
+}
+.image {
+    width:auto;
+    height: 150px;
+}
 /*----------MEDIA!!!-------*/
 @media screen and (max-width: 768px) {
     h2 {

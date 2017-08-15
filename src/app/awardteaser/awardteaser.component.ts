@@ -11,7 +11,7 @@ import { routerTransition } from '../animations/fadeInAnimation';
 export class AwardteaserComponent implements OnInit {
   isFlipped:boolean = false;
   constructor() { }
-    cardFlip(){
+  cardFlip(){
     this.isFlipped = !this.isFlipped;
   }
   ngOnInit() {
