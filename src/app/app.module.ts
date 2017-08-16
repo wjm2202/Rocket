@@ -24,6 +24,8 @@ import { AwardComponent } from './award/award.component';
 import { EmptyComponent } from './empty/empty.component';
 //services
 import { GetawardsService } from './services/getawards.service';
+//pipes
+import { UrlStrip } from './pipes/imagestrip';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -53,7 +55,8 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     AwardteaserComponent,
     SponsorsteaserComponent,
     PhototeaserComponent,
-    ContactteaserComponent
+    ContactteaserComponent,
+    UrlStrip
     
   ],
   imports: [

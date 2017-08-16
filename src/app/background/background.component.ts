@@ -66,7 +66,12 @@ export class BackgroundComponent implements OnInit {
 
   open(box:number){
     this.checkIsMobile();
-    this.mobile = box;
+    if(this.mobile == box){
+      this.mobile = 0;
+    }else{
+      this.mobile = box;
+    }
+    
   }
   ngOnInit() {
 

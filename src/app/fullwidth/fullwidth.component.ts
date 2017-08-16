@@ -2,28 +2,37 @@ import { Component, OnInit } from '@angular/core';
 import { Image } from '../interfaces/image';
 import { NgFor } from '@angular/common';
 import { Observable } from 'rxjs/Rx';
+import { HttpClient } from '@angular/common/http';
+import { GetMainCaraService } from '../services/getMainCara.service';
+import { UrlStrip } from '../pipes/imagestrip';
+
+
+interface MainCarosouelModel{
+  link:string;
+}
+
 
 @Component({
   selector: 'app-fullwidth',
   templateUrl: './fullwidth.component.html',
-  styleUrls: ['./fullwidth.component.css']
+  styleUrls: ['./fullwidth.component.css'],
+  providers: [GetMainCaraService]
 })
 export class FullwidthComponent implements OnInit {
-  pictures;
+  
   cara:Element;
-  constructor() { }
+  pictures:MainCarosouelModel[];
 
+  constructor(private getPicsService:GetMainCaraService ) { }
+
+  getpics(){
+    this.getPicsService.getAllMainCaraPics()
+    .subscribe(res => this.pictures = res,
+    error => console.log("Error :: "+ error))
+  }
   ngOnInit() {
-    this.pictures = this.IMAGES;
-    let timer = Observable.timer(2000,2000);
-    timer.subscribe(t=> {
+    this.getpics();
 
-    });
   }
 
-    IMAGES: Image[] = [
-  { "title": "Meeting the Students", "url": "../../assets/images/fair.jpg" },
-  { "title": "Kick-Starter Weekend", "url": "../../assets/images/iso.jpg" },
-  { "title": "Programming compitition", "url": "../../assets/images/kick.jpg" },
-  { "title": "NZ and China", "url": "../../assets/images/progContest.jpg" }];
 }

@@ -1,4 +1,3 @@
-export class Image {
-    title:string;
-    url:string;
+export interface Image {
+    link: string;
 }

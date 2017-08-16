@@ -23,7 +23,7 @@ export class AwardsComponent implements OnInit {
   
 
   ngOnInit() {
-    //this.getAwards();
+    this.getAwards();
     //this.awards = this.AWARD;
   }
   AWARD: AwardModel[] = [
