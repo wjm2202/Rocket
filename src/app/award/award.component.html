@@ -5,22 +5,18 @@
       <!-- front -->
       <figure class="front" (click)="cardFlip()">
         <img class="image" src="../../assets/images/i1.jpg" alt="Card image cap">
-        <h5>{{award.awardName}}</h5>
-        <h5>{{award.studentName}}</h5>
-        <h6>{{award.studentMajor}}</h6>
-        <p>{{award.awardBlub}}</p>
+        <h5>{{award.AwardName}}</h5>
+        <h5>{{award.StudentName}}</h5>
+        <h6>{{award.AwardFaculty}}</h6>
+        <p>{{award.AwardBlurb}}</p>
       </figure>
       <!-- back  -->
       <figure class="back" (click)="cardFlip()">
         <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
-        <h5 style="margin-top:20px;">{{award.sponsorName}}</h5>
-        <p>{{award.sponsorBlurb}}</p>
-        <h6>{{award.sponsorLink}}</h6>
+        <h5 style="margin-top:20px;">{{award.SponsorName}}</h5>
+        <p>{{award.SponsorBlurb}}</p>
+        <h6>{{award.SponsorLink | stripurl}}</h6>
       </figure>
     </div>
   </section>
 </div>
-  
-
-
-

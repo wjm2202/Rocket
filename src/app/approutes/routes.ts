@@ -13,10 +13,6 @@ import { RouterModule } from '@angular/router';
 
 const routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home/sponsors', component: SponsorsteaserComponent, data: {animation: 'home/sponsors'} },
-  { path: 'home/awards', component: AwardteaserComponent, data: {animation: 'home/awards'} },
-  { path: 'home/photos', component: PhototeaserComponent, data: {animation: 'home/photos'} },
-  { path: 'home/contact', component: ContactteaserComponent, data: {animation: 'home/contact'}},
   { path: 'awards', component: AwardsComponent },
   { path: 'sponsors', component: SponsorsComponent },
   { path: 'photos', component: PhotosComponent },

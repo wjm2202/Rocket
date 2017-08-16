@@ -24,6 +24,7 @@ import { AwardComponent } from './award/award.component';
 import { EmptyComponent } from './empty/empty.component';
 //services
 import { GetawardsService } from './services/getawards.service';
+import { GetMainSponsorService } from './services/getSponsor.service';
 //pipes
 import { UrlStrip } from './pipes/imagestrip';
 //bootstrap stuff here
@@ -56,7 +57,8 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     SponsorsteaserComponent,
     PhototeaserComponent,
     ContactteaserComponent,
-    UrlStrip
+    UrlStrip,
+    
     
   ],
   imports: [
@@ -69,7 +71,7 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     appRouting
 
   ],
-  providers: [GetawardsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

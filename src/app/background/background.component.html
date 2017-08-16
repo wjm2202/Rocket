@@ -252,6 +252,9 @@
 </section>
 </div>
 <!-- end of drawer boxes -->
+<div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 0">
+  <router-outlet></router-outlet>
+</div>
 
 <section class="inner-wrapper-2">
     <article id="tablet">
