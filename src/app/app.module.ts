@@ -31,6 +31,7 @@ import { AwardteaserComponent } from './awardteaser/awardteaser.component';
 import { SponsorsteaserComponent } from './sponsorsteaser/sponsorsteaser.component';
 import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
+import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
 
 
 
@@ -53,7 +54,8 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     AwardteaserComponent,
     SponsorsteaserComponent,
     PhototeaserComponent,
-    ContactteaserComponent
+    ContactteaserComponent,
+    SponsorCaraComponent
     
   ],
   imports: [

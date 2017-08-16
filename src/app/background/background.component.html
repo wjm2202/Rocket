@@ -1,8 +1,6 @@
-
 <!-- header -->
 <section class="header">
-    <app-menu
-    (mobile)="open($event)"></app-menu>
+    <app-menu (mobile)="open($event)"></app-menu>
 </section>
 <!-- end of header -->
 <!-- event slider -->
@@ -41,9 +39,9 @@
 </div>
 <section role="button" (click)="open(4)" routerLink="home/contact" class="one-fourth" id="social">
     <i class="fa fa-users"></i>
-    <h3 class="disable_text_highlighting" >CONTACT</h3>
+    <h3 class="disable_text_highlighting">CONTACT</h3>
 </section>
-<div *ngIf="ismobile" >
+<div *ngIf="ismobile">
     <div *ngIf="mobile == 4">
         <router-outlet></router-outlet>
     </div>
@@ -59,23 +57,17 @@
     </article>
     <aside id="tablet">
         <h2> Welcome to ECMS Awards</h2>
-        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-             ipsum appareat no mea, mei bonorum principes ne. 
-             Mandamus iudicabit intellegebat eos ne,
-              cetero impedit offendit vis ea.</p>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+            iudicabit intellegebat eos ne, cetero impedit offendit vis ea.</p>
     </aside>
 </section>
 <section class="inner-wrapper-2">
     <article id="mobile">
         <h2> Become a Sponsor </h2>
-        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-             ipsum appareat no mea, mei bonorum principes ne. 
-             Mandamus iudicabit intellegebat eos ne,
-              cetero impedit offendit vis ea.
-            Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-             ipsum appareat no mea, mei bonorum principes ne. 
-             Mandamus iudicabit intellegebat eos ne,
-              cetero impedit offendit vis ea.</p>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+            iudicabit intellegebat eos ne, cetero impedit offendit vis ea. Lorem ipsum dolor sit amet, prima option eleifend
+            cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit
+            offendit vis ea.</p>
     </article>
     <aside id="mobile">
         <img src="../../assets/images/i3.jpg">
@@ -84,11 +76,11 @@
 <!-- sponsor carasouel -->
 <section class="sponsorCara" id="spcara">
     <div>
-
+        <app-sponsor-cara></app-sponsor-cara>
     </div>
 </section>
 <section class="footer" id="foot">
     <div>
-       <app-footer></app-footer>  
+        <app-footer></app-footer>
     </div>
 </section>
