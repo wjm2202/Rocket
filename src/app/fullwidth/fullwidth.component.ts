@@ -8,7 +8,7 @@ import { UrlStrip } from '../pipes/imagestrip';
 
 
 interface MainCarosouelModel{
-  link:string;
+  Link:string;
 }
 
 

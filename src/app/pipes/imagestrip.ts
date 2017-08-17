@@ -8,7 +8,7 @@ export class UrlStrip implements PipeTransform {
         
         let location = value.indexOf(',');
         let result = value.slice(0,location);
-        //console.log('stripurl pipe result '+result);
+        console.log('stripurl pipe result '+result);
         return result;
     }
 }
