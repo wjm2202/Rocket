@@ -38,7 +38,6 @@ import { AwardteaserComponent } from './awardteaser/awardteaser.component';
 import { SponsorsteaserComponent } from './sponsorsteaser/sponsorsteaser.component';
 import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
-import { NavphotoComponent } from './navphoto/navphoto.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 
@@ -65,7 +64,6 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
     PhototeaserComponent,
     ContactteaserComponent,
     UrlStrip,
-    NavphotoComponent,
     GalleryComponent,
     ImageDetailComponent,
     ImageFilterPipe,

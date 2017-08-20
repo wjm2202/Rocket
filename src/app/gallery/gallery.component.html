@@ -1,5 +1,6 @@
-
+<h1 style="text-align:center;">{{title}}</h1>
 <div class="row">
+    <button class="btn btn-lg btn-success" routerLink="">Home</button>
     <button class="btn btn-lg btn-info" [class.active]="filterBy == 'all'" (click)="filterBy='all'">All</button>
     <button class="btn btn-lg btn-info" [class.active]="filterBy == 'event'" (click)="filterBy='event'">Event</button>
     <button class="btn btn-lg btn-info" [class.active]="filterBy == 'student'" (click)="filterBy='student'">Student</button>

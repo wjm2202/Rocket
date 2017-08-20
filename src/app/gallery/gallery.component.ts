@@ -8,7 +8,7 @@ import { Component, OnChanges, Input } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnChanges {
-  title = 'Recent Photos';
+  title = 'ECMS Photos';
   @Input() filterBy?: string = 'all';     //? is optional
   visableImages: any[] = [];
   //Onchanges is a life cycle hook called when something changes
