@@ -9,16 +9,21 @@ import { AwardteaserComponent } from '../awardteaser/awardteaser.component';
 import { SponsorsteaserComponent } from '../sponsorsteaser/sponsorsteaser.component';
 import { PhototeaserComponent } from '../phototeaser/phototeaser.component';
 import { ContactteaserComponent } from '../contactteaser/contactteaser.component';
+import { GalleryComponent } from '../gallery/gallery.component';
+import { ImageDetailComponent } from '../image-detail/image-detail.component';
 import { RouterModule } from '@angular/router';
 
 const routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  
   { path: 'awards', component: AwardsComponent },
   { path: 'sponsors', component: SponsorsComponent },
   { path: 'photos', component: PhotosComponent },
+  { path: 'photos/:id', component: ImageDetailComponent },
   { path: 'contact', component: ContactusComponent },
-  { path: '**', component: EmptyComponent }
+  { path: '**', component: EmptyComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full'}
+
 ];
 export const appRouting = RouterModule.forRoot(routes, {
-  useHash: true
+  useHash: false
 });

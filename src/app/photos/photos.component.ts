@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent implements OnInit {
-
+  title = 'Gallery Works';
+  subtitle = 'Latest Photographs';
   constructor() { }
 
   ngOnInit() {

@@ -25,8 +25,10 @@ import { EmptyComponent } from './empty/empty.component';
 //services
 import { GetawardsService } from './services/getawards.service';
 import { GetMainSponsorService } from './services/getSponsor.service';
+import { ImageService } from './services/Image.Service';
 //pipes
 import { UrlStrip } from './pipes/imagestrip';
+import { ImageFilterPipe } from './pipes/filter.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -34,6 +36,9 @@ import { AwardteaserComponent } from './awardteaser/awardteaser.component';
 import { SponsorsteaserComponent } from './sponsorsteaser/sponsorsteaser.component';
 import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
+import { NavphotoComponent } from './navphoto/navphoto.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
 
 
 
@@ -58,7 +63,10 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     PhototeaserComponent,
     ContactteaserComponent,
     UrlStrip,
-    
+    NavphotoComponent,
+    GalleryComponent,
+    ImageDetailComponent,
+    ImageFilterPipe
     
   ],
   imports: [
@@ -71,7 +79,7 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     appRouting
 
   ],
-  providers: [],
+  providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
