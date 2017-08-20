@@ -1,0 +1,96 @@
+
+.grid-container {
+        display: grid;
+        grid-area: auto;
+        grid-row-gap: 0px;
+        grid-column-gap: 0px;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+        overflow: hidden;
+        background-color: #272727;
+    }
+    .cu {
+        grid-column: 1/5;
+        grid-row: 2/3;
+        font-family: HeliaCore-Medium;
+        font-size: 18px;
+
+    }
+    .se {
+        grid-column: 1/10;
+        grid-row: 3/4;
+        font-family: HeliaCore-Light;
+        font-size: 24px;
+    }
+    .faq {
+        grid-column: 1/9;
+        grid-row: 4/5;
+        font-family: HeliaCore-Light;
+        font-size: 24px;
+    }
+    .freeph {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        font-family: HeliaCore-Light;
+        font-size: 24px;
+    }
+    .ph0800 {
+        grid-column: 2/10;
+        grid-row: 5/6;
+        margin-bottom: 10px;
+        font-family: HeliaCore-Medium;
+        font-size: 24px;
+    }
+    .email {
+        grid-column: 1/9;
+        grid-row: 6/7;
+        margin-bottom: 10px;
+        font-family: HeliaCore-Medium;
+        font-size: 24px;
+    }
+    .corpenq {
+        grid-column: 1/8;
+        grid-row: 7/8;
+        font-family: HeliaCore-Light;
+        font-size: 24px;
+    }
+    .phcorp {
+        grid-column: 1/2;
+        grid-row: 8/9;
+        font-family: HeliaCore-Light;
+        font-size: 24px;
+    }
+    .corpph0800 {
+        grid-column: 2/10;
+        grid-row: 8/9;
+        margin-bottom: 10px;
+        font-family: HeliaCore-Light;
+        font-size: 24px;
+    }
+    .facebook {
+        grid-column: 1/2;
+        grid-row: 10/11;
+        margin-bottom: 25px;
+    }
+    .twitter {
+        grid-column: 3/4;
+        grid-row: 10/11;
+    }
+    .youtube {
+        grid-column: 5/6;
+        grid-row: 10/11;
+    }
+    .linkedin {
+        grid-column: 7/8;
+        grid-row: 10/11;
+    }
+    .instagram {
+        grid-column: 9/10;
+        grid-row: 10/11;
+    }
+    .rainbow {
+        grid-column: 9/10;
+        grid-row: 2/3;
+    }
+
+

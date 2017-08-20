@@ -22,6 +22,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FullwidthComponent } from './fullwidth/fullwidth.component';
 import { AwardComponent } from './award/award.component'; 
 import { EmptyComponent } from './empty/empty.component';
+import { RightcontactComponent } from './rightcontact/rightcontact.component';
+import { LeftcontactComponent} from './leftcontact/leftcontact.component';
 //services
 import { GetawardsService } from './services/getawards.service';
 import { GetMainSponsorService } from './services/getSponsor.service';
@@ -66,8 +68,9 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
     NavphotoComponent,
     GalleryComponent,
     ImageDetailComponent,
-    ImageFilterPipe
-    
+    ImageFilterPipe,
+    RightcontactComponent,
+    LeftcontactComponent
   ],
   imports: [
     BrowserModule,
