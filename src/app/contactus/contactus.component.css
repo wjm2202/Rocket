@@ -1,0 +1,19 @@
+.inner-wrapper {
+    float: left;
+    width: 100%;
+    height: 400px;
+    background-color: #C3D7DF;
+    z-index: 0;
+}
+#photoaside {
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+    height: 400px;
+}
+#photoarticle {
+    float: right;
+    margin: 0 auto;
+    width: 50%;
+    height: 400px;
+}

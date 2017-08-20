@@ -22,11 +22,15 @@ import { FooterComponent } from './footer/footer.component';
 import { FullwidthComponent } from './fullwidth/fullwidth.component';
 import { AwardComponent } from './award/award.component'; 
 import { EmptyComponent } from './empty/empty.component';
+import { RightcontactComponent } from './rightcontact/rightcontact.component';
+import { LeftcontactComponent} from './leftcontact/leftcontact.component';
 //services
 import { GetawardsService } from './services/getawards.service';
 import { GetMainSponsorService } from './services/getSponsor.service';
+import { ImageService } from './services/Image.Service';
 //pipes
 import { UrlStrip } from './pipes/imagestrip';
+import { ImageFilterPipe } from './pipes/filter.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -34,6 +38,8 @@ import { AwardteaserComponent } from './awardteaser/awardteaser.component';
 import { SponsorsteaserComponent } from './sponsorsteaser/sponsorsteaser.component';
 import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
 
 
 
@@ -58,8 +64,11 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     PhototeaserComponent,
     ContactteaserComponent,
     UrlStrip,
-    
-    
+    GalleryComponent,
+    ImageDetailComponent,
+    ImageFilterPipe,
+    RightcontactComponent,
+    LeftcontactComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +80,7 @@ import { ContactteaserComponent } from './contactteaser/contactteaser.component'
     appRouting
 
   ],
-  providers: [],
+  providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
