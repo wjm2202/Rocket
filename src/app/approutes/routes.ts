@@ -14,14 +14,14 @@ import { ImageDetailComponent } from '../image-detail/image-detail.component';
 import { RouterModule } from '@angular/router';
 
 const routes = [
-  
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'awards', component: AwardsComponent },
   { path: 'sponsors', component: SponsorsComponent },
   { path: 'photos', component: PhotosComponent },
   { path: 'photos/:id', component: ImageDetailComponent },
   { path: 'contact', component: ContactusComponent },
-  { path: '**', component: EmptyComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full'}
+  { path: '**', component: EmptyComponent }
+  
 
 ];
 export const appRouting = RouterModule.forRoot(routes, {

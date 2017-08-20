@@ -1,4 +1,6 @@
+
 <h1 style="text-align:center;">{{title}}</h1>
+<section>
 <div class="row">
     <button class="btn btn-lg btn-success" routerLink="">Home</button>
     <button class="btn btn-lg btn-info" [class.active]="filterBy == 'all'" (click)="filterBy='all'">All</button>
@@ -13,3 +15,4 @@
         </li>
     </ul>
 </div>
+</section>

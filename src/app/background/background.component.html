@@ -15,6 +15,7 @@
 <!-- drawer boxes -->
 
 <!--sponsor teaser mobile-->
+<div *ngIf="displayHome && !ismobile">
 <section role="button" (click)="open(1)" class="one-fourth" id="html">
     <i class="fa fa-html5"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
@@ -132,7 +133,7 @@
     </aside>
 </section>
 </div>
-
+</div>
 <!-- router outlet desktop -->
 
 <!--sponsor teaser laptop-->
@@ -227,7 +228,7 @@
                ipsum appareat no mea, mei bonorum principes ne. 
                Mandamus iudicabit intellegebat eos ne,
                 cetero impedit offendit vis ea.</p>
-                <button routerLink="sponsors" style="text-align:center; float:right; height:50px" type="button" class="btn btn-primary" (click)="open(0)">Go To Photos Page</button>
+                <button routerLink="photos" style="text-align:center; float:right; height:50px" type="button" class="btn btn-primary" (click)="open(0)">Go To Photos Page</button>
     </aside>
 </section>
 </div>
@@ -246,7 +247,7 @@
                ipsum appareat no mea, mei bonorum principes ne. 
                Mandamus iudicabit intellegebat eos ne,
                 cetero impedit offendit vis ea.</p>
-                <button style="text-align:center; float:right; height:50px; " type="button" class="btn btn-primary" (click)="open(0)">Go To Contacts page</button>
+                <button routerLink="contact" style="text-align:center; float:right; height:50px; " type="button" class="btn btn-primary" (click)="open(0)">Go To Contacts page</button>
     </aside>
     <article id="contactarticle">
        
@@ -332,7 +333,7 @@
 
 
 
-<section class="footer" id="foot">
+<section class="navbar-fixed-bottom" style="width:100%;" id="foot">
     <div>
        <app-footer></app-footer>  
     </div>
