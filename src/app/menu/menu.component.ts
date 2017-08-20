@@ -13,6 +13,7 @@ export class MenuComponent implements OnInit {
   onboxChange(box:number){
     this.mobile.emit(box);
   }
+
   ngOnInit() {
   }
 

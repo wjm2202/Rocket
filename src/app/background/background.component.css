@@ -49,7 +49,7 @@ h3 {
 p {
     font-family: 'Alegreya Sans', Sans-serif;
     color: #F5F5F5;
-    font-size: 160%;
+    font-size: 150%;
     line-height: 150%;
     padding: 3%;
     text-indent: 2%;
@@ -126,7 +126,6 @@ nav ul li a:hover {
     width: 25%;
     float: left;
     text-align: center;
-    border: 1px solid black;
     z-index: 500;
 }
 #html {
@@ -310,6 +309,18 @@ aside {
     width: 50%;
     height: 400px;
 }
+#eventarticle {
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+    height: 400px;
+}
+#eventaside {
+    float: right;
+    margin: 0 auto;
+    width: 50%;
+    height: 400px;
+}
 #tablet2 {
     background-color: #A2B2C1;
     max-height: 800px;
@@ -392,7 +403,7 @@ footer {
     text-align: center;
 
 }
-
+/*
 .social li {
     display: inline;
 }
@@ -407,7 +418,7 @@ footer {
 .social i:hover {
     color: #F5F5F5;
 }
-
+*/
 footer.second {
     border-top: 1px solid #aadcd2;
     background-color: #544b59;

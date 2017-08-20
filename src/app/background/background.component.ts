@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Rx';
 import { routerAnimation } from '../animations/fadeInAnimation'
 import { teaser, heightdown, heightup } from '../animations/teaserDownUp';
 import { smoothDropper } from '../animations/smoothHeight';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-background',
@@ -19,6 +20,7 @@ export class BackgroundComponent implements OnInit {
   mobile:number = 5;
   width: any;
   ismobile:boolean;
+  displayHome:boolean = true;
   configs = {
     loop: true,
     margin: 1,
@@ -40,6 +42,29 @@ export class BackgroundComponent implements OnInit {
 
   }
 
+  constructor(private router: Router) {
+    this.router.events.subscribe((res) => { 
+      if(this.router.url == '/home'){
+        this.displayHome = true;
+        console.log('displayHome: '+this.displayHome);
+      }else{
+        this.displayHome = false;
+        console.log('displayHome: '+this.displayHome);
+      }
+    this.checkIsMobile();
+    });
+   }
+  checkIsMobile(){
+    this.width = window.screen.width;
+    if(this.width < 767){
+      this.ismobile = true;
+    }else{
+      this.ismobile = false;
+    }
+  }
+  displayHomemeth($event){
+    this.displayHome = false;
+  }
   cardFlip(){
     this.isFlipped = !this.isFlipped;
   }
@@ -51,24 +76,14 @@ export class BackgroundComponent implements OnInit {
       this.ismobile = false;
     }
   }
-  constructor() {
-    this.checkIsMobile();
-   }
-  checkIsMobile(){
-    this.width = window.screen.width;
-    //console.log('screen size: '+this.width);
-    if(this.width < 767){
-      this.ismobile = true;
-    }else{
-      this.ismobile = false;
-    }
-  }
-
   open(box:number){
     this.checkIsMobile();
+    
     if(this.mobile == box){
+      //console.log('box number same: '+box+" mobile: "+this.mobile);
       this.mobile = 0;
     }else{
+      //console.log('box number differnet: '+box+" mobile: "+this.mobile);
       this.mobile = box;
     }
     

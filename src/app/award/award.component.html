@@ -4,7 +4,7 @@
     <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
       <!-- front -->
       <figure class="front" (click)="cardFlip()">
-        <img class="image" src="../../assets/images/i1.jpg" style="width:275px; height:100;" alt="Card image cap">
+        <img class="image" src="../../assets/images/i1.jpg" style="min-width:275px; min-height:170px;" alt="Card image cap">
         <h5>{{award.AwardName}}</h5>
         <h6>{{award.AwardMajor}}</h6>
         <h5>{{award.StudentName}}</h5>
@@ -13,7 +13,7 @@
       </figure>
       <!-- back  -->
       <figure class="back" (click)="cardFlip()">
-        <img class="image" src="{{award.SponsorLogo | stripurl}}" style="width:275px; height:100;" alt="Card image cap">
+        <img class="image" src="{{award.SponsorLogo | stripurl}}" style="max-width:275px; max-height:100px;" alt="Card image cap">
         <h5 style="margin-top:20px;">{{award.SponsorName}}</h5>
         <p>{{award.awardSponsorBlurb}}</p>
         <h6>{{award.SponsorLink}}</h6>
@@ -21,18 +21,3 @@
     </div>
   </section>
 </div>
-<!--  awardBlub: string;
-  awardDate: string;
-  AwardDegree:string;
-  AwardDegreeLevel:string;
-  awardId: number;
-  awardName: string;
-  sponsorBlurb: string;
-  sponsorId: number;
-  AwardMajor: string;
-  sponsorLink: string;
-  sponsorLogo: string;
-  sponsorName: string;
-  studentMajor: string;
-  studentName: string;
-  awardSponsorBlurb: string;-->
