@@ -40,6 +40,7 @@ import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
+import { BecomesponsorComponent } from './becomesponsor/becomesponsor.component';
 
 
 
@@ -68,7 +69,8 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
     ImageDetailComponent,
     ImageFilterPipe,
     RightcontactComponent,
-    LeftcontactComponent
+    LeftcontactComponent,
+    BecomesponsorComponent
   ],
   imports: [
     BrowserModule,
