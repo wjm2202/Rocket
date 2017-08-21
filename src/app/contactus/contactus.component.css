@@ -17,3 +17,34 @@
     width: 50%;
     height: 400px;
 }
+
+.container {
+    display:                 inline-flex;
+    flex-wrap:               wrap;
+    -webkit-flex-wrap:       wrap;         /* Safari 8 */
+    justify-content:         center;
+    -webkit-justify-content: center;       /* Safari 8 */
+    height: 100%;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+ }
+
+ .ebussinescard{
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+ }
+
+
+ .ebussinescard p{
+    text-align: center;
+ }
+
+ .ebussinescard img{
+    display: block;
+    margin: 0 auto;
+ }
