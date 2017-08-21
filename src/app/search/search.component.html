@@ -1,0 +1,40 @@
+<h2 style="text-align:center;">{{title}}</h2>
+<button class="btn btn-lg btn-success" routerLink="">Home</button>
+<button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+<button class="btn btn-lg btn-info" [class.active]="filterBy=='certificate'" (click)="filterBy='certificate'">Certificate</button>
+<button class="btn btn-lg btn-info" [class.active]="filterBy=='under-graduate'" (click)="filterBy='under-graduate'">Under-graduate</button>
+<button class="btn btn-lg btn-info" [class.active]="filterBy=='post-graduate'" (click)="filterBy='post-graduate'">Post-graduate</button>
+<button class="btn btn-lg btn-info" [class.active]="filterBy=='doctorate'" (click)="filterBy='doctorate'">Doctorate</button>
+<div class="row">
+  <ul id="thumbnailsList">
+    <li  *ngFor="let award of (visableAwards | awardAwardDegreeLevelFilter:filterBy)">
+      <a [routerLink]="['award', award.awardId]">
+        <div class="card lo" style="width: 20rem;" >  
+          <img class="card-img-top" src="" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title" style="text-align:center;">{{award.awardName}}</h4>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="width:310px;text-align:center;">{{award.studentName}}</li>
+            <li class="list-group-item" style="width:310px;text-align:center;">{{award.awardDate}}</li>
+            <li class="list-group-item" style="width:310px;text-align:center;">{{award.AwardDegreeLevel}}</li>
+            <li class="list-group-item" style="width:310px;text-align:center;">{{award.AwardDegree}}</li>
+          </ul>
+          <div class="card-footer" style="text-align:center;">
+            <small class="text-muted" >ECMS Award</small>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>    
+
+
+
+      <!--
+      <div class="tn" style="width: 20rem;">
+
+      </div>  
+    </li>
+  </ul>  
+</div>-->

@@ -11,16 +11,21 @@ import { PhototeaserComponent } from '../phototeaser/phototeaser.component';
 import { ContactteaserComponent } from '../contactteaser/contactteaser.component';
 import { GalleryComponent } from '../gallery/gallery.component';
 import { ImageDetailComponent } from '../image-detail/image-detail.component';
+import { SearchComponent } from '../search/search.component';
+import { AwardDetailComponent } from '../award-detail/award-detail.component';
 import { RouterModule } from '@angular/router';
 
+
 const routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'awards', component: AwardsComponent },
   { path: 'sponsors', component: SponsorsComponent },
   { path: 'photos', component: PhotosComponent },
   { path: 'photos/:id', component: ImageDetailComponent },
   { path: 'contact', component: ContactusComponent },
-  { path: '**', component: EmptyComponent }
+  { path: 'awards/search', component: SearchComponent },
+  { path: 'awards/search/award/:id', component: AwardDetailComponent },
+  { path: '**', component: EmptyComponent },
   
 
 ];

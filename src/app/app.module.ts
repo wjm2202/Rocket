@@ -28,9 +28,11 @@ import { LeftcontactComponent} from './leftcontact/leftcontact.component';
 import { GetawardsService } from './services/getawards.service';
 import { GetMainSponsorService } from './services/getSponsor.service';
 import { ImageService } from './services/Image.Service';
+import { AwardsSearchService } from './services/awards-search.service';
 //pipes
 import { UrlStrip } from './pipes/imagestrip';
 import { ImageFilterPipe } from './pipes/filter.pipe';
+import { AwardLevelPipe } from './pipes/filterAwards.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -40,6 +42,8 @@ import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
+import { SearchComponent } from './search/search.component';
+import { AwardDetailComponent } from './award-detail/award-detail.component';
 
 
 
@@ -68,7 +72,10 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
     ImageDetailComponent,
     ImageFilterPipe,
     RightcontactComponent,
-    LeftcontactComponent
+    LeftcontactComponent,
+    SearchComponent,
+    AwardDetailComponent,
+    AwardLevelPipe
   ],
   imports: [
     BrowserModule,
@@ -80,7 +87,7 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
     appRouting
 
   ],
-  providers: [ImageService, ImageFilterPipe],
+  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

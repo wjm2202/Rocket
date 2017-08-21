@@ -1,0 +1,8 @@
+.award-container {
+    margin: 24px;
+    box-shadow: #555 1px 2px 8px 1px;
+    min-height: 660px;
+    width: 1200px;
+    background-position: center;
+    align-content: center;
+}
