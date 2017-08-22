@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, OnChanges } from '@angular/core';
 import { fade } from '../animations/fade';
 import { Observable } from 'rxjs/Rx';
 import { routerAnimation } from '../animations/fadeInAnimation'
@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
     '(window:resize)': 'onResize($event)'
   }
 })
-export class BackgroundComponent implements OnInit {
+export class BackgroundComponent implements OnChanges {
   isFlipped:boolean = false;
   mobile:number = 5;
   width: any;
@@ -46,10 +46,10 @@ export class BackgroundComponent implements OnInit {
     this.router.events.subscribe((res) => { 
       if(this.router.url == '/home'){
         this.displayHome = true;
-        console.log('displayHome: '+this.displayHome);
+        //console.log('displayHome: '+this.displayHome);
       }else{
         this.displayHome = false;
-        console.log('displayHome: '+this.displayHome);
+        //console.log('displayHome: '+this.displayHome);
       }
     this.checkIsMobile();
     });
@@ -61,6 +61,7 @@ export class BackgroundComponent implements OnInit {
     }else{
       this.ismobile = false;
     }
+    //console.log('is mobile test: '+this.ismobile+' screen width: '+this.width);
   }
   displayHomemeth($event){
     this.displayHome = false;
@@ -69,16 +70,17 @@ export class BackgroundComponent implements OnInit {
     this.isFlipped = !this.isFlipped;
   }
   onResize(event){
-    if(event.target.innerWidth <= 768){
+    if(event.target.innerWidth < 767){
+      console.log('resize width: '+event.target.innerWidth);
       this.ismobile = true;
     }
     if(event.target.innerWidth > 768){
+      console.log('resize width: '+event.target.innerWidth);
       this.ismobile = false;
     }
   }
   open(box:number){
     this.checkIsMobile();
-    
     if(this.mobile == box){
       //console.log('box number same: '+box+" mobile: "+this.mobile);
       this.mobile = 0;
@@ -88,8 +90,8 @@ export class BackgroundComponent implements OnInit {
     }
     
   }
-  ngOnInit() {
-
+  ngOnChanges(){
+    this.checkIsMobile();
   }
 
 }

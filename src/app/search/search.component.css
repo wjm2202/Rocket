@@ -1,0 +1,19 @@
+ul{
+    padding: 0;
+    width: 1200px;
+    margin: 20px auto;
+}
+li{
+    display: inline-block;
+}
+
+.tn{
+    margin: 6px;
+    border: 4px solid #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+}
+.lo{
+    margin: 6px;
+    border: 4px solid #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+}

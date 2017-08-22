@@ -15,7 +15,7 @@
 <!-- drawer boxes -->
 
 <!--sponsor teaser mobile-->
-<div *ngIf="displayHome && !ismobile">
+<div *ngIf="displayHome || ismobile">
 <section role="button" (click)="open(1)" class="one-fourth" id="html">
     <i class="fa fa-html5"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
@@ -333,8 +333,8 @@
 
 
 
-<section class="navbar-fixed-bottom" style="width:100%;" id="foot">
-    <div>
+<section  style="width:100%;" id="foot">
+    <div class="navbar-fixed-bottom">
        <app-footer></app-footer>  
     </div>
 </section>
