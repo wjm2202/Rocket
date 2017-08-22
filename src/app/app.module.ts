@@ -42,8 +42,12 @@ import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
+
+import { BecomesponsorComponent } from './becomesponsor/becomesponsor.component';
+
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
+
 
 
 
@@ -73,9 +77,11 @@ import { AwardDetailComponent } from './award-detail/award-detail.component';
     ImageFilterPipe,
     RightcontactComponent,
     LeftcontactComponent,
+    BecomesponsorComponent,
     SearchComponent,
     AwardDetailComponent,
     AwardLevelPipe
+
   ],
   imports: [
     BrowserModule,
