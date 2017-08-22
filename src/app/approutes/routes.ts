@@ -24,7 +24,7 @@ const routes = [
   { path: 'photos/:id', component: ImageDetailComponent },
   { path: 'contact', component: ContactusComponent },
   { path: 'awards/search', component: SearchComponent },
-  { path: 'awards/search/award/:id', component: AwardDetailComponent },
+  { path: 'awards/search/award/:id', component: AwardDetailComponent, pathMatch: 'full' },
   { path: '**', component: EmptyComponent },
   
 

@@ -18,6 +18,16 @@ export class GetawardsService {
     })
     .catch(this.handleError);
   }
+
+  getAward(id:number){
+    return this.http
+    .get('https://webservices-test.aut.ac.nz/ecms/api/awards/'+id)
+    .map((response: Response) => {
+      return <AwardModel[]>response.json();
+    })
+    .catch(this.handleError);
+  }
+
   private handleError(error: Response){
     return Observable.throw(error.statusText);
   }
