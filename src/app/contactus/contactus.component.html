@@ -3,20 +3,16 @@
 </section>
 
 <div class="container m-t-md">
-  <div class="row">
-        <div class="ebussinescard">
-              <img src="../../assets/images/aut_logo.png">
-              <p>Name: Leanne Bint</p>
-              <p>Title: Client</p>
-              <p>Email: lbint@aut.ac.nz</p>
-            </div>
-            
-            <div class="ebussinescard">
-              <img src="../../assets/images/aut_logo.png">
-              <p>Name: Stephen Thorpe</p>
-              <p>Title: Dr</p>
-              <p>Email: stephen.thorpe@aut.ac.nz</p>
-            </div>
+  <!-- Declare div tag and call to generate data from API of SharePoint -->
+  <div class="row" *ngFor="let contact of contacts">
+    <!-- If the contact is visible, it will display.
+    Otherwise, it will hide itself. -->
+    <div class="ebussinescard" *ngIf="contact.adminIsVisable">
+      <img src="../../assets/images/aut_logo.png">
+      <p>Name: {{contact.adminName}}</p>
+      <p>Title: {{contact.adminEmail}}</p>
+      <p>Email: {{contact.contactTitle}}</p>
+    </div>
   </div>
 </div>
 
