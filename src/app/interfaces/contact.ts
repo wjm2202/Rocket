@@ -1,7 +1,7 @@
 export interface ContactModel{
+    adminEmail: string;
     adminId: number;
     adminName: string;
-    adminEmail: string;
-    contactTitle: string;
     adminIsVisable: boolean;
+    contactTitle: string;
 }
