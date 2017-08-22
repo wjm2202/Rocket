@@ -3,9 +3,14 @@
 <div class="row">
   <div class="col-md-12">
     <div [ngStyle]="{'background-color':'whitesmoke'}" class="award-container">
-      
-      <h4>{{award.AwardDegree}}</h4>
-
+      <div [ngStyle]="{'text-align':'center'}">
+        <h1>{{AwardName}}</h1>
+        <h2>{{StudentName}}</h2>
+        <h2>{{AwardDegreeLevel}}</h2>
+        <h2>{{AwardDegree}}</h2>
+        <h2>{{AwardDate}}</h2>
+        <h2>{{AwardBlurb}}</h2>             
+      </div>
     </div>
   </div>
 </div>
