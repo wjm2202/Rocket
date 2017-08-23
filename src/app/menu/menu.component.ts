@@ -1,4 +1,5 @@
 import { Component, OnInit,Output, EventEmitter } from '@angular/core';
+import { AnimatedhamburgerComponent } from '../animatedhamburger/animatedhamburger.component';
 
 @Component({
   selector: 'app-menu',
@@ -7,6 +8,7 @@ import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   @Output() mobile = new EventEmitter();
+  
   constructor() { 
 
   }

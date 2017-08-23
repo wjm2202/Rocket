@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SponsorOpService } from '../services/SponsorOp.service';
 import { UrlStrip } from '../pipes/imagestrip';
 
+
 @Component({
   selector: 'app-signsponsor',
   templateUrl: './signsponsor.component.html',

@@ -1,3 +1,5 @@
+
+
 <md-card>
     <md-input-container>
       <input class="search" mdInput [(ngModel)]="searchQuery" name="search" placeholder="Search for Images">
@@ -6,7 +8,7 @@
     <br>
     <button (click)="searchSponsors()" md-raised-button class="searchButton" type="button">Find Images</button>
   </md-card>
-  
+ <!-- <app-animatedhamburger></app-animatedhamburger> -->
   <div *ngIf="searching">
     <md-progress-bar mode="indeterminate"></md-progress-bar>
   </div>

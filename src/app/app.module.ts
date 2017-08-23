@@ -53,6 +53,7 @@ import { SignsponsorComponent } from './signsponsor/signsponsor.component';
 import { MaterialModule } from '@angular/material';
 //third party modules
 import { MasonryModule } from 'angular2-masonry';
+import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburger.component';
 
 
 
@@ -87,7 +88,8 @@ import { MasonryModule } from 'angular2-masonry';
     AwardDetailComponent,
     AwardLevelPipe,
     SponsorCaraComponent,
-    SignsponsorComponent
+    SignsponsorComponent,
+    AnimatedhamburgerComponent
 
   ],
   imports: [
