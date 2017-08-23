@@ -1,8 +1,13 @@
     <div id="banner">
         <a routerLink="" id="logo"></a>
-        <app-animatedhamburger></app-animatedhamburger>
-        <nav>
-            <a  id="menu-icon"></a>
+        <div *ngIf="ismobile" class="burger">
+            <div (click)="toggleBurger()">
+                <app-animatedhamburger
+                [morf]="morf"></app-animatedhamburger>
+            </div>  
+        </div>
+        <div *ngIf="!ismobile">
+        <nav [class.active]="isopen">
             <ul>
                 <li><a routerLink="" class="current" (click)="onboxChange(0)"  >Home</a></li>
                 <li><a routerLink="sponsors" (click)="onboxChange(0)" >Sponsors</a></li>
@@ -11,4 +16,15 @@
                 <li><a routerLink="contact" (click)="onboxChange(0)" >Contact</a></li>
             </ul>
         </nav>
+        </div>
+    </div>
+    <div [@heightdown] [@heightup] *ngIf="isopen" class="dropdown">
+        <div class="inner-wrapper">
+            <br>
+            <button class="pagebutton" (click)="toggleBurger()" >Home</button>
+            <button class="pagebutton" (click)="toggleBurger()" >Sponsors</button>
+            <button class="pagebutton" (click)="toggleBurger()" >Awards</button>
+            <button class="pagebutton" (click)="toggleBurger()" >Photos</button>
+            <button class="pagebutton" (click)="toggleBurger()" >Contact</button>
+        </div>
     </div>

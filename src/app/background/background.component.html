@@ -1,6 +1,8 @@
 <!-- header -->
 <section class="header">
-  <app-menu (mobile)="open($event)"></app-menu>
+  <app-menu 
+  (mobile)="open($event)"
+  [ismobile]="ismobile"></app-menu>
 </section>
 <!-- end of header -->
 <!-- event slider [@heightdown] [@heightup]-->

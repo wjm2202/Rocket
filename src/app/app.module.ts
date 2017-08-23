@@ -11,10 +11,8 @@ import { FormsModule } from '@angular/forms';
 
 //my components
 import { BackgroundComponent } from './background/background.component';
-import { HeaderComponent } from './header/header.component';
 import { LogoComponent } from './logo/logo.component';
 import { MenuComponent } from './menu/menu.component';
-import { BurgerComponent } from './burger/burger.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { AwardsComponent } from './awards/awards.component';
 import { PhotosComponent } from './photos/photos.component';
@@ -61,10 +59,8 @@ import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburge
   declarations: [
     AppComponent,
     BackgroundComponent,
-    HeaderComponent,
     LogoComponent,
     MenuComponent,
-    BurgerComponent,
     SponsorsComponent,
     AwardsComponent,
     AwardComponent,
