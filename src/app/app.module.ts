@@ -49,6 +49,11 @@ import { BecomesponsorComponent } from './becomesponsor/becomesponsor.component'
 
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
+<<<<<<< HEAD
+import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
+
+=======
+>>>>>>> upstream/master
 import { SignsponsorComponent } from './signsponsor/signsponsor.component';
 //material design module
 import { MaterialModule } from '@angular/material';
@@ -87,6 +92,7 @@ import { MasonryModule } from 'angular2-masonry';
     SearchComponent,
     AwardDetailComponent,
     AwardLevelPipe,
+    SponsorCaraComponent,
     SignsponsorComponent
 
   ],

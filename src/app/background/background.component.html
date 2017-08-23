@@ -1,14 +1,12 @@
-
 <!-- header -->
 <section class="header">
-    <app-menu
-    (mobile)="open($event)"></app-menu>
+  <app-menu (mobile)="open($event)"></app-menu>
 </section>
 <!-- end of header -->
 <!-- event slider [@heightdown] [@heightup]-->
-<div  *ngIf="displayHome">
+<div *ngIf="displayHome">
   <section class="event" *ngIf="!ismobile">
-      <app-fullwidth></app-fullwidth>
+    <app-fullwidth></app-fullwidth>
   </section>
 </div>
 <!-- end of event slider -->
@@ -16,158 +14,141 @@
 
 <!--sponsor teaser mobile-->
 <div *ngIf="displayHome || ismobile">
-<section role="button" (click)="open(1)" class="one-fourth" id="html">
+  <section role="button" (click)="open(1)" class="one-fourth" id="html">
     <i class="fa fa-html5"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
-</section>
-<div [@dropdown] *ngIf="ismobile && mobile == 1">
-  <section class="inner-wrapper">
-    <aside id="sponsoraside">
-      <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
-      <h5 style="margin-top:20px;">Your Orginization here</h5>
-      <p>the details about your orginization and products here</p>
-      <h6>WWW.YourWebSite.co.nz</h6>
-    </aside>
-    <article id="sponsorarticle">
-      <h2 style="text-align:center;"> Become a Sponsor </h2>
-      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-              ipsum appareat no mea, mei bonorum principes ne. 
-              Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.
-              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-              ipsum appareat no mea, mei bonorum principes ne. 
-              Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.</p>
-    </article>
-  </section> 
-</div>
+  </section>
+  <div [@dropdown] *ngIf="ismobile && mobile == 1">
+    <section class="inner-wrapper">
+      <aside id="sponsoraside">
+        <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
+        <h5 style="margin-top:20px;">Your Orginization here</h5>
+        <p>the details about your orginization and products here</p>
+        <h6>WWW.YourWebSite.co.nz</h6>
+      </aside>
+      <article id="sponsorarticle">
+        <h2 style="text-align:center;"> Become a Sponsor </h2>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+          iudicabit intellegebat eos ne, cetero impedit offendit vis ea. Lorem ipsum dolor sit amet, prima option eleifend
+          cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit
+          offendit vis ea.</p>
+      </article>
+    </section>
+  </div>
 
-<!--awards teaser mobile-->
+  <!--awards teaser mobile-->
 
-<section role="button" (click)="open(2)" class="one-fourth" id="css">
+  <section role="button" (click)="open(2)" class="one-fourth" id="css">
     <i class="fa fa-css3"></i>
     <h3 class="disable_text_highlighting">AWARDS</h3>
-</section>
-<div [@dropdown] *ngIf="ismobile && mobile == 2">
-    <section class="inner-wrapper">
-        <article id="awardsarticle">
-      <h2 style="text-align:center;"> ECMS Awards </h2>
-        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-              ipsum appareat no mea, mei bonorum principes ne. 
-              Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.
-              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-              ipsum appareat no mea, mei bonorum principes ne. 
-              Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.</p>
-    </article>  
-    <aside id="awardsaside">
-      <div class="card">
-        <section class="holder">
-          <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
-        <!-- front -->
-            <figure class="front" (click)="cardFlip()">
-              <img class="image" src="../../assets/images/i1.jpg" alt="Card image cap">
-              <h5>Name an award</h5>
-              <h5>given to a student</h5>
-              <h6>who majors in</h6>
-              <p>Create an award blurb to show support</p>
-            </figure>
-        <!-- back  -->
-            <figure class="back" (click)="cardFlip()">
-              <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
-              <h5 style="margin-top:20px;">Your Orginization here</h5>
-              <p>the details about your orginization and products here</p>
-              <h6>WWW.YourWebSite.co.nz</h6>
-            </figure>
-          </div>
-        </section>
-      </div>
-    </aside>
   </section>
-</div>
+  <div [@dropdown] *ngIf="ismobile && mobile == 2">
+    <section class="inner-wrapper">
+      <article id="awardsarticle">
+        <h2 style="text-align:center;"> ECMS Awards </h2>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+          iudicabit intellegebat eos ne, cetero impedit offendit vis ea. Lorem ipsum dolor sit amet, prima option eleifend
+          cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit
+          offendit vis ea.</p>
+      </article>
+      <aside id="awardsaside">
+        <div class="card">
+          <section class="holder">
+            <div id="card" [ngClass]="isFlipped == true ? 'flipped' : '' ">
+              <!-- front -->
+              <figure class="front" (click)="cardFlip()">
+                <img class="image" src="../../assets/images/i1.jpg" alt="Card image cap">
+                <h5>Name an award</h5>
+                <h5>given to a student</h5>
+                <h6>who majors in</h6>
+                <p>Create an award blurb to show support</p>
+              </figure>
+              <!-- back  -->
+              <figure class="back" (click)="cardFlip()">
+                <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
+                <h5 style="margin-top:20px;">Your Orginization here</h5>
+                <p>the details about your orginization and products here</p>
+                <h6>WWW.YourWebSite.co.nz</h6>
+              </figure>
+            </div>
+          </section>
+        </div>
+      </aside>
+    </section>
+  </div>
 
-<!--photos teaser mobile-->
+  <!--photos teaser mobile-->
 
-<section role="button" (click)="open(3)" class="one-fourth" id="seo">
+  <section role="button" (click)="open(3)" class="one-fourth" id="seo">
     <i class="fa fa-search"></i>
     <h3 class="disable_text_highlighting">PHOTOS</h3>
-</section>
-<div class="test3" [@dropdown] *ngIf="ismobile && mobile == 3">
+  </section>
+  <div class="test3" [@dropdown] *ngIf="ismobile && mobile == 3">
     <section class="inner-wrapper">
-    <aside id="photoaside">
+      <aside id="photoaside">
         <img src="../../assets/images/i1.jpg">
-    </aside>
-    <article id="photoarticle">
+      </aside>
+      <article id="photoarticle">
         <h2> Photos</h2>
-        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-             ipsum appareat no mea, mei bonorum principes ne. 
-             Mandamus iudicabit intellegebat eos ne,
-              cetero impedit offendit vis ea.</p>
-    </article>
-</section>
-</div>
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+          iudicabit intellegebat eos ne, cetero impedit offendit vis ea.</p>
+      </article>
+    </section>
+  </div>
 
-<!--contact teaser mobile-->
+  <!--contact teaser mobile-->
 
-<section role="button" (click)="open(4)" class="one-fourth" id="social">
+  <section role="button" (click)="open(4)" class="one-fourth" id="social">
     <i class="fa fa-users"></i>
-    <h3 class="disable_text_highlighting" >CONTACT</h3>
-</section>
-  
-<div class="test4" [@dropdown] *ngIf="ismobile && mobile == 4">
+    <h3 class="disable_text_highlighting">CONTACT</h3>
+  </section>
+
+  <div class="test4" [@dropdown] *ngIf="ismobile && mobile == 4">
     <section class="inner-wrapper-2">
-    <article id="contactarticle">
+      <article id="contactarticle">
         <h2> Contacts </h2>
-        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-             ipsum appareat no mea, mei bonorum principes ne. 
-             Mandamus iudicabit intellegebat eos ne,
-              cetero impedit offendit vis ea.
-            Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-             ipsum appareat no mea, mei bonorum principes ne. 
-             Mandamus iudicabit intellegebat eos ne,
-              cetero impedit offendit vis ea.</p>
-    </article>
-    <aside id="contactaside">
+        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+          iudicabit intellegebat eos ne, cetero impedit offendit vis ea. Lorem ipsum dolor sit amet, prima option eleifend
+          cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit
+          offendit vis ea.</p>
+      </article>
+      <aside id="contactaside">
         <img src="../../assets/images/i3.jpg">
-    </aside>
-</section>
-</div>
+      </aside>
+    </section>
+  </div>
 </div>
 <!-- router outlet desktop -->
 
 <!--sponsor teaser laptop-->
 
 <div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 1">
- 
+
   <section class="inner-wrapper">
     <article id="sponsorarticle">
-      <button type="button" routerLink="sponsors" style="text-align:center; float:right; height:50px;" class="btn btn-primary" (click)="open(0)">Go To Sponsors Page</button>
+      <button type="button" routerLink="sponsors" style="text-align:center; float:right; height:50px;" class="btn btn-primary"
+        (click)="open(0)">Go To Sponsors Page</button>
       <h2 style="text-align:center;"> Become a Sponsor </h2>
-      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-              ipsum appareat no mea, mei bonorum principes ne. 
-              Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.
-              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-              ipsum appareat no mea, mei bonorum principes ne. 
-              Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.</p>
-                
-    </article> 
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+        iudicabit intellegebat eos ne, cetero impedit offendit vis ea. Lorem ipsum dolor sit amet, prima option eleifend
+        cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit offendit
+        vis ea.</p>
+
+    </article>
     <aside id="sponsoraside">
       <div class="card">
         <img class="card-img-top" src="../../assets/images/frucor.jpg" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title" style="text-align:center;">Card title</h4>
-          <p class="card-text" style="color:black;">Your orginization can use this oportunity to promote your brand
-             or to explain your business and links to the University. You can enguage the next generation.</p>
+          <p class="card-text" style="color:black;">Your orginization can use this oportunity to promote your brand or to explain your business and links to the University.
+            You can enguage the next generation.</p>
         </div>
-    
+
         <a href="#" class="btn btn-primary" style="height:50px;">Be A Sponsor</a>
-    
+
       </div>
     </aside>
-  </section> 
+  </section>
 </div>
 
 <!--awards teaser laptop-->
@@ -175,23 +156,19 @@
 <div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 2">
   <section class="inner-wrapper">
     <article id="awardsarticle">
-       <button type="button" routerLink="awards" style="text-align:center; float:right; height:50px; " class="btn btn-primary" (click)="open(0)">Go To Awards Page</button>
+      <button type="button" routerLink="awards" style="text-align:center; float:right; height:50px; " class="btn btn-primary" (click)="open(0)">Go To Awards Page</button>
       <h2 style="text-align:center;"> ECMS Awards </h2>
-        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-              ipsum appareat no mea, mei bonorum principes ne. 
-              Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.
-              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-              ipsum appareat no mea, mei bonorum principes ne. 
-              Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.</p>
-               
-    </article>  
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+        iudicabit intellegebat eos ne, cetero impedit offendit vis ea. Lorem ipsum dolor sit amet, prima option eleifend
+        cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit offendit
+        vis ea.</p>
+
+    </article>
     <aside id="awardsaside">
       <div class="card">
         <div class="holder">
-          <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
-        <!-- front -->
+          <div id="card" [ngClass]="isFlipped == true ? 'flipped' : '' ">
+            <!-- front -->
             <figure class="front" (click)="cardFlip()">
               <img class="image" src="../../assets/images/i1.jpg" alt="Card image cap">
               <h5>Name an award</h5>
@@ -200,7 +177,7 @@
               Create an award blurb to show support
               <h5>(Click Me)</h5>
             </figure>
-        <!-- back  -->
+            <!-- back  -->
             <figure class="back" (click)="cardFlip()">
               <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
               <h5 style="margin-top:20px;">Your Orginization here</h5>
@@ -216,45 +193,41 @@
 <!--photos teaser laptop-->
 
 <div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 3">
- 
-    <section class="inner-wrapper">
+
+  <section class="inner-wrapper">
     <article id="photoarticle">
-        <img src="../../assets/images/i2.jpg">    
+      <img src="../../assets/images/i2.jpg">
     </article>
     <aside id="photoaside">
-        
-        <h2> ECMS Photos</h2>
-        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-               ipsum appareat no mea, mei bonorum principes ne. 
-               Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.</p>
-                <button routerLink="photos" style="text-align:center; float:right; height:50px" type="button" class="btn btn-primary" (click)="open(0)">Go To Photos Page</button>
+
+      <h2> ECMS Photos</h2>
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+        iudicabit intellegebat eos ne, cetero impedit offendit vis ea.</p>
+      <button routerLink="photos" style="text-align:center; float:right; height:50px" type="button" class="btn btn-primary" (click)="open(0)">Go To Photos Page</button>
     </aside>
-</section>
+  </section>
 </div>
 <!--contacts teaser laptop-->
 
 <div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 4">
-    <section class="inner-wrapper"> <!--routerLink="sponsors"-->
+  <section class="inner-wrapper">
+    <!--routerLink="sponsors"-->
     <aside id="contactaside">
-        
-        <h2> Contact </h2>
-        <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-               ipsum appareat no mea, mei bonorum principes ne. 
-               Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.
-              Lorem ipsum dolor sit amet, prima option eleifend cu mei,
-               ipsum appareat no mea, mei bonorum principes ne. 
-               Mandamus iudicabit intellegebat eos ne,
-                cetero impedit offendit vis ea.</p>
-                <button routerLink="contact" style="text-align:center; float:right; height:50px; " type="button" class="btn btn-primary" (click)="open(0)">Go To Contacts page</button>
+
+      <h2> Contact </h2>
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+        iudicabit intellegebat eos ne, cetero impedit offendit vis ea. Lorem ipsum dolor sit amet, prima option eleifend
+        cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit offendit
+        vis ea.</p>
+      <button routerLink="contact" style="text-align:center; float:right; height:50px; " type="button" class="btn btn-primary"
+        (click)="open(0)">Go To Contacts page</button>
     </aside>
     <article id="contactarticle">
-       
-       <img src="../../assets/images/i3.jpg">
-             
+
+      <img src="../../assets/images/i3.jpg">
+
     </article>
-</section>
+  </section>
 </div>
 <!-- end of drawer boxes -->
 <div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 0">
@@ -263,78 +236,75 @@
 
 
 <div *ngIf="displayHome">
-    <section class="inner-wrapper-2">
-        <article id="tablet">
-            <img src="../../assets/images/i1.jpg">
-        </article>
-        <aside id="tablet">
-            <h2 style="color:black"> Welcome to ECMS Awards</h2>
-            <p style="color:black">Welcome to Engineering, Computer &amp; Mathematical Sciences at AUT.
-                A degree in engineering or computer and mathematical sciences provides an opportunity for our graduands to play a leading role in NZ’s technological, social and economic development. 
-                Our programmes achieve the highest standards in student experience and employer satisfaction. 
-                Our teaching and research staff are among the best in NZ and internationally. 
-                Our staff are interested in shaping the future of our youth in the evolving fields of ICT and Engineering and enjoy being part of our students’ success.
-                We enjoy close relationships with industry in the planning, design and review of our programmes and in the real world experience embedded in each of our student’s studies.
-                We warmly welcome you to connect with our vibrant school.  We value your interaction and collaboration and want to learn more about your business and the opportunities for us to partner and support you in achieving your success.</p>
-        </aside>
-    </section>
-    
-    <!-- event home page -->
-    
-    <section class="inner-wrapper-2">
-        <article id="desktop">
-            <h2 style="color:black"> Event </h2>
-            <p style="color:black">A celebratory evening is held at the end of the university year in December.
-                The purpose is to acknowledge the achievement of top students and graduands
-                 who have attained high levels of academic success.
-                The event is an enjoyable evening for prize winners, their families, 
-                partners and friends, our dedicated staff, together with our colleagues and sponsors from industry
-                 who can share in the recognition and success of our winning students.
-                We welcome your interest in being a sponsor for these Awards.
-                  There may be a particular area of interest or discipline your organisation is interested in sponsoring.
-                    Typically the value of industry prizes are from $1,000-$2,000.  
-                    Students are extremely grateful for your support in this area.</p>
-        </article>
-        <aside id="desktop">
-            <img src="../../assets/images/i3.jpg">
-        </aside>
-    </section>
-    
-    <!--sponsor home page -->
-    <section class="inner-wrapper-2">
-        <aside id="mobile">
-            <h2 style="color:black"> Become a Sponsor </h2>
-            <p style="color:black">A celebratory evening is held at the end of the university year in December.
-                The purpose is to acknowledge the achievement of top students and graduands
-                 who have attained high levels of academic success.
-                The event is an enjoyable evening for prize winners, their families, 
-                partners and friends, our dedicated staff, together with our colleagues and sponsors from industry
-                 who can share in the recognition and success of our winning students.
-                We welcome your interest in being a sponsor for these Awards.
-                  There may be a particular area of interest or discipline your organisation is interested in sponsoring.
-                    Typically the value of industry prizes are from $1,000-$2,000.  
-                    Students are extremely grateful for your support in this area.</p>
-            
-        </aside>
-        <article id="mobile">
-            <img src="../../assets/images/i3.jpg">
-        </article>
-    </section>
-    <!-- sponsor carasouel -->
-    <section class="sponsorCara" id="spcara">
-        <div>
-            
-            
-            
-            
-        </div>
-    </section>
-</div>  <!--end of display home-->
+  <section class="inner-wrapper-2">
+    <article id="tablet">
+      <img src="../../assets/images/i1.jpg">
+    </article>
+    <aside id="tablet">
+      <h2 style="color:black"> Welcome to ECMS Awards</h2>
+      <p style="color:black">Welcome to Engineering, Computer &amp; Mathematical Sciences at AUT. A degree in engineering or computer and mathematical
+        sciences provides an opportunity for our graduands to play a leading role in NZ’s technological, social and economic
+        development. Our programmes achieve the highest standards in student experience and employer satisfaction. Our teaching
+        and research staff are among the best in NZ and internationally. Our staff are interested in shaping the future of
+        our youth in the evolving fields of ICT and Engineering and enjoy being part of our students’ success. We enjoy close
+        relationships with industry in the planning, design and review of our programmes and in the real world experience
+        embedded in each of our student’s studies. We warmly welcome you to connect with our vibrant school. We value your
+        interaction and collaboration and want to learn more about your business and the opportunities for us to partner
+        and support you in achieving your success.</p>
+    </aside>
+  </section>
+
+  <!-- event home page -->
+
+  <section class="inner-wrapper-2">
+    <article id="desktop">
+      <h2 style="color:black"> Event </h2>
+      <p style="color:black">A celebratory evening is held at the end of the university year in December. The purpose is to acknowledge the achievement
+        of top students and graduands who have attained high levels of academic success. The event is an enjoyable evening
+        for prize winners, their families, partners and friends, our dedicated staff, together with our colleagues and sponsors
+        from industry who can share in the recognition and success of our winning students. We welcome your interest in being
+        a sponsor for these Awards. There may be a particular area of interest or discipline your organisation is interested
+        in sponsoring. Typically the value of industry prizes are from $1,000-$2,000. Students are extremely grateful for
+        your support in this area.</p>
+    </article>
+    <aside id="desktop">
+      <img src="../../assets/images/i3.jpg">
+    </aside>
+  </section>
+
+  <!--sponsor home page -->
+  <section class="inner-wrapper-2">
+    <aside id="mobile">
+      <h2 style="color:black"> Become a Sponsor </h2>
+      <p style="color:black">A celebratory evening is held at the end of the university year in December. The purpose is to acknowledge the achievement
+        of top students and graduands who have attained high levels of academic success. The event is an enjoyable evening
+        for prize winners, their families, partners and friends, our dedicated staff, together with our colleagues and sponsors
+        from industry who can share in the recognition and success of our winning students. We welcome your interest in being
+        a sponsor for these Awards. There may be a particular area of interest or discipline your organisation is interested
+        in sponsoring. Typically the value of industry prizes are from $1,000-$2,000. Students are extremely grateful for
+        your support in this area.</p>
+
+    </aside>
+    <article id="mobile">
+      <img src="../../assets/images/i3.jpg">
+    </article>
+  </section>
+  <!-- sponsor carasouel -->
+  <section class="sponsorCara" id="spcara">
+    <div>
+
+      <app-sponsor-cara></app-sponsor-cara>
 
 
-
-<section  style="width:100%;" id="foot">
-    <div class="navbar-fixed-bottom">
-       <app-footer></app-footer>  
     </div>
+  </section>
+</div>
+<!--end of display home-->
+
+
+
+<section style="width:100%;" id="foot">
+  <div class="navbar-fixed-bottom">
+    <app-footer></app-footer>
+  </div>
 </section>
