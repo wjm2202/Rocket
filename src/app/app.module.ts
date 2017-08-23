@@ -44,9 +44,7 @@ import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
-
 import { BecomesponsorComponent } from './becomesponsor/becomesponsor.component';
-
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
 import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
@@ -55,6 +53,7 @@ import { SignsponsorComponent } from './signsponsor/signsponsor.component';
 import { MaterialModule } from '@angular/material';
 //third party modules
 import { MasonryModule } from 'angular2-masonry';
+import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburger.component';
 
 
 
@@ -89,7 +88,8 @@ import { MasonryModule } from 'angular2-masonry';
     AwardDetailComponent,
     AwardLevelPipe,
     SponsorCaraComponent,
-    SignsponsorComponent
+    SignsponsorComponent,
+    AnimatedhamburgerComponent
 
   ],
   imports: [
