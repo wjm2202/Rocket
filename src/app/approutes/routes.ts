@@ -13,13 +13,14 @@ import { GalleryComponent } from '../gallery/gallery.component';
 import { ImageDetailComponent } from '../image-detail/image-detail.component';
 import { SearchComponent } from '../search/search.component';
 import { AwardDetailComponent } from '../award-detail/award-detail.component';
+import { SignsponsorComponent } from '../signsponsor/signsponsor.component';
 import { RouterModule } from '@angular/router';
 
 
 const routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'awards', component: AwardsComponent },
-  { path: 'sponsors', component: SponsorsComponent },
+  { path: 'sponsors', component: SignsponsorComponent },
   { path: 'photos', component: PhotosComponent },
   { path: 'photos/:id', component: ImageDetailComponent },
   { path: 'contact', component: ContactusComponent },

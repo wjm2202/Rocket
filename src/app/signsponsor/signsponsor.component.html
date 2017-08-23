@@ -1,0 +1,38 @@
+<md-card>
+    <md-input-container>
+      <input class="search" mdInput [(ngModel)]="searchQuery" name="search" placeholder="Search for Images">
+    </md-input-container>
+    {{searchQuery}}
+    <br>
+    <button (click)="searchSponsors()" md-raised-button class="searchButton" type="button">Find Images</button>
+  </md-card>
+  
+  <div *ngIf="searching">
+    <md-progress-bar mode="indeterminate"></md-progress-bar>
+  </div>
+  
+  <md-card>
+    <h4 *ngIf="sponsorsFound" md-subeader>Results</h4>
+    <masonry [useImagesLoaded]="true">
+      <masonry-brick *ngFor="let award of potential" class="image-container">  <!-- write a pipe for herer  -->
+        <md-card>
+         <!-- <a href="{{award.pageURL}}" target="_blank"> -->
+            <md-card-header>
+                <img src="{{(award.SponsorLogo | stripurl)}}">
+            <!--  <div class="avatar" md-card-avatar [ngStyle]="{'height':'40px','width':'40px','background-image':'url(../../assets/images/tick.png)'}"></div>-->
+              <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
+            </md-card-header>
+            <!--<img md-card-image src="{{award.webformatURL}}">-->
+            <md-card-content>
+              <p>Award: {{award.AwardName}}</p>
+              <p>Date: {{award.AwardDate}}</p>
+              <p>Degree: {{award.AwardDegree}}</p>
+              <p>Award Details: {{award.AwardBlurb}}</p>
+              
+            </md-card-content>
+        <!--  </a>   -->
+        </md-card>
+        <br><br>
+      </masonry-brick>
+    </masonry>
+  </md-card> 

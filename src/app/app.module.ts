@@ -7,6 +7,7 @@ import { appRouting } from './approutes/routes';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 //my components
 import { BackgroundComponent } from './background/background.component';
@@ -29,6 +30,7 @@ import { GetawardsService } from './services/getawards.service';
 import { GetMainSponsorService } from './services/getSponsor.service';
 import { ImageService } from './services/Image.Service';
 import { AwardsSearchService } from './services/awards-search.service';
+import { SponsorOpService } from './services/SponsorOp.service';
 //pipes
 import { UrlStrip } from './pipes/imagestrip';
 import { ImageFilterPipe } from './pipes/filter.pipe';
@@ -49,6 +51,11 @@ import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
 import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
 
+import { SignsponsorComponent } from './signsponsor/signsponsor.component';
+//material design module
+import { MaterialModule } from '@angular/material';
+//third party modules
+import { MasonryModule } from 'angular2-masonry';
 
 
 
@@ -82,20 +89,24 @@ import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
     SearchComponent,
     AwardDetailComponent,
     AwardLevelPipe,
-    SponsorCaraComponent
+    SponsorCaraComponent,
+    SignsponsorComponent
 
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     HttpModule,
     HttpClientModule,
     NgbModule.forRoot(),
     CarouselModule.forRoot(),
-    appRouting
+    appRouting,
+    MaterialModule,
+    MasonryModule
 
   ],
-  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe],
+  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
