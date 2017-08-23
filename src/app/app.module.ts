@@ -47,6 +47,7 @@ import { BecomesponsorComponent } from './becomesponsor/becomesponsor.component'
 
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
+import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
 
 
 
@@ -80,7 +81,8 @@ import { AwardDetailComponent } from './award-detail/award-detail.component';
     BecomesponsorComponent,
     SearchComponent,
     AwardDetailComponent,
-    AwardLevelPipe
+    AwardLevelPipe,
+    SponsorCaraComponent
 
   ],
   imports: [

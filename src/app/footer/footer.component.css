@@ -1,3 +1,23 @@
-h6 {
-    background-color: peachpuff;
+footer {
+    opacity:.3;
+    bottom:0;
+    position:fixed;
+    width:100%;
+    background-color:#000;
+    color:#FFF;
+}
+
+footer .fl {
+    float:left;
+    margin-left:8%;
+}
+
+.created {
+    margin-right:8%;
+    float:right;
+}
+
+footer:hover {
+    opacity:1.0;
+    height:20%;
 }
