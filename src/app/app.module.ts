@@ -44,16 +44,10 @@ import { PhototeaserComponent } from './phototeaser/phototeaser.component';
 import { ContactteaserComponent } from './contactteaser/contactteaser.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
-
 import { BecomesponsorComponent } from './becomesponsor/becomesponsor.component';
-
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
-<<<<<<< HEAD
 import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
-
-=======
->>>>>>> upstream/master
 import { SignsponsorComponent } from './signsponsor/signsponsor.component';
 //material design module
 import { MaterialModule } from '@angular/material';
