@@ -25,7 +25,36 @@ export class AwardsComponent implements OnInit {
   
 
   ngOnInit() {
-    this.getAwards();
+    //this.getAwards();
+    this.awards = this.AWARDS;
   }
-  
+  AWARDS = [
+    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
+    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
+    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
+    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
+    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
+    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
+    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
+    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
+    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
+    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
+    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
+    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'}
+  ];
 }
+
+/**
+ *      awardBlub: string;
+  awardDate: string;
+  awardDegree:string;
+  awardDegreeLevel:string;
+  awardId: number;
+  awardName: string;
+  sponsorLink: string;
+  sponsorLogo: string;
+  sponsorName: string;
+  studentName: string;
+  awardSponsorBlurb: string;
+ * 
+ */

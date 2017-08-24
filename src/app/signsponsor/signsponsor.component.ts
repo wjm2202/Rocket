@@ -37,6 +37,7 @@ export class SignsponsorComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.searchSponsors();
   }
 
 }
