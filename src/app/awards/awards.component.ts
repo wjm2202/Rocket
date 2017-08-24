@@ -25,8 +25,8 @@ export class AwardsComponent implements OnInit {
   
 
   ngOnInit() {
-    //this.getAwards();
-    this.awards = this.AWARDS;
+    this.getAwards();
+    //this.awards = this.AWARDS;
   }
   AWARDS = [
     {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',

@@ -19,12 +19,12 @@ import { RouterModule } from '@angular/router';
 
 const routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'awards', component: AwardsComponent },
-  { path: 'sponsors', component: SignsponsorComponent },
-  { path: 'photos', component: PhotosComponent },
-  { path: 'photos/:id', component: ImageDetailComponent },
-  { path: 'contact', component: ContactusComponent },
-  { path: 'awards/search', component: SearchComponent },
+  { path: 'awards', component: AwardsComponent , pathMatch: 'full'},
+  { path: 'sponsors', component: SignsponsorComponent , pathMatch: 'full'},
+  { path: 'photos', component: PhotosComponent, pathMatch: 'full' },
+  { path: 'photos/:id', component: ImageDetailComponent , pathMatch: 'full'},
+  { path: 'contact', component: ContactusComponent , pathMatch: 'full'},
+  { path: 'awards/search', component: SearchComponent, pathMatch: 'full' },
   { path: 'awards/search/award/:id', component: AwardDetailComponent, pathMatch: 'full' },
   { path: '**', component: EmptyComponent },
   

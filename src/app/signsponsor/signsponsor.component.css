@@ -29,3 +29,24 @@
     padding: 8px;
     margin-bottom: 12px;
 }
+.forms{
+    margin: 6px;
+    padding: 10px;
+    border: 4px solid #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+}
+.left{
+    width: 50%;
+    display: inline-block;
+}
+.right{
+    width: 40%;
+    display: inline-block;
+}
+.awardCard{
+    margin:10%;
+    align-content: center;
+}
+p{
+    text-align: center;
+}
