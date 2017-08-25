@@ -24,7 +24,6 @@
   </div>
 </div>
 -->
-
 <md-card class="card">
     <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
     <figure class="front" (click)="cardFlip()">
@@ -40,16 +39,16 @@
       </md-card-content>
     </figure>
     <figure class="back" (click)="cardFlip()">
-        <md-card-header>
-          <img class="image" src="{{award.SponsorLogo | stripurl}}" style="max-width:275px; max-height:100px;" alt="Card image cap">
-        </md-card-header>
-        <md-card-content>
-          <h5 style="margin-top:20px;">{{award.SponsorName}}</h5>
-          <p>{{award.awardSponsorBlurb}}</p>
-          <h6>{{award.SponsorLink}}</h6>
-        </md-card-content>
-      </figure>
+      <md-card-header>
+        <img class="image" src="{{award.SponsorLogo | stripurl}}" style="max-width:275px; max-height:100px;" alt="Card image cap">
+      </md-card-header>
+      <md-card-content>
+        <h5 style="margin-top:20px;">{{award.SponsorName}}</h5>
+        <p>{{award.awardSponsorBlurb}}</p>
+        <h6>{{award.SponsorLink}}</h6>
+      </md-card-content>
+    </figure>
     </div>
 </md-card>
 <br><br>
-  
+  <!--    -->

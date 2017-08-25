@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { UrlStrip } from '../pipes/imagestrip';
 import { GetawardsService } from '../services/getawards.service';
@@ -13,12 +13,17 @@ import { Router } from '@angular/router';
 })
 export class AwardsComponent implements OnInit {
   awards: AwardModel[];
+  isFlipped:boolean = false;
   constructor(private http: HttpClient,
               private AllAwards :GetawardsService,
               private router: Router) { 
-         
-  }
   
+  }
+  cardFlip(){
+    console.log('flipped clicked');
+    this.isFlipped = !this.isFlipped;
+    //console.log("flipped");
+  }
     
   getAwards(): void {
     this.AllAwards.getAllAwards()
@@ -29,22 +34,30 @@ export class AwardsComponent implements OnInit {
   
 
   ngOnInit() {
-    this.getAwards();
-    //this.awards = this.AWARDS;
+    //this.getAwards();
+    this.awards = this.AWARDS;
   }
   AWARDS = [
-    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
-    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
-    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
-    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
-    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
-    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
-    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
-    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
-    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
-    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
-    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
-    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'}
+    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardName':'best best','SponsorLink':'best best',
+    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best','AwardSponsorBlurb':'best best'},
+    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardName':'best best','SponsorLink':'best best',
+    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best','AwardSponsorBlurb':'best best'},
+    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardName':'best best','SponsorLink':'best best',
+    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best','AwardSponsorBlurb':'best best'},
+    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardName':'best best','SponsorLink':'best best',
+    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best','AwardSponsorBlurb':'best best'},
+    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardName':'best best','SponsorLink':'best best',
+    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best','AwardSponsorBlurb':'best best'},
+    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardName':'best best','SponsorLink':'best best',
+    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best','AwardSponsorBlurb':'best best'}
+    
+  
   ];
 }
 
