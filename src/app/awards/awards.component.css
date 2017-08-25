@@ -18,7 +18,7 @@
     margin-top: 20px;
 }
 .image-container{
-    width: 300px;
+    width: 270px;
     min-height: 400px;
     max-width: 300px;
     margin: 8px;
@@ -51,7 +51,7 @@ p{
     text-align: center;
 }
 #card {
-    width: 280px;
+    width: 250px;
     min-height: 380px;
     max-width: 300px;
     margin: 8px;

@@ -19,7 +19,6 @@ import { PhotosComponent } from './photos/photos.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { FooterComponent } from './footer/footer.component';
 import { FullwidthComponent } from './fullwidth/fullwidth.component';
-import { AwardComponent } from './award/award.component'; 
 import { EmptyComponent } from './empty/empty.component';
 import { RightcontactComponent } from './rightcontact/rightcontact.component';
 import { LeftcontactComponent} from './leftcontact/leftcontact.component';
@@ -36,13 +35,8 @@ import { AwardLevelPipe } from './pipes/filterAwards.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AwardteaserComponent } from './awardteaser/awardteaser.component';
-import { SponsorsteaserComponent } from './sponsorsteaser/sponsorsteaser.component';
-import { PhototeaserComponent } from './phototeaser/phototeaser.component';
-import { ContactteaserComponent } from './contactteaser/contactteaser.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
-import { BecomesponsorComponent } from './becomesponsor/becomesponsor.component';
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
 import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
@@ -63,23 +57,17 @@ import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburge
     MenuComponent,
     SponsorsComponent,
     AwardsComponent,
-    AwardComponent,
     PhotosComponent,
     ContactusComponent,
     FooterComponent,
     FullwidthComponent,
     EmptyComponent,
-    AwardteaserComponent,
-    SponsorsteaserComponent,
-    PhototeaserComponent,
-    ContactteaserComponent,
     UrlStrip,
     GalleryComponent,
     ImageDetailComponent,
     ImageFilterPipe,
     RightcontactComponent,
     LeftcontactComponent,
-    BecomesponsorComponent,
     SearchComponent,
     AwardDetailComponent,
     AwardLevelPipe,

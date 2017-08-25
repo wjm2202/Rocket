@@ -3,13 +3,13 @@
 <button routerLink="../awards/search" style="text-align:center; height:50px" type="button" class="btn btn-primary" >Search</button>
 
 <H1 style="text-align:center">ECMS Awards</H1>
-<masonry [useImagesLoaded]="true">
+<masonry [useImagesLoaded]="true" class="border">
   <masonry-brick class="cards" *ngFor="let award of awards" class="image-container" (click)="cardFlip()">
     <div class="card">
       <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
         <md-card class="front">
           <md-card-header >
-            <img class="image" src="../../assets/images/aut_logo.png"  >
+            <img class="image" src="../../assets/images/aut_logo.png">
           </md-card-header>
           <md-card-content>
             <p>Award: {{award.AwardName}}</p>
