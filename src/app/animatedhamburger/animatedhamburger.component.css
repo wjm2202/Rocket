@@ -11,7 +11,7 @@ button{
     transform: translateX(-40px);
     position: absolute;
     height: 8px;
-    background: #262626;
+    background: white;
     width: 55px;
     transition: .5s;
     transform-origin: center;
