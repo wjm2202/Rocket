@@ -44,6 +44,8 @@ export class BackgroundComponent implements OnChanges {
 
   constructor(private router: Router) {
     this.router.events.subscribe((res) => { 
+      this.checkIsMobile();
+      this.mobile =0;
       if(this.router.url == '/home'){
         this.displayHome = true;
         //console.log('displayHome: '+this.displayHome);
@@ -51,7 +53,7 @@ export class BackgroundComponent implements OnChanges {
         this.displayHome = false;
         //console.log('displayHome: '+this.displayHome);
       }
-    this.checkIsMobile();
+    
     });
    }
   checkIsMobile(){

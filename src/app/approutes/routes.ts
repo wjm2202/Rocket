@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
 import { BackgroundComponent } from '../background/background.component';
 import { SponsorsComponent } from '../sponsors/sponsors.component';
 import { AwardsComponent } from '../awards/awards.component';
@@ -14,7 +15,7 @@ import { ImageDetailComponent } from '../image-detail/image-detail.component';
 import { SearchComponent } from '../search/search.component';
 import { AwardDetailComponent } from '../award-detail/award-detail.component';
 import { SignsponsorComponent } from '../signsponsor/signsponsor.component';
-import { RouterModule } from '@angular/router';
+
 
 
 const routes = [
@@ -23,13 +24,11 @@ const routes = [
   { path: 'sponsors', component: SignsponsorComponent },
   { path: 'photos', component: PhotosComponent },
   { path: 'photos/:id', component: ImageDetailComponent },
-  { path: 'contact', component: ContactusComponent },
+  { path: 'contact', component: ContactusComponent  },
   { path: 'awards/search', component: SearchComponent },
-  { path: 'awards/search/award/:id', component: AwardDetailComponent, pathMatch: 'full' },
+  { path: 'awards/search/award/:id', component: AwardDetailComponent },
   { path: '**', component: EmptyComponent },
   
 
 ];
-export const appRouting = RouterModule.forRoot(routes, {
-  useHash: false
-});
+export const appRouting: ModuleWithProviders = RouterModule.forRoot(routes);

@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { UrlStrip } from '../pipes/imagestrip';
 import { GetawardsService } from '../services/getawards.service';
 import { AwardModel } from '../interfaces/awardcard';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-awards',
@@ -13,9 +14,12 @@ import { AwardModel } from '../interfaces/awardcard';
 export class AwardsComponent implements OnInit {
   awards: AwardModel[];
   constructor(private http: HttpClient,
-              private AllAwards :GetawardsService) { 
-                
+              private AllAwards :GetawardsService,
+              private router: Router) { 
+         
   }
+  
+    
   getAwards(): void {
     this.AllAwards.getAllAwards()
     .subscribe(resultArray => this.awards = resultArray,
@@ -26,6 +30,35 @@ export class AwardsComponent implements OnInit {
 
   ngOnInit() {
     this.getAwards();
+    //this.awards = this.AWARDS;
   }
-  
+  AWARDS = [
+    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
+    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
+    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
+    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
+    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
+    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
+    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
+    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
+    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'},
+    {'awardBlub':'best best','awardDate':'best best','awardDegree':'best best',
+    'awardDegreeLevel':'best best','awardId':1,'awardName':'best best','sponsorLink':'best best',
+    'sponsorLogo':'best best','sponsorName':'best best','studentName':'best best','awardSponsorBlurb':'best best'}
+  ];
 }
+
+/**
+ *      awardBlub: string;
+  awardDate: string;
+  awardDegree:string;
+  awardDegreeLevel:string;
+  awardId: number;
+  awardName: string;
+  sponsorLink: string;
+  sponsorLogo: string;
+  sponsorName: string;
+  studentName: string;
+  awardSponsorBlurb: string;
+ * 
+ */

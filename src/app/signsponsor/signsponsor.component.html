@@ -1,13 +1,58 @@
 
 
-<md-card>
-    <md-input-container>
-      <input class="search" mdInput [(ngModel)]="searchQuery" name="search" placeholder="Search for Images">
-    </md-input-container>
-    {{searchQuery}}
-    <br>
-    <button (click)="searchSponsors()" md-raised-button class="searchButton" type="button">Find Images</button>
-  </md-card>
+  <form class="forms">
+    <div class="left">
+      <md-card-header >
+          <h4 style="text-align:center;">Enter Your Details to Initiate Contact</h4>
+      </md-card-header>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Your Name</label>
+        <input type="text" class="form-control" mdInput [(ngModel)]="Name" name="name" id="formGroupExampleInput" placeholder="Name:">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Your Email</label>
+        <input type="text" class="form-control" mdInput [(ngModel)]="Email" name="email" id="formGroupExampleInput2" placeholder="Email:">
+      </div>
+      <div class="form-group">
+          <label for="formGroupExampleInput3">Your Company Name</label>
+          <input type="text" class="form-control" mdInput [(ngModel)]="Company" name="company" id="formGroupExampleInput3" placeholder="Company">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput4">Your Phone Number</label>
+        <input type="text" class="form-control" mdInput [(ngModel)]="Phone" name="phone" id="formGroupExampleInput4" placeholder="Phone:  Ext:">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput5">Click An Award To Auto Complete</label>
+        <input type="text" class="form-control" mdInput [(ngModel)]="AwardId" name="AwardId" id="formGroupExampleInput5" placeholder="Enter Award Name or click one from below">
+      </div>
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button (click)="clear()" class="btn btn-primary">Clear Selected Award</button>
+        </div>
+      </div>
+    </div>
+    <div class="right" *ngIf="AwardId !=''" >
+        <md-card class="awardCard">
+            <!-- <a href="{{award.pageURL}}" target="_blank"> -->
+               <md-card-header>
+                  <img src="../assets/images/aut_logo.png" style="width:65px;height:45px;">
+               <!--  <div class="avatar" md-card-avatar [ngStyle]="{'height':'40px','width':'40px','background-image':'url(../../assets/images/tick.png)'}"></div>-->
+                 <md-card-title style="color:red;">Award Status: PENDING</md-card-title>
+               </md-card-header>
+               <!--<img md-card-image src="{{award.webformatURL}}">-->
+               <md-card-content>
+                 <br>
+                 <h2>Award: {{AwardId}}</h2>
+                 <p>Date: {{Selected.AwardDate}}</p>
+                 <p>Degree: {{Selected.AwardDegree}}</p>
+                 <p>Award Details: {{Selected.AwardBlurb}}</p>
+               </md-card-content>
+           <!--  </a>   -->
+      </md-card>
+    </div>
+
+
  <!-- <app-animatedhamburger></app-animatedhamburger> -->
   <div *ngIf="searching">
     <md-progress-bar mode="indeterminate"></md-progress-bar>
@@ -17,24 +62,21 @@
     <h4 *ngIf="sponsorsFound" md-subeader>Results</h4>
     <masonry [useImagesLoaded]="true">
       <masonry-brick *ngFor="let award of potential" class="image-container">  <!-- write a pipe for herer  -->
-        <md-card>
-         <!-- <a href="{{award.pageURL}}" target="_blank"> -->
+        <div *ngIf="award.NeedsSponsor">
+          <md-card (click)="setAward(award)">
             <md-card-header>
-                <img src="{{(award.SponsorLogo | stripurl)}}">
-            <!--  <div class="avatar" md-card-avatar [ngStyle]="{'height':'40px','width':'40px','background-image':'url(../../assets/images/tick.png)'}"></div>-->
-              <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
+              <img src="{{(award.SponsorLogo | stripurl)}}">
+            <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
             </md-card-header>
-            <!--<img md-card-image src="{{award.webformatURL}}">-->
             <md-card-content>
               <p>Award: {{award.AwardName}}</p>
               <p>Date: {{award.AwardDate}}</p>
               <p>Degree: {{award.AwardDegree}}</p>
               <p>Award Details: {{award.AwardBlurb}}</p>
-              
             </md-card-content>
-        <!--  </a>   -->
-        </md-card>
-        <br><br>
+          </md-card>
+          <br><br>
+        </div>
       </masonry-brick>
     </masonry>
   </md-card> 

@@ -1,5 +1,36 @@
 
 /*--- Start navigation---*/
+.dropdown{
+    width:100%;
+    height: auto;
+    background: transparent;
+    float: right;
+    z-index: 9999;
+}
+.inner-wrapper{
+    position: relative;
+    background-color: #C3D7DF;
+    opacity: .25;
+    width: 100%;
+}
+.pagebutton{
+    background-color: #779ECB;
+    width: 100%;
+    padding:5px;
+    color: white;
+    font-size: 30px;
+    border: 1px solid black;
+}
+.pagebutton:hover{
+    background-color: #C3D7DF;
+    padding:3px;
+    color: whitesmoke;
+    font-size: 34px;
+    border: 2px solid black;
+}
+.burger{
+    float:right;
+}
 nav {
     float: right;
     padding: 25px 20px 0 0;
@@ -49,14 +80,14 @@ nav ul li a:hover {
 .banner {
     width: 100%;
     background-color:#F1AA90;
-    height: 80px;
+    height: 76px;
 }
 
 .banner-inner {
     max-width: 1100px;
     margin: 0 auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #logo {
     float: left;
     width: 200px;
@@ -75,11 +106,9 @@ nav ul li a:hover {
     }
         #menu-icon {
         display: inline-block;
-        background: url("../../assets/images/burger.png") center;
     }
 
     nav ul, nav:active ul {
-        display: none;
         z-index: 1000;
         position: absolute;
         padding: 20px;
@@ -99,6 +128,6 @@ nav ul li a:hover {
         text-align: center;
         width: 100%;
         padding: 10px 0;
-}
+    }
     
 }

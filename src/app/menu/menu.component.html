@@ -1,14 +1,30 @@
-    <div id="banner">
-        <a routerLink="" id="logo"></a>
-        <app-animatedhamburger></app-animatedhamburger>
-        <nav>
-            <a  id="menu-icon"></a>
-            <ul>
-                <li><a routerLink="" class="current" (click)="onboxChange(0)"  >Home</a></li>
-                <li><a routerLink="sponsors" (click)="onboxChange(0)" >Sponsors</a></li>
-                <li><a routerLink="awards" (click)="onboxChange(0)" >Awards</a></li>
-                <li><a routerLink="photos" (click)="onboxChange(0)" >Photos</a></li>
-                <li><a routerLink="contact" (click)="onboxChange(0)" >Contact</a></li>
-            </ul>
-        </nav>
+<div id="banner">
+    <a routerLink="" id="logo"></a>
+    <div *ngIf="ismobile" class="burger">
+        <div (click)="toggleBurger()">
+            <app-animatedhamburger
+            [morf]="morf"></app-animatedhamburger>
+        </div>  
+    </div>
+<div *ngIf="!ismobile">
+    <nav [class.active]="isopen">
+        <ul>
+            <li><a routerLink="" class="current" (click)="onboxChange(0)"  >Home</a></li>
+            <li><a routerLink="sponsors" (click)="onboxChange(0)" >Sponsors</a></li>
+            <li><a routerLink="awards" (click)="onboxChange(0)" >Awards</a></li>
+            <li><a routerLink="photos" (click)="onboxChange(0)" >Photos</a></li>
+            <li><a routerLink="contact" (click)="onboxChange(0)" >Contact</a></li>
+        </ul>
+    </nav>
+</div>
+    </div>
+    <div [@heightdown] [@heightup] *ngIf="isopen" class="dropdown">
+        <div class="inner-wrapper">
+            <br>
+            <button class="pagebutton" (click)="toggleBurger()" routerLink="" (click)="onboxChange(0)">Home</button>
+            <button class="pagebutton" (click)="toggleBurger()" routerLink="sponsors" (click)="onboxChange(0)">Sponsors</button>
+            <button class="pagebutton" (click)="toggleBurger()" routerLink="awards" (click)="onboxChange(0)" >Awards</button>
+            <button class="pagebutton" (click)="toggleBurger()" routerLink="photos" (click)="onboxChange(0)">Photos</button>
+            <button class="pagebutton" (click)="toggleBurger()" routerLink="contact" (click)="onboxChange(0)">Contact</button>
+        </div>
     </div>

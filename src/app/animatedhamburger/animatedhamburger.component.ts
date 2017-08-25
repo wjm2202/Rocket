@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-animatedhamburger',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./animatedhamburger.component.css']
 })
 export class AnimatedhamburgerComponent implements OnInit {
-  morf:boolean = false;
+  @Input() morf:boolean;
+  
   constructor() { }
 
   ngOnInit() {
