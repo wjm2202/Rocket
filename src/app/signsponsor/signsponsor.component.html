@@ -1,16 +1,5 @@
 
-<!--
-<md-card>
-    <md-input-container>
-      <input class="search" mdInput [(ngModel)]="Name" name="name" placeholder="Your Name">
-      <input class="search" mdInput [(ngModel)]="Email" name="email" placeholder="Your Email">
-      <input class="search" mdInput [(ngModel)]="Company" name="company" placeholder="Orginization">
-      <input class="search" mdInput [(ngModel)]="Phone" name="phone" placeholder="Contact Phone and ext">
-    </md-input-container>
-    
-    <br>
-    <button  md-raised-button class="searchButton" type="button">Submit</button>
-  </md-card> -->
+
   <form class="forms">
     <div class="left">
       <md-card-header >
@@ -25,7 +14,7 @@
         <input type="text" class="form-control" mdInput [(ngModel)]="Email" name="email" id="formGroupExampleInput2" placeholder="Email:">
       </div>
       <div class="form-group">
-          <label for="formGroupExampleInput3">Your Campany Name</label>
+          <label for="formGroupExampleInput3">Your Company Name</label>
           <input type="text" class="form-control" mdInput [(ngModel)]="Company" name="company" id="formGroupExampleInput3" placeholder="Company">
       </div>
       <div class="form-group">
@@ -73,24 +62,21 @@
     <h4 *ngIf="sponsorsFound" md-subeader>Results</h4>
     <masonry [useImagesLoaded]="true">
       <masonry-brick *ngFor="let award of potential" class="image-container">  <!-- write a pipe for herer  -->
-        <md-card (click)="setAward(award)">
-         <!-- <a href="{{award.pageURL}}" target="_blank"> -->
+        <div *ngIf="award.NeedsSponsor">
+          <md-card (click)="setAward(award)">
             <md-card-header>
-                <img src="{{(award.SponsorLogo | stripurl)}}">
-            <!--  <div class="avatar" md-card-avatar [ngStyle]="{'height':'40px','width':'40px','background-image':'url(../../assets/images/tick.png)'}"></div>-->
-              <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
+              <img src="{{(award.SponsorLogo | stripurl)}}">
+            <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
             </md-card-header>
-            <!--<img md-card-image src="{{award.webformatURL}}">-->
             <md-card-content>
               <p>Award: {{award.AwardName}}</p>
               <p>Date: {{award.AwardDate}}</p>
               <p>Degree: {{award.AwardDegree}}</p>
               <p>Award Details: {{award.AwardBlurb}}</p>
-              
             </md-card-content>
-        <!--  </a>   -->
-        </md-card>
-        <br><br>
+          </md-card>
+          <br><br>
+        </div>
       </masonry-brick>
     </masonry>
   </md-card> 

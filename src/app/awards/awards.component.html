@@ -1,10 +1,12 @@
 <H1 style="text-align:center">ECMS Awards</H1>
 <button routerLink="../awards/search" style="text-align:center; float:right; height:50px" type="button" class="btn btn-primary" >Search</button>
-<div class="container">
-  <div class="cards" *ngFor="let award of awards">
-    <app-award
-    [award]="award">
-    </app-award>
-  </div>
-</div>
 
+<masonry [useImagesLoaded]="true">
+  <masonry-brick class="cards" *ngFor="let award of awards" class="image-container">
+      
+      <app-award
+      [award]="award">
+      </app-award>
+    
+  </masonry-brick>
+</masonry>
