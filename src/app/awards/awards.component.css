@@ -51,8 +51,8 @@ p{
     text-align: center;
 }
 #card {
-    width: 300px;
-    min-height: 400px;
+    width: 280px;
+    min-height: 380px;
     max-width: 300px;
     margin: 8px;
     border-radius: 2px;
@@ -66,23 +66,34 @@ p{
     display: block;
     position: absolute;
     width: 100%;
-    min-height: 400px;
+    min-height: 380px;
     backface-visibility: hidden;
   }
   #card .front {
     background: whitesmoke;
-    min-height: 400px;
+    min-height: 380px;
+    
   }
   #card .back {
     background: white;
-    min-height: 400px;
+    min-height: 380px;
     transform: rotateY( 180deg );
   }
   #card.flipped {
+    min-height: 380px;
     transform: rotateY( 180deg );
   }
   .image {
     
     width:auto;
     height: 150px;
+}
+section{
+    height: 100px;
+    width:100%;
+}
+.border{
+    margin: 8px;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
 }
