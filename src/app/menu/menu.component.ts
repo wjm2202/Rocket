@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit, OnChanges {
   morf:boolean = false;
   isopen:boolean = false;
   width:number; 
-  @Input() ismobile:boolean = false;
+  @Input() ismobile:boolean;
   constructor() { 
     this.width = window.screen.width;
   }

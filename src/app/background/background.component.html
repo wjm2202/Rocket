@@ -15,7 +15,7 @@
 <!-- drawer boxes -->
 
 <!--sponsor teaser mobile-->
-<div *ngIf="displayHome || ismobile">
+<div *ngIf="displayHome">
   <section role="button" (click)="open(1)" class="one-fourth" id="html">
     <i class="fa fa-html5"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
@@ -232,7 +232,7 @@
   </section>
 </div>
 <!-- end of drawer boxes -->
-<div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 0">
+<div [@heightdown] [@heightup] *ngIf="mobile == 0">
   <router-outlet></router-outlet>
 </div>
 
