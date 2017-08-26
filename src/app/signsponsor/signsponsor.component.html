@@ -1,3 +1,4 @@
+
 <div class="border">
     <button class="btn btn-lg btn-success" routerLink="">Current Sposors</button>
     <h1 style="text-align:center;">Sponsor Inquiry</h1>
@@ -28,7 +29,7 @@
         <input type="text" class="form-control" mdInput [(ngModel)]="Phone" name="phone" id="formGroupExampleInput4" placeholder="Phone:  Ext:">
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput5">Click An Award To Inquire</label>
+        <label for="formGroupExampleInput5">Click An Award or type an award title To Inquire</label>
         <input type="text" class="form-control" mdInput [(ngModel)]="AwardId" name="AwardId" id="formGroupExampleInput5" placeholder="Enter Award Name or click one from below">
       </div>
       <div class="form-group row">
@@ -57,7 +58,7 @@
            <!--  </a>   -->
       </md-card>
     </div>
-
+<hr class="line">
 
  <!-- <app-animatedhamburger></app-animatedhamburger> -->
   <div *ngIf="searching">
@@ -66,17 +67,19 @@
   
   <md-card>
     <h4 *ngIf="sponsorsFound" md-subeader>Results</h4>
+    <h5>Click an Award to add to Inquiry</h5>
     <masonry [useImagesLoaded]="true">
       <masonry-brick *ngFor="let award of potential" class="image-container">  <!-- write a pipe for herer  -->
         <div *ngIf="award.NeedsSponsor">
           <md-card (click)="setAward(award)">
             <md-card-header>
-              <img src="{{(award.SponsorLogo | stripurl)}}">
+                <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
             <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
             </md-card-header>
             <md-card-content>
-              <p>Award: {{award.AwardName}}</p>
+              <h3>Award: {{award.AwardName}}</h3>
               <p>Date: {{award.AwardDate}}</p>
+              <p>Level: {{award.AwardDegreeLevel}}</p>
               <p>Degree: {{award.AwardDegree}}</p>
               <p>Award Details: {{award.AwardBlurb}}</p>
             </md-card-content>

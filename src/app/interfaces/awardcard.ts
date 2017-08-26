@@ -10,4 +10,6 @@ export interface AwardModel {
   SponsorName: string;
   StudentName: string;
   AwardSponsorBlurb: string;
+  NeedsSponsor: boolean;
+
 }
