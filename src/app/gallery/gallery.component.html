@@ -1,18 +1,15 @@
-
-<h1 style="text-align:center;">{{title}}</h1>
-<section>
-<div class="row">
+<div class="border">
     <button class="btn btn-lg btn-success" routerLink="">Home</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy == 'all'" (click)="filterBy='all'">All</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy == 'event'" (click)="filterBy='event'">Event</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy == 'student'" (click)="filterBy='student'">Student</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy == 'venue'" (click)="filterBy='venue'">Venue</button>
+    <h1 style="text-align:center;">{{title}}</h1>
+</div>
+<div class="border">
+<div class="row">
     <ul id="thumbnailsList">
-        <li *ngFor="let image of (visableImages | imageFilter:filterBy)">
+        <li *ngFor="let image of visableImages ">
             <a [routerLink] = "['/photos', image.id]">
                 <img src="{{image.url}}" class="tn" width="200" height="160">
             </a>
         </li>
     </ul>
 </div>
-</section>
+</div>

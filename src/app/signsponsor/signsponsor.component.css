@@ -30,7 +30,7 @@
     margin-bottom: 12px;
 }
 .forms{
-    margin: 6px;
+    margin: 20px;
     padding: 10px;
     border: 4px solid #eee;
     box-shadow: #555 1px 1px 8px 1px;
@@ -49,4 +49,10 @@
 }
 p{
     text-align: center;
+}
+.border{
+    margin: 20px;
+    border: 4px solid #eee;
+    border-radius: 2px;
+    box-shadow: #555 1px 1px 8px 1px;
 }

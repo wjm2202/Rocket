@@ -1,8 +1,8 @@
 <div class="border">
-    <section>
-<button routerLink="../awards/search" style="text-align:center; height:50px" type="button" class="btn btn-primary" >Search</button>
+  <button routerLink="../awards/search" style="text-align:center; height:50px" type="button" class="btn btn-success" >Search Awards</button>
+  <H1 style="text-align:center">ECMS Awards</H1>
+</div>
 
-<H1 style="text-align:center">ECMS Awards</H1>
 <masonry [useImagesLoaded]="true" class="border">
   <masonry-brick class="cards" *ngFor="let award of awards" class="image-container" (click)="cardFlip()">
     <div class="card">
@@ -36,5 +36,3 @@
       </app-award> -->
   </masonry-brick>
 </masonry>
-</section>
-</div>
