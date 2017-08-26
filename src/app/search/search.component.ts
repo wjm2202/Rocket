@@ -18,8 +18,8 @@ export class SearchComponent implements OnChanges, OnInit {
     
   }
   ngOnInit(){
-  //  this.getAwards();
-    this.visableAwards = this.AWARDS1;
+  //  this.getAwards();                          //for live api
+    this.visableAwards = this.AWARDS1;           //for offline testing
   }
   ngOnChanges() {
     
