@@ -6,3 +6,9 @@
     background-position: center;
     align-content: center;
 }
+.border{
+    margin: 20px;
+    border: 4px solid #eee;
+    border-radius: 2px;
+    box-shadow: #555 1px 1px 8px 1px;
+}

@@ -61,10 +61,22 @@ nav {
 }
 .fullwidth{
 /*  wrapper    */
+    background-color: transparent;
+    margin: 10px;
+    font-size: 25px;
 }
-bannerbutton{
+.bannerbutton{
 /*   button   */
-    background-color:blue;
+    color: whitesmoke;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.bannerbutton:hover{
+    color:black;
 }
 @media screen and (max-width: 767px) {
     #logo {
