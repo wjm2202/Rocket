@@ -9,8 +9,7 @@
 }
 .inner-wrapper{
     position: relative;
-    background-color: #C3D7DF;
-    opacity: .25;
+    opacity: 1;
     width: 100%;
 }
 .pagebutton{
@@ -64,6 +63,7 @@ nav {
     background-color: transparent;
     margin: 10px;
     font-size: 25px;
+    font-weight: bold;
 }
 .bannerbutton{
 /*   button   */

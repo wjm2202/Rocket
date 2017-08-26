@@ -85,7 +85,7 @@ p{
   }
   .image {
     
-    width:auto;
+    width:100%;
     height: 150px;
 }
 section{
@@ -97,4 +97,10 @@ section{
     border: 4px solid #eee;
     border-radius: 2px;
     box-shadow: #555 1px 1px 8px 1px;
+}
+md-card-headder.mat-card-header{
+    margin:0;
+}
+button{
+    margin:10px;
 }

@@ -19,6 +19,7 @@ export class MenuComponent implements OnInit, OnChanges {
   }
   onboxChange(box:number){
     this.mobile.emit(box);
+    this.ismobile = true;
   }
   toggleBurger(){
     this.morf = !this.morf;

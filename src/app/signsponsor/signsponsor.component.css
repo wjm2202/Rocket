@@ -56,3 +56,6 @@ p{
     border-radius: 2px;
     box-shadow: #555 1px 1px 8px 1px;
 }
+button{
+    margin:10px;
+}
