@@ -1,7 +1,16 @@
-<footer>
+<footer (click)="show()">
   <a href="http://www.aut.ac.nz" target="_blank" class="fl">AUCKLAND UNIVERSITY OF TECHNOLOGY</a>
   <a href="http://www.aut.ac.nz/copyright" target="_blank" class="created">Copyright</a>
   <a href="http://www.aut.ac.nz/privacy" target="_blank" class="created">Privacy</a>
   <a href="http://www.aut.ac.nz/site-map" target="_blank" class="created">Site Map</a>
-
+  <div *ngIf="open">
+    <section class="inner-wrapper">
+      <article id="photoarticle">
+        <app-rightcontact></app-rightcontact>
+      </article>
+      <aside id="photoaside">
+        <app-leftcontact></app-leftcontact>
+      </aside>
+    </section>
+  </div>
 </footer>
