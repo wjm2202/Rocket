@@ -29,7 +29,7 @@
         <input type="text" class="form-control" mdInput [(ngModel)]="Phone" name="phone" id="formGroupExampleInput4" placeholder="Phone:  Ext:">
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput5">Click An Award or type an award title To Inquire</label>
+        <label for="formGroupExampleInput5">Click An Award below or type an award title To Inquire</label>
         <input type="text" class="form-control" mdInput [(ngModel)]="AwardId" name="AwardId" id="formGroupExampleInput5" placeholder="Enter Award Name or click one from below">
       </div>
       <div class="form-group row">
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="right" *ngIf="AwardId !=''" >
+    <div class="right" *ngIf="AwardId !='' && postSuccess != true" >
         <md-card class="awardCard">
             <!-- <a href="{{award.pageURL}}" target="_blank"> -->
                <md-card-header>
@@ -56,6 +56,24 @@
                  <p>Award Details: {{Selected.AwardBlurb}}</p>
                </md-card-content>
            <!--  </a>   -->
+      </md-card>
+    </div>
+    <div class="right" *ngIf="postSuccess">
+      <md-card class="awardCard">
+        <md-card-header>
+          <img src="../assets/images/aut_logo.png" style="width:65px;height:45px;">
+          <md-card-title style="color:red;">Thank You For Your Inquiry</md-card-title>
+        </md-card-header>
+        <md-card-content>
+          <br>
+          <h2>Comapny: {{Company}}</h2>
+          <p>Contact: {{Name}}</p>
+          <p>Phone: {{Phone}}</p>
+          <p>Email: {{Email}}</p>
+          <p>Award: {{AwardId}}</p>
+          <p style="color:red;"> We will contact you about your inquiry</p>
+        </md-card-content>
+        
       </md-card>
     </div>
 <hr class="line">

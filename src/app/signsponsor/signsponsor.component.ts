@@ -3,7 +3,16 @@ import { SponsorOpService } from '../services/SponsorOp.service';
 import { UrlStrip } from '../pipes/imagestrip';
 import {FormControl, FormGroup} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Response } from '@angular/http';
 
+interface SuccessRes{
+  AwardId:string;
+  AwardName:string;
+  Company:string;
+  Email:string;
+  Name:string;
+  Phone:string;
+}
 
 @Component({
   selector: 'app-signsponsor',
@@ -16,6 +25,9 @@ export class SignsponsorComponent implements OnInit {
   potential: any[];  
   sponsorsFound: boolean = false;
   searching:boolean = false;
+  postSuccess:boolean = false;              //post worked
+  postFailed:boolean = false;               //post failed
+  successMessage:any;                           //details posted for success message
   searchQuery:string ='';
   Name:string = "";
   Email:string ='';
@@ -33,17 +45,15 @@ export class SignsponsorComponent implements OnInit {
   }
   //api call failed
   handleError(error){
+    this.postFailed = true;
     console.log(error);
   }
   //for observables
   constructor(private _sponsorOpS: SponsorOpService,
-              private _http: HttpClient) { 
-    
-      
-  }
+              private _http: HttpClient) { }
 
   sendDetails(){
-    const request = this._http.post('http://jsonplaceholder.typicode.com/posts',{
+    const request = this._http.post<SuccessRes>('http://jsonplaceholder.typicode.com/posts',{
       Name: this.Name,
       Email: this.Email,
       Company: this.Company,
@@ -53,6 +63,8 @@ export class SignsponsorComponent implements OnInit {
     })
       .subscribe(
         res => {
+          this.postSuccess = true;
+          console.log('is post successful '+this.postSuccess);
           console.log(res);
         },
         err => {
@@ -88,6 +100,7 @@ export class SignsponsorComponent implements OnInit {
     }
     this.AwardId = '';
     this.Selected ='';
+    this.postSuccess = false;
   }
   ngOnInit() {
     //this.searchSponsors();                    //for live api
