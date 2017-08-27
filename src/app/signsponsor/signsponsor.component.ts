@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SponsorOpService } from '../services/SponsorOp.service';
 import { UrlStrip } from '../pipes/imagestrip';
 import {FormControl, FormGroup} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -35,7 +36,30 @@ export class SignsponsorComponent implements OnInit {
     console.log(error);
   }
   //for observables
-  constructor(private _sponsorOpS: SponsorOpService) { }
+  constructor(private _sponsorOpS: SponsorOpService,
+              private _http: HttpClient) { 
+    
+      
+  }
+
+  sendDetails(){
+    const request = this._http.post('http://jsonplaceholder.typicode.com/posts',{
+      Name: this.Name,
+      Email: this.Email,
+      Company: this.Company,
+      Phone: this.Phone,
+      AwardId: this.AwardInput,
+      AwardName: this.AwardId
+    })
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.log('Error posting data');
+        }
+      )
+  }
 
   searchSponsors(){
     this.searching = true;
