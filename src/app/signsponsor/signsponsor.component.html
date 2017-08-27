@@ -39,29 +39,26 @@
         </div>
       </div>
     </div>
+    
     <div class="right" *ngIf="AwardId !='' && postSuccess != true" >
-        <md-card class="awardCard">
-            <!-- <a href="{{award.pageURL}}" target="_blank"> -->
-               <md-card-header>
-                  <img src="../assets/images/aut_logo.png" style="width:65px;height:45px;">
-               <!--  <div class="avatar" md-card-avatar [ngStyle]="{'height':'40px','width':'40px','background-image':'url(../../assets/images/tick.png)'}"></div>-->
-                 <md-card-title style="color:red;">Award Status: PENDING</md-card-title>
-               </md-card-header>
-               <!--<img md-card-image src="{{award.webformatURL}}">-->
-               <md-card-content>
-                 <br>
-                 <h2>Award: {{AwardId}}</h2>
-                 <p>Date: {{Selected.AwardDate}}</p>
-                 <p>Degree: {{Selected.AwardDegree}}</p>
-                 <p>Award Details: {{Selected.AwardBlurb}}</p>
-               </md-card-content>
-           <!--  </a>   -->
+      <md-card class="awardCard">
+        <md-card-header>
+          <img src="../assets/images/aut_logo.png" style="width:65px;height:45px;">
+          <md-card-title style="color:red;">Award Status: PENDING</md-card-title>
+        </md-card-header>
+        <md-card-content>
+          <br>
+          <h2>Award: {{AwardId}}</h2>
+          <p>Date: {{Selected.AwardDate}}</p>
+          <p>Degree: {{Selected.AwardDegree}}</p>
+          <p>Award Details: {{Selected.AwardBlurb}}</p>
+        </md-card-content>
       </md-card>
     </div>
     <div class="right" *ngIf="postSuccess">
       <md-card class="awardCard">
         <md-card-header>
-          <img src="../assets/images/aut_logo.png" style="width:65px;height:45px;">
+          <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
           <md-card-title style="color:red;">Thank You For Your Inquiry</md-card-title>
         </md-card-header>
         <md-card-content>
@@ -73,12 +70,11 @@
           <p>Award: {{AwardId}}</p>
           <p style="color:red;"> We will contact you about your inquiry</p>
         </md-card-content>
-        
       </md-card>
     </div>
+
 <hr class="line">
 
- <!-- <app-animatedhamburger></app-animatedhamburger> -->
   <div *ngIf="searching">
     <md-progress-bar mode="indeterminate"></md-progress-bar>
   </div>
