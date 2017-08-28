@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SponsorOpService } from '../services/SponsorOp.service';
 import { UrlStrip } from '../pipes/imagestrip';
 import {FormControl, FormGroup} from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { PhotoPipe } from '../pipes/photo.pipe';
 
@@ -54,14 +54,15 @@ export class SignsponsorComponent implements OnInit {
               private _http: HttpClient) { }
 
   sendDetails(){
-    const request = this._http.post<SuccessRes>('http://jsonplaceholder.typicode.com/posts',{
+    const headers = new HttpHeaders().set('Content-Type', 'application/json;');
+    const request = this._http.post<Boolean>('http://jsonplaceholder.typicode.com/posts',{
       Name: this.Name,
       Email: this.Email,
       Company: this.Company,
       Phone: this.Phone,
       AwardId: this.AwardInput,
       AwardName: this.AwardId
-    })
+    },{headers: headers})
       .subscribe(
         
         res => {

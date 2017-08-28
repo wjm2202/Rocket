@@ -8,4 +8,4 @@ export class PhotoPipe implements PipeTransform{
             return 'http://ecms-award.aut.ac.nz/web/sponsorCarousel/'+item;
         });
     }
-}
+} 
