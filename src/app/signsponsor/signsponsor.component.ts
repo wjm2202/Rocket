@@ -105,9 +105,9 @@ export class SignsponsorComponent implements OnInit {
     this.postSuccess = false;
   }
   ngOnInit() {
-    //this.searchSponsors();                    //for live api
-    this.potential = this.AWARDS;               //for offline testing
-    this.sponsorsFound = true;                  //for offline testing
+    this.searchSponsors();                    //for live api
+    //this.potential = this.AWARDS;               //for offline testing
+    //this.sponsorsFound = true;                  //for offline testing
   }
   AWARDS = [
     {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
