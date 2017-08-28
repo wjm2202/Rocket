@@ -33,7 +33,7 @@ export class SearchComponent implements OnChanges, OnInit {
   }
   AWARDS1 = [
     {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardName':'best best','SponsorLink':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardName':'best best','SponsorLink':'best best',
     'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
     'AwardSponsorBlurb':'best best','NeedsSponsor':true},
   ];

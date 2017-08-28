@@ -39,23 +39,23 @@ export class AwardsComponent implements OnInit {
   }
   AWARDS = [
     {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardName':'best best','SponsorLink':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardName':'best best','SponsorLink':'best best',
     'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
     'AwardSponsorBlurb':'best best','NeedsSponsor':true},
     {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':2,'AwardName':'best best','SponsorLink':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardName':'best best','SponsorLink':'best best',
     'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
     'AwardSponsorBlurb':'best best','NeedsSponsor':true},
     {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':3,'AwardName':'best best','SponsorLink':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardName':'best best','SponsorLink':'best best',
     'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
     'AwardSponsorBlurb':'best best','NeedsSponsor':true},
     {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':4,'AwardName':'best best','SponsorLink':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardName':'best best','SponsorLink':'best best',
     'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
     'AwardSponsorBlurb':'best best','NeedsSponsor':true},
     {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':5,'AwardName':'best best','SponsorLink':'best best',
+    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardName':'best best','SponsorLink':'best best',
     'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
     'AwardSponsorBlurb':'best best','NeedsSponsor':true}
   ];
