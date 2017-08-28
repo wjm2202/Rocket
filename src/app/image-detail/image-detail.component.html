@@ -1,18 +1,14 @@
-<button (click)="back()" class="btn btn-success" style="height:50px;">Gallery</button>
-<h1 style="text-align:center;">
-  ECMS Photo {{image.id}}
-</h1>
+<div class="border">
+    <button (click)="back()" class="btn btn-success" style="height:50px;">Gallery</button>
+    <h1 style="text-align:center;">ECMS Photo {{image.id}}</h1>
+</div>
+
+
+
 <br>
 <div class="row">
   <div class="col-md-12">
     <div [ngStyle]="{'background-image':'url('+ image.url +')'}" class="img-container">
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12 caption-row">
-    <span id="caption">
-      {{ image.caption }}
-    </span>
   </div>
 </div>

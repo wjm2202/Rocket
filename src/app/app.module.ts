@@ -11,17 +11,14 @@ import { FormsModule } from '@angular/forms';
 
 //my components
 import { BackgroundComponent } from './background/background.component';
-import { HeaderComponent } from './header/header.component';
 import { LogoComponent } from './logo/logo.component';
 import { MenuComponent } from './menu/menu.component';
-import { BurgerComponent } from './burger/burger.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { AwardsComponent } from './awards/awards.component';
 import { PhotosComponent } from './photos/photos.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { FooterComponent } from './footer/footer.component';
 import { FullwidthComponent } from './fullwidth/fullwidth.component';
-import { AwardComponent } from './award/award.component'; 
 import { EmptyComponent } from './empty/empty.component';
 import { RightcontactComponent } from './rightcontact/rightcontact.component';
 import { LeftcontactComponent} from './leftcontact/leftcontact.component';
@@ -38,15 +35,8 @@ import { AwardLevelPipe } from './pipes/filterAwards.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AwardteaserComponent } from './awardteaser/awardteaser.component';
-import { SponsorsteaserComponent } from './sponsorsteaser/sponsorsteaser.component';
-import { PhototeaserComponent } from './phototeaser/phototeaser.component';
-import { ContactteaserComponent } from './contactteaser/contactteaser.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
-
-import { BecomesponsorComponent } from './becomesponsor/becomesponsor.component';
-
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
 import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
@@ -56,6 +46,8 @@ import { SignsponsorComponent } from './signsponsor/signsponsor.component';
 import { MaterialModule } from '@angular/material';
 //third party modules
 import { MasonryModule } from 'angular2-masonry';
+import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburger.component';
+import { WordSearchComponent } from './word-search/word-search.component';
 
 
 
@@ -63,34 +55,28 @@ import { MasonryModule } from 'angular2-masonry';
   declarations: [
     AppComponent,
     BackgroundComponent,
-    HeaderComponent,
     LogoComponent,
     MenuComponent,
-    BurgerComponent,
     SponsorsComponent,
     AwardsComponent,
-    AwardComponent,
     PhotosComponent,
     ContactusComponent,
     FooterComponent,
     FullwidthComponent,
     EmptyComponent,
-    AwardteaserComponent,
-    SponsorsteaserComponent,
-    PhototeaserComponent,
-    ContactteaserComponent,
     UrlStrip,
     GalleryComponent,
     ImageDetailComponent,
     ImageFilterPipe,
     RightcontactComponent,
     LeftcontactComponent,
-    BecomesponsorComponent,
     SearchComponent,
     AwardDetailComponent,
     AwardLevelPipe,
     SponsorCaraComponent,
-    SignsponsorComponent
+    SignsponsorComponent,
+    AnimatedhamburgerComponent,
+    WordSearchComponent
 
   ],
   imports: [

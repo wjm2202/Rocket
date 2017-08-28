@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PhototeaserComponent } from './phototeaser.component';
+import { AnimatedhamburgerComponent } from './animatedhamburger.component';
 
-describe('PhototeaserComponent', () => {
-  let component: PhototeaserComponent;
-  let fixture: ComponentFixture<PhototeaserComponent>;
+describe('AnimatedhamburgerComponent', () => {
+  let component: AnimatedhamburgerComponent;
+  let fixture: ComponentFixture<AnimatedhamburgerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PhototeaserComponent ]
+      declarations: [ AnimatedhamburgerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PhototeaserComponent);
+    fixture = TestBed.createComponent(AnimatedhamburgerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

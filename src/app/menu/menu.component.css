@@ -1,5 +1,35 @@
 
 /*--- Start navigation---*/
+.dropdown{
+    width:100%;
+    height: auto;
+    background: transparent;
+    float: right;
+    z-index: 9999;
+}
+.inner-wrapper{
+    position: relative;
+    opacity: 1;
+    width: 100%;
+}
+.pagebutton{
+    background-color: #779ECB;
+    width: 100%;
+    padding:5px;
+    color: white;
+    font-size: 30px;
+    border: 1px solid black;
+}
+.pagebutton:hover{
+    background-color: #C3D7DF;
+    padding:3px;
+    color: whitesmoke;
+    font-size: 34px;
+    border: 2px solid black;
+}
+.burger{
+    float:right;
+}
 nav {
     float: right;
     padding: 25px 20px 0 0;
@@ -12,34 +42,6 @@ nav {
     
 }
 
-a:hover#menu-icon {
-    border-radius: 4px 4px 0 0;
-}
-
-ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    font-family: 'Alegreya Sans', Sans-serif;
-    font-size: 150%;
-    display: inline-block;
-    float: left;
-    padding: 10px;
-}
-
-nav ul li a {
-    color: #F5F5F5;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    color: black;
-    cursor: pointer;
-}
-.current {
-    color: #C3D7DF;
-}
 #logo {
     float: left;
     width: 200px;
@@ -49,14 +51,34 @@ nav ul li a:hover {
 .banner {
     width: 100%;
     background-color:#F1AA90;
-    height: 80px;
+    height: 76px;
 }
 
 .banner-inner {
     max-width: 1100px;
     margin: 0 auto;
 }
-@media screen and (max-width: 768px) {
+.fullwidth{
+/*  wrapper    */
+    background-color: transparent;
+    margin: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.bannerbutton{
+/*   button   */
+    color: whitesmoke;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.bannerbutton:hover{
+    color:black;
+}
+@media screen and (max-width: 767px) {
     #logo {
     float: left;
     width: 200px;
@@ -75,30 +97,5 @@ nav ul li a:hover {
     }
         #menu-icon {
         display: inline-block;
-        background: url("../../assets/images/burger.png") center;
     }
-
-    nav ul, nav:active ul {
-        display: none;
-        z-index: 1000;
-        position: absolute;
-        padding: 20px;
-        background: #6991AC;
-        right: 20px;
-        top: 60px;
-        border: 1px solid #FFF;
-        border-radius: 2px 0 2px 2px;
-        width: 50%;
-    }
-
-    nav:hover ul {
-        display: block;
-    }
-
-    nav li {
-        text-align: center;
-        width: 100%;
-        padding: 10px 0;
-}
-    
 }

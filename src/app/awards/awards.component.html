@@ -1,10 +1,38 @@
-<H1 style="text-align:center">ECMS Awards</H1>
-<button routerLink="../awards/search" style="text-align:center; float:right; height:50px" type="button" class="btn btn-primary" >Search</button>
-<div class="container">
-  <div class="cards" *ngFor="let award of awards">
-    <app-award
-    [award]="award">
-    </app-award>
-  </div>
+<div class="border">
+  <button routerLink="../awards/search" style="text-align:center; height:50px" type="button" class="btn btn-success" >Search Awards</button>
+  <H1  style="text-align:center">ECMS Awards</H1>
 </div>
 
+<masonry [useImagesLoaded]="true" class="border">
+  <masonry-brick class="cards" *ngFor="let award of awards" class="image-container" (click)="cardFlip()">
+    <div class="card">
+      <div id="card"  [ngClass]="isFlipped == true ? 'flipped' : '' ">
+        <md-card class="front">
+          <md-card-header >
+            <img class="image" src="../../assets/images/i6.jpg">
+          </md-card-header>
+          <md-card-content>
+            <p>Award: {{award.AwardName}}</p>
+            <p>Date: {{award.AwardDate}}</p>
+            <p>Degree: {{award.AwardDegree}}</p>
+            <p>Award Details: {{award.AwardBlurb}}</p>
+          </md-card-content>
+        </md-card>
+        <md-card class="back">
+            <md-card-header>
+              <img class="image" src="../../assets/images/aut_logo.png" >
+            </md-card-header>
+            <md-card-content>
+              <p>Sponsor: {{award.SponsorName}}</p>
+              <p>Award: {{award.AwardName}}</p>
+              <p>Message: {{award.AwardSponsorBlurb}}</p>
+              <p>Link: {{award.SponsorLink}}</p>
+            </md-card-content>
+          </md-card>
+      </div>
+    </div>
+     <!-- <app-award
+      [award]="award">
+      </app-award> -->
+  </masonry-brick>
+</masonry>

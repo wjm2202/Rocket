@@ -5,6 +5,7 @@ import { routerAnimation } from '../animations/fadeInAnimation'
 import { teaser, heightdown, heightup } from '../animations/teaserDownUp';
 import { smoothDropper } from '../animations/smoothHeight';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser'; 
 
 @Component({
   selector: 'app-background',
@@ -42,8 +43,13 @@ export class BackgroundComponent implements OnChanges {
 
   }
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private tite:Title) {
+     //this.tite.setTitle("AUT-ECMS"+this.router.url);           
     this.router.events.subscribe((res) => { 
+      this.tite.setTitle("AUT-ECMS"+this.router.url); 
+      this.checkIsMobile();
+      this.mobile =0;
       if(this.router.url == '/home'){
         this.displayHome = true;
         //console.log('displayHome: '+this.displayHome);
@@ -51,7 +57,7 @@ export class BackgroundComponent implements OnChanges {
         this.displayHome = false;
         //console.log('displayHome: '+this.displayHome);
       }
-    this.checkIsMobile();
+    
     });
    }
   checkIsMobile(){

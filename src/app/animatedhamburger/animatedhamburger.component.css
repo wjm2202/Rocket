@@ -1,0 +1,30 @@
+
+button{
+    cursor: pointer;
+    width: 100px;
+    height:70px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.line{
+    transform: translateX(-40px);
+    position: absolute;
+    height: 8px;
+    background: white;
+    width: 55px;
+    transition: .5s;
+    transform-origin: center;
+}
+
+.on .line:first-child{
+    transform: translateY(24px) translateX(-40px) rotate(-45deg);
+}
+.on .line:last-child{
+    transform: translateY(-24px) translateX(-40px) rotate(45deg);
+}
+.on .line:nth-of-type(2){
+    transform: translateY(0px) translateX(-40px) rotate(180deg);
+     opacity: 0;
+}
+

@@ -1,13 +1,15 @@
-<h2 style="text-align:center;">{{title}}</h2>
-<!--button to select search criteria -->
+<div class="border">
+    <button class="btn btn-lg btn-success" routerLink="">Home</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy=='Certificate'" (click)="filterBy='Certificate'">Certificate</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy=='Undergraduate'" (click)="filterBy='Undergraduate'">Under-graduate</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy=='Postgraduate'" (click)="filterBy='Postgraduate'">Post-graduate</button>
+    <button class="btn btn-lg btn-info" [class.active]="filterBy=='PhD'" (click)="filterBy='PhD'">Doctorate</button>
+    <h1 style="text-align:center;">{{title}}</h1>
+</div>
 
+<app-word-search></app-word-search>
 
-<button class="btn btn-lg btn-success" routerLink="">Home</button>
-<button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
-<button class="btn btn-lg btn-info" [class.active]="filterBy=='Certificate'" (click)="filterBy='Certificate'">Certificate</button>
-<button class="btn btn-lg btn-info" [class.active]="filterBy=='Undergraduate'" (click)="filterBy='Undergraduate'">Under-graduate</button>
-<button class="btn btn-lg btn-info" [class.active]="filterBy=='Postgraduate'" (click)="filterBy='Postgraduate'">Post-graduate</button>
-<button class="btn btn-lg btn-info" [class.active]="filterBy=='PhD'" (click)="filterBy='PhD'">Doctorate</button>
 <div class="row">
   <ul id="thumbnailsList">
     <li  *ngFor="let award of (visableAwards | awardAwardDegreeLevelFilter:filterBy)">

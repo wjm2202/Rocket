@@ -1,38 +1,105 @@
-<md-card>
-    <md-input-container>
-      <input class="search" mdInput [(ngModel)]="searchQuery" name="search" placeholder="Search for Images">
-    </md-input-container>
-    {{searchQuery}}
-    <br>
-    <button (click)="searchSponsors()" md-raised-button class="searchButton" type="button">Find Images</button>
-  </md-card>
-  
+
+<div class="border">
+    <button class="btn btn-lg btn-success" routerLink="all">Current Sponsors</button>
+    <h1 style="text-align:center;">Sponsor Inquiry</h1>
+</div> 
+
+  <form class="forms">
+    <div class="left">
+      <md-card-header >
+        <h4 style="text-align:center;">Enter Your Details to Initiate Contact</h4>
+      </md-card-header > 
+      <md-card-header>
+        <p>*This form is to initiate contact for more information about the possability to sponsor an award</p>
+      </md-card-header>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Your Name</label>
+        <input type="text" class="form-control" mdInput [(ngModel)]="Name" name="name" id="formGroupExampleInput" placeholder="Name:">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Your Email</label>
+        <input type="text" class="form-control" mdInput [(ngModel)]="Email" name="email" id="formGroupExampleInput2" placeholder="Email:">
+      </div>
+      <div class="form-group">
+          <label for="formGroupExampleInput3">Your Company Name</label>
+          <input type="text" class="form-control" mdInput [(ngModel)]="Company" name="company" id="formGroupExampleInput3" placeholder="Company">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput4">Your Phone Number</label>
+        <input type="text" class="form-control" mdInput [(ngModel)]="Phone" name="phone" id="formGroupExampleInput4" placeholder="Phone:  Ext:">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput5">Click An Award below or type an award title To Inquire</label>
+        <input type="text" class="form-control" mdInput [(ngModel)]="AwardId" name="AwardId" id="formGroupExampleInput5" placeholder="Enter Award Name or click one from below">
+      </div>
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button (click)="sendDetails()" type="submit" class="btn btn-success">Submit</button>
+          <button (click)="clear()" class="btn btn-primary">Clear Selected Award</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="right" *ngIf="AwardId !='' && postSuccess != true" >
+      <md-card class="awardCard">
+        <md-card-header>
+          <img src="../assets/images/aut_logo.png" style="width:65px;height:45px;">
+          <md-card-title style="color:red;">Award Status: PENDING</md-card-title>
+        </md-card-header>
+        <md-card-content>
+          <br>
+          <h2>Award: {{AwardId}}</h2>
+          <p>Date: {{Selected.AwardDate}}</p>
+          <p>Degree: {{Selected.AwardDegree}}</p>
+          <p>Award Details: {{Selected.AwardBlurb}}</p>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="right" *ngIf="postSuccess">
+      <md-card class="awardCard">
+        <md-card-header>
+          <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
+          <md-card-title style="color:red;">Thank You For Your Inquiry</md-card-title>
+        </md-card-header>
+        <md-card-content>
+          <br>
+          <h2>Comapny: {{Company}}</h2>
+          <p>Contact: {{Name}}</p>
+          <p>Phone: {{Phone}}</p>
+          <p>Email: {{Email}}</p>
+          <p>Award: {{AwardId}}</p>
+          <p style="color:red;"> We will contact you about your inquiry</p>
+        </md-card-content>
+      </md-card>
+    </div>
+
+<hr class="line">
+
   <div *ngIf="searching">
     <md-progress-bar mode="indeterminate"></md-progress-bar>
   </div>
   
   <md-card>
     <h4 *ngIf="sponsorsFound" md-subeader>Results</h4>
+    <h5>Click an Award to add to Inquiry</h5>
     <masonry [useImagesLoaded]="true">
       <masonry-brick *ngFor="let award of potential" class="image-container">  <!-- write a pipe for herer  -->
-        <md-card>
-         <!-- <a href="{{award.pageURL}}" target="_blank"> -->
+        <div *ngIf="award.NeedsSponsor">
+          <md-card (click)="setAward(award)">
             <md-card-header>
-                <img src="{{(award.SponsorLogo | stripurl)}}">
-            <!--  <div class="avatar" md-card-avatar [ngStyle]="{'height':'40px','width':'40px','background-image':'url(../../assets/images/tick.png)'}"></div>-->
-              <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
+                <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
+            <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
             </md-card-header>
-            <!--<img md-card-image src="{{award.webformatURL}}">-->
             <md-card-content>
-              <p>Award: {{award.AwardName}}</p>
+              <h3>Award: {{award.AwardName}}</h3>
               <p>Date: {{award.AwardDate}}</p>
+              <p>Level: {{award.AwardDegreeLevel}}</p>
               <p>Degree: {{award.AwardDegree}}</p>
               <p>Award Details: {{award.AwardBlurb}}</p>
-              
             </md-card-content>
-        <!--  </a>   -->
-        </md-card>
-        <br><br>
+          </md-card>
+          <br><br>
+        </div>
       </masonry-brick>
     </masonry>
   </md-card> 

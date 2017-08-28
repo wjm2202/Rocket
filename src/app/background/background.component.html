@@ -1,6 +1,8 @@
 <!-- header -->
 <section class="header">
-  <app-menu (mobile)="open($event)"></app-menu>
+  <app-menu 
+  (mobile)="open($event)"
+  [ismobile]="ismobile"></app-menu>
 </section>
 <!-- end of header -->
 <!-- event slider [@heightdown] [@heightup]-->
@@ -13,7 +15,7 @@
 <!-- drawer boxes -->
 
 <!--sponsor teaser mobile-->
-<div *ngIf="displayHome || ismobile">
+<div *ngIf="displayHome">
   <section role="button" (click)="open(1)" class="one-fourth" id="html">
     <i class="fa fa-html5"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
@@ -143,9 +145,7 @@
           <p class="card-text" style="color:black;">Your orginization can use this oportunity to promote your brand or to explain your business and links to the University.
             You can enguage the next generation.</p>
         </div>
-
-        <a href="#" class="btn btn-primary" style="height:50px;">Be A Sponsor</a>
-
+        <a routerLink="sponsors" style="text-align:center; float:right; height:50px;" class="btn btn-primary">Be A Sponsor</a>
       </div>
     </aside>
   </section>
@@ -230,7 +230,7 @@
   </section>
 </div>
 <!-- end of drawer boxes -->
-<div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 0">
+<div [@heightdown] [@heightup] *ngIf="mobile == 0">
   <router-outlet></router-outlet>
 </div>
 
