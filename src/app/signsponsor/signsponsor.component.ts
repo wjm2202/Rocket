@@ -4,6 +4,7 @@ import { UrlStrip } from '../pipes/imagestrip';
 import {FormControl, FormGroup} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
+import { PhotoPipe } from '../pipes/photo.pipe';
 
 interface SuccessRes{
   AwardId:string;
