@@ -17,6 +17,7 @@ export class WordSearchComponent implements OnInit {
   latestSearch = new Subject<string>();                   //sub of observable
   selected =0;
   criteria: string = 'StudentName';
+  showResults:boolean = false;
   
   test(id, selected){
     this.criteria = selected;
@@ -25,7 +26,7 @@ export class WordSearchComponent implements OnInit {
     console.log(this.selected);
   }
   newSearch(term){                                        //term from input
-    //${term}  
+    this.showResults = true;
     this.latestSearch.next(term);                        //emit the latest term enterd
   }
   constructor(private http:Http) {                         //import Http singleton
