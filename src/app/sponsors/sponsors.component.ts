@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { UrlStrip } from '../pipes/imagestrip';
+import { PhotoPipe } from '../pipes/photo.pipe';
 import { GetMainSponsorService } from '../services/getSponsor.service';
 
 interface SponsorsModel {

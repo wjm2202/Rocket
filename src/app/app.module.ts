@@ -76,7 +76,8 @@ import { WordSearchComponent } from './word-search/word-search.component';
     SponsorCaraComponent,
     SignsponsorComponent,
     AnimatedhamburgerComponent,
-    WordSearchComponent
+    WordSearchComponent,
+    PhotoPipe
 
   ],
   imports: [
