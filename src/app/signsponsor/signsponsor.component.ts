@@ -62,6 +62,7 @@ export class SignsponsorComponent implements OnInit {
       AwardName: this.AwardId
     })
       .subscribe(
+        
         res => {
           this.postSuccess = true;
           console.log('is post successful '+this.postSuccess);
@@ -71,6 +72,7 @@ export class SignsponsorComponent implements OnInit {
           console.log('Error posting data');
         }
       )
+      
   }
 
   searchSponsors(){

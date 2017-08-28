@@ -46,6 +46,7 @@ import { MaterialModule } from '@angular/material';
 //third party modules
 import { MasonryModule } from 'angular2-masonry';
 import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburger.component';
+import { WordSearchComponent } from './word-search/word-search.component';
 
 
 
@@ -73,7 +74,8 @@ import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburge
     AwardLevelPipe,
     SponsorCaraComponent,
     SignsponsorComponent,
-    AnimatedhamburgerComponent
+    AnimatedhamburgerComponent,
+    WordSearchComponent
 
   ],
   imports: [
