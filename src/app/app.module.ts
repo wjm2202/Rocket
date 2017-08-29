@@ -41,6 +41,7 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
 import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
+
 import { SignsponsorComponent } from './signsponsor/signsponsor.component';
 //material design module
 import { MaterialModule } from '@angular/material';
