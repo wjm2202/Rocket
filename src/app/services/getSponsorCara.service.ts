@@ -12,7 +12,7 @@ export class getSponsorCaraService {
     }
     getAllSponsorCaraPics() {
         return this.http
-            .get('https://webservices-test.aut.ac.nz/ecms/api/SPONSORCAROSOUEL')
+            .get('https://webservices-test.aut.ac.nz/ecms/api/sponsorCarosouel')
             .map((response: Response) => {
                 return <sponCarouselModel[]>response.json();
             })
