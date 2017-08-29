@@ -4,10 +4,10 @@ import { NgFor } from '@angular/common';
 import { Observable } from 'rxjs/Rx';
 import { HttpClient } from '@angular/common/http';
 import { getSponsorCaraService } from '../services/getSponsorCara.service';
-import { UrlStrip } from '../pipes/imagestrip';
+import { PhotoPipe } from '../pipes/photo.pipe';
 
 interface sponCarouselModel {
-  Link: string
+  Sponsor_carousel: string
 }
 
 
@@ -30,6 +30,8 @@ export class SponsorCaraComponent implements OnInit {
   }
   ngOnInit() {
     this.getpics();
+    console.log(this.pictures.length);
+    console.log(this.pictures[0].Sponsor_carousel);
 
   }
 }
