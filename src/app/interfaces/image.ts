@@ -1,3 +1,4 @@
 export interface Image {
-    link: string;
+    PhotoID: string;
+    PhotoLink: string;
 }
