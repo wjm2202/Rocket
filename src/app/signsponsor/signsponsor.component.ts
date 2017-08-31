@@ -13,6 +13,7 @@ interface SuccessRes{
   Email:string;
   Name:string;
   Phone:string;
+  Comments:string;
 }
 
 @Component({
@@ -35,6 +36,7 @@ export class SignsponsorComponent implements OnInit {
   Company:string = '';
   Phone:string = '';
   AwardId:string='';
+  Comments:string='';
   Selected;
   AwardInput:string='';
 
@@ -60,6 +62,7 @@ export class SignsponsorComponent implements OnInit {
       Email: this.Email,
       Company: this.Company,
       Phone: this.Phone,
+      comments: this.Comments,
       AwardId: this.AwardInput,
       AwardName: this.AwardId
     },{headers: headers})
