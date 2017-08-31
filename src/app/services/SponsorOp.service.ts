@@ -10,7 +10,7 @@ export class SponsorOpService{
     }
     
     getPotentialSponsors(){
-        return this._http.get('https://webservices-test.aut.ac.nz/ecms/api/awards')
+        return this._http.get('https://webservices-test.aut.ac.nz/ecms/api/needssponsor')
         .map(res => res.json());
     }    
 }

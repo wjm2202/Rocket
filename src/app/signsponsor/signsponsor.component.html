@@ -83,9 +83,9 @@
     <h4 *ngIf="sponsorsFound" md-subeader>Results</h4>
     <h5>Click an Award to add to Inquiry</h5>
     <masonry [useImagesLoaded]="true">
-      <masonry-brick *ngFor="let award of potential" class="image-container">  <!-- write a pipe for herer  -->
-        <div *ngIf="award.NeedsSponsor">
-          <md-card (click)="setAward(award)">
+      <masonry-brick *ngFor="let award of potential" >  <!-- write a pipe for herer  -->
+        <div *ngIf="award.NeedsSponsor == true">
+          <md-card (click)="setAward(award)" class="image-container">
             <md-card-header>
                 <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
             <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
