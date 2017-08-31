@@ -66,9 +66,12 @@ p{
     display: block;
     position: absolute;
     width: 100%;
-    min-height: 380px;
+    max-height: 380px;
     backface-visibility: hidden;
+    overflow: scroll;
   }
+
+  
   #card .front {
     background: whitesmoke;
     min-height: 380px;
@@ -79,6 +82,8 @@ p{
     min-height: 380px;
     transform: rotateY( 180deg );
   }
+
+
   #card.flipped {
     min-height: 380px;
     transform: rotateY( 180deg );

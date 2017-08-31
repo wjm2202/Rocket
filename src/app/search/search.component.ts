@@ -11,30 +11,34 @@ import { GetawardsService } from '../services/getawards.service';
 })
 export class SearchComponent implements OnChanges, OnInit {
   title = 'Search Awards';
-  @Input() filterBy ?: string = 'all';
+  @Input() filterBy?: string = 'all';
   visableAwards: AwardModel[];
   awards: AwardModel[];
-  constructor(private AllAwards :GetawardsService) { 
-    
+  constructor(private AllAwards: GetawardsService) {
+
   }
+
   ngOnInit(){
+
     this.getAwards();                          //for live api
     //this.visableAwards = this.AWARDS1;           //for offline testing
   }
   ngOnChanges() {
-    
+
   }
 
   getAwards(): void {
     this.AllAwards.getAllAwards()
-    .subscribe(resultArray => this.visableAwards = resultArray,
-    error => console.log("Error :: "+ error)
-   )
+      .subscribe(resultArray => this.visableAwards = resultArray,
+      error => console.log("Error :: " + error)
+      )
   }
   AWARDS1 = [
-    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisible':true ,'AwardName':'best best','SponsorLink':'best best',
-    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
-    'AwardSponsorBlurb':'best best','NeedsSponsor':true},
+    {
+      'AwardBlurb': 'best best', 'AwardDate': 'best best', 'AwardDegree': 'best best',
+      'AwardDegreeLevel': 'best best', 'AwardId': 1, 'AwardIsVisable': true, 'AwardName': 'best best', 'SponsorLink': 'best best',
+      'SponsorLogo': 'best best', 'SponsorName': 'best best', 'StudentName': 'best best',
+      'AwardSponsorBlurb': 'best best', 'NeedsSponsor': true
+    },
   ];
 }

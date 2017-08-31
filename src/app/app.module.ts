@@ -32,6 +32,7 @@ import { SponsorOpService } from './services/SponsorOp.service';
 import { UrlStrip } from './pipes/imagestrip';
 import { ImageFilterPipe } from './pipes/filter.pipe';
 import { AwardLevelPipe } from './pipes/filterAwards.pipe';
+import { PhotoPipe } from './pipes/photo.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -40,6 +41,7 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { SearchComponent } from './search/search.component';
 import { AwardDetailComponent } from './award-detail/award-detail.component';
 import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
+
 import { SignsponsorComponent } from './signsponsor/signsponsor.component';
 //material design module
 import { MaterialModule } from '@angular/material';
@@ -75,7 +77,8 @@ import { WordSearchComponent } from './word-search/word-search.component';
     SponsorCaraComponent,
     SignsponsorComponent,
     AnimatedhamburgerComponent,
-    WordSearchComponent
+    WordSearchComponent,
+    PhotoPipe
 
   ],
   imports: [
@@ -91,7 +94,7 @@ import { WordSearchComponent } from './word-search/word-search.component';
     MasonryModule
 
   ],
-  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService],
+  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

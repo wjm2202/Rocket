@@ -10,9 +10,9 @@
     Otherwise, it will hide itself. -->
     <div class="ebussinescard" *ngIf="contact.adminIsVisable">
       <img src="../../assets/images/aut_logo.png">
-      <p>Name: {{contact.adminName}}</p>
-      <p>Title: {{contact.contactTitle}}</p>
-      <p>Email: {{contact.adminEmail}}</p>
+      <p>{{contact.adminName}}</p>
+      <p>{{contact.contactTitle}}</p>
+      <p>Email: <a href="mailto:{{contact.adminEmail}}">{{contact.adminEmail}}</a></p>
     </div>
   </div>
 </div>
