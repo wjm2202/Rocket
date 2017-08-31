@@ -2,7 +2,7 @@
 
 <div class="card-deck danger">
   <div *ngFor="let sponsor of sponsors">
-  <div class="card" style="width:318px; height:100;">
+  <div class="card">
     <img class="card-img-top" style="width:318px; height:100;" src="{{sponsor.SponsorLogo}}" alt="Card image cap">
     <div class="card-block">
       <div class="card-header">
@@ -11,7 +11,7 @@
       <p class="card-text">{{sponsor.SponsorBlurb}}</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">{{sponsor.SponsorLink | stripurl}}</small>
+      <small class="text-muted"><a href="{{sponsor.SponsorLink}}">{{sponsor.SponsorLink | stripurl}}</a></small>
     </div>
   </div>
   </div>
