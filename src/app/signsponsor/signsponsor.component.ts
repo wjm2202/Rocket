@@ -55,7 +55,7 @@ export class SignsponsorComponent implements OnInit {
 
   sendDetails(){
     const headers = new HttpHeaders().set('Content-Type', 'application/json;');
-    const request = this._http.post<Boolean>('http://jsonplaceholder.typicode.com/posts',{
+    const request = this._http.post<Boolean>('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
       Name: this.Name,
       Email: this.Email,
       Company: this.Company,
