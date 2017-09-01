@@ -58,7 +58,7 @@ export class SignsponsorComponent implements OnInit {
   }            
 
   postDetails(Name:string, Email:string, Company:string, Phone:string, AwardInput:string, AwardId:string){
-    //const headers = new HttpHeaders().set('Content-Type', 'application/json;');
+    
     const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{Name,Email,Company,Phone,AwardInput,AwardId})                                               //{headers: headers})
       .subscribe(
         res => {
