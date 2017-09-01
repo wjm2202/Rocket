@@ -33,6 +33,11 @@
         <input type="text" class="form-control" mdInput [(ngModel)]="AwardId" name="AwardId" id="formGroupExampleInput5" placeholder="Enter Award Name or click one from below" 
         required>
       </div>
+      <div class="form-group">
+          <label for="formGroupExampleInput6">Your Further Comments</label>
+          <input type="text" class="form-control" mdInput [(ngModel)]="Comments" name="Comments" id="formGroupExampleInput6" placeholder="Further Comments:" 
+          required>
+        </div>
       <div class="form-group row">
         <div class="offset-sm-2 col-sm-10">
           <button (click)="sendDetails()" type="submit" class="btn btn-success">Submit</button>
@@ -64,11 +69,12 @@
         </md-card-header>
         <md-card-content>
           <br>
-          <h2>Comapny: {{Company}}</h2>
-          <p>Contact: {{Name}}</p>
-          <p>Phone: {{Phone}}</p>
-          <p>Email: {{Email}}</p>
-          <p>Award: {{AwardId}}</p>
+          <h2>{{Company}}</h2>
+          <p>{{Name}}</p>
+          <p>{{Phone}}</p>
+          <p>{{Email}}</p>
+          <p>{{AwardId}}</p>
+          <p>{{Comments}}</p>
           <p style="color:red;"> We will contact you about your inquiry</p>
         </md-card-content>
       </md-card>

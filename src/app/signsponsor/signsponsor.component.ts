@@ -13,6 +13,7 @@ interface SuccessRes{
   Email:string;
   Name:string;
   Phone:string;
+  Comments:string;
 }
 
 @Component({
@@ -35,6 +36,7 @@ export class SignsponsorComponent implements OnInit {
   Company:string = '';
   Phone:string = '';
   AwardId:string='';
+  Comments:string='';
   Selected;
   AwardInput:string='';
 
@@ -54,12 +56,12 @@ export class SignsponsorComponent implements OnInit {
               private _http: HttpClient) { }
 
   sendDetails(){
-    this.postDetails(this.Name, this.Email, this.Company, this.Phone, this.AwardInput, this.AwardId);
+    this.postDetails(this.Name, this.Email, this.Company, this.Phone, this.AwardInput, this.AwardId, this.Comments);
   }            
 
-  postDetails(Name:string, Email:string, Company:string, Phone:string, AwardInput:string, AwardId:string){
-    
-    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{Name,Email,Company,Phone,AwardInput,AwardId})                                               //{headers: headers})
+
+  postDetails(Name:string, Email:string, Company:string, Phone:string, AwardInput:string, AwardId:string, Comments:string){
+    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{Name,Email,Company,Phone,AwardInput,AwardId,Comments})                                               //{headers: headers})
       .subscribe(
         res => {
           this.postSuccess = true;
