@@ -4,9 +4,9 @@
 </div>
 
 <masonry [useImagesLoaded]="true" class="border">
-  <masonry-brick class="cards" *ngFor="let award of awards" class="image-container" (click)="cardFlip()">
+  <masonry-brick class="cards" *ngFor="let award of awards" class="image-container">
     <div class="card">
-      <div id="card" [ngClass]="isFlipped == true ? 'flipped' : '' ">
+      <div id="card" [ngClass]="{'flipped': cards.isFlipped }" (click)="cards.isFlipped = !cards.isFlipped;">
         <md-card class="front">
           <md-card-header>
             <img class="image" src="../../assets/images/i6.jpg">
