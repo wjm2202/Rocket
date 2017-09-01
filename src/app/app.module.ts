@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 //my components
 import { BackgroundComponent } from './background/background.component';
@@ -94,7 +95,7 @@ import { WordSearchComponent } from './word-search/word-search.component';
     MasonryModule
 
   ],
-  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe],
+  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
