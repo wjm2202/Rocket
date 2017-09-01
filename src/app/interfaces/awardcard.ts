@@ -5,6 +5,7 @@ export interface AwardModel {
   AwardDegreeLevel:string;
   AwardId: number;
   AwardIsVisable:boolean;
+  AwardMajor:string;
   AwardName: string;
   NeedsSponsor: boolean;
   SponsorLink: string;

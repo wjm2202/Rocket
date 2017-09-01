@@ -56,25 +56,20 @@ export class SignsponsorComponent implements OnInit {
               private _http: HttpClient) { }
 
   sendDetails(){
-    const headers = new HttpHeaders().set('Content-Type', 'application/json;');
-    const request = this._http.post<Boolean>('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
-      Name: this.Name,
-      Email: this.Email,
-      Company: this.Company,
-      Phone: this.Phone,
-      comments: this.Comments,
-      AwardId: this.AwardInput,
-      AwardName: this.AwardId
-    },{headers: headers})
+    this.postDetails(this.Name, this.Email, this.Company, this.Phone, this.AwardInput, this.AwardId);
+  }            
+
+  postDetails(Name:string, Email:string, Company:string, Phone:string, AwardInput:string, AwardId:string){
+    //const headers = new HttpHeaders().set('Content-Type', 'application/json;');
+    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{Name,Email,Company,Phone,AwardInput,AwardId})                                               //{headers: headers})
       .subscribe(
-        
         res => {
           this.postSuccess = true;
           console.log('is post successful '+this.postSuccess);
           console.log(res);
         },
         err => {
-          console.log('Error posting data');
+          console.log('Error posting data'+ err.Error);
         }
       )
       
