@@ -2,11 +2,11 @@
   <button routerLink="../awards/search" style="text-align:center; height:50px" type="button" class="btn btn-success">Search Awards</button>
   <H1 style="text-align:center">ECMS Awards</H1>
 </div>
-
+<!--this is a comment-->
 <masonry [useImagesLoaded]="true" class="border">
   <masonry-brick class="cards" *ngFor="let award of awards" class="image-container">
     <div class="card">
-      <div id="card" [ngClass]="{'flipped': cards.isFlipped }" (click)="cards.isFlipped = !cards.isFlipped;">
+      <div id="card"  (click)="cardFlip() ">
         <md-card class="front">
           <md-card-header>
             <img class="image" src="../../assets/images/i6.jpg">
