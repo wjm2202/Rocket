@@ -44,14 +44,16 @@ footer:hover {
 }
 
 /* For mobile with the pixel of width screen is or more than 640px */
-@media screen and (min-width: 640px){
+@media screen and (min-width: 568px){
     .inner-wrapper {
         height: 100%;
     }    
     #photoaside{
+        margin-top: -10px;
         height: 300px;
     }
     #photoarticle{
+        margin-top: -10px;
         height: 300px;
     }
 }
@@ -62,9 +64,11 @@ footer:hover {
         height: 100%;
     }
     #photoaside{
+        margin-top: 0;
         height: 400px;
     }
     #photoarticle{
+        margin-top: 0;
         height: 400px;
     }
 } 

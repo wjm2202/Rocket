@@ -112,7 +112,7 @@
         /* grid-column: 9/10;
         grid-row: 2/3; */
         float: right;
-        width: 120px;
+        width: 100px;
         height: 40px;
     }
 
@@ -189,7 +189,7 @@
         font-size: 6px;
     }
     .rainbow {
-        width: 25%;
+        width: 50%;
         /* grid-column: 2/10;
         grid-row: 2/3; */
     }
@@ -203,32 +203,31 @@
 /* Using media query to detect if the size of desktop/laptop is or more than 1024px */
 @media screen and (min-width: 1024px) {
     .cu {
-        font-size: 15px;
+        font-size: 20px;
     }
     .se {
-        font-size: 15px;
+        font-size: 20px;
     }
     .faq {
-        font-size: 15px;
+        font-size: 20px;
     }
     .freeph {
-        font-size: 15px;
+        font-size: 20px;
     }
     .ph0800 {
-        font-size: 15px;
+        font-size: 20px;
     }
     .email {
-        font-size: 15px;
+        font-size: 20px;
     }
     .corpenq {
-
-        font-size: 15px;
+        font-size: 20px;
     }
     .phcorp {
-        font-size: 15px;
+        font-size: 20px;
     }
     .corpph0800 {
-        font-size: 15px;
+        font-size: 20px;
     }
     .rainbow {
         width: 25%;

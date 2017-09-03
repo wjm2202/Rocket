@@ -19,7 +19,7 @@
     .maorides {
         /* grid-column: 1/10;
         grid-row: 2/3; */
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
@@ -135,30 +135,30 @@
 
 @media screen and (min-width: 1024px) {
     .addressinfo {
-        font-size: 15px;
+        font-size: 16px;
     }
     .maorides {
-        font-size: 15px;
+        font-size: 16px;
     }
     .autcity {
-        font-size: 15px;
+        font-size: 16px;
     }
     .cityaddress {
-        font-size: 15px;
+        font-size: 16px;
     }
     .autsouth {
-        font-size: 15px;
+        font-size: 16px;
     }
     .southaddress {
-        font-size: 15px;
+        font-size: 16px;
     }
     .autnorth {
-        font-size: 15px;
+        font-size: 16px;
     }
     .northaddress {
-        font-size: 15px;
+        font-size: 16px;
     }
     .slogan {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
