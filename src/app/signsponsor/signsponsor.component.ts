@@ -39,6 +39,7 @@ export class SignsponsorComponent implements OnInit {
   Comments:string='';
   Selected;
   AwardInput:string='';
+  Obj:SuccessRes;
 
 //api call success
   handleSuccess(data){
@@ -56,12 +57,13 @@ export class SignsponsorComponent implements OnInit {
               private _http: HttpClient) { }
 
   sendDetails(){
-    this.postDetails(this.Name, this.Email, this.Company, this.Phone, this.AwardInput, this.AwardId, this.Comments);
+    this.Obj = {AwardId: this.AwardId, AwardName: this.Name, Company: this.Company, Email: this.Email, Name: this.Name, Phone: this.Phone, Comments:this.Comments}
+    this.postDetails(this.Obj);
   }            
 
 
-  postDetails(Name:string, Email:string, Company:string, Phone:string, AwardInput:string, AwardId:string, Comments:string){
-    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{Name,Email,Company,Phone,AwardInput,AwardId,Comments})                                               //{headers: headers})
+  postDetails(Obj:SuccessRes){
+    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',JSON.stringify(Obj))                                               //{headers: headers})
       .subscribe(
         res => {
           this.postSuccess = true;
