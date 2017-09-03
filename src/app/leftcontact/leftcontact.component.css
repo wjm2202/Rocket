@@ -1,96 +1,244 @@
-
-.grid-container {
+/* .grid-container {
         display: grid;
         grid-area: auto;
         grid-row-gap: 0px;
         grid-column-gap: 0px;
         grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
-        overflow: hidden;
         background-color: #272727;
+        overflow: hidden;
+} */
+
+    .socialnetbox{
+        display: flex;
+        float: left;
+        box-sizing: border-box;
     }
+
     .cu {
-        grid-column: 1/5;
-        grid-row: 2/3;
+        /* grid-column: 1/5;
+        grid-row: 2/3; */
+        float: left;
         font-family: HeliaCore-Medium;
         font-size: 18px;
 
     }
     .se {
-        grid-column: 1/10;
-        grid-row: 3/4;
+        /* grid-column: 1/10;
+        grid-row: 3/4; */
+        float: left;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .faq {
-        grid-column: 1/9;
-        grid-row: 4/5;
+        /* grid-column: 1/9;
+        grid-row: 4/5; */
+        float: left;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .freeph {
-        grid-column: 1/2;
-        grid-row: 5/6;
+        /* grid-column: 1/2;
+        grid-row: 5/6; */
+        float: left;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .ph0800 {
-        grid-column: 2/10;
-        grid-row: 5/6;
+        /* grid-column: 2/10;
+        grid-row: 5/6; */
         margin-bottom: 10px;
+        float: left;
         font-family: HeliaCore-Medium;
         font-size: 24px;
     }
     .email {
-        grid-column: 1/9;
-        grid-row: 6/7;
+        /* grid-column: 1/9;
+        grid-row: 6/7; */
+        float: left;
         margin-bottom: 10px;
         font-family: HeliaCore-Medium;
         font-size: 24px;
     }
     .corpenq {
-        grid-column: 1/8;
-        grid-row: 7/8;
+        /* grid-column: 1/8;
+        grid-row: 7/8; */
+        float: left;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .phcorp {
-        grid-column: 1/2;
-        grid-row: 8/9;
+        /* grid-column: 1/2;
+        grid-row: 8/9; */
+        float: left;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .corpph0800 {
-        grid-column: 2/10;
-        grid-row: 8/9;
+        /* grid-column: 2/10;
+        grid-row: 8/9; */
+        float: left;
         margin-bottom: 10px;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .facebook {
-        grid-column: 1/2;
-        grid-row: 10/11;
-        margin-bottom: 25px;
+        /* grid-column: 1/2;
+        grid-row: 10/11; */
+        /* margin-bottom: 25px; */
+        display: inline-block;
     }
     .twitter {
-        grid-column: 3/4;
-        grid-row: 10/11;
+        /* grid-column: 3/4;
+        grid-row: 10/11; */
+        display: inline-block;
     }
     .youtube {
-        grid-column: 5/6;
-        grid-row: 10/11;
+        /* grid-column: 5/6;
+        grid-row: 10/11; */
+        display: inline-block;
     }
     .linkedin {
-        grid-column: 7/8;
-        grid-row: 10/11;
+        /* grid-column: 7/8;
+        grid-row: 10/11; */
+        display: inline-block;
     }
     .instagram {
-        grid-column: 9/10;
-        grid-row: 10/11;
+        /* grid-column: 9/10;
+        grid-row: 10/11; */
+        display: inline-block;
     }
     .rainbow {
-        grid-column: 9/10;
-        grid-row: 2/3;
+        /* grid-column: 9/10;
+        grid-row: 2/3; */
+        float: right;
+        width: 120px;
+        height: 40px;
     }
 
 
+/* Using media query to detect if the size of mobile is or more than 320px */
+@media screen and (min-width: 319px){
+    .cu {
+        font-size: 4px;
+    }
+    .se {
+        font-size: 4px;
+    }
+    .faq {
+        font-size: 4px;
+    }
+    .freeph {
+        font-size: 4px;
+        margin-bottom: 0;
+    }
+    .ph0800 {
+        font-size: 4px;
+    }
+    .email {
+        font-size: 4px;
+    }
+    .corpenq {
+        margin-bottom: 10px;
+        font-size: 4px;
+    }
+    .phcorp {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    .corpph0800 {
+        font-size: 4px;
+    }
+    .facebook a img, .instagram a img, 
+    .twitter a img, .youtube a img, .linkedin a img{
+        width: 25px;
+        height: 25px;
+        margin-right: 2px;
+    }
+}
+
+
+/* Using media query to detect if the size of tablet is or more than 768px */
+@media screen and (min-width: 768px) {
+    .cu {
+        font-size: 6px;
+    }
+    .se {
+        font-size: 6px;
+    }
+    .faq {
+        font-size: 6px;
+    }
+    .freeph {
+        font-size: 6px;
+    }
+    .ph0800 {
+        font-size: 6px;
+    }
+    .email {
+        font-size: 6px;
+    }
+    .corpenq {
+
+        font-size: 6px;
+    }
+    .phcorp {
+        font-size: 6px;
+    }
+    .corpph0800 {
+        font-size: 6px;
+    }
+    .rainbow {
+        width: 25%;
+        /* grid-column: 2/10;
+        grid-row: 2/3; */
+    }
+    .facebook a img, .instagram a img, 
+    .twitter a img, .youtube a img, .linkedin a img{
+        width: 65px;
+        height: 65px;
+        margin-right: 10px;
+    }
+}
+/* Using media query to detect if the size of desktop/laptop is or more than 1024px */
+@media screen and (min-width: 1024px) {
+    .cu {
+        font-size: 15px;
+    }
+    .se {
+        font-size: 15px;
+    }
+    .faq {
+        font-size: 15px;
+    }
+    .freeph {
+        font-size: 15px;
+    }
+    .ph0800 {
+        font-size: 15px;
+    }
+    .email {
+        font-size: 15px;
+    }
+    .corpenq {
+
+        font-size: 15px;
+    }
+    .phcorp {
+        font-size: 15px;
+    }
+    .corpph0800 {
+        font-size: 15px;
+    }
+    .rainbow {
+        width: 25%;
+        /* grid-column: 2/10;
+        grid-row: 2/3; */
+    }
+    .facebook a img, .instagram a img, 
+    .twitter a img, .youtube a img, .linkedin a img{
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+    }
+}

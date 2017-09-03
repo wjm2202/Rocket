@@ -39,3 +39,32 @@ footer:hover {
     width: 50%;
     height: 400px;
 }
+.row{
+    background-color: #272727;
+}
+
+/* For mobile with the pixel of width screen is or more than 640px */
+@media screen and (min-width: 640px){
+    .inner-wrapper {
+        height: 100%;
+    }    
+    #photoaside{
+        height: 300px;
+    }
+    #photoarticle{
+        height: 300px;
+    }
+}
+
+/* For mobile with the pixel of width screen is or more than 1024px */
+@media screen and (min-width: 1024px){
+    .inner-wrapper {
+        height: 100%;
+    }
+    #photoaside{
+        height: 400px;
+    }
+    #photoarticle{
+        height: 400px;
+    }
+} 
