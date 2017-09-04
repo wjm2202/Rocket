@@ -31,12 +31,12 @@ export class SignsponsorComponent implements OnInit {
   postFailed:boolean = false;               //post failed
   successMessage:any;                           //details posted for success message
   searchQuery:string ='';
-  Name:string = "";
-  Email:string ='';
-  Company:string = '';
-  Phone:string = '';
-  AwardId:string='';
-  Comments:string='';
+  Name:string = "";                        //contact name
+  Email:string ='';                        //contact email
+  Company:string = '';                     //company name
+  Phone:string = '';                       //phone number
+  AwardId:string='';                       //award name
+  Comments:string='';                      //comments
   Selected;
   AwardInput:string='';
   Obj;
@@ -67,13 +67,13 @@ export class SignsponsorComponent implements OnInit {
 
   postDetails(Obj:SuccessRes){
     const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
-      awardId: 'Obj.AwardId',
-      awardName: 'Obj.AwardName',
-      comments: 'Obj.Comments',
-      company: 'Obj.Company',
-      email: 'Obj.Email',
-      name: 'Obj.Name',
-      phone: 'Obj.Phone'
+      awardId: `${this.AwardInput}`,           //award id number
+      awardName: `${this.AwardId}`,            //name of award
+      comments: `${this.Comments}`,            //any comments made
+      company: `${this.Company}`,              //company name
+      email: `${this.Email}`,                  //contact email
+      name: `${this.Name}`,                    //contact name
+      phone: `${this.Phone}`                   //contact phone
     })
       .subscribe(
         res => {
