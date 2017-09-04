@@ -69,70 +69,72 @@
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
-
+/* Using media query to detect if the size of mobile is or more than 320px */
 @media screen and (min-width: 319px) and (max-width: 769px){
     .addressinfo {
-        font-size: 4px;
-    }
-    .maorides {
-        font-size: 4px;
-    }
-    .autcity {
-        font-size: 4px;
-    }
-    .cityaddress {
-        font-size: 4px;
-        margin-bottom: 10px;
-    }
-    .autsouth {
-        font-size: 4px;
-    }
-    .southaddress {
-        font-size: 4px;
-        margin-bottom: 10px;
-    }
-    .autnorth {
-        font-size: 4px;
-    }
-    .northaddress {
-        font-size: 4px;
-        margin-bottom: 10px;
-    }
-    .slogan {
-        font-size: 4px;
-    }
-}
-        
-@media screen and (min-width: 770px) {
-    .addressinfo {
         font-size: 10px;
     }
     .maorides {
         font-size: 10px;
     }
     .autcity {
-        font-size: 10px;
+        font-size:10px;
     }
     .cityaddress {
         font-size: 10px;
+        margin-bottom: 10px;
     }
     .autsouth {
         font-size: 10px;
     }
     .southaddress {
         font-size: 10px;
+        margin-bottom: 10px;
     }
     .autnorth {
         font-size: 10px;
     }
     .northaddress {
         font-size: 10px;
+        margin-bottom: 10px;
     }
     .slogan {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 
+/* Using media query to detect if the size of tablet is or more than 768px */
+@media screen and (min-width: 770px) {
+    .addressinfo {
+        font-size: 15px;
+    }
+    .maorides {
+        font-size: 15px;
+    }
+    .autcity {
+        font-size: 15px;
+    }
+    .cityaddress {
+        font-size: 15px;
+    }
+    .autsouth {
+        font-size: 15px;
+    }
+    .southaddress {
+        font-size: 15px;
+    }
+    .autnorth {
+        font-size: 15px;
+    }
+    .northaddress {
+        font-size: 15px;
+    }
+    .slogan {
+        font-size: 20px;
+    }
+}
+
+/* Using media query to detect if the size of desktop/laptop is or more than 1024px */
 @media screen and (min-width: 1024px) {
     .addressinfo {
         font-size: 16px;
@@ -159,6 +161,6 @@
         font-size: 16px;
     }
     .slogan {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
