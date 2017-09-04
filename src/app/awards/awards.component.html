@@ -3,10 +3,10 @@
   <H1 style="text-align:center">ECMS Awards</H1>
 </div>
 <!--this is a comment-->
-<masonry [useImagesLoaded]="true" class="border">
+<masonry [useImagesLoaded]="false" class="border">
   <masonry-brick class="cards" *ngFor="let award of awards" class="image-container">
     <div class="card">
-      <div id="card"  (click)="cardFlip() ">
+      <div id="card" [ngClass]="{'flipped': award.isflipped }" (click)="award.isflipped = !award.isflipped;">
         <md-card class="front">
           <md-card-header>
             <img class="image" src="../../assets/images/i6.jpg">

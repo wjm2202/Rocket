@@ -13,16 +13,10 @@ import { Router } from '@angular/router';
 })
 export class AwardsComponent implements OnInit {
   awards: AwardModel[];
-  isFlipped:boolean = false;
   constructor(private http: HttpClient,
               private AllAwards :GetawardsService,
               private router: Router) { 
   
-  }
-  cardFlip(){
-    console.log('flipped clicked');
-    this.isFlipped = !this.isFlipped;
-    //console.log("flipped");
   }
     
   getAwards(): void {
