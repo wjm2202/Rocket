@@ -50,6 +50,8 @@ import { MaterialModule } from '@angular/material';
 import { MasonryModule } from 'angular2-masonry';
 import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburger.component';
 import { WordSearchComponent } from './word-search/word-search.component';
+import { EventMessageComponent } from './event-message/event-message.component';
+import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
 
 
 
@@ -79,7 +81,9 @@ import { WordSearchComponent } from './word-search/word-search.component';
     SignsponsorComponent,
     AnimatedhamburgerComponent,
     WordSearchComponent,
-    PhotoPipe
+    PhotoPipe,
+    EventMessageComponent,
+    WelcomeMessageComponent
 
   ],
   imports: [
