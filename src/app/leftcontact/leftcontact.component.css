@@ -120,34 +120,34 @@
 /* Using media query to detect if the size of mobile is or more than 320px */
 @media screen and (min-width: 319px){
     .cu {
-        font-size: 4px;
+        font-size: 10px;
     }
     .se {
-        font-size: 4px;
+        font-size: 10px;
     }
     .faq {
-        font-size: 4px;
+        font-size: 10px;
     }
     .freeph {
-        font-size: 4px;
+        font-size: 10px;
         margin-bottom: 0;
     }
     .ph0800 {
-        font-size: 4px;
+        font-size: 10px;
     }
     .email {
-        font-size: 4px;
+        font-size: 10px;
     }
     .corpenq {
         margin-bottom: 10px;
-        font-size: 4px;
+        font-size: 10px;
     }
     .phcorp {
         font-size: 10px;
         margin-bottom: 0;
     }
     .corpph0800 {
-        font-size: 4px;
+        font-size: 10px;
     }
     .facebook a img, .instagram a img, 
     .twitter a img, .youtube a img, .linkedin a img{
@@ -161,32 +161,31 @@
 /* Using media query to detect if the size of tablet is or more than 768px */
 @media screen and (min-width: 768px) {
     .cu {
-        font-size: 6px;
+        font-size: 12px;
     }
     .se {
-        font-size: 6px;
+        font-size: 12px;
     }
     .faq {
-        font-size: 6px;
+        font-size: 12px;
     }
     .freeph {
-        font-size: 6px;
+        font-size: 12px;
     }
     .ph0800 {
-        font-size: 6px;
+        font-size: 12px;
     }
     .email {
-        font-size: 6px;
+        font-size: 12px;
     }
     .corpenq {
-
-        font-size: 6px;
+        font-size: 12px;
     }
     .phcorp {
-        font-size: 6px;
+        font-size: 12px;
     }
     .corpph0800 {
-        font-size: 6px;
+        font-size: 12px;
     }
     .rainbow {
         width: 50%;
