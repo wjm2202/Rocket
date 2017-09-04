@@ -3,13 +3,14 @@
   <a href="http://www.aut.ac.nz/copyright" target="_blank" class="created">Copyright</a>
   <a href="http://www.aut.ac.nz/privacy" target="_blank" class="created">Privacy</a>
   <a href="http://www.aut.ac.nz/site-map" target="_blank" class="created">Site Map</a>
-  <div *ngIf="open">
-    <section class="inner-wrapper">
+  <!-- Add class openfoot for div tag -->
+  <div *ngIf="open" class="openfoot">
+    <section class="inner-wrapper row">
       <article id="photoarticle">
-        <app-rightcontact></app-rightcontact>
+        <app-leftcontact class="col-md-6"></app-leftcontact>
       </article>
       <aside id="photoaside">
-        <app-leftcontact></app-leftcontact>
+          <app-rightcontact class="col-md-6"></app-rightcontact>
       </aside>
     </section>
   </div>

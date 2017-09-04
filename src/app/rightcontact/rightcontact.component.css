@@ -1,5 +1,5 @@
 
-    .grid-container {
+    /* .grid-container {
         display: grid;
         grid-area: auto;
         grid-row-gap: 2px;
@@ -8,65 +8,157 @@
         grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
         overflow: hidden;
         background-color: #272727;
-    }
+    } */
+
     .addressinfo {
-        grid-column: 1/10;
-        grid-row: 1/2;
+        /* grid-column: 1/10;
+        grid-row: 1/2; */
         font-family: HeliaCore-Medium;
         font-size: 18px;
     }
     .maorides {
-        grid-column: 1/10;
-        grid-row: 2/3;
-        margin-bottom: 20px;
+        /* grid-column: 1/10;
+        grid-row: 2/3; */
+        margin-bottom: 10px;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .autcity {
-        grid-column: 1/5;
-        grid-row: 3/4;
+        /* grid-column: 1/5;
+        grid-row: 3/4; */
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .cityaddress {
-        grid-column: 1/5;
-        grid-row: 4/5;
+        /* grid-column: 1/5;
+        grid-row: 4/5; */
         margin-bottom: 20px;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .autsouth {
-        grid-column: 6/10;
-        grid-row: 3/4;
+        /* grid-column: 6/10;
+        grid-row: 3/4; */
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .southaddress {
-        grid-column: 6/10;
-        grid-row: 4/5;
+        /* grid-column: 6/10;
+        grid-row: 4/5; */
         margin-bottom: 20px;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .autnorth {
-        grid-column: 1/5;
-        grid-row: 5/6;
+        /* grid-column: 1/5;
+        grid-row: 5/6; */
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .northaddress {
-        grid-column: 1/5;
-        grid-row: 6/7;
+        /* grid-column: 1/5;
+        grid-row: 6/7; */
         margin-bottom: 20px;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
     .slogan {
-        grid-column: 1/10;
-        grid-row: 8/9;
-        text-align: center;
+        /* grid-column: 1/10;
+        grid-row: 8/9; */
+        text-align: left;
         font-family: HeliaCore-Light;
         font-size: 24px;
     }
 
+@media screen and (min-width: 319px) and (max-width: 769px){
+    .addressinfo {
+        font-size: 4px;
+    }
+    .maorides {
+        font-size: 4px;
+    }
+    .autcity {
+        font-size: 4px;
+    }
+    .cityaddress {
+        font-size: 4px;
+        margin-bottom: 10px;
+    }
+    .autsouth {
+        font-size: 4px;
+    }
+    .southaddress {
+        font-size: 4px;
+        margin-bottom: 10px;
+    }
+    .autnorth {
+        font-size: 4px;
+    }
+    .northaddress {
+        font-size: 4px;
+        margin-bottom: 10px;
+    }
+    .slogan {
+        font-size: 4px;
+    }
+}
+        
+@media screen and (min-width: 770px) {
+    .addressinfo {
+        font-size: 10px;
+    }
+    .maorides {
+        font-size: 10px;
+    }
+    .autcity {
+        font-size: 10px;
+    }
+    .cityaddress {
+        font-size: 10px;
+    }
+    .autsouth {
+        font-size: 10px;
+    }
+    .southaddress {
+        font-size: 10px;
+    }
+    .autnorth {
+        font-size: 10px;
+    }
+    .northaddress {
+        font-size: 10px;
+    }
+    .slogan {
+        font-size: 10px;
+    }
+}
 
+@media screen and (min-width: 1024px) {
+    .addressinfo {
+        font-size: 16px;
+    }
+    .maorides {
+        font-size: 16px;
+    }
+    .autcity {
+        font-size: 16px;
+    }
+    .cityaddress {
+        font-size: 16px;
+    }
+    .autsouth {
+        font-size: 16px;
+    }
+    .southaddress {
+        font-size: 16px;
+    }
+    .autnorth {
+        font-size: 16px;
+    }
+    .northaddress {
+        font-size: 16px;
+    }
+    .slogan {
+        font-size: 16px;
+    }
+}
