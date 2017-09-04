@@ -39,7 +39,8 @@ export class SignsponsorComponent implements OnInit {
   Comments:string='';
   Selected;
   AwardInput:string='';
-  Obj:SuccessRes;
+  Obj;
+  headers;
 
 //api call success
   handleSuccess(data){
@@ -57,13 +58,23 @@ export class SignsponsorComponent implements OnInit {
               private _http: HttpClient) { }
 
   sendDetails(){
-    this.Obj = {AwardId: this.AwardId, AwardName: this.Name, Company: this.Company, Email: this.Email, Name: this.Name, Phone: this.Phone, Comments:this.Comments}
+    this.Obj = {awardId: this.AwardId, awardName: this.Name, company: this.Company, email: this.Email, name: this.Name, phone: this.Phone, comments:this.Comments}
+    //console.log(this.Obj);
     this.postDetails(this.Obj);
+    
   }            
 
 
   postDetails(Obj:SuccessRes){
-    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',JSON.stringify(Obj))                                               //{headers: headers})
+    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
+      awardId: 'Obj.AwardId',
+      awardName: 'Obj.AwardName',
+      comments: 'Obj.Comments',
+      company: 'Obj.Company',
+      email: 'Obj.Email',
+      name: 'Obj.Name',
+      phone: 'Obj.Phone'
+    })
       .subscribe(
         res => {
           this.postSuccess = true;
@@ -71,10 +82,9 @@ export class SignsponsorComponent implements OnInit {
           console.log(res);
         },
         err => {
-          console.log('Error posting data'+ err.Error);
+          console.log('Error posting data:   '+ err);
         }
       )
-      
   }
 
   searchSponsors(){
