@@ -5,7 +5,7 @@ import { NgFor } from '@angular/common';
 import { Observable } from 'rxjs/Rx';
 import { getSponsorCaraService } from '../services/getSponsorCara.service';
 
-interface Image {
+interface PhotoModel {
   PhotoID: string;
   PhotoLink: string;
 }
@@ -17,7 +17,7 @@ interface Image {
   providers: [ImageService]
 })
 export class GalleryComponent implements OnChanges, OnInit {
-  pictures: Image;
+  pictures: PhotoModel;
   title = 'ECMS Photos';
   @Input() filterBy?: string = 'all';     //? is optional
   visableImages: any[] = [];
@@ -34,9 +34,10 @@ export class GalleryComponent implements OnChanges, OnInit {
       error => console.log("Error: " + error))
   }
   ngOnInit(): void {
-    this.httpClient.get<Image>('https://webservices-test.aut.ac.nz/ecms/api/photos').subscribe(data => {
+    this.httpClient.get<PhotoModel>('https://webservices-test.aut.ac.nz/ecms/api/photos').subscribe(data => {
       this.pictures = data;
-      console.log(this.pictures[0].Sponsor_carousel);
+      console.log(this.pictures[0].PhotoID);
+      console.log(this.pictures[0].PhotoLink);
     },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
