@@ -17,8 +17,8 @@ import { SignsponsorComponent } from '../signsponsor/signsponsor.component';
 const routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'awards', component: AwardsComponent },
-  { path: 'sponsors', component: SignsponsorComponent },
-  { path: 'sponsors/all', component: SponsorsComponent },
+  { path: 'sponsors/all', component: SignsponsorComponent },
+  { path: 'sponsors', component: SponsorsComponent },
   { path: 'photos', component: PhotosComponent },
   { path: 'photos/:id', component: ImageDetailComponent },
   { path: 'contact', component: ContactusComponent  },
