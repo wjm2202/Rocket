@@ -31,15 +31,16 @@ export class SignsponsorComponent implements OnInit {
   postFailed:boolean = false;               //post failed
   successMessage:any;                           //details posted for success message
   searchQuery:string ='';
-  Name:string = "";
-  Email:string ='';
-  Company:string = '';
-  Phone:string = '';
-  AwardId:string='';
-  Comments:string='';
+  Name:string = "";                        //contact name
+  Email:string ='';                        //contact email
+  Company:string = '';                     //company name
+  Phone:string = '';                       //phone number
+  AwardId:string='';                       //award name
+  Comments:string='';                      //comments
   Selected;
   AwardInput:string='';
-  Obj:SuccessRes;
+  Obj;
+  headers;
 
 //api call success
   handleSuccess(data){
@@ -57,13 +58,23 @@ export class SignsponsorComponent implements OnInit {
               private _http: HttpClient) { }
 
   sendDetails(){
-    this.Obj = {AwardId: this.AwardId, AwardName: this.Name, Company: this.Company, Email: this.Email, Name: this.Name, Phone: this.Phone, Comments:this.Comments}
+    this.Obj = {awardId: this.AwardId, awardName: this.Name, company: this.Company, email: this.Email, name: this.Name, phone: this.Phone, comments:this.Comments}
+    //console.log(this.Obj);
     this.postDetails(this.Obj);
+    
   }            
 
 
   postDetails(Obj:SuccessRes){
-    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',JSON.stringify(Obj))                                               //{headers: headers})
+    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
+      awardId: `${this.AwardInput}`,           //award id number
+      awardName: `${this.AwardId}`,            //name of award
+      comments: `${this.Comments}`,            //any comments made
+      company: `${this.Company}`,              //company name
+      email: `${this.Email}`,                  //contact email
+      name: `${this.Name}`,                    //contact name
+      phone: `${this.Phone}`                   //contact phone
+    })
       .subscribe(
         res => {
           this.postSuccess = true;
@@ -71,10 +82,9 @@ export class SignsponsorComponent implements OnInit {
           console.log(res);
         },
         err => {
-          console.log('Error posting data'+ err.Error);
+          console.log('Error posting data:   '+ err);
         }
       )
-      
   }
 
   searchSponsors(){
