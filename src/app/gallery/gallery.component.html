@@ -8,7 +8,6 @@
             <li *ngFor="let picture of pictures ">
                 <a [routerLink]="['/photos', picture.PhotoID]">
                 <img src="{{picture.Filename | photoAppendGeneral}}" class="tn" width="200" height="160">
-                <h4>{{picture.PhotoID}}</h4>
             </a>
             </li>
         </ul>
