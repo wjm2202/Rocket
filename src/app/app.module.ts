@@ -35,6 +35,7 @@ import { ImageFilterPipe } from './pipes/filter.pipe';
 import { AwardLevelPipe } from './pipes/filterAwards.pipe';
 import { PhotoPipe } from './pipes/photo.pipe';
 import { PhotoGeneralPipe } from './pipes/append-general.pipe';
+import { AppendSponsorPipe } from './pipes/append-sponsor.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -87,7 +88,8 @@ import { AppendMaincaraPipe } from './pipes/append-maincara.pipe';
     EventMessageComponent,
     WelcomeMessageComponent,
     PhotoGeneralPipe,
-    AppendMaincaraPipe
+    AppendMaincaraPipe,
+    AppendSponsorPipe
 
   ],
   imports: [
@@ -103,7 +105,7 @@ import { AppendMaincaraPipe } from './pipes/append-maincara.pipe';
     MasonryModule
 
   ],
-  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [ImageService,AppendSponsorPipe, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
