@@ -1,5 +1,5 @@
 <div class="border">
-  <button class="btn btn-lg btn-success" routerLink="all">Sponsor Inquiry</button>
+  <button class="btn btn-lg btn-success" routerLink="enquiry">Sponsor Inquiry</button>
   <h2 style="text-align:center;">Sponsor Inquiry</h2>
 </div>
 
@@ -9,7 +9,7 @@
 <div class="card-deck danger">
   <div *ngFor="let sponsor of sponsors">
   <div class="card">
-    <img class="card-img-top" style="width:318px; height:100;" src="{{sponsor.SponsorLogo}}" alt="Card image cap">
+    <img class="card-img-top" style="width:318px; height:100;" src="{{sponsor.SponsorLogo | appendSponsor}}" alt="Card image cap">
     <div class="card-block">
       <div class="card-header">
         <h4 class="card-title">{{sponsor.SponsorName}}</h4>
@@ -22,39 +22,4 @@
   </div>
   </div>
 </div>
-  <!--
-  SponsorBlurb:string;
-  SponsorId:number;
-  SponsorLink:string;
-  SponsorLogo:string;
-  SponsorName:string;
-
-  <div class="card">
-    <img class="card-img-top" src="../../assets/images/frucor.jpg" alt="Card image cap">
-    <div class="card-block">
-      <div class="card-header">
-        <h4 class="card-title">Card title</h4>
-      </div>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="../../assets/images/frucor.jpg" alt="Card image cap">
-    <div class="card-block">
-      <div class="card-header">
-        <h4 class="card-title">Card title</h4>
-      </div>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
-
-<a routerLink="">close</a>
--->
     
