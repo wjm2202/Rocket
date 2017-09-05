@@ -2,8 +2,9 @@ section {
     position: relative;
 }
 .selected img {
-	opacity:0.5;
+    opacity:0.5;
 }
+
 #hero-carousel {
     position: relative;
     top: 50%;
