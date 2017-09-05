@@ -3,13 +3,14 @@
     <h1 style="text-align:center;">{{title}}</h1>
 </div>
 <div class="border">
-<div class="row">
-    <ul id="thumbnailsList">
-        <li *ngFor="let image of visableImages ">
-            <a [routerLink] = "['/photos', image.id]">
-                <img src="{{image.url}}" class="tn" width="200" height="160">
+    <div class="row">
+        <ul id="thumbnailsList">
+            <li *ngFor="let picture of pictures ">
+                <a [routerLink]="['/photos', picture.PhotoID]">
+                <img src="{{picture.Filename | photoAppendGeneral}}" class="tn" width="200" height="160">
+                <h4>{{picture.PhotoID}}</h4>
             </a>
-        </li>
-    </ul>
-</div>
+            </li>
+        </ul>
+    </div>
 </div>
