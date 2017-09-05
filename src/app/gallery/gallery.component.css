@@ -27,5 +27,7 @@ section {
 }
 .row{
     padding-left: 30px;
-    
+}
+img{
+    display: inline-block;
 }
