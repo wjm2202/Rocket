@@ -20,7 +20,7 @@ export class WelcomeMessageComponent implements OnInit {
     this.httpClient.get<OrgMessageModel>('https://webservices-test.aut.ac.nz/ecms/api/orgmessage').subscribe
       (data => {
         this.messages = data;
-        console.log("orgMessage: " + this.messages[0].orgMessage);
+        //console.log("orgMessage: " + this.messages[0].orgMessage);
       },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {

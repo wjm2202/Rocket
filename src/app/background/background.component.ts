@@ -77,11 +77,11 @@ export class BackgroundComponent implements OnChanges {
   }
   onResize(event){
     if(event.target.innerWidth < 767){
-      console.log('resize width: '+event.target.innerWidth);
+      //console.log('resize width: '+event.target.innerWidth);
       this.ismobile = true;
     }
     if(event.target.innerWidth > 768){
-      console.log('resize width: '+event.target.innerWidth);
+      //console.log('resize width: '+event.target.innerWidth);
       this.ismobile = false;
     }
   }
