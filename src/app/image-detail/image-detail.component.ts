@@ -22,31 +22,31 @@ export class ImageDetailComponent implements OnInit {
   Created;
   FileName;
   PhotoID;
+  loaded:boolean = false;
   constructor(private httpClient: HttpClient,
     private route: ActivatedRoute,
     private location: Location) {
 
     this.id = +this.route.snapshot.params['id'];
-    console.log('in constructor ' + this.id);
+    //console.log('in constructor ' + this.id);
+    this.getImages();
   }
   back() {
     this.location.back();
   }
   ngOnInit() {
-    console.log("in init the value of id: " + this.id);
-    this.getImages();
+    //console.log("in init the value of id: " + this.id);
   }
 
   getImages() {
     this.httpClient.get<PhotoModel>('https://webservices-test.aut.ac.nz/ecms/api/photos/' + this.id).subscribe
       (data => {
-        console.log('http://ecms-award.aut.ac.nz/web/generalphotos/' + data.Filename);
-        this.images = data;
+        //console.log('http://ecms-award.aut.ac.nz/web/generalphotos/' + data.Filename);
+        //this.images = data;
         this.Created = data.Created;
         this.FileName = data.Filename;
         this.PhotoID = data.PhotoID;
-        console.log(data);
-
+        this.loaded = true;
       },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {

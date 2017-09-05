@@ -53,6 +53,7 @@ import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburge
 import { WordSearchComponent } from './word-search/word-search.component';
 import { EventMessageComponent } from './event-message/event-message.component';
 import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
+import { AppendMaincaraPipe } from './pipes/append-maincara.pipe';
 
 
 
@@ -85,7 +86,8 @@ import { WelcomeMessageComponent } from './welcome-message/welcome-message.compo
     PhotoPipe,
     EventMessageComponent,
     WelcomeMessageComponent,
-    PhotoGeneralPipe
+    PhotoGeneralPipe,
+    AppendMaincaraPipe
 
   ],
   imports: [
