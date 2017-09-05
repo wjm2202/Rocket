@@ -104,33 +104,36 @@
 }
 
 /* Using media query to detect if the size of tablet is or more than 768px */
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
     .addressinfo {
-        font-size: 15px;
+        font-size: 13px;
     }
     .maorides {
-        font-size: 15px;
+        font-size: 13px;
     }
     .autcity {
-        font-size: 15px;
+        font-size: 13px;
     }
     .cityaddress {
-        font-size: 15px;
+        font-size: 13px;
+        margin-bottom: 10px;
     }
     .autsouth {
-        font-size: 15px;
+        font-size: 13px;
     }
     .southaddress {
-        font-size: 15px;
+        font-size: 13px;
+        margin-bottom: 10px;
     }
     .autnorth {
-        font-size: 15px;
+        font-size: 13px;
     }
     .northaddress {
-        font-size: 15px;
+        font-size: 13px;
+        margin-bottom: 10px;
     }
     .slogan {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -147,20 +150,56 @@
     }
     .cityaddress {
         font-size: 16px;
+        margin-bottom: 10px;
     }
     .autsouth {
         font-size: 16px;
     }
     .southaddress {
         font-size: 16px;
+        margin-bottom: 10px;
     }
     .autnorth {
         font-size: 16px;
     }
     .northaddress {
         font-size: 16px;
+        margin-bottom: 10px;
     }
     .slogan {
         font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 2603px) {
+    .addressinfo {
+        font-size: 23px;
+    }
+    .maorides {
+        font-size: 23px;
+    }
+    .autcity {
+        font-size: 23px;
+    }
+    .cityaddress {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .autsouth {
+        font-size: 23px;
+    }
+    .southaddress {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .autnorth {
+        font-size: 23px;
+    }
+    .northaddress {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .slogan {
+        font-size: 28px;
     }
 }

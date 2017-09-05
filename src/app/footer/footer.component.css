@@ -71,4 +71,18 @@ footer:hover {
         margin-top: 0;
         height: 400px;
     }
-} 
+}
+
+@media screen and (min-width: 2560px) {
+    .inner-wrapper {
+        height: 100%;
+    }
+    #photoaside{
+        margin-top: 0;
+        height: 500px;
+    }
+    #photoarticle{
+        margin-top: 0;
+        height: 500px;
+    }
+}
