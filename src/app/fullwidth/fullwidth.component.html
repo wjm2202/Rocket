@@ -1,7 +1,7 @@
 <ngb-carousel>
   <ng-template ngbSlide *ngFor="let picture of pictures;">
-    <img src="{{picture.Link | stripurl}}" alt="Random first slide">
+    <img src="{{picture.Link | appendMaincara}}" alt="Random first slide">
     <div class="carousel-caption">
-    </div> 
+    </div>
   </ng-template>
 </ngb-carousel>
