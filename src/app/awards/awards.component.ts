@@ -58,18 +58,3 @@ export class AwardsComponent implements OnInit {
     'AwardSponsorBlurb':'best best','NeedsSponsor':true}
   ];
 }
-
-/**
- *      awardBlub: string;
-  awardDate: string;
-  awardDegree:string;
-  awardDegreeLevel:string;
-  awardId: number;
-  awardName: string;
-  sponsorLink: string;
-  sponsorLogo: string;
-  sponsorName: string;
-  studentName: string;
-  awardSponsorBlurb: string;
- * 
- */
