@@ -22,7 +22,7 @@ export class EventMessageComponent implements OnInit {
     this.httpClient.get<EventModel>('https://webservices-test.aut.ac.nz/ecms/api/event').subscribe
       (data => {
         this.events = data;
-        console.log("EventBlurb: " + this.events[0].eventBlurb);
+      //  console.log("EventBlurb: " + this.events[0].eventBlurb);
       },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
