@@ -22,7 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FullwidthComponent } from './fullwidth/fullwidth.component';
 import { EmptyComponent } from './empty/empty.component';
 import { RightcontactComponent } from './rightcontact/rightcontact.component';
-import { LeftcontactComponent} from './leftcontact/leftcontact.component';
+import { LeftcontactComponent } from './leftcontact/leftcontact.component';
 //services
 import { GetawardsService } from './services/getawards.service';
 import { GetMainSponsorService } from './services/getSponsor.service';
@@ -34,6 +34,7 @@ import { UrlStrip } from './pipes/imagestrip';
 import { ImageFilterPipe } from './pipes/filter.pipe';
 import { AwardLevelPipe } from './pipes/filterAwards.pipe';
 import { PhotoPipe } from './pipes/photo.pipe';
+import { PhotoGeneralPipe } from './pipes/append-general.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -50,6 +51,8 @@ import { MaterialModule } from '@angular/material';
 import { MasonryModule } from 'angular2-masonry';
 import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburger.component';
 import { WordSearchComponent } from './word-search/word-search.component';
+import { EventMessageComponent } from './event-message/event-message.component';
+import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
 
 
 
@@ -79,7 +82,10 @@ import { WordSearchComponent } from './word-search/word-search.component';
     SignsponsorComponent,
     AnimatedhamburgerComponent,
     WordSearchComponent,
-    PhotoPipe
+    PhotoPipe,
+    EventMessageComponent,
+    WelcomeMessageComponent,
+    PhotoGeneralPipe
 
   ],
   imports: [
@@ -95,7 +101,7 @@ import { WordSearchComponent } from './word-search/word-search.component';
     MasonryModule
 
   ],
-  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [ImageService, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
