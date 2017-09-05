@@ -2,12 +2,8 @@
 
 <div class="carousel">
   <div class="holder">
-      <div *ngFor="let picture of pictures;">
-        <h4>{{picture.Sponsor_carousel}} </h4>
+    <span *ngFor="let picture of pictures;">
           <img src="{{picture.Sponsor_carousel | photoApend}}" alt="" />  
-      </div>
+      </span>
   </div>
-</div>  
-
-
-
+</div>
