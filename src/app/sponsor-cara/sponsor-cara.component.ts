@@ -35,7 +35,6 @@ export class SponsorCaraComponent implements OnInit {
     //this.getpics();
     this.httpClient.get<Spon_caraModel>('https://webservices-test.aut.ac.nz/ecms/api/sponsorCarosouel').subscribe(data => {
       this.pictures = data;
-      console.log(this.pictures[0].Sponsor_carousel);
     },
   (err: HttpErrorResponse) => {
     if(err.error instanceof Error){

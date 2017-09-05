@@ -27,7 +27,7 @@ export class FullwidthComponent implements OnInit {
   constructor(private httpclient: HttpClient) { }
 
   ngOnInit() {
-    this.getImages;
+    this.getImages();
   }
 
   getImages() {
