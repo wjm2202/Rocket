@@ -55,6 +55,7 @@ import { WordSearchComponent } from './word-search/word-search.component';
 import { EventMessageComponent } from './event-message/event-message.component';
 import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
 import { AppendMaincaraPipe } from './pipes/append-maincara.pipe';
+import { SponsorshipMessageComponent } from './sponsorship-message/sponsorship-message.component';
 
 
 
@@ -89,6 +90,7 @@ import { AppendMaincaraPipe } from './pipes/append-maincara.pipe';
     WelcomeMessageComponent,
     PhotoGeneralPipe,
     AppendMaincaraPipe,
+    SponsorshipMessageComponent,
     AppendSponsorPipe
 
   ],
