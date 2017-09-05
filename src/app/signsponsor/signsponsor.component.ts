@@ -61,8 +61,17 @@ export class SignsponsorComponent implements OnInit {
     this.Obj = {awardId: this.AwardId, awardName: this.Name, company: this.Company, email: this.Email, name: this.Name, phone: this.Phone, comments:this.Comments}
     //console.log(this.Obj);
     this.postDetails(this.Obj);
-    
-  }            
+  }     
+  
+    clearinput(): void{
+      this.AwardInput = "";
+      this.AwardId = "";
+      this.Comments = "";
+      this.Company = "";
+      this.Email = "";
+      this.Name = "";
+      this.Phone = "";
+    }
 
 
   postDetails(Obj:SuccessRes){
@@ -80,6 +89,7 @@ export class SignsponsorComponent implements OnInit {
           this.postSuccess = true;
           console.log('is post successful '+this.postSuccess);
           console.log(res);
+          this.clearinput();
         },
         err => {
           console.log('Error posting data:   '+ err);

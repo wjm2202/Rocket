@@ -1,11 +1,13 @@
 .img-container {
-    margin: auto;
+    margin:  auto;
+    margin-bottom: 50px;
     box-shadow: #555 1px 2px 8px 1px;
-    min-height: 660px;
-    width:900px;
+    height: 660px;
+    max-width: 900px;
     background-position: center;
     background-repeat: no-repeat;
     align-content: center;
+    background-size: 100%
 }
 
 #caption {
@@ -28,4 +30,9 @@
 }
 button{
     margin:20px;
+}
+
+.imageborder{
+    padding-bottom: 45px;
+    height: 660px;
 }
