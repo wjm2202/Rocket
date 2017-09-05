@@ -240,3 +240,44 @@
         margin-right: 10px;
     }
 }
+
+@media screen and (min-width: 2560px) {
+    .cu {
+        font-size: 25px;
+    }
+    .se {
+        font-size: 25px;
+    }
+    .faq {
+        font-size: 25px;
+    }
+    .freeph {
+        font-size: 25px;
+    }
+    .ph0800 {
+        font-size: 25px;
+    }
+    .email {
+        font-size: 25px;
+    }
+    .corpenq {
+        font-size: 25px;
+    }
+    .phcorp {
+        font-size: 25px;
+    }
+    .corpph0800 {
+        font-size: 25px;
+    }
+    .rainbow {
+        width: 25%;
+        /* grid-column: 2/10;
+        grid-row: 2/3; */
+    }
+    .facebook a img, .instagram a img, 
+    .twitter a img, .youtube a img, .linkedin a img{
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+}
