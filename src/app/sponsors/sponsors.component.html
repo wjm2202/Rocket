@@ -8,18 +8,20 @@
 
 <div class="card-deck danger">
   <div *ngFor="let sponsor of sponsors">
-  <div class="card">
-    <img class="card-img-top" style="width:318px; height:100;" src="{{sponsor.SponsorLogo | appendSponsor}}" alt="Card image cap">
-    <div class="card-block">
-      <div class="card-header">
-        <h4 class="card-title">{{sponsor.SponsorName}}</h4>
+    <div *ngIf="sponsor.SponsorName != 'Placeholder'">
+      <div class="card">
+        <img class="card-img-top" style="width:318px; height:100;" src="{{sponsor.SponsorLogo | appendSponsor}}" alt="Card image cap">
+        <div class="card-block">
+          <div class="card-header">
+            <h4 class="card-title">{{sponsor.SponsorName}}</h4>
+          </div>
+          <p class="card-text">{{sponsor.SponsorBlurb}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><a href="{{sponsor.SponsorLink}}">{{sponsor.SponsorLink | stripurl}}</a></small>
+        </div>
       </div>
-      <p class="card-text">{{sponsor.SponsorBlurb}}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted"><a href="{{sponsor.SponsorLink}}">{{sponsor.SponsorLink | stripurl}}</a></small>
-    </div>
-  </div>
+    </div>  
   </div>
 </div>
     
