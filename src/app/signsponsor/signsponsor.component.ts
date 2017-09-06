@@ -41,17 +41,18 @@ export class SignsponsorComponent implements OnInit {
   AwardInput:string='';
   Obj;
   headers;
+  posted:any;
 
 //api call success
   handleSuccess(data){
     this.sponsorsFound = true;
     this.potential = data;
-    console.log(data);
+    //console.log(data);
   }
   //api call failed
   handleError(error){
     this.postFailed = true;
-    console.log(error);
+    //console.log(error);
   }
   //for observables
   constructor(private _sponsorOpS: SponsorOpService,
@@ -75,7 +76,7 @@ export class SignsponsorComponent implements OnInit {
 
 
   postDetails(Obj:SuccessRes){
-    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
+    const request = this._http.post<SuccessRes>('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
       awardId: `${this.AwardInput}`,           //award id number
       awardName: `${this.AwardId}`,            //name of award
       comments: `${this.Comments}`,            //any comments made
@@ -87,8 +88,9 @@ export class SignsponsorComponent implements OnInit {
       .subscribe(
         res => {
           this.postSuccess = true;
-          console.log('is post successful '+this.postSuccess);
-          console.log(res);
+          this.posted = res;
+          //console.log('is post successful '+this.postSuccess);
+          //console.log(this.posted);
           this.clearinput();
         },
         err => {
