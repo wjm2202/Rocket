@@ -14,3 +14,7 @@
 button{
     margin:10px;
 }
+
+.card-deck .danger{
+    padding-left: 0%;
+}
