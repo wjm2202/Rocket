@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SponsorOpService } from '../services/SponsorOp.service';
 import { UrlStrip } from '../pipes/imagestrip';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, FormBuilder, Validators, EmailValidator} from '@angular/forms';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { PhotoPipe } from '../pipes/photo.pipe';
@@ -35,49 +35,73 @@ export class SignsponsorComponent implements OnInit {
   Email:string ='';                        //contact email
   Company:string = '';                     //company name
   Phone:string = '';                       //phone number
-  AwardId:string='';                       //award name
+  AwardId:string='';                       //award id
+  AwardName:string='';                     //award name
   Comments:string='';                      //comments
   Selected;
   AwardInput:string='';
   Obj;
   headers;
+  posted:any;
+
+  //reactive form
+  rForm:FormGroup;
+  post:any;
+  namealert:string = 'Name Field is Required to submit';
+  emailalert:string = 'Email must be valid to submit';
+  companyalert:string = 'Company feild must be completed to submit';
+  manual:boolean = false;
 
 //api call success
   handleSuccess(data){
     this.sponsorsFound = true;
     this.potential = data;
-    console.log(data);
+    //console.log(data);
   }
   //api call failed
   handleError(error){
     this.postFailed = true;
-    console.log(error);
+    //console.log(error);
   }
   //for observables
   constructor(private _sponsorOpS: SponsorOpService,
-              private _http: HttpClient) { }
+              private fb:FormBuilder,
+              private _http: HttpClient) { 
+    this.rForm = fb.group({
+      'name':[null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(30)])],
+      'email':[null, Validators.compose([Validators.required, Validators.email])],
+      'company':[null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(30)])],
+      'phone': '',
+      'awardname':'',
+      'comments':'',
+      'selfselect':''
+      
+
+    })
+  }
+//reactive forms
+  addPost(post){
+    this.Name = post.name;    
+    this.Email = post.email;
+    this.Company = post.company; 
+    this.Phone = post.phone;
+    if(post.awardname != ''){
+      this.AwardName = post.awardname;
+    }
+    this.Comments = post.comments;
+    this.sendDetails();
+  }
 
   sendDetails(){
-    this.Obj = {awardId: this.AwardId, awardName: this.Name, company: this.Company, email: this.Email, name: this.Name, phone: this.Phone, comments:this.Comments}
-    //console.log(this.Obj);
+    this.Obj = {awardId: this.AwardId, awardName: this.AwardName, company: this.Company, email: this.Email, name: this.Name, phone: this.Phone, comments:this.Comments}
+    console.log(this.Obj);
     this.postDetails(this.Obj);
   }     
   
-    clearinput(): void{
-      this.AwardInput = "";
-      this.AwardId = "";
-      this.Comments = "";
-      this.Company = "";
-      this.Email = "";
-      this.Name = "";
-      this.Phone = "";
-    }
-
-
   postDetails(Obj:SuccessRes){
-    const request = this._http.post('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
-      awardId: `${this.AwardInput}`,           //award id number
-      awardName: `${this.AwardId}`,            //name of award
+    const request = this._http.post<SuccessRes>('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
+      awardId: `${this.AwardId}`,           //award id number
+      awardName: `${this.AwardName}`,            //name of award
       comments: `${this.Comments}`,            //any comments made
       company: `${this.Company}`,              //company name
       email: `${this.Email}`,                  //contact email
@@ -87,9 +111,9 @@ export class SignsponsorComponent implements OnInit {
       .subscribe(
         res => {
           this.postSuccess = true;
-          console.log('is post successful '+this.postSuccess);
-          console.log(res);
-          this.clearinput();
+          this.posted = res;
+          //console.log('is post successful '+this.postSuccess);
+          //console.log(this.posted);
         },
         err => {
           console.log('Error posting data:   '+ err);
@@ -107,16 +131,10 @@ export class SignsponsorComponent implements OnInit {
   }
 
   setAward(id){
-    if(this.Selected){
-      this.clear();
-    }
-    this.AwardId = id.AwardName;
-    this.Selected = id;
-    this.AwardInput = id.AwardId;
-    let index = this.potential.indexOf(id);
-    if (index !== -1) {
-      this.potential.splice(index, 1);
-    } 
+    this.manual = true;
+    this.AwardName = id.AwardName;
+    this.AwardId = id.AwardId;
+    
   }
   clear(){
     if(this.Selected){
@@ -127,9 +145,17 @@ export class SignsponsorComponent implements OnInit {
     this.postSuccess = false;
   }
   ngOnInit() {
-    this.searchSponsors();                    //for live api
-    //this.potential = this.AWARDS;               //for offline testing
-    //this.sponsorsFound = true;                  //for offline testing
+    //this.searchSponsors();                    //for live api
+    this.potential = this.AWARDS;
+    this.rForm.get('selfselect').valueChanges.subscribe(
+      (selfselect) => {
+        if(selfselect  == '1'){
+          this.manual = true;
+        }else{
+          this.manual = false;
+        }
+      }
+    )
   }
   AWARDS = [
     {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',

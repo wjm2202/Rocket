@@ -7,7 +7,7 @@ import { appRouting } from './approutes/routes';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 //my components
@@ -97,6 +97,7 @@ import { SponsorshipMessageComponent } from './sponsorship-message/sponsorship-m
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpModule,
     HttpClientModule,

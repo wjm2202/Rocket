@@ -263,11 +263,6 @@ nav ul li a:hover {
     z-index: 0;
 }
 
-#tablet {
-    background-color: #FFFFFF;
-    max-height: 800px;
-}
-
 article {
     float: left;
     margin: 0 auto;
@@ -294,6 +289,7 @@ aside {
     height: 400px;
 }
 #awardsarticle {
+    text-align: center;
     float: left;
     margin: 0 auto;
     width: 70%;
@@ -313,12 +309,14 @@ aside {
     height: 400px;
 }
 #photoarticle {
+    text-align: center;
     float: right;
     margin: 0 auto;
     width: 50%;
     height: 400px;
 }
 #contactarticle {
+    text-align: center;
     float: right;
     margin: 0 auto;
     width: 50%;
@@ -346,7 +344,11 @@ aside {
     background-color: #FFFFFF;
     max-height: 800px;
 }
-
+/* Main Title Article Background Colour */
+#tablet {
+    background-color: transparent;
+    max-height: 800px;
+}
 /* Sponsorship Article Background Colour */
 #mobile {
     background-color: transparent;
@@ -382,13 +384,13 @@ aside {
     
     float: left;
     width: 100%;
-    background-color: #f07d00;
+    background-color: white;
 }
 
 .inner-wrapper-3 {
     float: left;
     width: 100%;
-    background-color: #f07d00;
+    background-color: white;
 }
 
 .one-third {
