@@ -153,8 +153,8 @@ export class SignsponsorComponent implements OnInit {
     this.postSuccess = false;
   }
   ngOnInit() {
-    //this.searchSponsors();                    //for live api
-    this.potential = this.AWARDS;
+    this.searchSponsors();                    //for live api
+    //this.potential = this.AWARDS;
     this.rForm.get('selfselect').valueChanges.subscribe(
       (selfselect) => {
         if(selfselect  == '1'){
