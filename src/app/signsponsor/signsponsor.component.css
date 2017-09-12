@@ -112,3 +112,9 @@ input[type=checkbox]{
         transform: translateY(0);
     }
 }
+
+@media screen and (max-width: 415px){
+    .border{
+        margin-left: 0;
+    }
+}
