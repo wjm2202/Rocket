@@ -38,7 +38,7 @@ export class SignsponsorComponent implements OnInit {
   AwardId:string='';                       //award id
   AwardName:string='';                     //award name
   Comments:string='';                      //comments
-  Selected;
+  Selected = null;
   AwardInput:string='';
   Obj;
   headers;
@@ -134,6 +134,14 @@ export class SignsponsorComponent implements OnInit {
     this.manual = true;
     this.AwardName = id.AwardName;
     this.AwardId = id.AwardId;
+    if(this.Selected !== null){
+      this.potential.push(this.Selected);
+      //console.log('Selected is not null');
+    }
+    let index = this.potential.indexOf(id);
+    this.Selected = this.potential[index];
+    this.potential.splice(index,1);
+    console.log('selected: '+ this.Selected.AwardId);
     
   }
   clear(){
