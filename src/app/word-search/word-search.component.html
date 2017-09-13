@@ -23,6 +23,7 @@
         <th>Sponsor</th>
         <th>Degree Level</th>
         <th>Degree</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -34,6 +35,7 @@
         <td>{{result.SponsorName}} </td>
         <td>{{result.AwardDegreeLevel}} </td>
         <td>{{result.AwardDegree}} </td>
+        <td><a [routerLink]="['award', result.AwardId]">View</a></td>
       </tr>
     </tbody>
   </table>
