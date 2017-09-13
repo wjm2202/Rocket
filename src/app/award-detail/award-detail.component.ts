@@ -38,7 +38,7 @@ export class AwardDetailComponent implements OnInit {
         this.AwardDegreeLevel = this.obj.AwardDegreeLevel;
         this.AwardDegree = this.obj.AwardDegree;
         this.AwardDate = this.obj.AwardDate;
-        this.AwardBlurb = this.AwardBlurb;
+        this.AwardBlurb = this.obj.AwardBlurb;
       }
     )
   }

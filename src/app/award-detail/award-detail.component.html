@@ -6,14 +6,17 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <div [ngStyle]="{'background-color':'whitesmoke'}" class="award-container">
+    <div class="award-container">
       <div [ngStyle]="{'text-align':'center'}">
+        <img src="http://ecms-award.aut.ac.nz/web/cert_header.png" width="1200px">
+        
+        <h1>{{StudentName}}</h1>
+        <h2>has been awarded the</h2>
         <h1>{{AwardName}}</h1>
-        <h2>{{StudentName}}</h2>
-        <h2>{{AwardDegreeLevel}}</h2>
-        <h2>{{AwardDegree}}</h2>
-        <h2>{{AwardDate}}</h2>
-        <h2>{{AwardBlurb}}</h2>             
+        <h2>for</h2>
+        <h3>{{AwardBlurb}}</h3>
+        <h3>{{AwardDate}}</h3>
+         
       </div>
     </div>
   </div>
