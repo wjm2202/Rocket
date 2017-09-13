@@ -20,6 +20,7 @@ export class WordSearchComponent implements OnInit {
   criteria: string = 'StudentName';
   showResults:boolean = false;
   
+  
   test(id, selected){
     this.criteria = selected;
     console.log(this.criteria);
@@ -33,11 +34,10 @@ export class WordSearchComponent implements OnInit {
   constructor(private http:Http) {                         //import Http singleton
     this.results = this.latestSearch                       //latest to results
     .debounceTime(500)                                     //500ms after typing to api call
-    .distinct()                                            //only search for distinct changes
     .filter(term =>!!term)                                 //result is truthy not empty
     //to use a variable in a string use back ticks`string${variable}string`  
-    .switchMap(term => this.http.get(`https://webservices-test.aut.ac.nz/ecms/api/search/studentname/${term}`) //get request github
-    .map(res => res.json().items.map(item => item.AwardModel))    //map the response to json get item => item.name
+    .switchMap(term => this.http.get(`https://webservices-test.aut.ac.nz/ecms/api/search/${this.criteria}/${term}`) //get request github
+    .map(res => res.json())    //map the response to json get item => item.name
     );
   }
   ngOnInit() {
