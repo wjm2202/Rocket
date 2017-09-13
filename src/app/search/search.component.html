@@ -5,10 +5,12 @@
     <button class="btn btn-lg btn-info" [class.active]="filterBy=='Undergraduate'" (click)="filterBy='Undergraduate'">Under-graduate</button>
     <button class="btn btn-lg btn-info" [class.active]="filterBy=='Postgraduate'" (click)="filterBy='Postgraduate'">Post-graduate</button>
     <button class="btn btn-lg btn-info" [class.active]="filterBy=='PhD'" (click)="filterBy='PhD'">Doctorate</button>
+    <button class="btn btn-lg btn-success" (click)="openSearch()">Detailed Search</button>
     <h1 style="text-align:center;">{{title}}</h1>
 </div>
-
-<app-word-search></app-word-search>
+<div [@dropdown] *ngIf="wordSearch">
+  <app-word-search></app-word-search>
+</div>
 
 <div class="row">
   <ul id="thumbnailsList">
