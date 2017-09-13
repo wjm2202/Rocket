@@ -128,9 +128,10 @@ button {
 
 .titleHeader {
 	text-align: center;
+	position: relative;
 }
 
-#logo {
+#pageTitle {
 	font-family: 'Open Sans', sans-serif;
 	color: #D93B20;
 	text-decoration: none;
@@ -142,19 +143,54 @@ button {
 	text-shadow: white 3px 2px 0;
 	position: relative;
   }
-  #logo:after {
+  #pageTitle:after {
 	content:"Awards";
 	position: absolute;
 	left: 7px;
 	top: 24px;
   }
-  #logo:after {
+  #pageTitle:after {
 	/*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
 	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
 	background-size: 3px 3px;
 	-webkit-background-clip: text;
+	background-clip: test;
 	-webkit-text-fill-color: transparent;
 	z-index: -5;
 	display: block;
 	text-shadow: none;
   }
+
+  .homepageButton {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    /* font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; */
+	font-family: 'Open Sans', sans-serif;
+	color: #D93B20;
+    font-size: 18px;
+    background: #FFFFFF;
+    padding: 7px 19px 7px 19px;
+    border: solid #D93B20 2px;
+    text-decoration: none;
+}
+
+.homepageButton:hover {
+    background: #D93B20;
+    /* font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; */
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 320px) {
+	#pageTitle {
+		font-size: 65px;
+		left: 0px;
+		text-shadow: white 2px 1px 0;
+	}
+	#pageTitle:after {
+		left: 6px;
+		top: 14px;
+	}
+}
