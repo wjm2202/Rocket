@@ -10,7 +10,7 @@
   <div *ngFor="let sponsor of sponsors">
     <div *ngIf="sponsor.SponsorName != 'Placeholder'">
       <div class="card">
-        <img class="card-img-top" style="width:318px; height:100;" src="{{sponsor.SponsorLogo | appendSponsor}}" alt="Card image cap">
+        <img class="card-img-top"  src="{{sponsor.SponsorLogo | appendSponsor}}" alt="Card image cap">
         <div class="card-block">
           <div class="card-header">
             <h4 class="card-title">{{sponsor.SponsorName}}</h4>
