@@ -149,7 +149,7 @@ nav ul li a:hover {
     z-index: 500;
 }
 #html {
-    background-color: #F1AA90;
+    background-color: #FC882B;
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -175,7 +175,7 @@ nav ul li a:hover {
     transform: scale(1);
 }
 #css {
-    background-color: #BEB9AD;
+    background-color: #F76A6A;
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -200,7 +200,7 @@ nav ul li a:hover {
     transform: scale(1);
 }
 #seo {
-    background-color: #AADCD2;
+    background-color: #A8D0E6;
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -225,7 +225,7 @@ nav ul li a:hover {
     transform: scale(1);
 }
 #social {
-    background-color: #A2B2C1;
+    background-color: #B189D2;
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
