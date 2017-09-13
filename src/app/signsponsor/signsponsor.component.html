@@ -1,82 +1,59 @@
-
 <div class="border">
     <button class="btn btn-lg btn-success" routerLink="..">Current Sponsors</button>
     <h2 style="text-align:center;">Sponsor Inquiry</h2>
 </div> 
 
-  <form class="forms">
-    <div class="left">
-      <md-card-header >
-        <h4 style="text-align:center;">Enter Your Details to Initiate Contact</h4>
-      </md-card-header > 
-      <md-card-header>
-        <p>*This form is to initiate contact for more information about the possability to sponsor an award</p>
-      </md-card-header>
-      <div class="form-group">
-        <label for="formGroupExampleInput">Your Name</label>
-        <input type="text" class="form-control" mdInput [(ngModel)]="Name" name="name" id="formGroupExampleInput" placeholder="Name:" required>
-      </div>
-      <div class="form-group">
-        <label for="formGroupExampleInput2">Your Email</label>
-        <input type="text" class="form-control" mdInput [(ngModel)]="Email" name="email" id="formGroupExampleInput2" placeholder="Email:" required>
-      </div>
-      <div class="form-group">
-          <label for="formGroupExampleInput3">Your Company Name</label>
-          <input type="text" class="form-control" mdInput [(ngModel)]="Company" name="company" id="formGroupExampleInput3" placeholder="Company" required>
-      </div>
-      <div class="form-group">
-        <label for="formGroupExampleInput4">Your Phone Number</label>
-        <input type="text" class="form-control" mdInput [(ngModel)]="Phone" name="phone" id="formGroupExampleInput4" placeholder="Phone:  Ext:" required>
-      </div>
-      <div class="form-group">
-        <label for="formGroupExampleInput5">Click An Award below or type an award title To Inquire</label>
-        <input type="text" class="form-control" mdInput [(ngModel)]="AwardId" name="AwardId" id="formGroupExampleInput5" placeholder="Enter Award Name or click one from below" 
-        required>
-      </div>
-      <div class="form-group">
-          <label for="formGroupExampleInput6">Your Further Comments</label>
-          <input type="text" class="form-control" mdInput [(ngModel)]="Comments" name="Comments" id="formGroupExampleInput6" placeholder="Further Comments:" 
-          required>
-        </div>
-      <div class="form-group row">
-        <div class="offset-sm-2 col-sm-10">
-          <button (click)="sendDetails()" type="submit" class="btn btn-success">Submit</button>
-          <button (click)="clear()" class="btn btn-primary">Clear Selected Award</button>
-        </div>
-      </div>
-    </div>
+<div class="container border">
+<div *ngIf="!Name; else forminfo">
+  <h1 style="text-align:center">Submit an Enquiry </h1>
+  <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
     
-    <div class="right" *ngIf="AwardId !='' && postSuccess != true" >
-      <md-card class="awardCard">
-        <md-card-header>
-          <img src="../assets/images/aut_logo.png" style="width:65px;height:45px;">
-          <md-card-title style="color:red;">Award Status: PENDING</md-card-title>
-        </md-card-header>
-        <md-card-content>
-          <br>
-          <h2>{{AwardId}}</h2>
-          <p>{{Selected.AwardDegree}}</p>
-          <p>{{Selected.AwardBlurb}}</p>
-        </md-card-content>
-      </md-card>
-    </div>
-    <div class="right" *ngIf="postSuccess">
-      <md-card class="awardCard">
-        <md-card-header>
-          <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
-          <md-card-title style="color:red;">Thank You For Your Inquiry</md-card-title>
-        </md-card-header>
-        <md-card-content>
-          <br>
-          <h2>{{Company}}</h2>
-          <p>{{Name}}</p>
-          <p>{{Phone}}</p>
-          <p>{{Email}}</p>
-          <p>{{AwardId}}</p>
-          <p style="color:red;"> We will contact you about your inquiry</p>
-        </md-card-content>
-      </md-card>
-    </div>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="sizing-addon1">Name</span>
+        <input type="text" formControlName="name" class="form-control" placeholder="Contact Name" aria-describedby="sizing-addon1">
+      </div>
+      <div class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">{{namealert}}</div>
+      <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">Email</span>
+          <input type="text" formControlName="email" class="form-control" placeholder="Email Address" aria-describedby="sizing-addon1">
+      </div>
+      <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{emailalert}}</div>
+      <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">Organization</span>
+          <input type="text" formControlName="company" class="form-control" placeholder="organization" aria-describedby="sizing-addon1">
+      </div>
+      <div class="alert" *ngIf="!rForm.controls['company'].valid && rForm.controls['company'].touched">{{companyalert}}</div>
+      <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">Phone</span>
+          <input type="text" formControlName="phone" class="form-control" placeholder="Phone Number" aria-describedby="sizing-addon1">
+      </div>
+      <h3>Click to Select an Award Below OR</h3>
+      <input type="checkbox" class="cb" formControlName="selfselect" value="1">
+      &nbsp;&nbsp;Enter your own award suggestion
+      <div *ngIf="manual">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Award</span> 
+            <input type="text" [(ngModel)]="AwardName" formControlName="awardname" class="form-control" placeholder="Award Name" aria-describedby="sizing-addon1">
+        </div>
+      </div>
+      <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">Comments</span> 
+          <input type="text" formControlName="comments" class="form-control" placeholder="Comments" aria-describedby="sizing-addon1">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Submit Form" [disabled]="!rForm.valid">
+  </form>
+</div>
+</div>
+<ng-template #forminfo>
+  <div class="border" >
+    <h3 style="color:red;text-align:center;"> Thank You for your Enquiry </h3>
+      <h1 style="text-align:center">{{ Name}} </h1>
+      <h4 style="text-align:center">{{ Email }} </h4>
+      <h4 style="text-align:center"> {{ Company }}</h4>
+      <h4 style="text-align:center"> {{ AwardName }}</h4>
+      <h3 style="color:red;text-align:center;"> We will Email you to discuss the details of your enquiry </h3>
+  </div>
+</ng-template>
 
 <hr class="line">
 
@@ -88,7 +65,7 @@
     <h4 *ngIf="sponsorsFound" md-subeader>Results</h4>
     <h5>Click an Award to add to Inquiry</h5>
     <masonry [useImagesLoaded]="true">
-      <masonry-brick *ngFor="let award of potential" >  <!-- write a pipe for herer  -->
+      <masonry-brick *ngFor="let award of potential" >   
         <div *ngIf="award.NeedsSponsor == true">
           <md-card (click)="setAward(award)" class="image-container">
             <md-card-header>

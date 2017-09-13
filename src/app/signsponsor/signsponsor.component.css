@@ -55,6 +55,7 @@ p{
     border: 2px solid #eee;
     border-radius: 2px;
     box-shadow: #555 1px 1px 8px 1px;
+    padding-bottom: 10px;
 }
 button{
     margin:10px;
@@ -63,4 +64,57 @@ button{
     margin: 0px;
     border: 4px solid #eee;
     box-shadow: #555 0px 0px 8px 0px;
+}
+/* reactive form css */
+.form-container {
+    width:90%;
+    padding:2em;
+    margin: 2em auto;
+    background:#fff;
+}
+
+.alert {
+    background: #f2edda;
+    padding: 7px;
+    font-size: .9em;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: 2s alertAnim forwards;
+}
+
+.button {
+    margin-top: 3rem;
+}
+h1 {
+    margin-bottom: 2rem;
+    font-weight:bold;
+    font-family:'Muli';
+    font-size: 2em;
+}
+#name{
+    width: 100%;
+}
+.input-group{
+    margin-bottom: 10px;
+}
+input[type=checkbox]{
+    transform: scale(2);
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+@keyframes alertAnim {
+    from {
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 415px){
+    .border{
+        margin-left: 0;
+    }
 }

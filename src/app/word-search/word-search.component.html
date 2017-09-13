@@ -13,7 +13,30 @@
   </div>
 </div>
 <div [class.border]="showResults">
-  <div *ngFor="let result of results | async">
-      {{result}}
-  </div>
+  <table class="table table-stripped table-inverse">
+    <thead>
+      <tr>
+        <th>Award Id</th>
+        <th>Award Name</th>
+        <th>Student Name</th>
+        <th>Award Date</th>
+        <th>Sponsor</th>
+        <th>Degree Level</th>
+        <th>Degree</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of results | async">
+        <td>{{result.AwardId}} </td>
+        <td>{{result.AwardName}} </td>
+        <td>{{result.StudentName}} </td>
+        <td>{{result.AwardDate}} </td>
+        <td>{{result.SponsorName}} </td>
+        <td>{{result.AwardDegreeLevel}} </td>
+        <td>{{result.AwardDegree}} </td>
+        <td><a [routerLink]="['award', result.AwardId]">View</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
