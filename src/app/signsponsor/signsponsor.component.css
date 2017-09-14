@@ -103,6 +103,9 @@ input[type=checkbox]{
     margin-bottom: 20px;
     margin-left: 10px;
 }
+input[type=text]{
+    z-index: 0;
+}
 @keyframes alertAnim {
     from {
         opacity:0;
