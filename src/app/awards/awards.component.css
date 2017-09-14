@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
 @import url(https://fonts.googleapis.com/css?family=Squada+One);
-
 #search-container {
 	margin-top: 20%;
 }
@@ -107,7 +106,7 @@ p {
 }
 
 section {
-	height: 100px;	
+	height: 100px;
 	width: 100%;
 }
 
@@ -142,15 +141,16 @@ button {
 	line-height: 1;
 	text-shadow: white 3px 2px 0;
 	position: relative;
-  }
-  #pageTitle:after {
-	content:"Awards";
+}
+
+#pageTitle:after {
+	content: "Awards";
 	position: absolute;
 	left: 7px;
 	top: 24px;
-  }
-  #pageTitle:after {
-	/*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
+}
+
+#pageTitle:after {
 	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
 	background-size: 3px 3px;
 	-webkit-background-clip: text;
@@ -159,42 +159,24 @@ button {
 	z-index: -5;
 	display: block;
 	text-shadow: none;
-  }
+}
 
-  .homepageButton {
-    -webkit-border-radius: 6;
-    -moz-border-radius: 6;
-    border-radius: 6px;
-    /* font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; */
+.homepageButton {
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	border-radius: 6px;
 	font-family: 'Open Sans', sans-serif;
 	color: #D93B20;
-    font-size: 18px;
-    background: #FFFFFF;
-    padding: 7px 19px 7px 19px;
-    border: solid #D93B20 2px;
-    text-decoration: none;
+	font-size: 18px;
+	background: #FFFFFF;
+	padding: 7px 19px 7px 19px;
+	border: solid #D93B20 2px;
+	text-decoration: none;
 }
 
 .homepageButton:hover {
-    background: #D93B20;
-    /* font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; */
+	background: #D93B20;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
-    text-decoration: none;
-}
-
-
-
-/***************  MOBILE PAGE HEADER TITLES  ***************/
-
-@media only screen and (max-width: 320px) {
-	#pageTitle {
-		font-size: 55px;
-		left: 0px;
-		text-shadow: white 2px 1px 0;
-	}
-	#pageTitle:after {
-		left: 6px;
-		top: 14px;
-	}
+	text-decoration: none;
 }
