@@ -20,6 +20,10 @@ html, body {
 	overflow-x: hidden;
 	background-color: black;
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
 
 .event {
 	background-color: #D93B20;
@@ -175,12 +179,12 @@ nav ul li a:hover {
 }
 
 #html {
-	background-color: #F1AA90;
-	-webkit-transition: .1s ease-in-out;
-	-moz-transition: .1s ease-in-out;
-	-ms-transition: .1s ease-in-out;
-	-o-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
+    background-color: #FC882B;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
 }
 
 #html:hover {
@@ -204,12 +208,12 @@ nav ul li a:hover {
 }
 
 #css {
-	background-color: #BEB9AD;
-	-webkit-transition: .1s ease-in-out;
-	-moz-transition: .1s ease-in-out;
-	-ms-transition: .1s ease-in-out;
-	-o-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
+    background-color: #F76A6A;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
 }
 
 #css:hover {
@@ -232,12 +236,12 @@ nav ul li a:hover {
 }
 
 #seo {
-	background-color: #AADCD2;
-	-webkit-transition: .1s ease-in-out;
-	-moz-transition: .1s ease-in-out;
-	-ms-transition: .1s ease-in-out;
-	-o-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
+    background-color: #A8D0E6;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
 }
 
 #seo:hover {
@@ -260,12 +264,13 @@ nav ul li a:hover {
 }
 
 #social {
-	background-color: #A2B2C1;
-	-webkit-transition: .1s ease-in-out;
-	-moz-transition: .1s ease-in-out;
-	-ms-transition: .1s ease-in-out;
-	-o-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
+    background-color: #B189D2;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+    
 }
 
 #social:hover {
@@ -353,17 +358,19 @@ aside {
 }
 
 #photoarticle {
-	float: right;
-	margin: 0 auto;
-	width: 50%;
-	height: 400px;
+    float: right;
+    margin: 0 auto;
+    width: 50%;
+    height: 400px;
+    overflow: scroll;
 }
 
 #contactarticle {
-	float: right;
-	margin: 0 auto;
-	width: 50%;
-	height: 400px;
+    float: right;
+    margin: 0 auto;
+    width: 50%;
+    height: 400px;
+    overflow: scroll;
 }
 
 #contactaside {
@@ -531,8 +538,14 @@ footer.second p {
 }
 
 #card .front {
+<<<<<<< HEAD
 	background: whitesmoke;
 	min-height: 400px;
+=======
+  background: whitesmoke;
+  min-height: 400px;
+  height: auto;
+>>>>>>> upstream/master
 }
 
 #card .back {
@@ -554,6 +567,7 @@ footer.second p {
 /*----------MEDIA!!!-------*/
 
 @media screen and (max-width: 768px) {
+<<<<<<< HEAD
 	h2 {
 		font-size: 150%;
 	}
@@ -620,4 +634,89 @@ footer.second p {
 	.social i {
 		font-size: 180%;
 	}
+=======
+    h2 {
+        font-size: 150%;
+    }
+
+    h3 {
+        font-size: 125%;
+    }
+
+    p {
+        font-size: 120%;
+    }
+
+    header {
+    background-color: #AADCD2;
+    min-height: 70px;
+
+    }
+
+    #logo {
+        margin: 15px 0 20px -25px;
+    }
+
+    #menu-icon {
+        display: inline-block;
+        color: black;
+    }
+
+    nav ul, nav:active ul {
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        padding: 20px;
+        background: #6991AC;
+        right: 20px;
+        top: 60px;
+        border: 1px solid #FFF;
+        border-radius: 2px 0 2px 2px;
+        width: 50%;
+    }
+
+    nav:hover ul {
+        display: block;
+    }
+
+    nav li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .banner {
+        padding-top: 86px;
+    }
+    .one-fourth {
+        float: left;
+        width: 100%;
+    }
+    .one-fourth i {
+        font-size: 350%;
+        padding: 4% 0 1% 0;
+    }
+    article {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+    .hand-mobile {
+        display: none;
+    }
+    .one-third {
+        width: 100%;
+    }
+    .social i {
+        font-size: 180%;
+    }
+
+    .inner-wrapper {
+        overflow: scroll;
+    }
+    .inner-wrapper-2 {
+        overflow: scroll;
+    }
+>>>>>>> upstream/master
 }
