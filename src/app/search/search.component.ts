@@ -17,6 +17,8 @@ export class SearchComponent implements OnChanges, OnInit {
   visableAwards: AwardModel[];
   awards: AwardModel[];
   wordSearch:boolean = false;
+  filterSearch:boolean = false;
+  hideCards:boolean = true;
   constructor(private AllAwards: GetawardsService) {
 
   }
@@ -31,7 +33,18 @@ export class SearchComponent implements OnChanges, OnInit {
   }
 
   openSearch(){
+    if(this.filterSearch == true){
+      this.filterSearch = false;
+    }
     this.wordSearch = !this.wordSearch;
+    this.hideCards = false;
+  }
+  openFilter(){
+    if(this.wordSearch == true){
+      this.wordSearch = false;
+    }
+    this.filterSearch = !this.filterSearch;
+    this.hideCards = true;
   }
 
   getAwards(): void {
