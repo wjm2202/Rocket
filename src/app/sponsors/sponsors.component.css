@@ -1,5 +1,5 @@
 .card{
-    width:400px;
+    width:353px;
     max-height:380px;
     overflow: scroll;
 }
@@ -17,4 +17,15 @@ button{
 
 .card-deck .danger{
     padding-left: 0%;
+}
+
+
+.card-img-top{
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px){
+    .card-deck{
+        padding-left: 30px;
+    }
 }
