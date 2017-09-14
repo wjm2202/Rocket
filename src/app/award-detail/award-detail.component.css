@@ -19,25 +19,58 @@ button{
 
 h1 {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    margin-top: 20px;
+    margin-top: 100px;
     color: black;
-    font-size: 32px;
+    font-size: 34px;
     font-weight: bold;
     text-align: center;
 }
 
 h2 {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    margin-top: 20px;
+    margin-top: 37px;
     color: black;
-    font-size: 24px;
+    font-size: 22px;
+    font-style: italic;
     text-align: center;
 }
 
 h3 {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    margin-top: 20px;
+    margin-top: 65px;
     color: black;
-    font-size: 24px;
+    font-size: 34px;
+    font-weight: bold;
     text-align: center;
+}
+
+h4 {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    margin-top: 65px;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+}
+
+td {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: black;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    border: none;
+}
+
+th {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    border: none;
 }
