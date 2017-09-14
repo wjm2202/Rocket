@@ -482,6 +482,7 @@ footer.second p {
 #card .front {
   background: whitesmoke;
   min-height: 400px;
+  height: auto;
 }
 #card .back {
   background: white;
@@ -572,5 +573,12 @@ footer.second p {
     }
     .social i {
         font-size: 180%;
+    }
+
+    .inner-wrapper {
+        overflow: scroll;
+    }
+    .inner-wrapper-2 {
+        overflow: scroll;
     }
 }
