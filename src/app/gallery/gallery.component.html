@@ -1,7 +1,13 @@
 <div class="border">
-    <button class="btn btn-lg btn-success" routerLink="">Home</button>
+    <div class="btn-group">
+        <button class="btn btn-lg btn-success" routerLink="">Home</button>
+        <button class="btn btn-lg btn-success" (click)="upDate()">&lt; &lt;</button>
+        <button class="btn btn-lg btn-primary">{{selected}}</button>
+        <button class="btn btn-lg btn-success" (click)="downDate()">&gt; &gt;</button>
+    </div>
     <h1 style="text-align:center;">{{title}}</h1>
 </div>
+
 <div class="border">
     <div class="row">
         <ul id="thumbnailsList">
