@@ -17,6 +17,10 @@ html, body {
     overflow-x: hidden;
     background-color: black;
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
 
 .event {
     background-color: #D93B20;
@@ -149,7 +153,7 @@ nav ul li a:hover {
     z-index: 500;
 }
 #html {
-    background-color: #F1AA90;
+    background-color: #FC882B;
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -175,7 +179,7 @@ nav ul li a:hover {
     transform: scale(1);
 }
 #css {
-    background-color: #BEB9AD;
+    background-color: #F76A6A;
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -200,7 +204,7 @@ nav ul li a:hover {
     transform: scale(1);
 }
 #seo {
-    background-color: #AADCD2;
+    background-color: #A8D0E6;
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -225,7 +229,7 @@ nav ul li a:hover {
     transform: scale(1);
 }
 #social {
-    background-color: #A2B2C1;
+    background-color: #B189D2;
     -webkit-transition: .1s ease-in-out;
     -moz-transition: .1s ease-in-out;
     -ms-transition: .1s ease-in-out;
@@ -315,12 +319,14 @@ aside {
     margin: 0 auto;
     width: 50%;
     height: 400px;
+    overflow: scroll;
 }
 #contactarticle {
     float: right;
     margin: 0 auto;
     width: 50%;
     height: 400px;
+    overflow: scroll;
 }
 #contactaside {
     text-align: center;    
@@ -482,6 +488,7 @@ footer.second p {
 #card .front {
   background: whitesmoke;
   min-height: 400px;
+  height: auto;
 }
 #card .back {
   background: white;
@@ -572,5 +579,12 @@ footer.second p {
     }
     .social i {
         font-size: 180%;
+    }
+
+    .inner-wrapper {
+        overflow: scroll;
+    }
+    .inner-wrapper-2 {
+        overflow: scroll;
     }
 }
