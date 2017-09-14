@@ -45,14 +45,14 @@ img {
 
 #pageTitle {
 	font-family: 'Open Sans', sans-serif;
-	color: #D93B20;
+	color: #DBA449;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 110px;
 	font-weight: 800;
 	letter-spacing: -3px;
 	line-height: 1;
-	text-shadow: white 3px 2px 0;
+	text-shadow: #A97E37 3px 2px 0;
 	position: relative;
 }
 
