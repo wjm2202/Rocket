@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-.card{
-    width:353px;
-    max-height:380px;
-    overflow: scroll;
-=======
 .card {
 	width: 400px;
 	max-height: 380px;
 	overflow-y: scroll;
 	overflow-x: hidden;
->>>>>>> upstream/master
 }
 
 .border {
