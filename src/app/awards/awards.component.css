@@ -183,9 +183,13 @@ button {
     text-decoration: none;
 }
 
+
+
+/***************  MOBILE PAGE HEADER TITLES  ***************/
+
 @media only screen and (max-width: 320px) {
 	#pageTitle {
-		font-size: 65px;
+		font-size: 55px;
 		left: 0px;
 		text-shadow: white 2px 1px 0;
 	}
