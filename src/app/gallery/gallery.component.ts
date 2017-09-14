@@ -4,6 +4,8 @@ import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/htt
 import { NgFor } from '@angular/common';
 import { Observable } from 'rxjs/Rx';
 import { getSponsorCaraService } from '../services/getSponsorCara.service';
+import { Moment } from 'moment'; 
+import { DatePipe } from '@angular/common';
 
 interface PhotoModel {
   Created: Date;
@@ -15,16 +17,33 @@ interface PhotoModel {
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
-  providers: [ImageService]
+  providers: [ImageService, DatePipe]
 })
 export class GalleryComponent implements OnChanges, OnInit {
   pictures: PhotoModel;
   title = 'ECMS Photos';
   @Input() filterBy?: string = 'all';     //? is optional
   visableImages: any[] = [];
+  current;
+  selected;
   //Onchanges is a life cycle hook called when something changes
-  constructor(private imageService: ImageService, private httpClient: HttpClient) {
+  constructor(private imageService: ImageService, 
+              private httpClient: HttpClient,
+              private datePipe: DatePipe) {
+    
+    this.current = Date.now();
+    this.current = this.datePipe.transform(this.current, 'yyyy');
+    this.selected = this.current;
     this.visableImages = this.imageService.getImages();
+  }
+
+  upDate(){
+    this.selected = parseInt(this.selected) + 1;
+    this.getImages();
+  }
+  downDate(){
+    this.selected = parseInt(this.selected) - 1;
+    this.getImages();
   }
   ngOnChanges() {
     this.visableImages = this.imageService.getImages();
@@ -38,7 +57,7 @@ export class GalleryComponent implements OnChanges, OnInit {
     this.getImages();
   }
   getImages() {
-    this.httpClient.get<PhotoModel>('https://webservices-test.aut.ac.nz/ecms/api/photos').subscribe(data => {
+    this.httpClient.get<PhotoModel>(`https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/${this.selected}`).subscribe(data => {
       this.pictures = data;
       //console.log("Created: " + this.pictures[0].Created);
       //console.log("FileName: " + this.pictures[0].Filename);
