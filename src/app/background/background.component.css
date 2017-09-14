@@ -538,14 +538,9 @@ footer.second p {
 }
 
 #card .front {
-<<<<<<< HEAD
-	background: whitesmoke;
-	min-height: 400px;
-=======
   background: whitesmoke;
   min-height: 400px;
   height: auto;
->>>>>>> upstream/master
 }
 
 #card .back {
@@ -567,74 +562,6 @@ footer.second p {
 /*----------MEDIA!!!-------*/
 
 @media screen and (max-width: 768px) {
-<<<<<<< HEAD
-	h2 {
-		font-size: 150%;
-	}
-	h3 {
-		font-size: 125%;
-	}
-	p {
-		font-size: 120%;
-	}
-	header {
-		background-color: #AADCD2;
-		min-height: 70px;
-	}
-	#logo {
-		margin: 15px 0 20px -25px;
-	}
-	#menu-icon {
-		display: inline-block;
-		color: black;
-	}
-	nav ul, nav:active ul {
-		display: none;
-		z-index: 1000;
-		position: absolute;
-		padding: 20px;
-		background: #6991AC;
-		right: 20px;
-		top: 60px;
-		border: 1px solid #FFF;
-		border-radius: 2px 0 2px 2px;
-		width: 50%;
-	}
-	nav:hover ul {
-		display: block;
-	}
-	nav li {
-		text-align: center;
-		width: 100%;
-		padding: 10px 0;
-	}
-	.banner {
-		padding-top: 86px;
-	}
-	.one-fourth {
-		float: left;
-		width: 100%;
-	}
-	.one-fourth i {
-		font-size: 350%;
-		padding: 4% 0 1% 0;
-	}
-	article {
-		width: 100%;
-	}
-	aside {
-		width: 100%;
-	}
-	.hand-mobile {
-		display: none;
-	}
-	.one-third {
-		width: 100%;
-	}
-	.social i {
-		font-size: 180%;
-	}
-=======
     h2 {
         font-size: 150%;
     }
@@ -718,5 +645,4 @@ footer.second p {
     .inner-wrapper-2 {
         overflow: scroll;
     }
->>>>>>> upstream/master
 }
