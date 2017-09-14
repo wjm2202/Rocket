@@ -23,6 +23,69 @@ li{
     border-radius: 2px;
     box-shadow: #555 1px 1px 8px 1px;
 }
+.buttonGroup{
+    text-align: center;
+    margin: 20px;
+    border: 4px solid #eee;
+    border-radius: 2px;
+    box-shadow: #555 1px 1px 8px 1px;
+}
 button{
     margin:10px;
+}
+
+.titleHeader {
+	text-align: center;
+	position: relative;
+}
+
+#pageTitle {
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 110px;
+	font-weight: 800;
+	letter-spacing: -3px;
+	line-height: 1;
+	text-shadow: #A97E37 3px 2px 0;
+	position: relative;
+}
+
+#pageTitle:after {
+	content: "Search";
+	position: absolute;
+	left: 7px;
+	top: 24px;
+}
+
+#pageTitle:after {
+	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+	background-size: 3px 3px;
+	-webkit-background-clip: text;
+	background-clip: test;
+	-webkit-text-fill-color: transparent;
+	z-index: -5;
+	display: block;
+	text-shadow: none;
+}
+
+.homepageButton {
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	border-radius: 6px;
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	font-size: 18px;
+	background: #FFFFFF;
+	padding: 7px 19px 7px 19px;
+	border: solid #DBA449 2px;
+	text-decoration: none;
+}
+
+.homepageButton:hover {
+	background: #DBA449;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+	text-decoration: none;
 }

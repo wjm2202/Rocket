@@ -19,25 +19,114 @@ button{
 
 h1 {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    margin-top: 20px;
+    margin-top: 100px;
     color: black;
-    font-size: 32px;
+    font-size: 34px;
     font-weight: bold;
     text-align: center;
 }
 
 h2 {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    margin-top: 20px;
+    margin-top: 37px;
     color: black;
-    font-size: 24px;
+    font-size: 22px;
+    font-style: italic;
     text-align: center;
 }
 
 h3 {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    margin-top: 20px;
+    margin-top: 65px;
     color: black;
-    font-size: 24px;
+    font-size: 34px;
+    font-weight: bold;
     text-align: center;
+}
+
+h4 {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    margin-top: 65px;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+}
+
+td {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: black;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    border: none;
+}
+
+th {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    border: none;
+}
+
+.titleHeader {
+	text-align: center;
+	position: relative;
+}
+
+#pageTitle {
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 110px;
+	font-weight: 800;
+	letter-spacing: -3px;
+	line-height: 1;
+	text-shadow: #A97E37 3px 2px 0;
+	position: relative;
+}
+
+#pageTitle:after {
+	content: "Certificate";
+	position: absolute;
+	left: 7px;
+	top: 24px;
+}
+
+#pageTitle:after {
+	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+	background-size: 3px 3px;
+	-webkit-background-clip: text;
+	background-clip: test;
+	-webkit-text-fill-color: transparent;
+	z-index: -5;
+	display: block;
+	text-shadow: none;
+}
+
+.homepageButton {
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	border-radius: 6px;
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	font-size: 18px;
+	background: #FFFFFF;
+	padding: 7px 19px 7px 19px;
+	border: solid #DBA449 2px;
+	text-decoration: none;
+}
+
+.homepageButton:hover {
+	background: #DBA449;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+	text-decoration: none;
 }

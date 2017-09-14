@@ -1,18 +1,25 @@
-<div class="border">
-    <button class="btn btn-lg btn-success" (click)="openSearch()">Detailed Search</button>
-    <button class="btn btn-lg btn-success" (click)="openFilter()">Filter Search</button>
-    <h1 style="text-align:center;">{{title}}</h1>
+<div class="header">
+  
+    <div class="titleHeader">
+      <br />
+      <a id="pageTitle">Search</a>
+      <br />
+      <button type="button" class="homepageButton" (click)="openSearch()">Detailed Search</button>
+      <button type="button" class="homepageButton" (click)="openFilter()">Filter Search</button>
+      <br />
+    </div>
+    
 </div>
 <div [@dropdown] *ngIf="wordSearch">
   <app-word-search></app-word-search>
 </div>
 <div [@dropdown] *ngIf="filterSearch">
-  <div class="border">
-    <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy=='Certificate'" (click)="filterBy='Certificate'">Certificate</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy=='Undergraduate'" (click)="filterBy='Undergraduate'">Under-graduate</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy=='Postgraduate'" (click)="filterBy='Postgraduate'">Post-graduate</button>
-    <button class="btn btn-lg btn-info" [class.active]="filterBy=='PhD'" (click)="filterBy='PhD'">Doctorate</button>
+  <div class="buttonGroup">
+    <button class="homepageButton" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+    <button class="homepageButton" [class.active]="filterBy=='Certificate'" (click)="filterBy='Certificate'">Certificate</button>
+    <button class="homepageButton" [class.active]="filterBy=='Undergraduate'" (click)="filterBy='Undergraduate'">Under-graduate</button>
+    <button class="homepageButton" [class.active]="filterBy=='Postgraduate'" (click)="filterBy='Postgraduate'">Post-graduate</button>
+    <button class="homepageButton" [class.active]="filterBy=='PhD'" (click)="filterBy='PhD'">Doctorate</button>
   </div>
 </div>
 <div [@dropdown] *ngIf="hideCards">

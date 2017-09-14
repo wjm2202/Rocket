@@ -65,11 +65,41 @@ img {
 
 #pageTitle:after {
 	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
-	background-size: 3px 3px;
+	background-size: 4px 4px;
 	-webkit-background-clip: text;
 	background-clip: test;
 	-webkit-text-fill-color: transparent;
 	z-index: -5;
 	display: block;
 	text-shadow: none;
+}
+
+.homepageButton {
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	border-radius: 6px;
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	font-size: 18px;
+	background: #FFFFFF;
+	padding: 7px 19px 7px 19px;
+	border: solid #DBA449 2px;
+	text-decoration: none;
+}
+
+.homepageButton:hover {
+	background: #DBA449;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.blankButton {
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	font-size: 35px;
+	background: #FFFFFF;
+	padding: 15px 19px 15px 19px;
+	border: none;
+	text-decoration: none;
 }

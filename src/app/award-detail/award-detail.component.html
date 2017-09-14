@@ -1,9 +1,14 @@
-
-
-<div class="border">
-    <button (click)="back()" class="btn btn-success" style="height:50px;">Search</button>
-    <h1 style="text-align:center;">ECMS Award</h1>
+<div class="header">
+  
+    <div class="titleHeader">
+      <br />
+      <a id="pageTitle">Certificate</a>
+      <br />
+      <button type="button" class="homepageButton" (click)="back()">Back to Search</button>
+      <br />
+    </div>
 </div>
+
 <div class="row">
   <div class="col-md-12">
     <div class="award-container">
@@ -12,11 +17,29 @@
         
         <h1>{{StudentName}}</h1>
         <h2>has been awarded the</h2>
-        <h1>{{AwardName}}</h1>
-        <h2>for</h2>
-        <h3>{{AwardBlurb}}</h3>
-        <h3>{{AwardDate}}</h3>
-         
+        <h3>{{AwardName}}</h3>
+        <h4>Awarded for: {{AwardBlurb}}</h4>
+        
+        <table style="width: 100%; margin-top: 80px;" border="1" cellpadding="3">
+          <tbody>
+          <tr>
+            <td style="width: 10%;"> <!-- table --> </td>
+            <td style="width: 30%;"><img src="https://allaboutcloud.info/wp-content/uploads/2017/08/signature.png" style="width:245px;"></td>
+            <td style="width: 20;"> <!-- table --> </td>
+            <td style="width: 30%; vertical-align:bottom;">{{AwardDate}}</td>
+            <td style="width: 10%;"> <!-- table --> </td>
+          </tr>
+          <tr>
+            <th style="width: 10%;"> <!-- table --> </th>
+            <th style="width: 30%; border-top: 1px solid black;">Professor Enrico Haemmerle, Head of School</th>
+            <th style="width: 20;"> <!-- table --> </th>
+            <th style="width: 30%; border-top: 1px solid black;">Date</th>
+            <th style="width: 10%;"> <!-- table --> </th>
+          </tr>
+          </tbody>
+        </table>
+
+
       </div>
     </div>
   </div>
