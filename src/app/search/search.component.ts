@@ -2,18 +2,21 @@ import { Component, OnChanges, Input, OnInit } from '@angular/core';
 import { AwardsSearchService } from '../services/awards-search.service';
 import { AwardModel } from '../interfaces/awardcard';
 import { GetawardsService } from '../services/getawards.service';
+import { fade } from '../animations/fade';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css'],
-  providers: [GetawardsService]
+  providers: [GetawardsService],
+  animations:[fade]
 })
 export class SearchComponent implements OnChanges, OnInit {
   title = 'Search Awards';
   @Input() filterBy?: string = 'all';
   visableAwards: AwardModel[];
   awards: AwardModel[];
+  wordSearch:boolean = false;
   constructor(private AllAwards: GetawardsService) {
 
   }
@@ -25,6 +28,10 @@ export class SearchComponent implements OnChanges, OnInit {
   }
   ngOnChanges() {
 
+  }
+
+  openSearch(){
+    this.wordSearch = !this.wordSearch;
   }
 
   getAwards(): void {

@@ -16,16 +16,11 @@ button{
 }
 
 .card-deck .danger{
-    padding-left: 0%;
+    padding-left: 10%;
 }
-
-
 .card-img-top{
-    margin: 0 auto;
-}
-
-@media screen and (min-width: 1024px){
-    .card-deck{
-        padding-left: 30px;
-    }
+    width:318px;
+    height:100;
+    margin-left:20px;
+    margin: 20px;
 }

@@ -62,8 +62,7 @@
   </div>
   
   <md-card>
-    <h4 *ngIf="sponsorsFound" md-subeader>Results</h4>
-    <h5>Click an Award to add to Inquiry</h5>
+    <h4 *ngIf="sponsorsFound" md-subeader>Click an Award to add to Inquiry</h4>
     <masonry [useImagesLoaded]="true">
       <masonry-brick *ngFor="let award of potential" >   
         <div *ngIf="award.NeedsSponsor == true">
