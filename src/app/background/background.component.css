@@ -17,6 +17,10 @@ html, body {
     overflow-x: hidden;
     background-color: black;
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
 
 .event {
     background-color: #D93B20;
@@ -315,12 +319,14 @@ aside {
     margin: 0 auto;
     width: 50%;
     height: 400px;
+    overflow: scroll;
 }
 #contactarticle {
     float: right;
     margin: 0 auto;
     width: 50%;
     height: 400px;
+    overflow: scroll;
 }
 #contactaside {
     text-align: center;    
