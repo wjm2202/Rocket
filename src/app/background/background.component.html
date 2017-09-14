@@ -17,15 +17,15 @@
 <!--sponsor teaser mobile-->
 <div *ngIf="displayHome">
   <section role="button" (click)="open(1)" class="one-fourth" id="html">
-    <i class="fa fa-html5"></i>
+    <i class="fa fa-handshake-o"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
   </section>
   <div [@dropdown] *ngIf="ismobile && mobile == 1">
     <section class="inner-wrapper">
       <aside id="sponsoraside">
         <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
-        <h5 style="margin-top:20px;">Your Orginization here</h5>
-        <p>the details about your orginization and products here</p>
+        <h5 style="margin-top:20px;">Your Organisation here</h5>
+        <p>the details about your organisation and products here</p>
         <h6>WWW.YourWebSite.co.nz</h6>
       </aside>
       <article id="sponsorarticle">
@@ -41,7 +41,7 @@
   <!--awards teaser mobile-->
 
   <section role="button" (click)="open(2)" class="one-fourth" id="css">
-    <i class="fa fa-css3"></i>
+    <i class="fa fa-trophy"></i>
     <h3 class="disable_text_highlighting">AWARDS</h3>
   </section>
   <div [@dropdown] *ngIf="ismobile && mobile == 2">
@@ -68,8 +68,8 @@
               <!-- back  -->
               <figure class="back" (click)="cardFlip()">
                 <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
-                <h5 style="margin-top:20px;">Your Orginization here</h5>
-                <p>the details about your orginization and products here</p>
+                <h5 style="margin-top:20px;">Your Organisation here</h5>
+                <p>the details about your organisation and products here</p>
                 <h6>WWW.YourWebSite.co.nz</h6>
               </figure>
             </div>
@@ -82,7 +82,7 @@
   <!--photos teaser mobile-->
 
   <section role="button" (click)="open(3)" class="one-fourth" id="seo">
-    <i class="fa fa-search"></i>
+    <i class="fa fa-camera-retro"></i>
     <h3 class="disable_text_highlighting">PHOTOS</h3>
   </section>
   <div class="test3" [@dropdown] *ngIf="ismobile && mobile == 3">
@@ -101,7 +101,7 @@
   <!--contact teaser mobile-->
 
   <section role="button" (click)="open(4)" class="one-fourth" id="social">
-    <i class="fa fa-users"></i>
+    <i class="fa fa-phone-square"></i>
     <h3 class="disable_text_highlighting">CONTACT</h3>
   </section>
 
@@ -144,8 +144,8 @@
         <img class="card-img-top" src="../../assets/images/frucor.jpg" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title" style="text-align:center;">Card title</h4>
-          <p class="card-text" style="color:black;">Your orginization can use this oportunity to promote your brand or to explain your business and links to the University.
-            You can enguage the next generation.</p>
+          <p class="card-text" style="color:black;">Your organisation can use this oportunity to promote your brand or to explain your business and links to the University.
+            You can engage the next generation.</p>
         </div>
         <a routerLink="sponsors/enquiry" style="text-align:center; float:right; height:50px;" class="btn btn-primary">Be A Sponsor</a>
       </div>
@@ -186,8 +186,8 @@
             <!-- back  -->
             <figure class="back" (click)="cardFlip()">
               <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
-              <h5 style="margin-top:20px;">Your Orginization here</h5>
-              the details about your orginization and products here<br>
+              <h5 style="margin-top:20px;">Your Organisation here</h5>
+              the details about your organisation and products here<br>
               <h6>WWW.YourWebSite.co.nz</h6>
             </figure>
           </div>
@@ -209,7 +209,7 @@
       <h2> Photos</h2>
 
       <br />
-      <button type="button" class="homepageButton" routerLink="photos" (click)="open(0)">View the Awards</button>
+      <button type="button" class="homepageButton" routerLink="photos" (click)="open(0)">View the Photos</button>
       <br />
       
       <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit offendit vis ea.</p>
@@ -226,7 +226,7 @@
       <h2> Contact </h2>
 
       <br />
-      <button type="button" class="homepageButton" routerLink="contact" (click)="open(0)">View the Awards</button>
+      <button type="button" class="homepageButton" routerLink="contact" (click)="open(0)">View the Contacts</button>
       <br />
 
       <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
@@ -253,7 +253,7 @@
       <img src="../../assets/images/i1.jpg">
     </article>
     <aside id="tablet">
-      <h2 style="margin-top: 60px; margin-left: 90px; margin-right: 90px; border-radius: 10px; color: #D93B20; border: 2px; border-style:solid; border-color:#D93B20; padding: 15px"> ECMS Awards </h2>
+      <h2 id="mainTitle"> ECMS Awards </h2>
       <p style="color: black; padding: 40px;"><app-welcome-message></app-welcome-message></p>
     </aside>
   </section>
@@ -262,7 +262,7 @@
 
   <section class="inner-wrapper-2">
     <article id="desktop">
-      <h2 style="margin-top: 60px; margin-left: 130px; margin-right: 130px; border-radius: 10px; color: #D93B20; border: 2px; border-style:solid; border-color:#D93B20; padding: 15px"> Event Info </h2>
+      <h2 id="mainTitle"> Event Info </h2>
       <p style="color: black; padding: 40px;"><app-event-message></app-event-message></p>
     </article>
     <aside id="desktop">
@@ -273,7 +273,7 @@
   <!--sponsor home page -->
   <section class="inner-wrapper-2">
     <aside id="mobile">
-      <h2 style="margin-top: 60px; margin-left: 100px; margin-right: 100px; border-radius: 10px; color: #D93B20; border: 2px; border-style:solid; border-color:#D93B20; padding: 15px"> Sponsorship </h2>
+      <h2 id="mainTitle"> Sponsorship </h2>
       <p style="color: black; padding: 40px;"><app-sponsorship-message></app-sponsorship-message></p>
 
     </aside>

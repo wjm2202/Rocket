@@ -59,10 +59,16 @@ export class GalleryComponent implements OnChanges, OnInit {
   getImages() {
     this.httpClient.get<PhotoModel>(`https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/${this.selected}`).subscribe(data => {
       this.pictures = data;
+<<<<<<< HEAD
       console.log("Created: " + this.pictures[0].Created);
       console.log("FileName: " + this.pictures[0].Filename);
       console.log("PhotoID: " + this.pictures[0].PhotoID);
       console.log('year: '+ this.pictures[0].Year);
+=======
+      //console.log("Created: " + this.pictures[0].Created);
+      //console.log("FileName: " + this.pictures[0].Filename);
+      //console.log("PhotoID: " + this.pictures[0].PhotoID);
+>>>>>>> a55d3fc9cc9e7f40ebd80e15167e1f2b4f73c376
     },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
