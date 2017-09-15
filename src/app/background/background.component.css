@@ -41,7 +41,7 @@ body {
 	-webkit-border-radius: 6;
 	-moz-border-radius: 6;
 	border-radius: 6px;
-	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #f07d00;
 	font-size: 22px;
 	background: #FFFFFF;
@@ -52,13 +52,13 @@ body {
 
 .homepageButton:hover {
 	background: #f07d00;
-	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
 	text-decoration: none;
 }
 
 h2 {
-	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	margin-top: 20px;
 	color: #F07D00;
 	font-size: 50px;
@@ -71,16 +71,16 @@ h2 {
     margin-top: 50px;
     margin-left: 90px;
     margin-right: 90px;
-    color: #D93B20;
+    color: #DBA449;
     text-transform: uppercase;
     text-decoration: none;
 	font-size: 50px;
     font-weight: 800;
-    letter-spacing: -1px;
     text-align: center;
     border: 2px;
     border-style: solid;
-    border-color:#D93B20;
+	border-color:#DBA449;
+	border-radius: 15px;
     padding: 15px;
 }
 
@@ -93,9 +93,9 @@ h3 {
 }
 
 p {
-	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #F07D00;
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: normal;
 	line-height: 120%;
 	padding: 30px;
@@ -133,7 +133,7 @@ ul {
 }
 
 nav ul li {
-	font-family: 'Alegreya Sans', Sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 150%;
 	display: inline-block;
 	padding: 10px;
