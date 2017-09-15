@@ -6,11 +6,13 @@ import { teaser, heightdown, heightup } from '../animations/teaserDownUp';
 import { smoothDropper } from '../animations/smoothHeight';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser'; 
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-background',
   templateUrl: './background.component.html',
   styleUrls: ['./background.component.css'],
+  providers: [ DatePipe],
   animations: [routerAnimation, fade, teaser, smoothDropper, heightdown, heightup],
   host: {
     '(window:resize)': 'onResize($event)'
@@ -22,6 +24,7 @@ export class BackgroundComponent implements OnChanges {
   width: any;
   ismobile:boolean;
   displayHome:boolean = true;
+  current;
   configs = {
     loop: true,
     margin: 1,
@@ -44,7 +47,8 @@ export class BackgroundComponent implements OnChanges {
   }
 
   constructor(private router: Router,
-              private tite:Title) {
+              private tite:Title,
+              private datePipe:DatePipe) {
      //this.tite.setTitle("AUT-ECMS"+this.router.url);           
     this.router.events.subscribe((res) => { 
       this.tite.setTitle("AUT-ECMS"+this.router.url); 
@@ -57,7 +61,8 @@ export class BackgroundComponent implements OnChanges {
         this.displayHome = false;
         //console.log('displayHome: '+this.displayHome);
       }
-    
+      this.current = Date.now();
+      this.current = this.datePipe.transform(this.current, 'yyyy');
     });
    }
   checkIsMobile(){
