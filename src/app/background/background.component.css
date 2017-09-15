@@ -563,7 +563,7 @@ footer.second p {
 
 @media screen and (max-width: 768px) {
     h2 {
-        font-size: 150%;
+        font-size: 100%;
     }
 
     h3 {
@@ -645,4 +645,15 @@ footer.second p {
     .inner-wrapper-2 {
         overflow: scroll;
     }
+}
+@media screen and (max-width: 1042px) {
+	#mainTitle{
+		font-size: 100%;
+	}
+}
+@media screen and (max-width: 330px){
+	#mainTitle{
+		font-size: 85%;
+		padding: 2%;
+	}
 }
