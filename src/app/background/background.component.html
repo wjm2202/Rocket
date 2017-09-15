@@ -207,7 +207,7 @@
       <h2> Photos</h2>
 
       <br />
-      <button type="button" class="homepageButton" routerLink="photos" (click)="open(0)">View the Photos</button>
+      <button type="button" class="homepageButton" [routerLink]="['/photos', current]" (click)="open(0)">View the Photos</button>
       <br />
 
       <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus

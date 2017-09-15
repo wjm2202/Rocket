@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Rx';
 import { getSponsorCaraService } from '../services/getSponsorCara.service';
 import { Moment } from 'moment'; 
 import { DatePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 interface PhotoModel {
   Created: Date;
@@ -26,15 +27,19 @@ export class GalleryComponent implements OnChanges, OnInit {
   visableImages: any[] = [];
   current;
   selected;
+  id;
   //Onchanges is a life cycle hook called when something changes
   constructor(private imageService: ImageService, 
               private httpClient: HttpClient,
-              private datePipe: DatePipe) {
-    
-    this.current = Date.now();
-    this.current = this.datePipe.transform(this.current, 'yyyy');
+              private datePipe: DatePipe,
+              private route: ActivatedRoute,) {
+    //console.log('in gallery '+this.route.snapshot.params['id']);
+    this.current = +this.route.snapshot.params['id'];
+    //this.current = Date.now();
+    ///this.current = this.datePipe.transform(this.current, 'yyyy');
     this.selected = this.current;
     this.visableImages = this.imageService.getImages();
+    //this.current = +this.route.snapshot.params['id'];
   }
 
   upDate(){
@@ -55,13 +60,11 @@ export class GalleryComponent implements OnChanges, OnInit {
   }
   ngOnInit(): void {
     this.getImages();
+    
   }
   getImages() {
     this.httpClient.get<PhotoModel>(`https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/${this.selected}`).subscribe(data => {
       this.pictures = data;
-      //console.log("Created: " + this.pictures[0].Created);
-      //console.log("FileName: " + this.pictures[0].Filename);
-      //console.log("PhotoID: " + this.pictures[0].PhotoID);
     },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {

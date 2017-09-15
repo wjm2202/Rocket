@@ -14,7 +14,7 @@
     <div class="row">
         <ul id="thumbnailsList">
             <li *ngFor="let picture of pictures ">
-                <a [routerLink]="['/photos', selected]">
+                <a [routerLink]="['/photos/slideshow', selected]">
                 <img src="{{picture.Filename | photoAppendGeneral}}" class="tn" width="200" height="160">
             </a>
             </li>
