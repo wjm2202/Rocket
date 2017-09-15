@@ -1,13 +1,13 @@
 <div class="border">
   <button (click)="back()" class="btn btn-success" style="height:50px;">Gallery</button>
+  <button  (click)="indexDown()" class="btn btn-success" style="height:50px;">&lt; &lt;</button>
+  <button  (click)="indexUp()"class="btn btn-success" style="height:50px;">&gt; &gt;</button>
   <h1 style="text-align:center;">ECMS Photo {{PhotoID}}</h1>
 </div>
 
 <br>
 <div class="border">
   <div *ngIf="loaded" class="marg">
-    <img src="http://ecms-award.aut.ac.nz/web/generalphotos/{{FileName}}" class="img-container">
-    <!-- <div [ngStyle]="{'background-image':'url(http://ecms-award.aut.ac.nz/web/generalphotos/${}')'}" class="img-container">-->
-    <!--  </div>-->
+    <img src="http://ecms-award.aut.ac.nz/web/generalphotos/{{yearPhotos[index].Filename}}" class="img-container">
   </div>
 </div>

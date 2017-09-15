@@ -22,6 +22,8 @@ export class ImageDetailComponent implements OnInit {
   Created;
   FileName;
   PhotoID;
+  yearPhotos:any[];
+  index:number = 0;
   loaded:boolean = false;
   constructor(private httpClient: HttpClient,
     private route: ActivatedRoute,
@@ -34,18 +36,32 @@ export class ImageDetailComponent implements OnInit {
   back() {
     this.location.back();
   }
+
+  indexUp(){
+    if (this.index < this.yearPhotos.length -1){
+      this.index++;
+    }
+  }
+  indexDown(){
+    if(this.index >= 1){
+      this.index--;
+    }
+  }
   ngOnInit() {
     //console.log("in init the value of id: " + this.id);
   }
 
   getImages() {
-    this.httpClient.get<PhotoModel>('https://webservices-test.aut.ac.nz/ecms/api/photos/' + this.id).subscribe
+    console.log('https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/' + this.id);
+    this.httpClient.get<PhotoModel[]>('https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/' + this.id).subscribe
       (data => {
         //console.log('http://ecms-award.aut.ac.nz/web/generalphotos/' + data.Filename);
         //this.images = data;
-        this.Created = data.Created;
-        this.FileName = data.Filename;
-        this.PhotoID = data.PhotoID;
+       // this.Created = data.Created;
+        //this.FileName = data.Filename;
+        //this.PhotoID = data.PhotoID;
+        this.yearPhotos = data;
+        console.log(this.yearPhotos);
         this.loaded = true;
       },
       (err: HttpErrorResponse) => {
