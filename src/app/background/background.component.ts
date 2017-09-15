@@ -52,6 +52,7 @@ export class BackgroundComponent implements OnChanges {
       this.mobile =0;
       if(this.router.url == '/home'){
         this.displayHome = true;
+        window.scrollTo(0, 0);
         //console.log('displayHome: '+this.displayHome);
       }else{
         this.displayHome = false;
