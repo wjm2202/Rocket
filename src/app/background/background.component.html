@@ -1,8 +1,6 @@
 <!-- header -->
 <section class="header">
-  <app-menu 
-  (mobile)="open($event)"
-  [ismobile]="ismobile"></app-menu>
+  <app-menu (mobile)="open($event)" [ismobile]="ismobile"></app-menu>
 </section>
 <!-- end of header -->
 <!-- event slider [@heightdown] [@heightup]-->
@@ -211,8 +209,9 @@
       <br />
       <button type="button" class="homepageButton" [routerLink]="['/photos', current]" (click)="open(0)">View the Photos</button>
       <br />
-      
-      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus iudicabit intellegebat eos ne, cetero impedit offendit vis ea.</p>
+
+      <p>Lorem ipsum dolor sit amet, prima option eleifend cu mei, ipsum appareat no mea, mei bonorum principes ne. Mandamus
+        iudicabit intellegebat eos ne, cetero impedit offendit vis ea.</p>
     </aside>
   </section>
 </div>
@@ -254,7 +253,9 @@
     </article>
     <aside id="tablet">
       <h2 id="mainTitle"> ECMS Awards </h2>
-      <p style="color: black; padding: 40px;"><app-welcome-message></app-welcome-message></p>
+      <p style="color: black; padding: 40px;">
+        <app-welcome-message></app-welcome-message>
+      </p>
     </aside>
   </section>
 
@@ -263,7 +264,9 @@
   <section class="inner-wrapper-2">
     <article id="desktop">
       <h2 id="mainTitle"> Event Info </h2>
-      <p style="color: black; padding: 40px;"><app-event-message></app-event-message></p>
+      <p style="color: black; padding: 40px;">
+        <app-event-message></app-event-message>
+      </p>
     </article>
     <aside id="desktop">
       <img src="../../assets/images/i2.jpg">
@@ -274,8 +277,12 @@
   <section class="inner-wrapper-2">
     <aside id="mobile">
       <h2 id="mainTitle"> Sponsorship </h2>
-      <p style="color: black; padding: 40px;"><app-sponsorship-message></app-sponsorship-message></p>
-
+      <p style="color: black; padding: 40px;">
+        <app-sponsorship-message></app-sponsorship-message>
+      </p>
+      <div align="center">
+        <button type="button" class="homepageButton" routerLink="../sponsors/enquiry">Sponsorship Enquiry</button>
+      </div>
     </aside>
     <article id="mobile">
       <img src="../../assets/images/i3.jpg">
