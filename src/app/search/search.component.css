@@ -92,12 +92,18 @@ button{
 
 @media screen and (max-width: 426px){
 	#pageTitle{
-		font-size: 300%
+		font-size: 290%
+	}
+	#pageTitle:after {
+		top: 15px;
 	}
 }
 
 @media screen and (min-width: 426px) and (max-width: 769px){
 	#pageTitle{
 		font-size: 350%;
+	}
+	#pageTitle:after {
+		top: 20px;
 	}
 }

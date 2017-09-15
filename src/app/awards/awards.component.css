@@ -115,6 +115,7 @@ section {
 	border: 4px solid #eee;
 	border-radius: 2px;
 	box-shadow: #555 1px 1px 8px 1px;
+	min-width: 289px;
 }
 
 md-card-headder.mat-card-header {
@@ -183,12 +184,24 @@ button {
 
 @media screen and (max-width: 426px){
 	#pageTitle{
-		font-size: 300%;
+		font-size: 290%
+	}
+	#pageTitle:after {
+		top: 15px;
 	}
 }
 
 @media screen and (min-width: 426px) and (max-width: 769px){
 	#pageTitle{
 		font-size: 350%;
+	}
+	#pageTitle:after {
+		top: 20px;
+	}
+}
+
+@media screen and (min-width: 319px) and (max-width: 426px){
+	.image-container{
+		margin-left: 9px;
 	}
 }
