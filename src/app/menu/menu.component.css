@@ -32,7 +32,7 @@
 }
 nav {
     float: right;
-    padding: 25px 20px 0 0;
+    padding: 30px 30px 0 0;
 }
 
 #menu-icon {
@@ -66,19 +66,21 @@ nav {
 .bannerbutton{
 /*   button   */
     color: white;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;
     outline:none;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .bannerbutton:hover{
     color:black;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
 }
 @media screen and (max-width: 767px) {
     #logo {

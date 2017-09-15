@@ -103,3 +103,15 @@ img {
 	border: none;
 	text-decoration: none;
 }
+
+@media screen and (max-width: 426px){
+	#pageTitle{
+		font-size: 300%
+	}
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px){
+	#pageTitle{
+		font-size: 350%;
+	}
+}
