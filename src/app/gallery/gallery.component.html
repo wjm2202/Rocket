@@ -15,7 +15,8 @@
         <ul id="thumbnailsList">
             <li *ngFor="let picture of pictures ">
                 <a [routerLink]="['/photos/slideshow', selected]">
-                <img src="{{picture.Filename | photoAppendGeneral}}" class="tn" width="200" height="160">
+    <!-- for live use   <img src="{{picture.Filename | photoAppendGeneral}}" class="tn" width="200" height="160"> -->
+    <!--testing --><img src="{{picture.Filename }}" class="tn" width="200" height="160">
             </a>
             </li>
         </ul>
