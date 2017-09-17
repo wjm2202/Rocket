@@ -10,7 +10,7 @@ button{
     transform: translateX(-40px);
     position: absolute;
     height: 8px;
-    background: black;
+    background: #DBA449;
     width: 55px;
     transition: .5s;
     border-radius: 5px;

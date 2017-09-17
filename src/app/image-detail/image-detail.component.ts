@@ -100,7 +100,7 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
     }
   }
   startSlideShow(){
-      let timer = Observable.timer(3000, 3000);
+      let timer = Observable.timer(3000, 4000);
       this.subscription = timer.subscribe(t=>{
         if(this.isPlaying){
           this.slideShow();
