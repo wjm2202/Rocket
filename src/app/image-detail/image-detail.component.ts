@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ImageService } from '../services/Image.Service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -6,6 +6,7 @@ import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/htt
 import { Observable } from 'rxjs/Rx';
 import { animatePic} from '../animations/pic-slideAnimation';
 import { trigger, state, style, animate, transition, query, stagger,keyframes } from '@angular/animations';
+ 
 
 interface PhotoModel {
   Created: number;
@@ -29,20 +30,20 @@ interface PhotoModel {
       })),
       transition('off => on', animate('350ms linear', keyframes([
         style({transform: 'scale(0)'}),
-        style({transform: 'scale(.5)'}),
-        style({transform: 'scale(1.1)'}),
+        style({transform: 'scale(.33)'}),
+        style({transform: 'scale(.66)'}),
         style({transform: 'scale(1)'}),
       ]))),
       transition('on => off', animate('250ms linear', keyframes([
         style({transform: 'scale(1)'}),
-        style({transform: 'scale(1.1)'}),
-        style({transform: 'scale(.5)'}),
+        style({transform: 'scale(.66)'}),
+        style({transform: 'scale(.33)'}),
         style({transform: 'scale(0)'}),
       ])))
     ])
   ]
 })
-export class ImageDetailComponent implements OnInit {
+export class ImageDetailComponent implements OnInit, OnDestroy {
   images: PhotoModel;
   id: number;
   Created;
@@ -55,6 +56,9 @@ export class ImageDetailComponent implements OnInit {
   value:number = 1;
   first:boolean = true;
   direction:boolean = false;
+  isPlaying:boolean = false;
+  timerOn:boolean = false;
+  private subscription;
   constructor(private httpClient: HttpClient,
     private route: ActivatedRoute,
     private location: Location) {
@@ -64,6 +68,51 @@ export class ImageDetailComponent implements OnInit {
     //this.yearPhotos = this.PICTURES;   //turn on for testing
     //this.loaded = true;                 //turn on for testing
     //console.log(this.yearPhotos);
+  }
+  togglePlaying(data){
+    this.isPlaying = data;
+    console.log('isplaying '+this.isPlaying);
+    if(this.isPlaying){
+      this.startSlideShow();
+      //console.log('start slide show');
+    }else{
+      this.stopSlideShow();
+      //console.log('stop slide show');
+    }
+  }
+  slideShow(){
+    if(this.isPlaying){                               //is this playing
+      if(this.direction){                             //index increasing
+        if (this.index < this.yearPhotos.length -1){  // if can go higher
+          this.toggle();                              //get next photo
+        }else{
+          this.direction = !this.direction; //change direction
+        }
+      }else if(!this.direction){                     //index decreasing
+        if (this.index >= 1){                        //if can go lower
+          this.toggle();                             //get previous photo
+        }else{
+          this.direction = !this.direction; //change direction
+        }
+      }
+    }else{
+      //not playing
+    }
+  }
+  startSlideShow(){
+      let timer = Observable.timer(3000, 3000);
+      this.subscription = timer.subscribe(t=>{
+        if(this.isPlaying){
+          this.slideShow();
+         // console.log('timer subscribe'+t);
+        }
+      });
+  }
+  stopSlideShow(){
+    if(this.subscription != null){
+      this.subscription.unsubscribe();
+      //console.log('timer unsubscribed');
+    }
   }
   changeIndex(){
     if (!this.first){
@@ -112,6 +161,9 @@ export class ImageDetailComponent implements OnInit {
     this.toggle();
   }
   ngOnInit() {
+  }
+  ngOnDestroy(){
+    this.subscription.unsubscribe();
   }
 
   getImages() {

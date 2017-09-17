@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-animated-play',
@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./animated-play.component.css']
 })
 export class AnimatedPlayComponent implements OnInit {
-
-  isPlaying:boolean = false;
-  func = 'stop';
+  @Input() public isPlaying:boolean;
+  @Output() event: EventEmitter<boolean> = new EventEmitter();
+  func = 'play';
   constructor() { }
 
   ngOnInit() {
@@ -20,5 +20,6 @@ export class AnimatedPlayComponent implements OnInit {
     }else {
       this.func = 'play';
     }
+    this.event.emit(this.isPlaying);
   }
 }

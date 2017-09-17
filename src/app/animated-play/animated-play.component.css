@@ -13,6 +13,7 @@ button{
     background: black;
     width: 55px;
     transition: .5s;
+    border-radius: 5px;
     transform-origin: center;
 }
 /* stop nutton */
