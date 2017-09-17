@@ -86,7 +86,7 @@ footer:hover {
 
 @media screen and (min-width: 2560px) {
     footer{
-        min-height: 511px;
+        min-height: 600px;
     }
     .inner-wrapper {
         height: 100%;
