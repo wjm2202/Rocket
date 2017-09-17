@@ -9,14 +9,14 @@
         <br />
     </div>
 </div>
-<app-animated-play></app-animated-play>
+
 <div class="border">
     <div class="row">
         <ul id="thumbnailsList">
             <li *ngFor="let picture of pictures ">
                 <a [routerLink]="['/photos/slideshow', selected]">
-    <!-- for live use   <img src="{{picture.Filename | photoAppendGeneral}}" class="tn" width="200" height="160"> -->
-    <!--testing --><img src="{{picture.Filename }}" class="tn" width="200" height="160">
+    <img src="{{picture.Filename | photoAppendGeneral}}" class="tn" width="200" height="160">
+    <!--testing <img src="{{picture.Filename }}" class="tn" width="200" height="160">-->
             </a>
             </li>
         </ul>

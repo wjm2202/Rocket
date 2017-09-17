@@ -3,6 +3,9 @@
   <button   (click)="indexUp()"  class="btn btn-success" style="height:50px;">&lt; &lt;</button>
   <button  (click)="indexDown()" class="btn btn-success" style="height:50px;">&gt; &gt;</button>
   <h1 style="text-align:center;">ECMS Photo {{PhotoID}}</h1>
+  <app-animated-play
+  [isPlaying]="isPlaying"
+  (event)="togglePlaying($event)"></app-animated-play>
 </div>
 <br>
 <div class="border">
