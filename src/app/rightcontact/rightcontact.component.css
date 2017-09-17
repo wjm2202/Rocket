@@ -1,15 +1,3 @@
-
-    /* .grid-container {
-        display: grid;
-        grid-area: auto;
-        grid-row-gap: 2px;
-        grid-column-gap: 0px;
-        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
-        overflow: hidden;
-        background-color: #272727;
-    } */
-
     .addressinfo {
         /* grid-column: 1/10;
         grid-row: 1/2; */

@@ -2,8 +2,8 @@ footer {
     bottom:0;
     width:100%;
     background-color:#000;
-    color:#FFFFFF;
-    min-height: 511px;
+    /* color:#FFFFFF; */
+    min-height: 480px;
     position: relative;
 }
 
@@ -45,6 +45,13 @@ footer:hover {
 }
 
 /* For mobile with the pixel of width screen is or more than 640px */
+
+@media screen and (min-width: 319px) and (max-width: 426px){
+    footer{
+        min-height: 511px;
+    }
+}
+
 @media screen and (min-width: 568px){
     .inner-wrapper {
         height: 100%;
@@ -60,7 +67,10 @@ footer:hover {
 }
 
 /* For mobile with the pixel of width screen is or more than 1024px */
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 767px) and (min-width: 1024px){
+    footer{
+        height: 490px;
+    }
     .inner-wrapper {
         height: 100%;
     }
