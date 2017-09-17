@@ -71,7 +71,7 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
   }
   togglePlaying(data){
     this.isPlaying = data;
-    console.log('isplaying '+this.isPlaying);
+    //console.log('isplaying '+this.isPlaying);
     if(this.isPlaying){
       this.startSlideShow();
       //console.log('start slide show');
@@ -170,7 +170,7 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
     this.httpClient.get<PhotoModel[]>('https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/' + this.id).subscribe
       (data => {
         this.yearPhotos = data;
-        console.log(this.yearPhotos);
+        //console.log(this.yearPhotos);
         this.loaded = true;
       },
       (err: HttpErrorResponse) => {
