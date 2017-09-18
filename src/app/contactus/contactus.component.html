@@ -10,16 +10,20 @@
     
   </div>
 
-<div class="container m-t-md">
+<div class="contactsContainer" style="margin: 0 auto;">
   <!-- Declare div tag and call to generate data from API of SharePoint -->
   <div class="row" *ngFor="let contact of contacts">
     <!-- If the contact is visible, it will display.
     Otherwise, it will hide itself. -->
     <div class="ebussinescard" *ngIf="contact.adminIsVisable">
-      <img src="../../assets/images/aut_logo.png">
-      <p>{{contact.adminName}}</p>
-      <p>{{contact.contactTitle}}</p>
-      <p>Email: <a href="mailto:{{contact.adminEmail}}">{{contact.adminEmail}}</a></p>
+      <img src="http://ecms-award.aut.ac.nz/web/assets/ebusiness_header.jpg">
+      <div class="cardText">
+        <p class="name">{{contact.adminName}}</p>
+        <p class="school">School of Engineering, Computer & Mathematical Sciences</p>
+        <p class="title">{{contact.contactTitle}}</p>
+        <p class="email">Email:&nbsp;&nbsp;&nbsp;<a href="mailto:{{contact.adminEmail}}">{{contact.adminEmail}}</a></p>
+      </div>
     </div>
   </div>
+
 </div>

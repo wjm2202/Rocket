@@ -1,5 +1,5 @@
 .award-container {
-    margin: 25px;
+    margin: 0 auto;
     box-shadow: #555 1px 2px 8px 1px;
     background-color: white;
     min-height: 850px;
@@ -129,4 +129,22 @@ th {
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
 	text-decoration: none;
+}
+
+@media screen and (max-width: 426px){
+	#pageTitle{
+		font-size: 290%
+	}
+	#pageTitle:after {
+		top: 15px;
+	}
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px){
+	#pageTitle{
+		font-size: 350%;
+	}
+	#pageTitle:after {
+		top: 20px;
+	}
 }
