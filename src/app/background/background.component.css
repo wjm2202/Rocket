@@ -176,6 +176,7 @@ nav ul li a:hover {
 	float: left;
 	text-align: center;
 	z-index: 500;
+	padding-top: 25px;
 }
 
 #html {
@@ -557,7 +558,6 @@ footer.second p {
 	width: auto;
 	height: 150px;
 }
-
 
 /*----------MEDIA!!!-------*/
 
