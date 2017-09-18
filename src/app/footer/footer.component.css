@@ -1,3 +1,11 @@
+a {
+    color:#ffffff;
+}
+
+a:hover {
+    color: #DBA449;
+}
+
 footer {
     bottom:-9px;
     width:100%;
@@ -43,11 +51,19 @@ footer .fl {
 
 /* For mobile with the pixel of width screen is or more than 640px */
 
-/* @media screen and (min-width: 319px) and (max-width: 426px){
-    footer{
-        min-height: 511px;
+@media screen and (max-width: 318px){
+    .inner-wrapper {
+        height: 100%;
+    }    
+    #photoaside{
+        margin-top: -10px;
+        min-height: 300px;
     }
-} */
+    #photoarticle{
+        margin-top: -10px;
+        min-height: 300px;
+    }
+}
 
 @media screen and (min-width: 568px){
     .inner-wrapper {

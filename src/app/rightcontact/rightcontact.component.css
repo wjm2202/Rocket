@@ -58,6 +58,39 @@
         font-size: 24px;
     }
 /* Using media query to detect if the size of mobile is or more than 320px */
+
+@media screen and (max-width: 318px){
+    .addressinfo {
+        font-size: 10px;
+    }
+    .maorides {
+        font-size: 10px;
+    }
+    .autcity {
+        font-size:10px;
+    }
+    .cityaddress {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .autsouth {
+        font-size: 10px;
+    }
+    .southaddress {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .autnorth {
+        font-size: 10px;
+    }
+    .northaddress {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .slogan {
+        font-size: 13px;
+    }
+}
 @media screen and (min-width: 319px) and (max-width: 769px){
     .addressinfo {
         font-size: 10px;
