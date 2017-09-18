@@ -87,12 +87,14 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
           this.toggle();                              //get next photo
         }else{
           this.direction = !this.direction; //change direction
+          this.toggle();
         }
       }else if(!this.direction){                     //index decreasing
         if (this.index >= 1){                        //if can go lower
           this.toggle();                             //get previous photo
         }else{
           this.direction = !this.direction; //change direction
+          this.toggle();
         }
       }
     }else{
