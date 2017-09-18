@@ -100,3 +100,16 @@ button {
 		top: 20px;
 	}
 }
+
+@media screen and (max-width: 321px){
+	.card{
+		width: 277px;
+		margin-bottom: 10px;
+	}
+	.card .card-img-top{
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		padding: 23px;
+	}
+}
