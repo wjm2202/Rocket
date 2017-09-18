@@ -42,6 +42,11 @@ button {
 	margin: 10px;
 }
 
+.cardText {
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
 
 p.name {
 	font-family: 'Open Sans', sans-serif;
