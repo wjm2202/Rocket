@@ -1,46 +1,21 @@
-.inner-wrapper {
-	float: left;
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
+
+.contactsContainer {
 	width: 100%;
-	height: 400px;
-	background-color: #C3D7DF;
-	z-index: 0;
-}
-
-#photoaside {
-	float: left;
-	margin: 0 auto;
-	width: 50%;
-	height: 400px;
-}
-
-#photoarticle {
-	float: right;
-	margin: 0 auto;
-	width: 50%;
-	height: 400px;
-}
-
-.container {
 	display: inline-flex;
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
-	/* Safari 8 */
 	justify-content: center;
-	-webkit-justify-content: center;
-	/* Safari 8 */
-	height: 100%;
-	-webkit-perspective: 800px;
-	-moz-perspective: 800px;
-	-o-perspective: 800px;
-	perspective: 800px;
 }
 
 .ebussinescard {
-	margin: 20px;
+	margin: 60px;
 	width: 300px;
-	height: 300px;
-	background-color: #e0e0e0;
-	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	height: 375px;
+	text-align: center;
+	background-color: white;
+	box-shadow: #555 1px 1px 8px 1px;
 }
 
 .ebussinescard p {
@@ -66,6 +41,56 @@
 button {
 	margin: 10px;
 }
+
+.cardText {
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
+
+p.name {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+	color: #F07D00;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+
+p.school {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+	color: black;
+	font-size: 13px;
+	font-style: italic;
+	text-align: center;
+}
+
+p.title {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+	color: black;
+	font-size: 16px;
+	text-align: center;
+}
+
+p.email {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+	color: black;
+	font-size: 13px;
+	font-style: italic;
+	text-align: center;
+}
+
+a {
+	color: #F07D00;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: oblique;
+}
+
+
 
 .titleHeader {
 	text-align: center;
