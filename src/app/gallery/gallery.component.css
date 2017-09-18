@@ -1,7 +1,10 @@
 ul {
 	padding: 0;
-	width: 1200px;
 	margin: 20px auto;
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 li {
@@ -9,10 +12,10 @@ li {
 }
 
 .tn {
-	margin: 6px;
-	border: 4px solid #eee;
+	margin: 20px;
+	border: 2px solid white;
 	box-shadow: #555 1px 1px 8px 1px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 
 button {
@@ -23,15 +26,12 @@ section {
 	width: 100%;
 }
 
-.border {
+.photosContainer {
 	margin: 20px;
-	border: 4px solid #eee;
-	border-radius: 2px;
-	box-shadow: #555 1px 1px 8px 1px;
 }
 
 .row {
-	padding-left: 30px;
+	margin: 20px;
 }
 
 img {
