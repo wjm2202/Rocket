@@ -6,25 +6,25 @@
             [morf]="morf"></app-animatedhamburger>
         </div>  
     </div>
-<div *ngIf="!ismobile">
-    <nav>
-        <div class="fullwidth">
-            <button class="bannerbutton" routerLink="" >Home</button>
-            <button class="bannerbutton"  routerLink="sponsors">Sponsors</button>
-            <button class="bannerbutton"  routerLink="awards">Awards</button>
-            <button class="bannerbutton"  routerLink="photos/{{current}}">Photos</button>
-            <button class="bannerbutton"  routerLink="contact">Contact</button>
-        </div>
-    </nav>
+    <div *ngIf="!ismobile">
+        <nav>
+            <div class="fullwidth">
+                <button class="bannerbutton" routerLink="" >Home</button>
+                <button class="bannerbutton"  routerLink="sponsors">Sponsors</button>
+                <button class="bannerbutton"  routerLink="awards">Awards</button>
+                <button class="bannerbutton"  routerLink="photos/{{current}}">Photos</button>
+                <button class="bannerbutton"  routerLink="contact">Contact</button>
+            </div>
+        </nav>
+    </div>
 </div>
+<div [@heightdown] [@heightup] *ngIf="isopen && ismobile" class="dropdown">
+    <div class="inner-wrapper">
+        <br>
+        <button class="pagebutton" (click)="toggleBurger()" routerLink="" (click)="onboxChange(0)">Home</button>
+        <button class="pagebutton" (click)="toggleBurger()" routerLink="sponsors" (click)="onboxChange(0)">Sponsors</button>
+        <button class="pagebutton" (click)="toggleBurger()" routerLink="awards" (click)="onboxChange(0)" >Awards</button>
+        <button class="pagebutton" (click)="toggleBurger()" [routerLink]="['/photos', current]" (click)="onboxChange(0)">Photos</button>
+        <button class="pagebutton" (click)="toggleBurger()" routerLink="contact" (click)="onboxChange(0)">Contact</button>
     </div>
-    <div [@heightdown] [@heightup] *ngIf="isopen && ismobile" class="dropdown">
-        <div class="inner-wrapper">
-            <br>
-            <button class="pagebutton" (click)="toggleBurger()" routerLink="" (click)="onboxChange(0)">Home</button>
-            <button class="pagebutton" (click)="toggleBurger()" routerLink="sponsors" (click)="onboxChange(0)">Sponsors</button>
-            <button class="pagebutton" (click)="toggleBurger()" routerLink="awards" (click)="onboxChange(0)" >Awards</button>
-            <button class="pagebutton" (click)="toggleBurger()" [routerLink]="['/photos', current]" (click)="onboxChange(0)">Photos</button>
-            <button class="pagebutton" (click)="toggleBurger()" routerLink="contact" (click)="onboxChange(0)">Contact</button>
-        </div>
-    </div>
+</div>
