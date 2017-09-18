@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { ImageService } from '../services/Image.Service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -21,11 +21,11 @@ interface PhotoModel {
   animations:[animatePic,
     trigger('picstate', [
       state('off', style({
-        opacity: '0',
+        //opacity: '0',
         //transform: 'translate(-50%)'
       })),
       state('on', style({
-        opacity: '1',
+        //opacity: '1',
         //transform: 'translate(0)'
       })),
       transition('off => on', animate('350ms linear', keyframes([
@@ -65,6 +65,7 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
   first:boolean = true;
   direction:boolean = false;
   isPlaying:boolean = false;
+  playStopMessage:string = 'Play';
   timerOn:boolean = false;
   private subscription;
   constructor(private httpClient: HttpClient,
@@ -79,13 +80,12 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
   }
   togglePlaying(data){
     this.isPlaying = data;
-    //console.log('isplaying '+this.isPlaying);
     if(this.isPlaying){
       this.startSlideShow();
-      //console.log('start slide show');
+      this.playStopMessage = 'Stop';
     }else{
       this.stopSlideShow();
-      //console.log('stop slide show');
+      this.playStopMessage = 'Play';
     }
   }
   slideShow(){
@@ -121,6 +121,7 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
   stopSlideShow(){
     if(this.subscription != null){
       this.subscription.unsubscribe();
+      this.isPlaying = false;
       //console.log('timer unsubscribed');
     }
   }
@@ -164,10 +165,20 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
   }
   indexUp(){
     this.direction = true;
+    if(this.isPlaying == true){
+      this.isPlaying = false;
+      this.stopSlideShow();
+      this.playStopMessage = 'Play';
+    }
     this.toggle();
   }
   indexDown(){
     this.direction = false;
+    if(this.isPlaying == true){
+      this.isPlaying = false;
+      this.stopSlideShow();
+      this.playStopMessage = 'Play';
+    }
     this.toggle();
   }
   ngOnInit() {

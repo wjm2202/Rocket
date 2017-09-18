@@ -26,8 +26,8 @@
 
   <div class="buttonCenter">
     <p class="slideshowStatus">
-      Play Slideshow <br />
-      <app-animated-play [isPlaying]="isPlaying" (event)="togglePlaying($event)"></app-animated-play>
+      {{playStopMessage}} Slideshow <br />
+      <app-animated-play [isPlaying]="isPlaying"  (event)="togglePlaying($event)"></app-animated-play>
     </p>
   </div>
 
