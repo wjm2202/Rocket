@@ -78,6 +78,45 @@
 
 
 /* Using media query to detect if the size of mobile is or more than 320px */
+@media screen and (max-width: 318px){
+    .cu {
+        font-size: 10px;
+    }
+    .se {
+        font-size: 10px;
+    }
+    .faq {
+        font-size: 10px;
+    }
+    .freeph {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    .ph0800 {
+        font-size: 10px;
+    }
+    .email {
+        font-size: 10px;
+    }
+    .corpenq {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .phcorp {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    .corpph0800 {
+        font-size: 10px;
+    }
+    .facebook a img, .instagram a img, 
+    .twitter a img, .youtube a img, .linkedin a img{
+        width: 25px;
+        height: 25px;
+        margin-right: 2px;
+    }
+}
+
 @media screen and (min-width: 319px){
     .cu {
         font-size: 10px;
