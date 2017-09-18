@@ -1,18 +1,34 @@
-<div class="border">
-  <button [routerLink]="['/photos', id]" class="btn btn-success" style="height:50px;">Gallery</button>
-  <button   (click)="indexUp()"  class="btn btn-success" style="height:50px;">&lt; &lt;</button>
-  <button  (click)="indexDown()" class="btn btn-success" style="height:50px;">&gt; &gt;</button>
-  <h1 style="text-align:center;">ECMS Photo {{PhotoID}}</h1>
-  <app-animated-play
-  [isPlaying]="isPlaying"
-  (event)="togglePlaying($event)"></app-animated-play>
-</div>
-<br>
-<div class="border">
-  <div *ngIf="loaded" class="marg">
-    <div [@picstate]="picstate" (@picstate.done)="changeIndex()">
-    <img src="http://ecms-award.aut.ac.nz/web/generalphotos/{{yearPhotos[index].Filename}}" class="img-container">
-<!--testing     <img src="{{yearPhotos[index].Filename}}" class="img-container" alt="pic here">   -->
+<div class="header">
+    <div class="titleHeader">
+        <br />
+        <a id="pageTitle">Gallery</a>
+        <br />
+        <br />
     </div>
+</div>
+
+<div class="class1">
+  <div *ngIf="loaded" class="marg">
+    
+    <div class="button1">
+      <button (click)="indexDown()" class="homepageButton" style="height:50px;">&lt;</button>
+    </div>
+    
+    <div [@picstate]="picstate" (@picstate.done)="changeIndex()">
+      <img src="http://ecms-award.aut.ac.nz/web/generalphotos/{{yearPhotos[index].Filename}}" class="img-container">
+    </div>
+
+    <div class="button2">
+      <button (click)="indexUp()" class="homepageButton" style="height:50px;">&gt;</button>
+    </div>
+
   </div>
+
+  <div class="buttonCenter">
+    <p class="slideshowStatus">
+      Play Slideshow <br />
+      <app-animated-play [isPlaying]="isPlaying" (event)="togglePlaying($event)"></app-animated-play>
+    </p>
+  </div>
+
 </div>
