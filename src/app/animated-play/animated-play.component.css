@@ -1,12 +1,13 @@
-button{
+button {
     cursor: pointer;
     width: 100px;
-    height:70px;
+    padding-left: 40px;
+    height:100px;
     background-color: transparent;
     border: none;
     outline: none;
 }
-.line{
+.line {
     transform: translateX(-40px);
     position: absolute;
     height: 8px;
@@ -34,6 +35,5 @@ button{
 }
 .on .line:nth-of-type(2){
     transform:translateY(12px) translateX(-44px) rotate(29deg);
-     
-}
 
+}

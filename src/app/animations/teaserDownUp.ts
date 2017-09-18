@@ -22,7 +22,7 @@ export const teaser =
         transition('void => *', [
             query('.inner-wrapper', style({ opacity: 0, height: 0}), {optional: true}),
             query('.inner-wrapper', stagger('100ms', [
-                animate('0.5s 500ms cubic-bezier(0.35, 0, 0.25, 1)', keyframes([
+                animate('0.5s  cubic-bezier(0.35, 0, 0.25, 1)', keyframes([
                     style({opacity: 1, height: '*', offset: 1.0}),
                     ]))]), {optional: true}),
         ])

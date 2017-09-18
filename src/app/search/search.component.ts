@@ -16,9 +16,9 @@ export class SearchComponent implements OnChanges, OnInit {
   @Input() filterBy?: string = 'all';
   visableAwards: AwardModel[];
   awards: AwardModel[];
-  wordSearch:boolean = false;
+  wordSearch:boolean = true;
   filterSearch:boolean = false;
-  hideCards:boolean = true;
+  hideCards:boolean = false;
   constructor(private AllAwards: GetawardsService) {
 
   }

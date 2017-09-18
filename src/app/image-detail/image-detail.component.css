@@ -1,40 +1,14 @@
 .img-container {
     margin:  auto;
     margin-bottom: 0;
-    box-shadow: #555 1px 2px 8px 1px;
-    /* height: 660px; */
+	border: 2px solid white;
+	box-shadow: #555 1px 1px 8px 1px;
     max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     align-content: center;
-    background-size: 100%
 }
-
-#caption {
-    font-size: 1.5em;
-    font-family: 'Open Sans', sans-serif;
-    padding: 18px;
-    color: #222;
-    border: 1px solid #bbb;
-    width: 900px;
-}
-.caption-row {
-    padding: 24px;
-    text-align: center;
-}
-.border{
-    margin: 20px;
-    margin-bottom: 50px;
-    border: 4px solid #eee;
-    border-radius: 2px;
-    box-shadow: #555 1px 1px 8px 1px;
-}
-button{
-    margin:20px;
-}
-
 img {
-    max-width: 100%;
     height: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -43,4 +17,84 @@ img {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size:cover;
+}
+
+.class1 {
+    margin: 0 auto;
+    position: relative;
+    max-width: 75%;
+}
+
+.button1 {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-left: 2px;
+}
+
+.buttonCenter {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button2 {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-right: 2px;
+}
+
+.slideshowStatus {
+    margin-top: 40px;
+}
+
+.titleHeader {
+	text-align: center;
+	position: relative;
+}
+
+#pageTitle {
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 110px;
+	font-weight: 800;
+	letter-spacing: -3px;
+	line-height: 1;
+	text-shadow: #A97E37 3px 2px 0;
+	position: relative;
+}
+
+#pageTitle:after {
+	content: "Gallery";
+	position: absolute;
+	left: 7px;
+	top: 24px;
+}
+
+#pageTitle:after {
+	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+	background-size: 4px 4px;
+	-webkit-background-clip: text;
+	background-clip: test;
+	-webkit-text-fill-color: transparent;
+	z-index: -5;
+	display: block;
+	text-shadow: none;
+}
+
+.homepageButton {
+    font-family: arial black, sans-serif;
+    background-color: rgba(255, 255, 255, 0.50);
+    padding: 0px 20px 0px 20px;
+	text-decoration: none;
+	font-size: 18px;
+    font-weight: bold;
+    border: 0px;
+}
+
+.homepageButton:hover {
+    background-color: #f07d00;
+    color: white;
 }
