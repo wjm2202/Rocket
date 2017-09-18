@@ -23,9 +23,9 @@ export class WordSearchComponent implements OnInit {
   
   test(id, selected){
     this.criteria = selected;
-    console.log(this.criteria);
+    //console.log(this.criteria);
     this.selected = id;
-    console.log(this.selected);
+    //console.log(this.selected);
   }
   newSearch(term){                                        //term from input
     this.showResults = true;

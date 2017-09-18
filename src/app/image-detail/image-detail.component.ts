@@ -173,7 +173,10 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
   ngOnDestroy(){
-    this.subscription.unsubscribe();
+    if(this.subscription != null){
+      this.subscription.unsubscribe();
+    }
+    
   }
 
   getImages() {
