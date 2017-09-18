@@ -57,6 +57,7 @@ import { WelcomeMessageComponent } from './welcome-message/welcome-message.compo
 import { AppendMaincaraPipe } from './pipes/append-maincara.pipe';
 import { SponsorshipMessageComponent } from './sponsorship-message/sponsorship-message.component';
 import { AnimatedPlayComponent } from './animated-play/animated-play.component';
+import { AwardTeaserMessageComponent } from './award-teaser-message/award-teaser-message.component';
 
 
 
@@ -93,7 +94,8 @@ import { AnimatedPlayComponent } from './animated-play/animated-play.component';
     AppendMaincaraPipe,
     SponsorshipMessageComponent,
     AppendSponsorPipe,
-    AnimatedPlayComponent
+    AnimatedPlayComponent,
+    AwardTeaserMessageComponent
 
   ],
   imports: [
