@@ -12,6 +12,8 @@ img {
   display: inline-block;
   width: 200px;
   height: 100px;
+  /* Spacing Image */
+  padding: 20px;
 }
 .carousel {
   width: 100%;
@@ -21,6 +23,7 @@ img {
   box-sizing: border-box;
   box-shadow: 0 0 4px #000;
   margin: 0 auto;
+  margin-top: 21px;
   border-radius: 5px;
 }
 .holder {

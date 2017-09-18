@@ -1,8 +1,8 @@
 .card {
 	width: 400px;
 	max-height: 380px;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	/*overflow-y: scroll;
+	overflow-x: hidden;*/
 }
 
 .border {
