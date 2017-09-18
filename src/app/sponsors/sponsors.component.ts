@@ -43,6 +43,7 @@ export class SponsorsComponent implements OnInit {
 
    getSponsor(): void {
     this.getSponsors.getAllSponsorPics()
+    .filter((x:any) => x.SponsorName != 'Placeholder')
     .subscribe(resultArray => {
       this.sponsors = resultArray;
     },

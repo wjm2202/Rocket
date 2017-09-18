@@ -10,8 +10,47 @@
 	border: 2px solid #eee;
 	border-radius: 2px;
 	box-shadow: #555 1px 1px 8px 1px;
+	background-color: whitesmoke;
+}
+.image-container {
+	width: 275px;
+	min-height: 600px;
+	max-width: 300px;
+	margin: 30px;
+	height:auto;
+	border-radius: 2px;
+	box-shadow: #555 1px 1px 8px 1px;
+}
+#card {
+	width: 270px;
+	height:auto;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: transform 1s;
 }
 
+#card md-card {
+	display: block;
+	position: absolute;
+	margin:2px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	backface-visibility: hidden;
+	overflow: hidden;
+}
+md-card-headder.mat-card-header {
+	margin: 0;
+}
+#card .front {
+	background: white;
+	height: auto;
+}
+.image {
+	max-width: 185px;
+	max-height: 150px;
+}
 button {
 	margin: 10px;
 }

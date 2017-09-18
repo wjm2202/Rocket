@@ -11,8 +11,29 @@
 </div>
 
 <br/>
-<div class="border">
 
+<masonry [useImagesLoaded]="false" class="border">
+  <masonry-brick class="cards" *ngFor="let sponsor of sponsors" class="image-container">
+    
+      <div class="card">
+        <div id="card">
+          <md-card class="front">
+            <md-card-header>
+              <img class="image" src="{{sponsor.SponsorLogo | appendSponsor}}">
+            </md-card-header>
+            <md-card-content>
+              <p>{{sponsor.SponsorName}}</p>
+              <p>{{sponsor.SponsorBlurb}}</p>
+              <a href="{{sponsor.SponsorLink}}">{{sponsor.SponsorLink | stripurl}}</a>
+            </md-card-content>
+          </md-card>
+        </div>
+      </div>
+    
+  </masonry-brick>
+</masonry>
+
+<!--
 <div class="card-deck danger">
   <div *ngFor="let sponsor of sponsors">
     <div *ngIf="sponsor.SponsorName != 'Placeholder'">
@@ -31,4 +52,4 @@
     </div>  
   </div>
 </div>
-</div>
+</div> -->
