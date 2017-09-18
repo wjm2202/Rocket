@@ -4,3 +4,10 @@
     border-radius: 2px;
     box-shadow: #555 1px 1px 8px 1px;
 }
+tbody{
+    background-color: lightgray;
+}
+tr:hover{
+    background-color:black;
+    color:white;
+}

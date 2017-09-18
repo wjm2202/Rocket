@@ -18,7 +18,7 @@ export class WordSearchComponent implements OnInit {
   latestSearch = new Subject<string>();                   //sub of observable
   selected =0;
   criteria: string = 'StudentName';
-  showResults:boolean = false;
+  showResults:boolean = true;
   
   
   test(id, selected){
