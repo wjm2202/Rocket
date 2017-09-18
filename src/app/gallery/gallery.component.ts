@@ -6,9 +6,10 @@ import { Observable } from 'rxjs/Rx';
 import { getSponsorCaraService } from '../services/getSponsorCara.service';
 import { Moment } from 'moment'; 
 import { DatePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 interface PhotoModel {
-  Created: Date;
+  Created: number;
   Filename: string;
   PhotoID: number;
 }
@@ -20,21 +21,25 @@ interface PhotoModel {
   providers: [ImageService, DatePipe]
 })
 export class GalleryComponent implements OnChanges, OnInit {
-  pictures: PhotoModel;
+  pictures: PhotoModel[];
   title = 'ECMS Photos';
   @Input() filterBy?: string = 'all';     //? is optional
   visableImages: any[] = [];
   current;
   selected;
+  id;
   //Onchanges is a life cycle hook called when something changes
   constructor(private imageService: ImageService, 
               private httpClient: HttpClient,
-              private datePipe: DatePipe) {
-    
-    this.current = Date.now();
-    this.current = this.datePipe.transform(this.current, 'yyyy');
+              private datePipe: DatePipe,
+              private route: ActivatedRoute,) {
+    //console.log('in gallery '+this.route.snapshot.params['id']);
+    this.current = +this.route.snapshot.params['id'];
+    //this.current = Date.now();
+    ///this.current = this.datePipe.transform(this.current, 'yyyy');
     this.selected = this.current;
     this.visableImages = this.imageService.getImages();
+    //this.current = +this.route.snapshot.params['id'];
   }
 
   upDate(){
@@ -54,14 +59,12 @@ export class GalleryComponent implements OnChanges, OnInit {
       error => console.log("Error: " + error))
   }
   ngOnInit(): void {
-    this.getImages();
+    this.getImages();                   // turn off for testing
+    //this.pictures = this.PICTURES;
   }
-  getImages() {
-    this.httpClient.get<PhotoModel>(`https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/${this.selected}`).subscribe(data => {
+  getImages() {            //change to photomodel[] for testing
+    this.httpClient.get<PhotoModel[]>(`https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/${this.selected}`).subscribe(data => {
       this.pictures = data;
-      //console.log("Created: " + this.pictures[0].Created);
-      //console.log("FileName: " + this.pictures[0].Filename);
-      //console.log("PhotoID: " + this.pictures[0].PhotoID);
     },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
@@ -72,5 +75,20 @@ export class GalleryComponent implements OnChanges, OnInit {
       }
     )
   }
+  PICTURES = [
+    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 1},
+    {'Created': 2016,'Filename': '../../assets/images/2.jpg','PhotoID': 2},
+    {'Created': 2015,'Filename': '../../assets/images/3.jpg','PhotoID': 3},
+    {'Created': 2015,'Filename': '../../assets/images/4.jpg','PhotoID': 4},
+    {'Created': 2014,'Filename': '../../assets/images/5.jpg','PhotoID': 5},
+    {'Created': 2014,'Filename': '../../assets/images/1.jpg','PhotoID': 6},
+    {'Created': 2017,'Filename': '../../assets/images/1.jpg','PhotoID': 7},
+    {'Created': 2017,'Filename': '../../assets/images/1.jpg','PhotoID': 8},
+    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 9},
+    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 10},
+    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 11},
+    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 12}
+  ]
 }
+
 

@@ -1,0 +1,39 @@
+button{
+    cursor: pointer;
+    width: 100px;
+    height:70px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.line{
+    transform: translateX(-40px);
+    position: absolute;
+    height: 8px;
+    background: #DBA449;
+    width: 55px;
+    transition: .5s;
+    border-radius: 5px;
+    transform-origin: center;
+}
+/* stop nutton */
+.line:first-child{
+    transform:translateY(48px) translateX(-14px) rotate(-90deg);
+}
+
+.line:nth-of-type(3){
+    transform:translateX(-65px) rotate(-90deg);
+}
+/* play button */
+.on .line:first-child{
+    transform:translateY(48px) translateX(-65px) rotate(-90deg);
+    opacity: 0;
+}
+.on .line:last-child{
+    transform:translateY(-12px) translateX(-44px) rotate(-29deg);
+}
+.on .line:nth-of-type(2){
+    transform:translateY(12px) translateX(-44px) rotate(29deg);
+     
+}
+

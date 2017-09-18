@@ -18,9 +18,9 @@
 	box-shadow: #555 1px 1px 8px 1px;
 }
 
-.cardText {
-	padding-left: 10px;
-	padding-right: 10px;
+.ebussinescard p {
+	text-align: center;
+	padding: 4px;
 }
 
 
@@ -141,4 +141,22 @@ a {
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
 	text-decoration: none;
+}
+
+@media screen and (max-width: 426px){
+	#pageTitle{
+		font-size: 290%
+	}
+	#pageTitle:after {
+		top: 15px;
+	}
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px){
+	#pageTitle{
+		font-size: 350%;
+	}
+	#pageTitle:after {
+		top: 20px;
+	}
 }

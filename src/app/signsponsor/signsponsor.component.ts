@@ -89,16 +89,10 @@ export class SignsponsorComponent implements OnInit {
       this.AwardName = post.awardname;
     }
     this.Comments = post.comments;
-    this.sendDetails();
+    this.postDetails();
   }
-
-  sendDetails(){
-    this.Obj = {awardId: this.AwardId, awardName: this.AwardName, company: this.Company, email: this.Email, name: this.Name, phone: this.Phone, comments:this.Comments}
-    console.log(this.Obj);
-    this.postDetails(this.Obj);
-  }     
-  
-  postDetails(Obj:SuccessRes){
+    
+  postDetails(){
     const request = this._http.post<SuccessRes>('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
       awardId: `${this.AwardId}`,           //award id number
       awardName: `${this.AwardName}`,            //name of award
@@ -141,7 +135,7 @@ export class SignsponsorComponent implements OnInit {
     let index = this.potential.indexOf(id);
     this.Selected = this.potential[index];
     this.potential.splice(index,1);
-    console.log('selected: '+ this.Selected.AwardId);
+    //console.log('selected: '+ this.Selected.AwardId);
     
   }
   clear(){

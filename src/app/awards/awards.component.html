@@ -7,13 +7,13 @@
     <button type="button" class="homepageButton" routerLink="../awards/search">Search Awards</button>
     <br />
   </div>
-  
+
 </div>
 <!--this is a comment-->
 <masonry [useImagesLoaded]="false" class="border">
   <masonry-brick class="cards" *ngFor="let award of awards" class="image-container">
     <div class="card">
-      <div id="card" [ngClass]="{'flipped': award.isflipped }" (click)="award.isflipped = !award.isflipped;">
+      <div id="card" [ngClass]="{'flipped': award.isflipped }">
         <md-card class="front">
           <md-card-header>
             <img class="image" src="../../assets/images/i6.jpg">
@@ -27,6 +27,9 @@
             <p>{{award.AwardDegreeLevel}}</p>
             <p>{{award.AwardBlurb}}</p>
           </md-card-content>
+          <div align="center">
+            <button type="button" class="homepageButton" (click)="award.isflipped = !award.isflipped;">Flip</button>
+          </div>
         </md-card>
         <md-card class="back">
           <md-card-header>
@@ -38,6 +41,9 @@
             <p>{{award.AwardSponsorBlurb}}</p>
             <p>{{award.SponsorLink}}</p>
           </md-card-content>
+          <div align="center">
+            <button type="button" class="homepageButton" (click)="award.isflipped = !award.isflipped;">Flip</button>
+          </div>
         </md-card>
       </div>
     </div>
