@@ -30,14 +30,22 @@ interface PhotoModel {
       })),
       transition('off => on', animate('350ms linear', keyframes([
         style({transform: 'scale(0)', opacity: '0'}),
-        style({transform: 'scale(.33)', opacity: '0.3'}),
-        style({transform: 'scale(.66)', opacity: '0.6'}),
+        style({transform: 'scale(.25)', opacity: '0.25'}),
+        style({transform: 'scale(.5)', opacity: '0.5'}),
+        style({transform: 'scale(.6)', opacity: '0.6'}),
+        style({transform: 'scale(.7)', opacity: '0.7'}),
+        style({transform: 'scale(.8)', opacity: '0.8'}),
+        style({transform: 'scale(.9)', opacity: '0.9'}),
         style({transform: 'scale(1)', opacity: '1'}),
       ]))),
       transition('on => off', animate('250ms linear', keyframes([
         style({transform: 'scale(1)', opacity: '1'}),
-        style({transform: 'scale(.66)', opacity: '0.6'}),
-        style({transform: 'scale(.33)', opacity: '0.3'}),
+        style({transform: 'scale(.9)', opacity: '0.9'}),
+        style({transform: 'scale(.8)', opacity: '0.8'}),
+        style({transform: 'scale(.7)', opacity: '0.7'}),
+        style({transform: 'scale(.6)', opacity: '0.6'}),
+        style({transform: 'scale(.5)', opacity: '0.5'}),
+        style({transform: 'scale(.25)', opacity: '0.25'}),
         style({transform: 'scale(0)', opacity: '0'}),
       ])))
     ])
