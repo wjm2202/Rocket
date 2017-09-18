@@ -29,16 +29,16 @@ interface PhotoModel {
         //transform: 'translate(0)'
       })),
       transition('off => on', animate('350ms linear', keyframes([
-        style({transform: 'scale(0)'}),
-        style({transform: 'scale(.33)'}),
-        style({transform: 'scale(.66)'}),
-        style({transform: 'scale(1)'}),
+        style({transform: 'scale(0)', opacity: '0'}),
+        style({transform: 'scale(.33)', opacity: '0.3'}),
+        style({transform: 'scale(.66)', opacity: '0.6'}),
+        style({transform: 'scale(1)', opacity: '1'}),
       ]))),
       transition('on => off', animate('250ms linear', keyframes([
-        style({transform: 'scale(1)'}),
-        style({transform: 'scale(.66)'}),
-        style({transform: 'scale(.33)'}),
-        style({transform: 'scale(0)'}),
+        style({transform: 'scale(1)', opacity: '1'}),
+        style({transform: 'scale(.66)', opacity: '0.6'}),
+        style({transform: 'scale(.33)', opacity: '0.3'}),
+        style({transform: 'scale(0)', opacity: '0'}),
       ])))
     ])
   ]
