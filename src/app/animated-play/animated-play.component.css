@@ -1,7 +1,8 @@
 button{
     cursor: pointer;
     width: 100px;
-    height:70px;
+    padding-left: 10px;
+    height:100px;
     background-color: transparent;
     border: none;
     outline: none;
