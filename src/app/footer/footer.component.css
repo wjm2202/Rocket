@@ -1,3 +1,11 @@
+a {
+    color:#ffffff;
+}
+
+a:hover {
+    color: #DBA449;
+}
+
 footer {
     bottom:-9px;
     width:100%;
