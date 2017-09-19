@@ -42,9 +42,10 @@ body {
 	-moz-border-radius: 6;
 	border-radius: 6px;
 	font-family: 'Open Sans', sans-serif;
-	color: #f07d00;
+	color: #FFFFFF;
 	font-size: 22px;
-	background: #FFFFFF;
+	background: #DBA449;
+	
 	padding: 10px 24px 10px 24px;
 	border: solid #f07d00 2px;
 	text-decoration: none;

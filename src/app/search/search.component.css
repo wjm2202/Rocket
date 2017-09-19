@@ -75,18 +75,18 @@ button{
 	-moz-border-radius: 6;
 	border-radius: 6px;
 	font-family: 'Open Sans', sans-serif;
-	color: #DBA449;
+	color: #FFFFFF;
 	font-size: 18px;
-	background: #FFFFFF;
+	background: #DBA449;
 	padding: 7px 19px 7px 19px;
 	border: solid #DBA449 2px;
 	text-decoration: none;
 }
 
 .homepageButton:hover {
-	background: #DBA449;
+	background: #FFFFFF;
 	font-family: 'Open Sans', sans-serif;
-	color: #FFFFFF;
+	color: #DBA449;
 	text-decoration: none;
 }
 
