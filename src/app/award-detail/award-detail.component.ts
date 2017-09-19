@@ -14,6 +14,7 @@ import { environment } from '../../environments/environment';
   providers: []
 })
 export class AwardDetailComponent implements OnInit {
+  base:string = environment.baseURL+'assets/cert_header.png';
   obj;
   AwardName;
   StudentName;
