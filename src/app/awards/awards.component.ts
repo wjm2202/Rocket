@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { UrlStrip } from '../pipes/imagestrip';
+import { AppendAssetsPipe } from '../pipes/append-assets.pipe';
+import { AppendSponsorPipe } from '../pipes/append-sponsor.pipe';
 import { GetawardsService } from '../services/getawards.service';
 import { AwardModel } from '../interfaces/awardcard';
 import { Router } from '@angular/router';

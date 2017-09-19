@@ -109,13 +109,8 @@ section {
 	width: 100%;
 }
 
-.border {
-	margin: 40px;
-	border: 4px solid #eee;
-	background-color: whitesmoke;
-	border-radius: 2px;
-	box-shadow: #555 1px 1px 8px 1px;
-	min-width: 289px;
+.cardContainer {
+	margin: 20px;
 }
 
 md-card-headder.mat-card-header {

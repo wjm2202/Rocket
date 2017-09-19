@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     align-content: center;
 }
+
 img {
     height: auto;
     background-repeat: no-repeat;
@@ -45,8 +46,15 @@ img {
 }
 
 .slideshowStatus {
-    margin-top: 40px;
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 120%;
+	padding: 20px;
+	text-align: center;
 }
+
 
 .titleHeader {
 	text-align: center;
@@ -95,6 +103,6 @@ img {
 }
 
 .homepageButton:hover {
-    background-color: #f07d00;
+    background-color: #DBA449;
     color: white;
 }
