@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 
 export class PhotoGeneralPipe implements PipeTransform {
     transform(items: any): any {
-        console.log('append-general    '+environment.baseURL+'generalphotos/' + items);
+        //console.log('append-general    '+environment.baseURL+'generalphotos/' + items);
         return environment.baseURL+'generalphotos/' + items;
     }
 } 

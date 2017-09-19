@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 
 export class PhotoPipe implements PipeTransform{
     transform(items: any): any {
-        console.log('photo pipe ' +environment.baseURL+'sponsorCarousel'+items);
+        //console.log('photo pipe ' +environment.baseURL+'sponsorCarousel'+items);
         return environment.baseURL+'sponsorCarousel/'+items;
     }
 } 

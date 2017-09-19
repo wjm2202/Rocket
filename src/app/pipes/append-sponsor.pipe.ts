@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 export class AppendSponsorPipe implements PipeTransform {
 
   transform(items: any): any {
-    console.log('append sponsor   '+environment.baseURL+'sponsorCarousel/' + items);
+    //console.log('append sponsor   '+environment.baseURL+'sponsorCarousel/' + items);
     return environment.baseURL+'sponsorCarousel/' + items;
   }
 
