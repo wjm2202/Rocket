@@ -29,7 +29,7 @@ export class AwardDetailComponent implements OnInit {
               }
 
   getSingleAward(){
-    this.http.get('https://webservices-test.aut.ac.nz/ecms/api/awards/'+this.route.snapshot.params['id'])
+    this.http.get(environment.baseURI+'awards/'+this.route.snapshot.params['id'])
     .subscribe(
       (res: Response) => {
         this.obj = res.json();

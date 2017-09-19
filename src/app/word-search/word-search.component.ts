@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { Subject } from 'rxjs/Subject';
 import { AwardModel } from '../interfaces/awardcard'
+import { environment } from '../../environments/environment';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/debounceTime';
@@ -30,7 +31,7 @@ export class WordSearchComponent implements OnInit {
   newSearch(term){                                        //term from input
     this.showResults = true;
     this.latestSearch.next(term);                        //emit the latest term enterd
-    console.log(`https://webservices-test.aut.ac.nz/ecms/api/search/${this.criteria}/${term}`)
+    console.log(environment.baseURI+`search/${this.criteria}/${term}`)
   }
   constructor(private http:Http) {                         //import Http singleton
     
@@ -38,8 +39,7 @@ export class WordSearchComponent implements OnInit {
     .debounceTime(500)                                     //500ms after typing to api call
     .filter(term =>!!term)                                 //result is truthy not empty
     //to use a variable in a string use back ticks`string${variable}string`  
-    
-    .switchMap(term => this.http.get(`https://webservices-test.aut.ac.nz/ecms/api/search/${this.criteria}/${term}`) //get request github
+    .switchMap(term => this.http.get(environment.baseURI+`search/${this.criteria}/${term}`) //get request github
     .map(res => res.json())    //map the response to json get item => item.name
     );
   }

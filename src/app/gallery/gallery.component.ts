@@ -7,6 +7,7 @@ import { getSponsorCaraService } from '../services/getSponsorCara.service';
 import { Moment } from 'moment'; 
 import { DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 interface PhotoModel {
   Created: number;
@@ -63,7 +64,7 @@ export class GalleryComponent implements OnChanges, OnInit {
     //this.pictures = this.PICTURES;
   }
   getImages() {            //change to photomodel[] for testing
-    this.httpClient.get<PhotoModel[]>(`https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/${this.selected}`).subscribe(data => {
+    this.httpClient.get<PhotoModel[]>(environment.baseURI+`photos/getyear/${this.selected}`).subscribe(data => {
       this.pictures = data;
     },
       (err: HttpErrorResponse) => {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 interface OrgMessageModel {
   messageIsVisable: string;
@@ -17,7 +18,7 @@ export class WelcomeMessageComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
-    this.httpClient.get<OrgMessageModel>('https://webservices-test.aut.ac.nz/ecms/api/orgmessage').subscribe
+    this.httpClient.get<OrgMessageModel>(environment.baseURI+'orgmessage').subscribe
       (data => {
         this.messages = data;
         //console.log("orgMessage: " + this.messages[0].orgMessage);

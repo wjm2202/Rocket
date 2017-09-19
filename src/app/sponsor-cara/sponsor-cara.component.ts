@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Rx';
 import { HttpClient, HttpResponse ,HttpErrorResponse } from '@angular/common/http';
 import { getSponsorCaraService } from '../services/getSponsorCara.service';
 import { PhotoPipe } from '../pipes/photo.pipe';
+import { environment } from '../../environments/environment';
 
 interface Spon_caraModel {
   Sponsor_carousel: string
@@ -33,7 +34,7 @@ export class SponsorCaraComponent implements OnInit {
   }
   ngOnInit(): void {
     //this.getpics();
-    this.httpClient.get<Spon_caraModel>('https://webservices-test.aut.ac.nz/ecms/api/sponsorCarosouel').subscribe(data => {
+    this.httpClient.get<Spon_caraModel>(environment.baseURI+'sponsorCarosouel').subscribe(data => {
       this.pictures = data;
     },
   (err: HttpErrorResponse) => {

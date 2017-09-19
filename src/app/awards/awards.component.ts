@@ -6,6 +6,7 @@ import { AppendSponsorPipe } from '../pipes/append-sponsor.pipe';
 import { GetawardsService } from '../services/getawards.service';
 import { AwardModel } from '../interfaces/awardcard';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-awards',
