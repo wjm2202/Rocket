@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 
 export class AppendAssetsPipe implements PipeTransform {
     transform(items: any): any {
-        console.log('append general   '+environment.baseURL+'assets/' + items);
+        //console.log('append assets   '+environment.baseURL+'assets/' + items);
         return environment.baseURL+'assets/' + items;
     }
 } 

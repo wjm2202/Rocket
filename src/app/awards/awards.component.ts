@@ -16,7 +16,7 @@ import { environment } from '../../environments/environment';
 })
 export class AwardsComponent implements OnInit {
   awards: AwardModel[];
-  header:string = 'award_header.jpg';
+  header:string ='award_header.jpg';
   constructor(private http: HttpClient,
               private AllAwards :GetawardsService,
               private router: Router) { 
