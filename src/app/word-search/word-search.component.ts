@@ -14,6 +14,8 @@ import 'rxjs/add/operator/distinct';
   styleUrls: ['./word-search.component.css']
 })
 export class WordSearchComponent implements OnInit {
+  hasResults:boolean = false;
+  status:string = '';
   results;                                                //values returned from search
   searchTerm:string;                                      //string entered for search
   latestSearch = new Subject<string>();                   //sub of observable
@@ -29,19 +31,23 @@ export class WordSearchComponent implements OnInit {
     //console.log(this.selected);
   }
   newSearch(term){                                        //term from input
+    this.status = 'Typing';
     this.showResults = true;
     this.latestSearch.next(term);                        //emit the latest term enterd
     console.log(environment.baseURI+`search/${this.criteria}/${term}`)
   }
   constructor(private http:Http) {                         //import Http singleton
-    
     this.results = this.latestSearch                       //latest to results
     .debounceTime(500)                                     //500ms after typing to api call
     .filter(term =>!!term)                                 //result is truthy not empty
     //to use a variable in a string use back ticks`string${variable}string`  
     .switchMap(term => this.http.get(environment.baseURI+`search/${this.criteria}/${term}`) //get request github
     .map(res => res.json())    //map the response to json get item => item.name
+    .finally(()=> {
+      this.status = 'Search Complete for   -   ' + this.criteria+ ': '+term;
+    })
     );
+    
   }
   ngOnInit() {
   }

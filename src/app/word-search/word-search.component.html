@@ -1,15 +1,18 @@
 <div class="border">
+  <H1 style="margin:20px;">Search Criteria</H1>
   <md-radio-group layout="row" [(ngModel)]="selected" style="margin:10px 10px;">
-    <md-radio-button [value]=0 (change)="test(0,'StudentName')"  class="md-primary">Student Name</md-radio-button>
-    <md-radio-button [value]=1 (change)="test(1,'AwardName')">Award Name</md-radio-button>
-    <md-radio-button [value]=2 (change)="test(2,'DegreeLevel')">Degree Level</md-radio-button>
-    <md-radio-button [value]=3 (change)="test(3,'Degree')">Degree</md-radio-button>
-    <md-radio-button [value]=4 (change)="test(4,'Date')">Year</md-radio-button>
-    <md-radio-button [value]=5 (change)="test(5,'Sponsor')">Sponsor</md-radio-button>
+    <md-radio-button [value]=0 (change)="test(0,'StudentName')"  class="md-primary">Student Name &emsp;</md-radio-button>
+    <md-radio-button [value]=1 (change)="test(1,'AwardName')">Award Name &emsp;</md-radio-button>
+    <md-radio-button [value]=2 (change)="test(2,'DegreeLevel')">Degree Level &emsp;</md-radio-button>
+    <md-radio-button [value]=3 (change)="test(3,'Degree')">Degree &emsp;</md-radio-button>
+    <md-radio-button [value]=4 (change)="test(4,'Date')">Year &emsp;</md-radio-button>
+    <md-radio-button [value]=5 (change)="test(5,'Sponsor')">Sponsor &emsp;</md-radio-button>
   </md-radio-group>
   <div class="form-group">
+      <H1 style="margin:20px;">Search Term</H1>
     <label for="formGroupExampleInput" style="margin:10px;">Search</label>
-    <input type="text" style="width:50%;margin-top:20px;" placeholder="Search" [(ngModel)]="searchTerm" (ngModelChange)="newSearch(searchTerm)">
+    <input type="text" style="width:50%;margin:20px;" placeholder="Search" [(ngModel)]="searchTerm" (ngModelChange)="newSearch(searchTerm)">
+    <h3 style="margin:20px;">{{status}}</h3>
   </div>
 </div>
 <div [class.border]="showResults">
