@@ -1,3 +1,4 @@
+
 <div class="header">
 
   <div class="titleHeader">
@@ -10,28 +11,26 @@
 
 </div>
 
-<masonry [useImagesLoaded]="false" class="border">
+<masonry [useImagesLoaded]="false" class="cardContainer">
   <masonry-brick class="cards" *ngFor="let award of awards" class="image-container">
-    <div class="card">
       <div id="card" [ngClass]="{'flipped': award.isflipped }">
         <md-card class="front">
-          <md-card-header>
-            <img class="image" src="{{header | assetsAppendGeneral}}">
-          </md-card-header>
+          <img class="frontImage" src="{{header | assetsAppendGeneral}}">
           <md-card-content>
-            <p>{{award.StudentName}}</p>
-            <p>{{award.AwardDate}}&nbsp;{{award.AwardName}}</p>
-            <p>{{award.AwardBlurb}}</p>
-            <p>{{award.AwardDegree}}</p>
-            <p>{{award.AwardDegreeLevel}}</p>
+            <p class="student">{{award.StudentName}}</p>
+            <p class="award">{{award.AwardDate}}&nbsp;{{award.AwardName}}</p>
+            <p class="blurb">{{award.AwardBlurb}}</p>
+            <p class="level">{{award.AwardDegreeLevel}}</p>
+            <p class="degree">{{award.AwardDegree}}</p>
           </md-card-content>
           <div align="center">
-            <button type="button" class="homepageButton" (click)="award.isflipped = !award.isflipped;">Flip</button>
+            <button type="button" class="flipButton" (click)="award.isflipped = !award.isflipped;"> Flip </button>
+            <button type="button" class="flipButton"> View </button>
           </div>
         </md-card>
         <md-card class="back">
           <md-card-header>
-            <img class="image" src="{{award.SponsorLogo | appendSponsor}}">
+            <img class="backImage" src="{{award.SponsorLogo | appendSponsor}}">
           </md-card-header>
           <md-card-content>
             <p>{{award.SponsorName}}</p>
@@ -40,23 +39,10 @@
             <p>{{award.SponsorLink}}</p>
           </md-card-content>
           <div align="center">
-            <button type="button" class="homepageButton" (click)="award.isflipped = !award.isflipped;">Flip</button>
+            <button type="button" class="flipButton" (click)="award.isflipped = !award.isflipped;"> Flip </button>
+            <button type="button" class="flipButton"> View </button>
           </div>
         </md-card>
       </div>
-    </div>
   </masonry-brick>
 </masonry>
-<!--
-<div class="card-deck" *ngFor="let award of awards; let i = index;">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-
-</div> -->
