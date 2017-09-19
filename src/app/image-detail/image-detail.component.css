@@ -77,8 +77,8 @@ img {
 #pageTitle:after {
 	content: "Gallery";
 	position: absolute;
-	left: 7px;
-	top: 24px;
+	left: 3px;
+	top: 21px;
 }
 
 #pageTitle:after {
@@ -105,4 +105,24 @@ img {
 .homepageButton:hover {
     background-color: #DBA449;
     color: white;
+}
+
+@media screen and (max-width: 426px){
+	#pageTitle{
+		font-size: 290%
+	}
+	#pageTitle:after {
+		top: 11px;
+		left: 3px;
+	}
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px){
+	#pageTitle{
+		font-size: 350%;
+	}
+	#pageTitle:after {
+		top: 14px;
+		left: 3px;
+	}
 }
