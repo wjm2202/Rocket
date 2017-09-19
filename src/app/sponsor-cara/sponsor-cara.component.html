@@ -1,8 +1,12 @@
-<h6>-</h6>
+<p>-</p>
 <div class="carousel">
   <div class="holder">
     <span *ngFor="let picture of pictures;">
-          <img src="{{picture.Sponsor_carousel | photoApend}}" alt="" />  
+        <img src="{{picture.Sponsor_carousel | photoApend}}"/>
       </span>
   </div>
+</div>
+
+<div style="text-align:center;">
+<button type="button" class="sponsorButton" routerLink="sponsors" (click)="open(0)">Our Sponsors</button>
 </div>
