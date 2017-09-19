@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Pipe({
   name: 'appendMaincara'
@@ -6,7 +7,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class AppendMaincaraPipe implements PipeTransform {
 
   transform(items: any): any {
-    return 'http://ecms-award.aut.ac.nz/web/welcomeCarousel/' + items;
+    console.log('append-general    '+environment.baseURL+'welcomeCarousel/' + items);
+    return environment.baseURL+'welcomeCarousel/' + items;
   }
 
 }

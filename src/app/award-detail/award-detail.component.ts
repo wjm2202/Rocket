@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { GetawardsService } from '../services/getawards.service';
 import { AwardModel } from '../interfaces/awardcard';
 import { Http, Response } from '@angular/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-award-detail',

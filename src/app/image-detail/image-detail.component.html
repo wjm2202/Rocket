@@ -15,7 +15,8 @@
     </div>
     
     <div [@picstate]="picstate" (@picstate.done)="changeIndex()">
-      <img src="http://ecms-award.aut.ac.nz/web/generalphotos/{{yearPhotos[index].Filename}}" class="img-container">
+    <!--  <img src="http://ecms-award.aut.ac.nz/web/generalphotos/{{yearPhotos[index].Filename}}" class="img-container">  -->
+    <img src="{{yearPhotos[index].Filename | photoAppendGeneral}}" class="img-container">
     </div>
 
     <div class="button2">

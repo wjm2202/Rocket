@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Pipe({
   name: 'appendSponsor'
@@ -6,8 +7,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class AppendSponsorPipe implements PipeTransform {
 
   transform(items: any): any {
-    console.log('append sponsor   http://ecms-award.aut.ac.nz/web/sponsorCarousel/' + items);
-    return 'http://ecms-award.aut.ac.nz/web/sponsorCarousel/' + items;
+    console.log('append sponsor   '+environment.baseURL+'sponsorCarousel/' + items);
+    return environment.baseURL+'sponsorCarousel/' + items;
   }
 
 }

@@ -1,10 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Pipe({ name: 'photoAppendGeneral' })
 
 export class PhotoGeneralPipe implements PipeTransform {
     transform(items: any): any {
-        
-        return 'http://ecms-award.aut.ac.nz/web/generalphotos/' + items;
+        console.log('append-general    '+environment.baseURL+'generalphotos/' + items);
+        return environment.baseURL+'generalphotos/' + items;
     }
 } 

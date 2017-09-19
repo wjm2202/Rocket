@@ -1,10 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Pipe({ name: 'assetsAppendGeneral' })
 
 export class AppendAssetsPipe implements PipeTransform {
     transform(items: any): any {
-        console.log('append general   http://ecms-award.aut.ac.nz/web/assets/' + items);
-        return 'http://ecms-award.aut.ac.nz/web/assets/' + items;
+        console.log('append general   '+environment.baseURL+'assets/' + items);
+        return environment.baseURL+'assets/' + items;
     }
 } 

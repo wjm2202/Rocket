@@ -1,9 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Pipe({name: 'photoApend'})
 
 export class PhotoPipe implements PipeTransform{
     transform(items: any): any {
-        return 'http://ecms-award.aut.ac.nz/web/sponsorCarousel/'+items;
+        console.log('photo pipe ' +environment.baseURL+'sponsorCarousel'+items);
+        return environment.baseURL+'sponsorCarousel/'+items;
     }
 } 
