@@ -142,8 +142,8 @@ button {
 #pageTitle:after {
 	content: "Awards";
 	position: absolute;
-	left: 7px;
-	top: 24px;
+	left: 3px;
+	top: 21px;
 }
 
 #pageTitle:after {
@@ -187,17 +187,22 @@ button {
 	}
 }
 
+@media screen and (max-width: 426px){
+	#pageTitle{
+		font-size: 290%
+	}
+	#pageTitle:after {
+		top: 11px;
+		left: 3px;
+	}
+}
+
 @media screen and (min-width: 426px) and (max-width: 769px){
 	#pageTitle{
 		font-size: 350%;
 	}
 	#pageTitle:after {
-		top: 20px;
-	}
-}
-
-@media screen and (min-width: 319px) and (max-width: 426px){
-	.image-container{
-		margin-left: 9px;
+		top: 14px;
+		left: 3px;
 	}
 }
