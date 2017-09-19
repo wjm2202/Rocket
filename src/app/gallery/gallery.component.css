@@ -80,17 +80,18 @@ img {
 	border-radius: 6px;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
-	font-size: 18px;
+	font-size: 22px;
 	background: #DBA449;
-	padding: 7px 19px 7px 19px;
-	border: solid #DBA449 2px;
+	
+	padding: 10px 24px 10px 24px;
+	border: solid #f07d00 2px;
 	text-decoration: none;
 }
 
 .homepageButton:hover {
-	background: #FFFFFF;
+	background: #f07d00;
 	font-family: 'Open Sans', sans-serif;
-	color: #DBA449;
+	color: #FFFFFF;
 	text-decoration: none;
 }
 
