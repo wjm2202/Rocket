@@ -178,14 +178,6 @@ button {
 	text-decoration: none;
 }
 
-@media screen and (max-width: 426px){
-	#pageTitle{
-		font-size: 290%
-	}
-	#pageTitle:after {
-		top: 15px;
-	}
-}
 
 @media screen and (max-width: 426px){
 	#pageTitle{
