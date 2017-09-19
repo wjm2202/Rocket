@@ -36,6 +36,7 @@ import { AwardLevelPipe } from './pipes/filterAwards.pipe';
 import { PhotoPipe } from './pipes/photo.pipe';
 import { PhotoGeneralPipe } from './pipes/append-general.pipe';
 import { AppendSponsorPipe } from './pipes/append-sponsor.pipe';
+import { AppendAssetsPipe } from './pipes/append-assets.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -95,7 +96,8 @@ import { AwardTeaserMessageComponent } from './award-teaser-message/award-teaser
     SponsorshipMessageComponent,
     AppendSponsorPipe,
     AnimatedPlayComponent,
-    AwardTeaserMessageComponent
+    AwardTeaserMessageComponent,
+    AppendAssetsPipe
 
   ],
   imports: [
@@ -112,7 +114,7 @@ import { AwardTeaserMessageComponent } from './award-teaser-message/award-teaser
     MasonryModule
 
   ],
-  providers: [ImageService,AppendSponsorPipe, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [ImageService, AppendAssetsPipe, AppendSponsorPipe, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
