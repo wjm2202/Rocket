@@ -15,7 +15,6 @@
     </div>
     
     <div [@picstate]="picstate" (@picstate.done)="changeIndex()">
-    <!--  <img src="http://ecms-award.aut.ac.nz/web/generalphotos/{{yearPhotos[index].Filename}}" class="img-container">  -->
     <img src="{{yearPhotos[index].Filename | photoAppendGeneral}}" class="img-container">
     </div>
 
@@ -27,8 +26,8 @@
 
   <div class="buttonCenter">
     <p class="slideshowStatus">
-      <br /> {{playStopMessage}} Slideshow <br />
       <app-animated-play [isPlaying]="isPlaying"  (event)="togglePlaying($event)"></app-animated-play>
+      <br /> {{playStopMessage}} Slideshow <br />
     </p>
   </div>
 

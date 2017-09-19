@@ -1,91 +1,101 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
 @import url(https://fonts.googleapis.com/css?family=Squada+One);
-#search-container {
-	margin-top: 20%;
-}
 
-.search {
-	height: 70px;
-	max-height: 70px;
-	font-size: 3.5em;
-}
 
-.avatar {
-	margin-bottom: 7px;
-	height: 40px;
-	width: 40px;
-}
-
-.searchButton {
-	background-color: green;
-	color: #fff;
+.cardContainer {
+	width: 100%;
 	margin-top: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .image-container {
-	width: 275px;
-	min-height: 510px;
-	max-width: 300px;
-	margin: 30px;
+	width: 300px;
+	min-height: 550px;
 	height:auto;
-	border-radius: 2px;
+	background-color: white;
 	box-shadow: #555 1px 1px 8px 1px;
 	overflow: auto;
-}
-
-.results {
-	padding: 8px;
-	margin-bottom: 12px;
-}
-
-.forms {
-	margin: 6px;
-	padding: 10px;
-	border: 4px solid #eee;
-	box-shadow: #555 1px 1px 8px 1px;
-}
-
-.left {
-	width: 50%;
-	display: inline-block;
-}
-
-.right {
-	width: 40%;
-	display: inline-block;
-}
-
-.awardCard {
-	margin: 10%;
-	align-content: center;
+	margin: 30px;
+	overflow-x: hidden;
+	padding-bottom: 10px;
 }
 
 p {
 	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+}
+
+p.student {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+	color: #F07D00;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+p.award {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 25px;
+	color: black;
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+}
+
+p.blurb {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 25px;
+	color: black;
+	font-size: 16px;
+	text-align: center;
+}
+
+p.level {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 25px;
+	color: black;
+	font-size: 14px;
+	font-style: italic;
+	text-align: center;
+}
+
+p.degree {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 0px;
+	color: black;
+	font-size: 16px;
+	text-align: center;
+}
+
+.mat-card {
+    display: block;
+    position: relative;
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+	box-shadow: none;
 }
 
 #card {
-	width: 270px;
-	height:auto;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	transform-style: preserve-3d;
 	transition: transform 1s;
+	
 }
 
 #card md-card {
 	display: block;
 	position: absolute;
-	margin:2px;
 	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 20px;
 	backface-visibility: hidden;
-}
-
-#card .front {
-	background: white;
-	height: auto;
 }
 
 #card .back {
@@ -99,27 +109,34 @@ p {
 	transform: rotateY( 180deg);
 }
 
-.image {
-	max-width: 185px;
-	max-height: 150px;
+.frontImage {
+	width: 300px;
 }
 
-section {
-	height: 100px;
-	width: 100%;
+.backImage {
+	margin: 0 auto;
+	width: 226px;
+	height: 150px;
 }
 
-.cardContainer {
-	margin: 20px;
+.flipButton {
+	display:inline-block;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 40px;
+	width: 60px;
+	background-color: #f07d00;
+	color: white;
+	border: 0;
 }
 
-md-card-headder.mat-card-header {
-	margin: 0;
+.flipButton:hover {
+	background-color: white;
+	color: #f07d00;
+	border: 1px solid #f07d00;
 }
 
-button {
-	margin: 10px;
-}
 
 .titleHeader {
 	text-align: center;
