@@ -7,6 +7,7 @@ import { GetMainCaraService } from '../services/getMainCara.service';
 import { UrlStrip } from '../pipes/imagestrip';
 import { AppendMaincaraPipe } from '../pipes/append-maincara.pipe';
 import { HttpErrorResponse } from "@angular/common/http";
+import { environment } from '../../environments/environment';
 
 
 interface MainCarosouelModel {
@@ -31,7 +32,7 @@ export class FullwidthComponent implements OnInit {
   }
 
   getImages() {
-    this.httpclient.get<MainCarosouelModel>('https://webservices-test.aut.ac.nz/ecms/api/maincarosouel').subscribe(
+    this.httpclient.get<MainCarosouelModel>(environment.baseURI+'maincarosouel').subscribe(
       data => {
         this.pictures = data;
       },

@@ -5,6 +5,7 @@ import {FormControl, FormGroup, FormBuilder, Validators, EmailValidator} from '@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { PhotoPipe } from '../pipes/photo.pipe';
+import { environment } from '../../environments/environment';
 
 interface SuccessRes{
   AwardId:string;
@@ -93,7 +94,7 @@ export class SignsponsorComponent implements OnInit {
   }
     
   postDetails(){
-    const request = this._http.post<SuccessRes>('https://webservices-test.aut.ac.nz/ecms/api/sponsors',{
+    const request = this._http.post<SuccessRes>(environment.baseURI+'sponsors',{
       awardId: `${this.AwardId}`,           //award id number
       awardName: `${this.AwardName}`,            //name of award
       comments: `${this.Comments}`,            //any comments made

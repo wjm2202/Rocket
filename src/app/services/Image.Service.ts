@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Image } from '../interfaces/image';
+import { environment } from '../../environments/environment';
 import "rxjs/Rx";
 
 @Injectable()
@@ -11,7 +12,7 @@ export class ImageService {
 
     getImagesHttp() {
         return this.http
-            .get('https://webservices-test.aut.ac.nz/ecms/api/photos')
+            .get(environment.baseURI+'photos')
             .map((response: Response) => {
                 return <Image[]>response.json();
             })

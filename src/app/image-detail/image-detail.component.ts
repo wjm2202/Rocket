@@ -6,6 +6,7 @@ import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/htt
 import { Observable } from 'rxjs/Rx';
 import { animatePic} from '../animations/pic-slideAnimation';
 import { trigger, state, style, animate, transition, query, stagger,keyframes } from '@angular/animations';
+import { environment } from '../../environments/environment';
  
 
 interface PhotoModel {
@@ -191,7 +192,7 @@ export class ImageDetailComponent implements OnInit, OnDestroy {
   }
 
   getImages() {
-    this.httpClient.get<PhotoModel[]>('https://webservices-test.aut.ac.nz/ecms/api/photos/getyear/' + this.id).subscribe
+    this.httpClient.get<PhotoModel[]>(environment.baseURI+'photos/getyear/' + this.id).subscribe
       (data => {
         this.yearPhotos = data;
         //console.log(this.yearPhotos);

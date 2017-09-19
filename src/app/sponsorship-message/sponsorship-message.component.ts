@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 interface SponsorshipModel {
   Message: string;
@@ -19,7 +20,7 @@ export class SponsorshipMessageComponent implements OnInit {
     this.getMessage();
   }
   getMessage() {
-    this.httpClient.get<SponsorshipModel>('https://webservices-test.aut.ac.nz/ecms/api/sponsorship').subscribe
+    this.httpClient.get<SponsorshipModel>(environment.baseURI+'sponsorship').subscribe
       (
       data => {
         this.messages = data;
