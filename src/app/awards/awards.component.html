@@ -31,7 +31,7 @@
         </md-card>
         <md-card class="back">
           <md-card-header>
-            <img class="image" src="http://ecms-award.aut.ac.nz/web/sponsorCarousel/{{award.SponsorLogo}}">
+            <img class="image" src="{{award.SponsorLogo | appendSponsor}}">
           </md-card-header>
           <md-card-content>
             <p>{{award.SponsorName}}</p>

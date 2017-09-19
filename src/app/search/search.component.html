@@ -28,7 +28,7 @@
     <li  *ngFor="let award of (visableAwards | awardAwardDegreeLevelFilter:filterBy)">
       <a [routerLink]="['award', award.AwardId]">
         <div class="card lo" style="width: 20rem;" >  
-          <img class="card-img-top" src="http://ecms-award.aut.ac.nz/web/sponsorCarousel/{{award.SponsorLogo}}" alt="Card image cap">
+          <img class="card-img-top" src="{{award.SponsorLogo | appendSponsor}}" alt="Card image cap">
           <div class="card-block">
             <h4 class="card-title" style="text-align:center;">{{award.AwardName}}</h4> <!--working-->
           </div>
