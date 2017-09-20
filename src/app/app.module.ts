@@ -29,6 +29,7 @@ import { GetMainSponsorService } from './services/getSponsor.service';
 import { ImageService } from './services/Image.Service';
 import { AwardsSearchService } from './services/awards-search.service';
 import { SponsorOpService } from './services/SponsorOp.service';
+import { DateService } from './services/currentDate.service';
 //pipes
 import { UrlStrip } from './pipes/imagestrip';
 import { ImageFilterPipe } from './pipes/filter.pipe';
@@ -115,7 +116,7 @@ import '../polyfills.ts';
     MasonryModule
 
   ],
-  providers: [ImageService, AppendAssetsPipe, AppendSponsorPipe, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [DateService,ImageService, AppendAssetsPipe, AppendSponsorPipe, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

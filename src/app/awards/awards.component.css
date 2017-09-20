@@ -71,6 +71,23 @@ p.degree {
 	text-align: center;
 }
 
+p.sponsorTitle {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+	color: #F07D00;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	font-style: italic;
+}
+
+a {
+	color: #F07D00;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: oblique;
+}
+
 .mat-card {
     display: block;
     position: relative;
@@ -92,6 +109,7 @@ p.degree {
 }
 
 #card md-card {
+	text-align: center;
 	display: block;
 	position: absolute;
 	width: 100%;
@@ -114,14 +132,15 @@ p.degree {
 }
 
 .backImage {
-	margin: 0 auto;
 	width: 226px;
 	height: 150px;
+	border: 1 solid #f07d00;
 }
 
 .flipButton {
 	display:inline-block;
-	margin-top: 20px;
+	margin-top: 30px;
+	margin-bottom: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
 	height: 40px;
@@ -136,7 +155,6 @@ p.degree {
 	color: #f07d00;
 	border: 1px solid #f07d00;
 }
-
 
 .titleHeader {
 	text-align: center;
