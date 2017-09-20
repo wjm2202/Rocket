@@ -215,3 +215,23 @@ p.degree {
 		left: 3px;
 	}
 }
+
+@media screen and (max-width: 321px){
+	.image-container {
+		margin-left: 0;
+		left: -22px;
+	}
+}
+
+@media screen and (min-width: 375px) and (max-width: 426px){
+	.image-container {
+		left: 30px;
+	}
+}
+
+@media screen and (max-width: 769px){
+	.image-container {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
