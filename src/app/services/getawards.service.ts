@@ -16,7 +16,7 @@ export class GetawardsService {
  
   getAllAwards(){
     return this.http
-    .get(environment.baseURI+'search/date/'+this.dateService.getDate())   //search by current year    environment.baseURI+`search/${this.criteria}/${term}`
+    .get(environment.baseURI+'awards')   //search by current year    environment.baseURI+`search/${this.criteria}/${term}`
     .map((response: Response) => {
       return <AwardModel[]>response.json();
     })
