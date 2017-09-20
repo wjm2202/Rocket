@@ -50,7 +50,7 @@ button {
 
 p.name {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 10px;
 	color: #F07D00;
 	font-size: 22px;
 	font-weight: bold;
@@ -61,7 +61,7 @@ p.school {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 20px;
 	color: black;
-	font-size: 13px;
+	font-size: 15px;
 	font-style: italic;
 	text-align: center;
 }
@@ -78,12 +78,13 @@ p.email {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 20px;
 	color: black;
-	font-size: 13px;
+	font-size: 15px;
 	font-style: italic;
 	text-align: center;
 }
 
 a {
+	text-align: center;
 	color: #F07D00;
 	font-size: 16px;
 	font-weight: bold;
