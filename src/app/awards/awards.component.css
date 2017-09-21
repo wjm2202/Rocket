@@ -63,8 +63,6 @@ p.level {
 	text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 p.smallTitle {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 20px;
@@ -88,7 +86,6 @@ p.smallSponsor {
 	margin-top: 20px;
 }
 
->>>>>>> 5bc99861de6e7a56b9cbf8bbf4aec2339dffe141
 p.degree {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 0px;
@@ -236,10 +233,7 @@ a {
 	background: #f07d00;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
-<<<<<<< HEAD
-=======
 	border: solid #f07d00 2px;	
->>>>>>> 5bc99861de6e7a56b9cbf8bbf4aec2339dffe141
 	text-decoration: none;
 }
 
