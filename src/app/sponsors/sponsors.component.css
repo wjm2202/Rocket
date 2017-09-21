@@ -1,69 +1,99 @@
-.card {
-	width: 400px;
-	max-height: 380px;
-	/*overflow-y: scroll;
-	overflow-x: hidden;*/
+.cardContainer {
+	width: 100%;
+	margin-top: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
-.border {
-	margin: 20px;
-	border: 2px solid #eee;
-	border-radius: 2px;
-	box-shadow: #555 1px 1px 8px 1px;
-	background-color: whitesmoke;
-}
 .image-container {
-	width: 275px;
-	min-height: 600px;
-	max-width: 300px;
-	margin: 30px;
+	width: 300px;
+	min-height: 560px;
 	height:auto;
-	border-radius: 2px;
+	background-color: white;
 	box-shadow: #555 1px 1px 8px 1px;
+	overflow: auto;
+	margin: 30px;
+	overflow-x: hidden;
+	padding-bottom: 10px;
 }
+
+p {
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+p.name {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 0px;
+	color: #F07D00;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+}
+
+p.blurb {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+	color: black;
+	font-size: 16px;
+	text-align: center;
+}
+
+a {
+	color: #F07D00;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: oblique;
+}
+
+.mat-card {
+    display: block;
+    position: relative;
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+	box-shadow: none;
+}
+
 #card {
-	width: 270px;
-	height:auto;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	transform-style: preserve-3d;
 	transition: transform 1s;
 }
 
 #card md-card {
+	text-align: center;
 	display: block;
 	position: absolute;
-	margin:2px;
 	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 20px;
-	backface-visibility: hidden;
-	overflow: hidden;
-}
-md-card-headder.mat-card-header {
-	margin: 0;
-}
-#card .front {
-	background: white;
-	height: auto;
-}
-.image {
-	max-width: 185px;
-	max-height: 150px;
-}
-button {
-	margin: 10px;
 }
 
-.card-deck .danger {
-	padding-left: 10%;
+#card md-card-header {
+	display: block;
+	margin: auto;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	text-align: center;
+	position: relative;
+	width: 100%;
 }
 
-.card-img-top {
-	width: 318px;
-	height: 100;
-	margin-left: 20px;
-	margin: 20px;
+#card md-card-content {
+	text-align: center;
+	position: relative;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.frontImage {
+	width: 226px;
+	height: 150px;
 }
 
 .titleHeader {
@@ -80,29 +110,12 @@ button {
 	font-weight: 800;
 	letter-spacing: -3px;
 	line-height: 1;
-	text-shadow: #A97E37 3px 2px 0;
+	text-shadow: #A97E37 4px 3px 0;
 	position: relative;
 }
 
-#pageTitle:after {
-	content: "Sponsors";
-	position: absolute;
-	left: 3px;
-	top: 21px;
-}
-
-#pageTitle:after {
-	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
-	background-size: 3px 3px;
-	-webkit-background-clip: text;
-	background-clip: test;
-	-webkit-text-fill-color: transparent;
-	z-index: -5;
-	display: block;
-	text-shadow: none;
-}
-
 .homepageButton {
+	margin: 10px;
 	-webkit-border-radius: 6;
 	-moz-border-radius: 6;
 	border-radius: 6px;
@@ -110,9 +123,8 @@ button {
 	color: #FFFFFF;
 	font-size: 22px;
 	background: #DBA449;
-	
 	padding: 10px 24px 10px 24px;
-	border: solid #f07d00 2px;
+	border: solid #A97E37 2px;
 	text-decoration: none;
 }
 
@@ -120,6 +132,7 @@ button {
 	background: #f07d00;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
+	border: solid #f07d00 2px;
 	text-decoration: none;
 }
 

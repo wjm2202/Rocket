@@ -72,41 +72,29 @@ img {
 	font-weight: 800;
 	letter-spacing: -3px;
 	line-height: 1;
-	text-shadow: #A97E37 3px 2px 0;
+	text-shadow: #A97E37 4px 3px 0;
 	position: relative;
 }
 
-#pageTitle:after {
-	content: "Gallery";
-	position: absolute;
-	left: 3px;
-	top: 21px;
-}
-
-#pageTitle:after {
-	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
-	background-size: 4px 4px;
-	-webkit-background-clip: text;
-	background-clip: test;
-	-webkit-text-fill-color: transparent;
-	z-index: -5;
-	display: block;
-	text-shadow: none;
-}
-
 .homepageButton {
-    font-family: arial black, sans-serif;
-    background-color: rgba(255, 255, 255, 0.50);
-    padding: 0px 20px 0px 20px;
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	border-radius: 6px;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+	font-size: 22px;
+	background: #DBA449;
+	padding: 10px 24px 10px 24px;
+	border: solid #A97E37 2px;
 	text-decoration: none;
-	font-size: 18px;
-    font-weight: bold;
-    border: 0px;
 }
 
 .homepageButton:hover {
-    background-color: #DBA449;
-    color: white;
+	background: #f07d00;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+	border: solid #f07d00 2px;
+	text-decoration: none;
 }
 
 @media screen and (max-width: 426px){

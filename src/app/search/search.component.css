@@ -48,26 +48,8 @@ button{
 	font-weight: 800;
 	letter-spacing: -3px;
 	line-height: 1;
-	text-shadow: #A97E37 3px 2px 0;
+	text-shadow: #A97E37 4px 3px 0;
 	position: relative;
-}
-
-#pageTitle:after {
-	content: "Search";
-	position: absolute;
-	left: 3px;
-	top: 21px;
-}
-
-#pageTitle:after {
-	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
-	background-size: 3px 3px;
-	-webkit-background-clip: text;
-	background-clip: test;
-	-webkit-text-fill-color: transparent;
-	z-index: -5;
-	display: block;
-	text-shadow: none;
 }
 
 .homepageButton {
@@ -78,9 +60,8 @@ button{
 	color: #FFFFFF;
 	font-size: 22px;
 	background: #DBA449;
-	
 	padding: 10px 24px 10px 24px;
-	border: solid #f07d00 2px;
+	border: solid #A97E37 2px;
 	text-decoration: none;
 }
 
@@ -88,6 +69,7 @@ button{
 	background: #f07d00;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
+	border: solid #f07d00 2px;
 	text-decoration: none;
 }
 
