@@ -19,8 +19,9 @@
           <p class="award">{{award.AwardDate}}&nbsp;{{award.AwardName}}</p>
           <p class="blurb">{{award.AwardBlurb}}</p>
           <p class="level">{{award.AwardDegreeLevel}}</p>
-          <p class="degree">{{award.AwardDegree}}</p>
-
+          <div *ngIf="award.SponsorName != 'Placeholder'">
+            <p class="degree">{{award.AwardDegree}}</p>
+        </div>
           <!-- <p class="smallTitle">Sponsored By: </p> -->
           <!-- <p class="smallSponsor">{{award.SponsorName}}</p> -->
           <img class="smallLogo" src="{{award.SponsorLogo | appendSponsor}}">
@@ -33,7 +34,9 @@
         <md-card class="back">
           <p class="sponsorTitle">Sponsored By:</p>
           <img class="backImage" src="{{award.SponsorLogo | appendSponsor}}">
-          <p class="student">{{award.SponsorName}}</p>
+          <div *ngIf="award.SponsorName != 'Placeholder'">
+            <p class="student">{{award.SponsorName}}</p>
+          </div>
           <p class="award">{{award.AwardName}}</p>
           <p class="blurb">{{award.AwardSponsorBlurb}}</p>
           <a href="{{award.SponsorLink | stripurl}}">{{award.SponsorLink | stripurl}}</a>

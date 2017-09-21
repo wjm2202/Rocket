@@ -45,7 +45,7 @@ export class WordSearchComponent implements OnInit {
     //console.log(this.selected);
   }
   newSearch(term){                                        //term from input
-    if(!isNaN(term)){
+    if(!isNaN(term)){                                     //look for date input
       if(term > this.dateService.getDate()){
         term = this.dateService.getDate();
       }
