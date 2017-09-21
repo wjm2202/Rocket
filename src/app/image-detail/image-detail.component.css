@@ -35,8 +35,14 @@ img {
 }
 
 .buttonCenter {
+	position:absolute;
+	left:46%;
+	right:54%;
+	bottom:24px;
     margin: 0 auto;
-    text-align: center;
+	text-align: center;
+	z-index: 9999;
+	transform:scale(.7);
 }
 
 .button2 {
