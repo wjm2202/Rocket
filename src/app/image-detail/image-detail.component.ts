@@ -23,31 +23,31 @@ interface PhotoModel {
     trigger('picstate', [
       state('off', style({
         //opacity: '0',
-        //transform: 'translate(-50%)'
+        transform: 'translate(-50%)'
       })),
       state('on', style({
         //opacity: '1',
-        //transform: 'translate(0)'
+        transform: 'translate(0)'
       })),
-      transition('off => on', animate('350ms linear', keyframes([
-        style({transform: 'scale(0)', opacity: '0'}),
-        style({transform: 'scale(.25)', opacity: '0.25'}),
-        style({transform: 'scale(.5)', opacity: '0.5'}),
-        style({transform: 'scale(.6)', opacity: '0.6'}),
-        style({transform: 'scale(.7)', opacity: '0.7'}),
-        style({transform: 'scale(.8)', opacity: '0.8'}),
-        style({transform: 'scale(.9)', opacity: '0.9'}),
-        style({transform: 'scale(1)', opacity: '1'}),
+      transition('off => on', animate('350ms ease', keyframes([
+        style({transform: 'translate(-50%)', opacity: '0'}),
+        style({transform: 'translate(-40%)', opacity: '0.25'}),
+        style({transform: 'translate(-30%)', opacity: '0.5'}),
+        style({transform: 'translate(-20%)', opacity: '0.6'}),
+        style({transform: 'translate(-15%)', opacity: '0.7'}),
+        style({transform: 'translate(-10%)', opacity: '0.8'}),
+        style({transform: 'translate(-5%)', opacity: '0.9'}),
+        style({transform: 'translate(0%)', opacity: '1'}),
       ]))),
-      transition('on => off', animate('250ms linear', keyframes([
-        style({transform: 'scale(1)', opacity: '1'}),
-        style({transform: 'scale(.9)', opacity: '0.9'}),
-        style({transform: 'scale(.8)', opacity: '0.8'}),
-        style({transform: 'scale(.7)', opacity: '0.7'}),
-        style({transform: 'scale(.6)', opacity: '0.6'}),
-        style({transform: 'scale(.5)', opacity: '0.5'}),
-        style({transform: 'scale(.25)', opacity: '0.25'}),
-        style({transform: 'scale(0)', opacity: '0'}),
+      transition('on => off', animate('250ms ease', keyframes([
+        style({transform: 'translate(0%)', opacity: '1'}),
+        style({transform: 'translate(5%)', opacity: '0.9'}),
+        style({transform: 'translate(10%)', opacity: '0.8'}),
+        style({transform: 'translate(15%)', opacity: '0.7'}),
+        style({transform: 'translate(20%)', opacity: '0.6'}),
+        style({transform: 'translate(30%)', opacity: '0.5'}),
+        style({transform: 'translate(40%)', opacity: '0.25'}),
+        style({transform: 'translate(50%)', opacity: '0'}),
       ])))
     ])
   ]

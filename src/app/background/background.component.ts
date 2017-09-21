@@ -7,6 +7,7 @@ import { smoothDropper } from '../animations/smoothHeight';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser'; 
 import { DatePipe } from '@angular/common';
+import { DateService } from '../services/currentDate.service';
 
 @Component({
   selector: 'app-background',
@@ -48,7 +49,8 @@ export class BackgroundComponent implements OnChanges {
 
   constructor(private router: Router,
               private tite:Title,
-              private datePipe:DatePipe) {
+              private datePipe:DatePipe,
+              private dateService:DateService) {
      //this.tite.setTitle("AUT-ECMS"+this.router.url);           
     this.router.events.subscribe((res) => { 
       this.tite.setTitle("AUT-ECMS"+this.router.url); 
@@ -65,6 +67,7 @@ export class BackgroundComponent implements OnChanges {
       this.current = Date.now();
       this.current = this.datePipe.transform(this.current, 'yyyy');
     });
+    
    }
   checkIsMobile(){
     this.width = window.screen.width;

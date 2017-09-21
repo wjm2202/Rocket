@@ -13,7 +13,7 @@ export class DateService implements OnInit{
 
         this.httpClient.get<CurrentYear[]>(environment.baseURI+`currentyear`).subscribe(data => {
             this.Date = data;
-            console.log('data service :'+this.Date[0].Year);
+            //console.log('data service inside call:'+this.Date[0].Year);
         },
             (err: HttpErrorResponse) => {
               if (err.error instanceof Error) {
@@ -27,6 +27,7 @@ export class DateService implements OnInit{
         
     }
     getDate(){
+        //console.log('in dateservice inside return'+this.Date[0].Year);
         return this.Date[0].Year;
     }
    

@@ -46,7 +46,7 @@ export class GalleryComponent implements OnChanges, OnInit {
   }
 
   upDate(){
-    if(this.selected < this.dateService.getDate()){
+    if(this.selected <= this.dateService.getDate()){
       console.log(this.dateService.getDate());
       this.selected = parseInt(this.selected) + 1;
       this.getImages();

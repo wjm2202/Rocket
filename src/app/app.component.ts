@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { DateService } from './services/currentDate.service';
 
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
@@ -15,18 +16,11 @@ export class AppComponent {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private titleService: Title
-  ) {}
+    private titleService: Title,
+    private dateService:DateService) {
+    
+  }
   ngOnInit() {
-/*    this.router.events
-      .filter((event) => event instanceof NavigationEnd)
-      .map(() => this.activatedRoute)
-      .map((route) => {
-        while (route.firstChild) route = route.firstChild;
-        return route;
-      })
-      .filter((route) => route.outlet === 'primary')
-      .mergeMap((route) => route.data)
-      .subscribe((event) => this.titleService.setTitle(event['title'])); */
+    //this.dateService.getDate();
   }
 }

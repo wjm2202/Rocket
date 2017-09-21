@@ -34,7 +34,7 @@ export class AwardDetailComponent implements OnInit {
     .subscribe(
       (res: Response) => {
         this.obj = res.json();
-        console.log(this.obj);
+        //console.log(this.obj);
         this.AwardName = this.obj.AwardName;
         this.StudentName = this.obj.StudentName;
         this.AwardDegreeLevel = this.obj.AwardDegreeLevel;
