@@ -1,3 +1,6 @@
 <div *ngFor="let event of events;">
+  <h3>{{event.eventDate | nzDate}}</h3>
+  <br>
+  <h3>{{event.eventLocation}}</h3>
   <h4>{{event.eventBlurb}}</h4>
 </div>

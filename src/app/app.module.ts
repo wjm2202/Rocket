@@ -29,6 +29,7 @@ import { GetMainSponsorService } from './services/getSponsor.service';
 import { ImageService } from './services/Image.Service';
 import { AwardsSearchService } from './services/awards-search.service';
 import { SponsorOpService } from './services/SponsorOp.service';
+import { DateService } from './services/currentDate.service';
 //pipes
 import { UrlStrip } from './pipes/imagestrip';
 import { ImageFilterPipe } from './pipes/filter.pipe';
@@ -37,6 +38,7 @@ import { PhotoPipe } from './pipes/photo.pipe';
 import { PhotoGeneralPipe } from './pipes/append-general.pipe';
 import { AppendSponsorPipe } from './pipes/append-sponsor.pipe';
 import { AppendAssetsPipe } from './pipes/append-assets.pipe';
+import { NzDatePipe } from './pipes/nzDate.pipe';
 //bootstrap stuff here
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -98,7 +100,8 @@ import '../polyfills.ts';
     AppendSponsorPipe,
     AnimatedPlayComponent,
     AwardTeaserMessageComponent,
-    AppendAssetsPipe
+    AppendAssetsPipe,
+    NzDatePipe
 
   ],
   imports: [
@@ -115,7 +118,10 @@ import '../polyfills.ts';
     MasonryModule
 
   ],
-  providers: [ImageService, AppendAssetsPipe, AppendSponsorPipe, ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe, PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+    providers: [NzDatePipe, DateService,ImageService, AppendAssetsPipe, AppendSponsorPipe, 
+    ImageFilterPipe, AwardsSearchService, AwardLevelPipe, SponsorOpService, PhotoPipe,
+    PhotoGeneralPipe, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

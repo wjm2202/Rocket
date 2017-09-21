@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { Subject } from 'rxjs/Subject';
 import { AwardModel } from '../interfaces/awardcard'
 import { environment } from '../../environments/environment';
+import { DateService } from '../services/currentDate.service';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/debounceTime';
@@ -23,20 +24,8 @@ export class WordSearchComponent implements OnInit {
   criteria: string = 'StudentName';
   showResults:boolean = true;
   
-  
-  test(id, selected){
-    this.criteria = selected;
-    //console.log(this.criteria);
-    this.selected = id;
-    //console.log(this.selected);
-  }
-  newSearch(term){                                        //term from input
-    this.status = 'Typing';
-    this.showResults = true;
-    this.latestSearch.next(term);                        //emit the latest term enterd
-    console.log(environment.baseURI+`search/${this.criteria}/${term}`)
-  }
-  constructor(private http:Http) {                         //import Http singleton
+  constructor(private http:Http,
+    public dateService:DateService) {                         //import Http singleton
     this.results = this.latestSearch                       //latest to results
     .debounceTime(500)                                     //500ms after typing to api call
     .filter(term =>!!term)                                 //result is truthy not empty
@@ -49,6 +38,24 @@ export class WordSearchComponent implements OnInit {
     );
     
   }
+  test(id, selected){
+    this.criteria = selected;
+    //console.log(this.criteria);
+    this.selected = id;
+    //console.log(this.selected);
+  }
+  newSearch(term){                                        //term from input
+    if(!isNaN(term)){
+      if(term > this.dateService.getDate()){
+        term = this.dateService.getDate();
+      }
+    }
+    this.status = 'Typing';
+    this.showResults = true;
+    this.latestSearch.next(term);                        //emit the latest term enterd
+    //console.log(environment.baseURI+`search/${this.criteria}/${term}`)
+  }
+
   ngOnInit() {
   }
 

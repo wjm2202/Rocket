@@ -8,6 +8,7 @@ import { Moment } from 'moment';
 import { DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { DateService } from '../services/currentDate.service';
 
 interface PhotoModel {
   Created: number;
@@ -29,27 +30,36 @@ export class GalleryComponent implements OnChanges, OnInit {
   current;
   selected;
   id;
+  currentYear:number;
   //Onchanges is a life cycle hook called when something changes
   constructor(private imageService: ImageService, 
               private httpClient: HttpClient,
               private datePipe: DatePipe,
-              private route: ActivatedRoute,) {
+              private route: ActivatedRoute,
+              private dateService:DateService) {
     //console.log('in gallery '+this.route.snapshot.params['id']);
     this.current = +this.route.snapshot.params['id'];
     //this.current = Date.now();
     ///this.current = this.datePipe.transform(this.current, 'yyyy');
     this.selected = this.current;
     this.visableImages = this.imageService.getImages();
-    //this.current = +this.route.snapshot.params['id'];
   }
 
   upDate(){
-    this.selected = parseInt(this.selected) + 1;
-    this.getImages();
+    if(this.selected <= this.dateService.getDate()){
+      console.log(this.dateService.getDate());
+      this.selected = parseInt(this.selected) + 1;
+      this.getImages();
+    }else{
+      console.log(this.dateService.getDate());
+    }
   }
   downDate(){
-    this.selected = parseInt(this.selected) - 1;
-    this.getImages();
+    if(this.selected > 2014){
+      this.selected = parseInt(this.selected) - 1;
+      this.getImages();
+    }
+    
   }
   ngOnChanges() {
     this.visableImages = this.imageService.getImages();
@@ -61,7 +71,6 @@ export class GalleryComponent implements OnChanges, OnInit {
   }
   ngOnInit(): void {
     this.getImages();                   // turn off for testing
-    //this.pictures = this.PICTURES;
   }
   getImages() {            //change to photomodel[] for testing
     this.httpClient.get<PhotoModel[]>(environment.baseURI+`photos/getyear/${this.selected}`).subscribe(data => {

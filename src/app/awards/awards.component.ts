@@ -7,6 +7,7 @@ import { GetawardsService } from '../services/getawards.service';
 import { AwardModel } from '../interfaces/awardcard';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { DateService } from '../services/currentDate.service';
 
 @Component({
   selector: 'app-awards',
@@ -19,8 +20,9 @@ export class AwardsComponent implements OnInit {
   header:string ='card-header-300px.jpg';
   constructor(private http: HttpClient,
               private AllAwards :GetawardsService,
-              private router: Router) { 
-  
+              private router: Router,
+            private dateService:DateService) { 
+                                     
   }
     
   getAwards(): void {
@@ -32,7 +34,8 @@ export class AwardsComponent implements OnInit {
   
 
   ngOnInit() {
-    this.getAwards();                      //for live api
+    //console.log(this.dateService.getDate())
+    this.getAwards(); 
     //this.awards = this.AWARDS;               //for testing
   }
   AWARDS = [
