@@ -16,7 +16,7 @@
     <!-- If the contact is visible, it will display.
     Otherwise, it will hide itself. -->
     <div class="ebussinescard" *ngIf="contact.adminIsVisable">
-      <img src="http://ecms-award.aut.ac.nz/web/assets/ebusiness_header.jpg">
+      <img src="{{header | assetsAppendGeneral}}">
       <div class="cardText">
         <p class="name">{{contact.adminName}}</p>
         <p class="school">School of Engineering, Computer & Mathematical Sciences</p>

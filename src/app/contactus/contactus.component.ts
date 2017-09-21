@@ -12,7 +12,7 @@ import { GetContactService } from '../services/getContact.service';
 export class ContactusComponent implements OnInit {
 
   contacts: ContactModel[];//Declare array of contact
-
+  header:string ='card-header-300px.jpg';
   constructor(private getContacts: GetContactService) { }
 
   ngOnInit() {
