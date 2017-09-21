@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
+
+
 .cardContainer {
 	width: 100%;
 	margin-top: 20px;
@@ -7,7 +11,7 @@
 
 .image-container {
 	width: 300px;
-	min-height: 560px;
+	min-height: 550px;
 	height:auto;
 	background-color: white;
 	box-shadow: #555 1px 1px 8px 1px;
@@ -19,24 +23,23 @@
 
 p {
 	text-align: center;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	margin-bottom: 0px;
 }
 
 p.student {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 15px;
+	margin-top: 20px;
 	color: #F07D00;
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
-	line-height: 1;
 }
 
 p.award {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 25px;
 	color: black;
 	font-size: 16px;
 	text-align: center;
@@ -45,7 +48,7 @@ p.award {
 
 p.blurb {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 25px;
 	color: black;
 	font-size: 16px;
 	text-align: center;
@@ -53,13 +56,15 @@ p.blurb {
 
 p.level {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 25px;
 	color: black;
 	font-size: 14px;
 	font-style: italic;
 	text-align: center;
 }
 
+<<<<<<< HEAD
+=======
 p.smallTitle {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 20px;
@@ -83,6 +88,7 @@ p.smallSponsor {
 	margin-top: 20px;
 }
 
+>>>>>>> 5bc99861de6e7a56b9cbf8bbf4aec2339dffe141
 p.degree {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 0px;
@@ -190,7 +196,7 @@ a {
 	font-weight: 800;
 	letter-spacing: -3px;
 	line-height: 1;
-	text-shadow: #A97E37 4px 3px 0;
+	text-shadow: #A97E37 3px 2px 0;
 	position: relative;
 }
 
@@ -213,7 +219,6 @@ a {
 }
 
 .homepageButton {
-	margin: 10px;
 	-webkit-border-radius: 6;
 	-moz-border-radius: 6;
 	border-radius: 6px;
@@ -223,7 +228,7 @@ a {
 	background: #DBA449;
 	
 	padding: 10px 24px 10px 24px;
-	border: solid #A97E37 2px;
+	border: solid #f07d00 2px;
 	text-decoration: none;
 }
 
@@ -231,7 +236,10 @@ a {
 	background: #f07d00;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
+<<<<<<< HEAD
+=======
 	border: solid #f07d00 2px;	
+>>>>>>> 5bc99861de6e7a56b9cbf8bbf4aec2339dffe141
 	text-decoration: none;
 }
 
