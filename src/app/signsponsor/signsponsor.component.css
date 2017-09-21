@@ -1,66 +1,53 @@
-#search-container{
-    margin-top: 20%;
+.image-container {
+	width: 300px;
+	min-height: 400px;
+	height:auto;
+	background-color: white;
+	box-shadow: #555 1px 1px 8px 1px;
+	overflow: auto;
+	margin: 30px;
+	overflow-x: hidden;
 }
-.search{
-    height: 70px;
-    max-height: 70px;
-    font-size: 3.5em;
-    
-}
-.avatar{
-    margin-bottom: 7px;
-    height: 40px;
-    width: 40px;
-}
-.searchButton{
-    background-color:green;
-    color: #fff;
-    margin-top: 20px;
-}
-.image-container{
-    width: 280px;
-    min-height: 100px;
-    max-width: 300px;
-    margin: 8px;
-    border-radius: 2px;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
-}
-.results{
-    padding: 8px;
-    margin-bottom: 12px;
-}
-.forms{
-    margin: 20px;
-    padding: 10px;
-    border: 4px solid #eee;
-    box-shadow: #555 1px 1px 8px 1px;
-}
-.left{
-    width: 50%;
-    display: inline-block;
-}
-.right{
-    width: 40%;
-    display: inline-block;
-}
-.awardCard{
+
+.awardCard {
     margin:10%;
     align-content: center;
 }
-p{
+
+p {
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 0px;
+}
+
+p.formTitle {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+	color: black;
+    font-size: 32px;
+	text-transform: uppercase;
+	font-weight: bold;
     text-align: center;
 }
-.border{
-    margin: 20px;
-    border: 2px solid #eee;
-    border-radius: 2px;
-    box-shadow: #555 1px 1px 8px 1px;
-    padding-bottom: 10px;
-    width:97%;
+
+.formContainer {
+    margin: auto;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px 40px 40px 40px;
+    border: 2px solid #D5D5D5;
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	border-radius: 6px;
 }
+
 button{
     margin:10px;
 }
+
 .line{
     margin: 0px;
     border: 4px solid #eee;

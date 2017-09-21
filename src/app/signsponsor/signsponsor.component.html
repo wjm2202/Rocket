@@ -11,9 +11,9 @@
       
 </div>
 
-<div class="container border">
+<div class="formContainer">
 <div *ngIf="!Name; else forminfo">
-  <h1 style="text-align:center">Submit an Enquiry </h1>
+  <p class="formTitle">Submit an Enquiry </p>
   <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
     
       <div class="input-group input-group-lg">
@@ -72,22 +72,17 @@
   <md-card>
     <h4 *ngIf="sponsorsFound" md-subeader>Click an Award to add to Inquiry</h4>
     <masonry [useImagesLoaded]="true">
-      <masonry-brick *ngFor="let award of potential" >   
-        <div *ngIf="award.NeedsSponsor == true">
-          <md-card (click)="setAward(award)" class="image-container">
-            <md-card-header>
-                <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
+      <masonry-brick *ngFor="let award of potential" class="image-container">
+        <div id="card" *ngIf="award.NeedsSponsor == true">
+          <md-card (click)="setAward(award)">
+            <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
             <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
-            </md-card-header>
-            <md-card-content>
-              <h3>{{award.AwardName}}</h3>
-              <p>{{award.AwardDate}}</p>
-              <p>{{award.AwardDegreeLevel}}</p>
-              <p>{{award.AwardDegree}}</p>
-              <p>{{award.AwardBlurb}}</p>
-            </md-card-content>
+            <h3>{{award.AwardName}}</h3>
+            <p>{{award.AwardDate}}</p>
+            <p>{{award.AwardDegreeLevel}}</p>
+            <p>{{award.AwardDegree}}</p>
+            <p>{{award.AwardBlurb}}</p>
           </md-card>
-          <br><br>
         </div>
       </masonry-brick>
     </masonry>
