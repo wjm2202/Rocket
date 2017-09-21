@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
+
+
 .cardContainer {
 	width: 100%;
 	margin-top: 20px;
@@ -7,7 +11,7 @@
 
 .image-container {
 	width: 300px;
-	min-height: 560px;
+	min-height: 550px;
 	height:auto;
 	background-color: white;
 	box-shadow: #555 1px 1px 8px 1px;
@@ -19,24 +23,23 @@
 
 p {
 	text-align: center;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	margin-bottom: 0px;
 }
 
 p.student {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 15px;
+	margin-top: 20px;
 	color: #F07D00;
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
-	line-height: 1;
 }
 
 p.award {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 25px;
 	color: black;
 	font-size: 16px;
 	text-align: center;
@@ -45,7 +48,7 @@ p.award {
 
 p.blurb {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 25px;
 	color: black;
 	font-size: 16px;
 	text-align: center;
@@ -53,7 +56,7 @@ p.blurb {
 
 p.level {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 25px;
 	color: black;
 	font-size: 14px;
 	font-style: italic;
@@ -66,29 +69,6 @@ p.degree {
 	color: black;
 	font-size: 16px;
 	text-align: center;
-}
-
-p.smallTitle {
-	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
-	color: black;
-	font-size: 14px;
-	font-style: italic;
-	text-align: center;
-}
-
-p.smallSponsor {
-	font-family: 'Open Sans', sans-serif;
-	margin-top: 0px;
-	color: #F07D00;
-	font-size: 16px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.smallLogo {
-	width: 90px;
-	margin-top: 20px;
 }
 
 p.sponsorTitle {
@@ -125,6 +105,7 @@ a {
 	position: absolute;
 	transform-style: preserve-3d;
 	transition: transform 1s;
+	
 }
 
 #card md-card {
@@ -136,6 +117,7 @@ a {
 }
 
 #card .back {
+	background: white;
 	height: auto;
 	transform: rotateY( 180deg);
 }
@@ -152,6 +134,7 @@ a {
 .backImage {
 	width: 226px;
 	height: 150px;
+	border: 1 solid #f07d00;
 }
 
 .flipButton {
@@ -187,12 +170,29 @@ a {
 	font-weight: 800;
 	letter-spacing: -3px;
 	line-height: 1;
-	text-shadow: #A97E37 4px 3px 0;
+	text-shadow: #A97E37 3px 2px 0;
 	position: relative;
 }
 
+#pageTitle:after {
+	content: "Awards";
+	position: absolute;
+	left: 3px;
+	top: 21px;
+}
+
+#pageTitle:after {
+	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+	background-size: 3px 3px;
+	-webkit-background-clip: text;
+	background-clip: test;
+	-webkit-text-fill-color: transparent;
+	z-index: -5;
+	display: block;
+	text-shadow: none;
+}
+
 .homepageButton {
-	margin: 10px;
 	-webkit-border-radius: 6;
 	-moz-border-radius: 6;
 	border-radius: 6px;
@@ -200,8 +200,9 @@ a {
 	color: #FFFFFF;
 	font-size: 22px;
 	background: #DBA449;
+	
 	padding: 10px 24px 10px 24px;
-	border: solid #A97E37 2px;
+	border: solid #f07d00 2px;
 	text-decoration: none;
 }
 
@@ -209,9 +210,9 @@ a {
 	background: #f07d00;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
-	border: solid #f07d00 2px;
 	text-decoration: none;
 }
+
 
 @media screen and (max-width: 426px){
 	#pageTitle{
@@ -235,20 +236,32 @@ a {
 
 @media screen and (max-width: 321px){
 	.image-container {
-		margin-left: 0;
-		left: -22px;
+		margin-left: -40px;
 	}
 }
 
-@media screen and (min-width: 375px) and (max-width: 426px){
+@media screen and (max-width: 376px){
 	.image-container {
-		left: 30px;
+		margin-left: -12px;
 	}
 }
 
 @media screen and (max-width: 769px){
 	.image-container {
-		margin-left: 10px;
-		margin-right: 10px;
+		margin-left: 2px;
+	}
+}
+
+@media screen and (max-width: 1025px){
+	.image-container {
+		margin-left: 5px;
+		margin-right: 3px;
+	}
+}
+
+@media screen and (max-width: 1441px){
+	.image-container {
+		margin-left: 22px;
+		margin-right: 3px;
 	}
 }
