@@ -38,6 +38,16 @@ img {
 	display: inline-block;
 }
 
+.blankButton {
+	font-family: 'Open Sans', sans-serif;
+	color: #DBA449;
+	font-size: 35px;
+	background: #FFFFFF;
+	padding: 15px 19px 15px 19px;
+	border: none;
+	text-decoration: none;
+}
+
 .titleHeader {
 	text-align: center;
 	position: relative;
@@ -52,26 +62,8 @@ img {
 	font-weight: 800;
 	letter-spacing: -3px;
 	line-height: 1;
-	text-shadow: #A97E37 3px 1px 0;
+	text-shadow: #A97E37 4px 3px 0;
 	position: relative;
-}
-
-#pageTitle:after {
-	content: "Photos";
-	position: absolute;
-	left: 3px;
-	top: 21px;
-}
-
-#pageTitle:after {
-	background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
-	background-size: 4px 4px;
-	-webkit-background-clip: text;
-	background-clip: test;
-	-webkit-text-fill-color: transparent;
-	z-index: -5;
-	display: block;
-	text-shadow: none;
 }
 
 .homepageButton {
@@ -82,9 +74,8 @@ img {
 	color: #FFFFFF;
 	font-size: 22px;
 	background: #DBA449;
-	
 	padding: 10px 24px 10px 24px;
-	border: solid #f07d00 2px;
+	border: solid #A97E37 2px;
 	text-decoration: none;
 }
 
@@ -92,16 +83,7 @@ img {
 	background: #f07d00;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
-	text-decoration: none;
-}
-
-.blankButton {
-	font-family: 'Open Sans', sans-serif;
-	color: #DBA449;
-	font-size: 35px;
-	background: #FFFFFF;
-	padding: 15px 19px 15px 19px;
-	border: none;
+	border: solid #f07d00 2px;
 	text-decoration: none;
 }
 

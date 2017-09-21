@@ -17,7 +17,7 @@ import { DateService } from '../services/currentDate.service';
 })
 export class AwardsComponent implements OnInit {
   awards: AwardModel[];
-  header:string ='award_header.jpg';
+  header:string ='card-header-300px.jpg';
   constructor(private http: HttpClient,
               private AllAwards :GetawardsService,
               private router: Router,

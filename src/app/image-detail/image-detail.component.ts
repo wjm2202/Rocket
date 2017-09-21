@@ -29,7 +29,7 @@ interface PhotoModel {
         //opacity: '1',
         transform: 'translate(0)'
       })),
-      transition('off => on', animate('350ms ease', keyframes([
+      transition('off => on', animate('350ms ease-in-out', keyframes([
         style({transform: 'translate(-50%)', opacity: '0'}),
         style({transform: 'translate(-40%)', opacity: '0.25'}),
         style({transform: 'translate(-30%)', opacity: '0.5'}),
@@ -39,7 +39,7 @@ interface PhotoModel {
         style({transform: 'translate(-5%)', opacity: '0.9'}),
         style({transform: 'translate(0%)', opacity: '1'}),
       ]))),
-      transition('on => off', animate('250ms ease', keyframes([
+      transition('on => off', animate('350ms ease-in-out', keyframes([
         style({transform: 'translate(0%)', opacity: '1'}),
         style({transform: 'translate(5%)', opacity: '0.9'}),
         style({transform: 'translate(10%)', opacity: '0.8'}),
