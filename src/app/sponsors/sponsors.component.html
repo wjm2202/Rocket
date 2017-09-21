@@ -10,46 +10,19 @@
 
 </div>
 
-<br/>
-
-<masonry [useImagesLoaded]="false" class="border">
+<masonry [useImagesLoaded]="false" class="cardContainer">
   <masonry-brick class="cards" *ngFor="let sponsor of sponsors" class="image-container">
-    
-      <div class="card">
-        <div id="card">
-          <md-card class="front">
-            <md-card-header>
-              <img class="image" src="{{sponsor.SponsorLogo | appendSponsor}}">
-            </md-card-header>
-            <md-card-content>
-              <p>{{sponsor.SponsorName}}</p>
-              <p>{{sponsor.SponsorBlurb}}</p>
-              <a href="{{sponsor.SponsorLink}}">{{sponsor.SponsorLink | stripurl}}</a>
-            </md-card-content>
-          </md-card>
-        </div>
+      <div id="card">
+        <md-card class="front">
+          <md-card-header>
+            <img class="frontImage" src="{{sponsor.SponsorLogo | appendSponsor}}">
+          </md-card-header>
+          <md-card-content>
+            <p class="name">{{sponsor.SponsorName}}</p>
+            <p class="blurb">{{sponsor.SponsorBlurb}}</p>
+            <a href="{{sponsor.SponsorLink | stripurl}}">Visit Website</a>
+          </md-card-content>
+        </md-card>
       </div>
-    
   </masonry-brick>
 </masonry>
-
-<!--
-<div class="card-deck danger">
-  <div *ngFor="let sponsor of sponsors">
-    <div *ngIf="sponsor.SponsorName != 'Placeholder'">
-      <div class="card">
-        <img class="card-img-top"  src="{{sponsor.SponsorLogo | appendSponsor}}" alt="Card image cap">
-        <div class="card-block">
-          <div class="card-header">
-            <h4 class="card-title">{{sponsor.SponsorName}}</h4>
-          </div>
-          <p class="card-text">{{sponsor.SponsorBlurb}}</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted"><a href="{{sponsor.SponsorLink}}">{{sponsor.SponsorLink | stripurl}}</a></small>
-        </div>
-      </div>
-    </div>  
-  </div>
-</div>
-</div> -->

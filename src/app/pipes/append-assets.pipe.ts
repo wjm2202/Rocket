@@ -8,4 +8,4 @@ export class AppendAssetsPipe implements PipeTransform {
         //console.log('append assets   '+environment.baseURL+'assets/' + items);
         return environment.baseURL+'assets/' + items;
     }
-} 
+}

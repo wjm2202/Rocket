@@ -137,9 +137,8 @@ a {
 	color: #FFFFFF;
 	font-size: 22px;
 	background: #DBA449;
-	
 	padding: 10px 24px 10px 24px;
-	border: solid #f07d00 2px;
+	border: solid #A97E37 2px;
 	text-decoration: none;
 }
 
@@ -147,6 +146,7 @@ a {
 	background: #f07d00;
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
+	border: solid #f07d00 2px;
 	text-decoration: none;
 }
 

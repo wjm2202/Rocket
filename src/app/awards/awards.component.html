@@ -1,4 +1,3 @@
-
 <div class="header">
 
   <div class="titleHeader">
@@ -21,13 +20,18 @@
           <p class="blurb">{{award.AwardBlurb}}</p>
           <p class="level">{{award.AwardDegreeLevel}}</p>
           <p class="degree">{{award.AwardDegree}}</p>
+
+          <!-- <p class="smallTitle">Sponsored By: </p> -->
+          <!-- <p class="smallSponsor">{{award.SponsorName}}</p> -->
+          <img class="smallLogo" src="{{award.SponsorLogo | appendSponsor}}">
+
           <div align="center">
             <button type="button" class="flipButton" (click)="award.isflipped = !award.isflipped;"> Flip </button>
             <button type="button" class="flipButton" [routerLink]="['search/award', award.AwardId]"> View </button>
           </div>
         </md-card>
         <md-card class="back">
-            <p class="sponsorTitle">Sponsored By:</p>
+          <p class="sponsorTitle">Sponsored By:</p>
           <img class="backImage" src="{{award.SponsorLogo | appendSponsor}}">
           <p class="student">{{award.SponsorName}}</p>
           <p class="award">{{award.AwardName}}</p>
