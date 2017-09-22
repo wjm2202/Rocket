@@ -9,26 +9,97 @@
 	overflow-x: hidden;
 }
 
+.sponsorCard {
+	width: 300px;
+	text-align: center;
+}
+
 .awardCard {
     margin:10%;
     align-content: center;
 }
 
+.headerImage {
+    width: 100%;
+}
+
+.sponsorImage {
+	max-width: 100%;
+	max-height: 100px;
+}
+
 p {
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-bottom: 0px;
 }
 
+p.awardName {
+	margin-top: 0px;
+	color: #F07D00;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+}
+
+p.awardBlurb {
+	color: black;
+	font-size: 16px;
+	text-align: center;
+}
+
+.selectButton {
+	margin: auto;
+	margin-top: 25px;
+	height: 40px;
+	padding: 10px 20px 10px 20px;
+	background-color: #f07d00;
+	color: white;
+	border: 0;
+	text-transform: uppercase;
+}
+
+.selectButton:hover {
+	background-color: white;
+	color: #f07d00;
+	border: 1px solid #f07d00;
+}
+
 p.formTitle {
-    font-family: 'Open Sans', sans-serif;
     margin-bottom: 20px;
 	color: black;
     font-size: 32px;
 	text-transform: uppercase;
 	font-weight: bold;
     text-align: center;
+}
+
+p.formSubtitle {
+	color: #F07D00;
+    font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+p.formSubtitle2 {
+	display: inline;
+	color: #F07D00;
+    font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.formSubtitle3 {
+    font-family: 'Open Sans', sans-serif;
+	color: #F07D00;
+    font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .formContainer {
@@ -42,10 +113,6 @@ p.formTitle {
 	-webkit-border-radius: 6;
 	-moz-border-radius: 6;
 	border-radius: 6px;
-}
-
-button{
-    margin:10px;
 }
 
 .line{
@@ -69,16 +136,6 @@ button{
     display: inline-block;
     animation: 2s alertAnim forwards;
 }
-
-.button {
-    margin-top: 3rem;
-}
-h1 {
-    margin-bottom: 2rem;
-    font-weight:bold;
-    font-family:'Muli';
-    font-size: 2em;
-}
 #name{
     width: 100%;
 }
@@ -93,6 +150,50 @@ input[type=checkbox]{
 input[type=text]{
     z-index: 0;
 }
+
+.input-group-addon {
+	font-family: 'Open Sans', sans-serif;
+	color: #262626;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+input::placeholder {
+	opacity: 0.5;
+	font-size: 15px;
+}
+
+.frontImage {
+	width: 300px;
+}
+
+p.submitThanks {
+	margin-top: 20px;
+    margin-bottom: 20px;
+	color: #DBA449;
+    font-size: 32px;
+	text-transform: uppercase;
+	font-weight: bold;
+    text-align: center;
+}
+
+p.submitName {
+	margin-top: 25px;
+	color: black;
+	font-size: 22px;
+	text-align: center;
+}
+
+p.submitMessage {
+	margin-top: 20px;
+    margin-bottom: 20px;
+	color: #DBA449;
+    font-size: 28px;
+	font-weight: bold;
+    text-align: center;
+}
+
+
 @keyframes alertAnim {
     from {
         opacity:0;
@@ -130,6 +231,7 @@ input[type=text]{
 }
 
 .homepageButton {
+	margin: 10px;
 	-webkit-border-radius: 6;
 	-moz-border-radius: 6;
 	border-radius: 6px;

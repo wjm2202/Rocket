@@ -17,49 +17,53 @@
   <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
     
       <div class="input-group input-group-lg">
-        <span class="input-group-addon" id="sizing-addon1">Name</span>
-        <input type="text" formControlName="name" class="form-control" placeholder="Contact Name: Required" aria-describedby="sizing-addon1">
+        <span class="input-group-addon" id="sizing-addon1">Name*</span>
+        <input type="text" formControlName="name" class="form-control" placeholder="Contact Name..." aria-describedby="sizing-addon1">
       </div>
       <div class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">{{namealert}}</div>
       <div class="input-group input-group-lg">
-          <span class="input-group-addon" id="sizing-addon1">Email</span>
-          <input type="text" formControlName="email" class="form-control" placeholder="Email Address: Required" aria-describedby="sizing-addon1">
+          <span class="input-group-addon" id="sizing-addon1">Email*</span>
+          <input type="text" formControlName="email" class="form-control" placeholder="Contact Email Address..." aria-describedby="sizing-addon1">
       </div>
       <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{emailalert}}</div>
       <div class="input-group input-group-lg">
-          <span class="input-group-addon" id="sizing-addon1">Organization</span>
-          <input type="text" formControlName="company" class="form-control" placeholder="Organization: Required" aria-describedby="sizing-addon1">
+          <span class="input-group-addon" id="sizing-addon1">Organisation*</span>
+          <input type="text" formControlName="company" class="form-control" placeholder="Name of your Organisation..." aria-describedby="sizing-addon1">
       </div>
       <div class="alert" *ngIf="!rForm.controls['company'].valid && rForm.controls['company'].touched">{{companyalert}}</div>
       <div class="input-group input-group-lg">
           <span class="input-group-addon" id="sizing-addon1">Phone</span>
-          <input type="text" formControlName="phone" class="form-control" placeholder="Phone Number: Optional" aria-describedby="sizing-addon1">
+          <input type="text" formControlName="phone" class="form-control" placeholder="Contact Phone Number..." aria-describedby="sizing-addon1">
       </div>
-      <h3>Click to Select an Award Below OR</h3>
-      <input type="checkbox" class="cb" formControlName="selfselect" value="1">
-      &nbsp;&nbsp;Enter your own award suggestion
+      <p class="formSubtitle">Select an Award from Below</p>
+      <p class="formSubtitle3">OR</p>
+      <div style="text-align: center;">
+          <p class="formSubtitle2">Enter a Custom Award</p>
+          <input type="checkbox" class="cb" style="text-align: center;" formControlName="selfselect" value="1">
+      </div>
       <div *ngIf="manual">
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1">Award</span> 
-            <input type="text" [(ngModel)]="AwardName" formControlName="awardname" class="form-control" placeholder="Award Name: Optional" aria-describedby="sizing-addon1">
+            <input type="text" [(ngModel)]="AwardName" formControlName="awardname" class="form-control" placeholder="Custom Award Name..." aria-describedby="sizing-addon1">
         </div>
       </div>
       <div class="input-group input-group-lg">
           <span class="input-group-addon" id="sizing-addon1">Comments</span> 
-          <input type="text" formControlName="comments" class="form-control" placeholder="Comments: Optional" aria-describedby="sizing-addon1">
+          <input type="text" formControlName="comments" class="form-control" placeholder="Leave a comment..." aria-describedby="sizing-addon1">
       </div>
-      <input type="submit" class="btn btn-primary" value="Submit Form" [disabled]="!rForm.valid">
+      <div style="text-align: center;">
+          <input type="submit" class="homepageButton" value="Submit Form" [disabled]="!rForm.valid">
+      </div>
   </form>
 </div>
 </div>
 <ng-template #forminfo>
-  <div class="border" >
-    <h3 style="color:red;text-align:center;"> Thank You for your Enquiry </h3>
-      <h1 style="text-align:center">{{ Name}} </h1>
-      <h4 style="text-align:center">{{ Email }} </h4>
-      <h4 style="text-align:center"> {{ Company }}</h4>
-      <h4 style="text-align:center"> {{ AwardName }}</h4>
-      <h3 style="color:red;text-align:center;"> We will Email you to discuss the details of your enquiry </h3>
+  <div style="width: 100%; height: 100%; border: none;">
+    <p class="submitThanks">Thanks for your Enquiry</p>
+    <p class="submitName">{{Name}}</p>
+    <p class="submitName">{{Email}}</p>
+    <p class="submitName">{{Company}}</p>
+    <p class="submitThanks">We will get back to your shortly</p>
   </div>
 </ng-template>
 
@@ -69,21 +73,23 @@
     <md-progress-bar mode="indeterminate"></md-progress-bar>
   </div>
   
-  <md-card>
-    <h4 *ngIf="sponsorsFound" md-subeader>Click an Award to add to Inquiry</h4>
-    <masonry [useImagesLoaded]="true">
-      <masonry-brick *ngFor="let award of potential" class="image-container">
-        <div id="card" *ngIf="award.NeedsSponsor == true">
-          <md-card (click)="setAward(award)">
-            <img src="../assets/images/aut_logo.png" style="width:100px;height:80px;">
-            <md-card-title style="color:red;">Award Status: AVAILABLE FOR SPONSORSHIP</md-card-title>
-            <h3>{{award.AwardName}}</h3>
-            <p>{{award.AwardDate}}</p>
-            <p>{{award.AwardDegreeLevel}}</p>
-            <p>{{award.AwardDegree}}</p>
-            <p>{{award.AwardBlurb}}</p>
-          </md-card>
-        </div>
-      </masonry-brick>
-    </masonry>
-  </md-card> 
+<md-card>
+  <p class="formTitle" *ngIf="sponsorsFound" md-subeader>Enquire About a Current Award</p>
+  <masonry [useImagesLoaded]="true">
+    <masonry-brick *ngFor="let award of potential" class="image-container">
+      <div id="card" *ngIf="award.NeedsSponsor == true">
+          <div class="sponsorCard">
+            <img class="headerImage" src="http://ecms-award.aut.ac.nz/web/assets/card-header-300px.jpg">
+            <div class="card-block">
+              <p class="awardName">{{award.AwardName}}</p>
+            </div>
+            <img class="sponsorImage" src="http://ecms-award.aut.ac.nz/web/assets/sponsorLogoPlaceholder.jpg">
+            <div class="card-block">
+              <p class="awardBlurb">{{award.AwardBlurb}}</p>
+              <button type="button" class="selectButton" (click)="setAward(award)">Select This Award</button>
+            </div>
+          </div>
+      </div>
+    </masonry-brick>
+  </masonry>
+</md-card> 
