@@ -10,6 +10,7 @@ export class AnimatedPlayComponent implements OnInit {
   @Output() event: EventEmitter<boolean> = new EventEmitter();
   constructor() {}
   ngOnInit() {
+    this.toggle()
   }
   toggle(){
     this.isPlaying = !this.isPlaying;

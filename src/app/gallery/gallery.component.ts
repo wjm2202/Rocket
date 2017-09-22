@@ -9,6 +9,7 @@ import { DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { DateService } from '../services/currentDate.service';
+import { trigger,state,style,transition,animate,keyframes} from '@angular/animations';
 
 interface PhotoModel {
   Created: number;
@@ -20,7 +21,23 @@ interface PhotoModel {
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
-  providers: [ImageService, DatePipe]
+  providers: [ImageService, DatePipe],
+  animations: [
+    
+            trigger('focusPanel', [
+                state('inactive', style({
+                    transform: 'scale(0.1)',
+                    backgroundColor: 'transparent'
+                })),
+                state('active', style({
+                    transform: 'scale(0.4)',
+                    backgroundColor: '#000000'
+                })),
+                transition('inactive => active', animate('10ms ease-in')),
+                transition('active => inactive', animate('10ms ease-out'))
+            ]),
+    
+        ]
 })
 export class GalleryComponent implements OnChanges, OnInit {
   pictures: PhotoModel[];
@@ -31,6 +48,12 @@ export class GalleryComponent implements OnChanges, OnInit {
   selected;
   id;
   currentYear:number;
+  selectedIdx = -1;
+  selectedsize = -1;
+  state: string = '';
+  hidden:boolean = false;
+  bigPic:string;
+  lastScrollY;
   //Onchanges is a life cycle hook called when something changes
   constructor(private imageService: ImageService, 
               private httpClient: HttpClient,
@@ -43,6 +66,20 @@ export class GalleryComponent implements OnChanges, OnInit {
     ///this.current = this.datePipe.transform(this.current, 'yyyy');
     this.selected = this.current;
     this.visableImages = this.imageService.getImages();
+  }
+  photoSize(pic:number){
+    if(this.selectedIdx != -1){                      //if image already selected
+      this.selectedIdx = -1;                         //remove center class
+      this.hidden = false;                           //show the normal page
+      window.scrollTo(0, this.lastScrollY);          //scroll to last know location prior to click
+    }else{                                           //if image is selected
+      this.selectedIdx = pic;                        //set the css to center
+      this.hidden = true;                            //clear the background
+      this.bigPic = this.pictures[pic].Filename;     //get the filename
+      this.lastScrollY = window.pageYOffset;         //get the last Yoffset
+      window.scrollTo(0,100);                        //scroll to below the menu
+    }
+    
   }
 
   upDate(){

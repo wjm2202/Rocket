@@ -1,3 +1,6 @@
+
+
+<div *ngIf="!hidden">
 <div class="header">
     <div class="titleHeader">
         <br />
@@ -7,17 +10,26 @@
         <button type="button" class="blankButton">{{selected}}</button>
         <button type="button" class="homepageButton" (click)="upDate()">&gt; &gt;</button>
         <br />
+        <button type="button" class="homepageButton" [routerLink]="['/photos/slideshow', selected]">Slideshow</button>
     </div>
 </div>
-<h3 style="text-align:center;">Click A Photo to Start Slide Show</h3>
-<div class="photosContainer">
+<div class="photosContainer" >
     <div class="row">
         <ul id="thumbnailsList">
-            <li *ngFor="let picture of pictures ">
-                <a [routerLink]="['/photos/slideshow', selected]">
-                    <img src="{{picture.Filename | photoAppendGeneral}}" class="tn" width="200" height="160">
-                </a>
+            <li *ngFor="let picture of pictures;let i = index;">
+                <div>
+                    <img src="{{picture.Filename | photoAppendGeneral}}" class="tn"  (click)="photoSize(i)" [ngClass]="{'center': selectedIdx == i}">
+                </div>
             </li>
         </ul>
+    </div>
+</div>
+</div>
+<div class="photosContainer" >
+    <div class="row" [ngClass]="{'blacken': hidden}">
+        <div *ngIf="hidden" class="large">
+            <img src="{{bigPic | photoAppendGeneral}}" class="tn"  (click)="photoSize(-1)" [ngClass]="{'center': true}">
+            
+        </div>
     </div>
 </div>
