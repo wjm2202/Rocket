@@ -30,7 +30,7 @@ export class SignsponsorComponent implements OnInit {
   searching:boolean = false;
   postSuccess:boolean = false;              //post worked
   postFailed:boolean = false;               //post failed
-  successMessage:any;                           //details posted for success message
+  successMessage:any;                       //details posted for success message
   searchQuery:string ='';
   Name:string = "";                        //contact name
   Email:string ='';                        //contact email
@@ -48,9 +48,9 @@ export class SignsponsorComponent implements OnInit {
   //reactive form
   rForm:FormGroup;
   post:any;
-  namealert:string = 'Name Field is Required to submit';
-  emailalert:string = 'Email must be valid to submit';
-  companyalert:string = 'Company feild must be completed to submit';
+  namealert:string = 'The Name field is required to submit';
+  emailalert:string = 'The Email field is required to submit';
+  companyalert:string = 'The Organisation field is required to submit';
   manual:boolean = false;
 
 //api call success
