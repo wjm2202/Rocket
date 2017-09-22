@@ -13,25 +13,30 @@
 <masonry [useImagesLoaded]="false" class="cardContainer">
   <masonry-brick class="cards" *ngFor="let award of awards" class="image-container">
       <div id="card" [ngClass]="{'flipped': award.isflipped }">
+        
+        <!-- FRONT OF AWARD CARD -->
         <md-card class="front">
           <img class="frontImage" src="{{header | assetsAppendGeneral}}">
           <p class="student">{{award.StudentName}}</p>
+          <div class="logoContainer">
+            <a href="{{award.SponsorLink | stripurl}}" title="Visit Sponsor Website"> <img class="smallLogo" src="{{award.SponsorLogo | appendSponsor}}"> </a>
+          </div>
           <p class="award">{{award.AwardDate}}&nbsp;{{award.AwardName}}</p>
           <p class="blurb">{{award.AwardBlurb}}</p>
-          <p class="level">{{award.AwardDegreeLevel}}</p>
-          <div *ngIf="award.SponsorName != 'Placeholder'">
+          <div *ngIf="award.AwardDegreeLevel != 'Miscellaneous'">
+            <p class="level">{{award.AwardDegreeLevel}}</p>
+          </div>
+          <div *ngIf="award.AwardDegree != 'Placeholder'">
             <p class="degree">{{award.AwardDegree}}</p>
-        </div>
-          <!-- <p class="smallTitle">Sponsored By: </p> -->
-          <!-- <p class="smallSponsor">{{award.SponsorName}}</p> -->
-          <img class="smallLogo" src="{{award.SponsorLogo | appendSponsor}}">
-
+          </div>
           <div align="center">
-            <button type="button" class="flipButton" (click)="award.isflipped = !award.isflipped;"> Flip </button>
-            <button type="button" class="flipButton" [routerLink]="['search/award', award.AwardId]"> View </button>
+            <!-- <button type="button" class="flipButton" (click)="award.isflipped = !award.isflipped;"> Flip </button> -->
+            <button type="button" class="flipButton" [routerLink]="['search/award', award.AwardId]"> View Award </button>
           </div>
         </md-card>
-        <md-card class="back">
+
+        <!-- BACK OF AWARD CARD -->
+<!--         <md-card class="back">
           <p class="sponsorTitle">Sponsored By:</p>
           <img class="backImage" src="{{award.SponsorLogo | appendSponsor}}">
           <div *ngIf="award.SponsorName != 'Placeholder'">
@@ -44,7 +49,7 @@
             <button type="button" class="flipButton" (click)="award.isflipped = !award.isflipped;"> Flip </button>
             <button type="button" class="flipButton" [routerLink]="['search/award', award.AwardId]"> View </button>
           </div>
-        </md-card>
+        </md-card> -->
       </div>
   </masonry-brick>
 </masonry>

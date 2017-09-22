@@ -30,16 +30,34 @@ p {
 
 p.student {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 10px;
 	color: #F07D00;
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
 }
 
+.logoContainer {
+	margin: auto;
+	margin-top: 10px;
+	width: 90px;
+	height: 60px;
+}
+
+.smallLogo {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.smallLogo:hover {
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #f07d00;
+	transition: .2s ease;
+}
+
 p.award {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 25px;
+	margin-top: 10px;
 	color: black;
 	font-size: 16px;
 	text-align: center;
@@ -48,7 +66,7 @@ p.award {
 
 p.blurb {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 25px;
+	margin-top: 20px;
 	color: black;
 	font-size: 16px;
 	text-align: center;
@@ -56,7 +74,7 @@ p.blurb {
 
 p.level {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 25px;
+	margin-top: 20px;
 	color: black;
 	font-size: 14px;
 	font-style: italic;
@@ -65,7 +83,7 @@ p.level {
 
 p.smallTitle {
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 20px;
+	margin-top: 15px;
 	color: black;
 	font-size: 14px;
 	font-style: italic;
@@ -79,11 +97,6 @@ p.smallSponsor {
 	font-size: 16px;
 	font-weight: bold;
 	text-align: center;
-}
-
-.smallLogo {
-	width: 90px;
-	margin-top: 20px;
 }
 
 p.degree {
@@ -163,11 +176,11 @@ a {
 .flipButton {
 	display:inline-block;
 	margin-top: 30px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
 	height: 40px;
-	width: 60px;
+	padding: 0px 15px 0px 15px;
 	background-color: #f07d00;
 	color: white;
 	border: 0;
@@ -216,6 +229,7 @@ a {
 }
 
 .homepageButton {
+	margin-top: 10px;
 	-webkit-border-radius: 6;
 	-moz-border-radius: 6;
 	border-radius: 6px;
@@ -223,9 +237,8 @@ a {
 	color: #FFFFFF;
 	font-size: 22px;
 	background: #DBA449;
-	
 	padding: 10px 24px 10px 24px;
-	border: solid #f07d00 2px;
+	border: solid #A97E37 2px;
 	text-decoration: none;
 }
 
