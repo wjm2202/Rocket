@@ -5,6 +5,7 @@ import {FormControl, FormGroup, FormBuilder, Validators, EmailValidator} from '@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
 import { PhotoPipe } from '../pipes/photo.pipe';
+import { AppendAssetsPipe } from '../pipes/append-assets.pipe';
 import { environment } from '../../environments/environment';
 
 interface SuccessRes{
@@ -44,6 +45,8 @@ export class SignsponsorComponent implements OnInit {
   Obj;
   headers;
   posted:any;
+  head:string = 'card-header-300px.jpg';
+  logo:string = 'sponsorLogoPlaceholder.jpg';
 
   //reactive form
   rForm:FormGroup;
