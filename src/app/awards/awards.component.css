@@ -81,6 +81,7 @@ p.level {
 	text-align: center;
 }
 
+<<<<<<< HEAD
 p.degree {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 0px;
@@ -89,6 +90,8 @@ p.degree {
 	text-align: center;
 }
 
+=======
+>>>>>>> upstream/master
 p.smallTitle {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 15px;
@@ -107,6 +110,22 @@ p.smallSponsor {
 	text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+.smallLogo {
+	width: 90px;
+	margin-top: 20px;
+}
+
+p.degree {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 0px;
+	color: black;
+	font-size: 16px;
+	text-align: center;
+}
+
+>>>>>>> upstream/master
 p.sponsorTitle {
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 20px;
