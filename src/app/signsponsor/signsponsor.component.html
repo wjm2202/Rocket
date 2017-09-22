@@ -35,6 +35,10 @@
           <span class="input-group-addon" id="sizing-addon1">Phone</span>
           <input type="text" formControlName="phone" class="form-control" placeholder="Contact Phone Number..." aria-describedby="sizing-addon1">
       </div>
+      <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">Comments</span> 
+          <input type="text" formControlName="comments" class="form-control" placeholder="Leave a comment..." aria-describedby="sizing-addon1">
+      </div>
       <p class="formSubtitle">Select an Award from Below</p>
       <p class="formSubtitle3">OR</p>
       <div style="text-align: center;">
@@ -47,10 +51,7 @@
             <input type="text" [(ngModel)]="AwardName" formControlName="awardname" class="form-control" placeholder="Custom Award Name..." aria-describedby="sizing-addon1">
         </div>
       </div>
-      <div class="input-group input-group-lg">
-          <span class="input-group-addon" id="sizing-addon1">Comments</span> 
-          <input type="text" formControlName="comments" class="form-control" placeholder="Leave a comment..." aria-describedby="sizing-addon1">
-      </div>
+      
       <div style="text-align: center;">
           <input type="submit" class="homepageButton" value="Submit Form" [disabled]="!rForm.valid">
       </div>
@@ -79,11 +80,11 @@
     <masonry-brick *ngFor="let award of potential" class="image-container">
       <div id="card" *ngIf="award.NeedsSponsor == true">
           <div class="sponsorCard">
-            <img class="headerImage" src="http://ecms-award.aut.ac.nz/web/assets/card-header-300px.jpg">
+            <img class="headerImage" src="{{head | assetsAppendGeneral}}">
             <div class="card-block">
               <p class="awardName">{{award.AwardName}}</p>
             </div>
-            <img class="sponsorImage" src="http://ecms-award.aut.ac.nz/web/assets/sponsorLogoPlaceholder.jpg">
+            <img class="sponsorImage" src="{{logo | assetsAppendGeneral}}">
             <div class="card-block">
               <p class="awardBlurb">{{award.AwardBlurb}}</p>
               <button type="button" class="selectButton" (click)="setAward(award)">Select This Award</button>
