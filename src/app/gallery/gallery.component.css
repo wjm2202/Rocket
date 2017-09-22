@@ -7,15 +7,33 @@ ul {
 	justify-content: center;
 }
 
+
 li {
-	display: inline;
+	display: inline-block;
 }
 
 .tn {
-	margin: 20px;
 	border: 2px solid white;
 	box-shadow: #555 1px 1px 8px 1px;
-	margin-bottom: 20px;
+	height: 200px;
+	width:300px;
+	margin:20px;
+	
+}
+.center{
+	position: fixed;
+	top: 50%;
+	left: 50%; 
+	width: 910px; 
+	height: 610px; 
+	background: #fff;				
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%); 
+	-ms-transform: translate(-50%, -50%); 
+	-o-transform: translate(-50%, -50%); 
+	transform: translate(-50%, -50%); 
+	z-index: 9999;
+	scroll-behavior: none;
 }
 
 button {
