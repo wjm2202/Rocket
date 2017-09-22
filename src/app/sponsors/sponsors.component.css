@@ -81,7 +81,8 @@ a {
 	margin-bottom: 20px;
 	text-align: center;
 	position: relative;
-	width: 100%;
+	width: 260px;
+	height: 150px;
 }
 
 #card md-card-content {
@@ -92,8 +93,8 @@ a {
 }
 
 .frontImage {
-	width: 226px;
-	height: 150px;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .titleHeader {
