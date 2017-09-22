@@ -259,40 +259,24 @@ a {
 }
 
 @media screen and (max-width: 321px){
-	.cardContainer {
-		padding-right: 0;
-		padding-left: 0;
-	}
 	.image-container {
-		margin-left: 9px;
+		margin-left: -40px;
 	}
 }
 
 @media screen and (max-width: 376px){
-	.cardContainer {
-		padding-right: 25px;
-		padding-left: 25px;
-	}
 	.image-container {
 		margin-left: -12px;
 	}
 }
 
 @media screen and (max-width: 769px){
-	.cardContainer {
-		padding-right: 20px;
-		padding-left: 20px;
-	}
 	.image-container {
 		margin-left: 2px;
 	}
 }
 
 @media screen and (max-width: 1025px){
-	.cardContainer {
-		padding-right: 6px;
-		padding-left: 6px;
-	}
 	.image-container {
 		margin-left: 5px;
 		margin-right: 3px;
@@ -300,12 +284,8 @@ a {
 }
 
 @media screen and (max-width: 1441px){
-	.cardContainer {
-		padding-right: 6px;
-		padding-left: 6px;
-	}
 	.image-container {
-		margin-left: 24px;
-		margin-right: 11px;
+		margin-left: 22px;
+		margin-right: 3px;
 	}
 }

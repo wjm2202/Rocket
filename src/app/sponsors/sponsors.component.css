@@ -167,37 +167,4 @@ a {
 		margin: 0 auto;
 		padding: 23px;
 	}
-	.cardContainer {
-		padding-right: 0;
-		padding-left: 0;
-	}
-	.image-container {
-		margin-left: 10px;
-	}
-}
-
-@media screen and (max-width: 376px){
-	.image-container {
-		margin-left: -12px;
-	}
-}
-
-@media screen and (max-width: 769px){
-	.image-container {
-		margin-left: 4px;
-	}
-}
-
-@media screen and (max-width: 1025px){
-	.image-container {
-		margin-left: 5px;
-		margin-right: 0px;
-	}
-}
-
-@media screen and (max-width: 1441px){
-	.image-container {
-		margin-left: 10px;
-		margin-right: 24px;
-	}
 }
