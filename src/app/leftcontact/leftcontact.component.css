@@ -191,8 +191,8 @@
     }
     .facebook a img, .instagram a img, 
     .twitter a img, .youtube a img, .linkedin a img{
-        width: 65px;
-        height: 65px;
+        width: 50px;
+        height: 50px;
         margin-right: 10px;
     }
 }
@@ -230,8 +230,8 @@
     }
     .facebook a img, .instagram a img, 
     .twitter a img, .youtube a img, .linkedin a img{
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         margin-right: 10px;
     }
 }
@@ -269,8 +269,8 @@
     }
     .facebook a img, .instagram a img, 
     .twitter a img, .youtube a img, .linkedin a img{
-        width: 100px;
-        height: 100px;
+        width: 65px;
+        height: 65px;
         margin-right: 10px;
     }
 }
