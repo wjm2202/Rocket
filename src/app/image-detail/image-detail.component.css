@@ -122,3 +122,15 @@ img {
 		left: 3px;
 	}
 }
+
+@media screen and (max-width: 320px){
+	.buttonCenter{
+		left: 23%;
+	}
+}
+
+@media screen and (min-width: 321px) and (max-width: 426px){
+	.buttonCenter{
+		left: 30%;
+	}
+}
