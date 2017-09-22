@@ -37,9 +37,22 @@ p.student {
 	text-align: center;
 }
 
-.smallLogo {
-	width: 90px;
+.logoContainer {
+	margin: auto;
 	margin-top: 10px;
+	width: 90px;
+	height: 60px;
+}
+
+.smallLogo {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.smallLogo:hover {
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #f07d00;
+	transition: .2s ease;
 }
 
 p.award {
