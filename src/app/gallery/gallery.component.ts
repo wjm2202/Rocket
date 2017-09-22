@@ -51,6 +51,9 @@ export class GalleryComponent implements OnChanges, OnInit {
   selectedIdx = -1;
   selectedsize = -1;
   state: string = '';
+  hidden:boolean = false;
+  bigPic:string;
+  lastScrollY;
   //Onchanges is a life cycle hook called when something changes
   constructor(private imageService: ImageService, 
               private httpClient: HttpClient,
@@ -65,11 +68,16 @@ export class GalleryComponent implements OnChanges, OnInit {
     this.visableImages = this.imageService.getImages();
   }
   photoSize(pic:number){
-
-    if(this.selectedIdx != -1){
-      this.selectedIdx = -1;
-    }else{
-      this.selectedIdx = pic;
+    if(this.selectedIdx != -1){                      //if image already selected
+      this.selectedIdx = -1;                         //remove center class
+      this.hidden = false;                           //show the normal page
+      window.scrollTo(0, this.lastScrollY);          //scroll to last know location prior to click
+    }else{                                           //if image is selected
+      this.selectedIdx = pic;                        //set the css to center
+      this.hidden = true;                            //clear the background
+      this.bigPic = this.pictures[pic].Filename;     //get the filename
+      this.lastScrollY = window.pageYOffset;         //get the last Yoffset
+      window.scrollTo(0,100);                        //scroll to below the menu
     }
     
   }
