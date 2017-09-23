@@ -1,2 +1,2 @@
 # Rocket
-Rocket design accpted by client for development
+Rocket design accepted by client for development
