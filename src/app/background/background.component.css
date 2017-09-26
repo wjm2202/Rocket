@@ -24,7 +24,22 @@ html, body {
     width: 0px;
     background: transparent;
 }
+p.awardName {
+	margin-top: 0px;
+	color: #F07D00;
+	font-size: 22px;
+	width:250px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+}
 
+p.awardBlurb {
+	color: black;
+	font-size: 16px;
+	width:250px;
+	text-align: center;
+}
 .event {
 	background-color: #D93B20;
 }
@@ -523,11 +538,12 @@ footer.second p {
 }
 
 #card {
-	width: 100%;
+	width: 270px;
 	height: 400px;
 	position: absolute;
 	transform-style: preserve-3d;
 	transition: transform 1s;
+	border: 1px solid black;
 }
 
 #card figure {

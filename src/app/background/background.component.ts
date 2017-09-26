@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, OnChanges } from '@angular/core';
+import { Component, OnInit, HostBinding, OnChanges, AfterViewInit,ElementRef } from '@angular/core';
 import { fade } from '../animations/fade';
 import { Observable } from 'rxjs/Rx';
 import { routerAnimation } from '../animations/fadeInAnimation'
@@ -19,7 +19,17 @@ import { DateService } from '../services/currentDate.service';
     '(window:resize)': 'onResize($event)'
   }
 })
-export class BackgroundComponent implements OnChanges {
+export class BackgroundComponent implements OnChanges, AfterViewInit {
+  head:string = 'card-header-300px.jpg';
+  logo:string = 'sponsorLogoPlaceholder.jpg';
+  create:string = 'Create An Award';
+  blurb:string = 'Describe your company and products';
+  viewPort;
+  element:Element;
+  sponsorEL:Element;
+  awardEL:Element;
+  photoEL:Element;
+  contactEL:Element;
   isFlipped:boolean = false;
   mobile:number = 5;
   width: any;
@@ -50,8 +60,7 @@ export class BackgroundComponent implements OnChanges {
   constructor(private router: Router,
               private tite:Title,
               private datePipe:DatePipe,
-              private dateService:DateService) {
-     //this.tite.setTitle("AUT-ECMS"+this.router.url);           
+              private dateService:DateService) {        
     this.router.events.subscribe((res) => { 
       this.tite.setTitle("AUT-ECMS"+this.router.url); 
       this.checkIsMobile();
@@ -59,16 +68,18 @@ export class BackgroundComponent implements OnChanges {
       if(this.router.url == '/home'){
         this.displayHome = true;
         window.scrollTo(0, 0);
-        //console.log('displayHome: '+this.displayHome);
       }else{
         this.displayHome = false;
-        //console.log('displayHome: '+this.displayHome);
       }
       this.current = Date.now();
       this.current = this.datePipe.transform(this.current, 'yyyy');
     });
-    
    }
+   ngAfterViewInit(){
+    this.element = document.getElementById("laptopTop");
+    console.log('laptop '+this.element.getBoundingClientRect().top);
+   }
+
   checkIsMobile(){
     this.width = window.screen.width;
     if(this.width < 767){
@@ -76,7 +87,6 @@ export class BackgroundComponent implements OnChanges {
     }else{
       this.ismobile = false;
     }
-    //console.log('is mobile test: '+this.ismobile+' screen width: '+this.width);
   }
   displayHomemeth($event){
     this.displayHome = false;
@@ -86,27 +96,29 @@ export class BackgroundComponent implements OnChanges {
   }
   onResize(event){
     if(event.target.innerWidth < 767){
-      //console.log('resize width: '+event.target.innerWidth);
       this.ismobile = true;
     }
     if(event.target.innerWidth > 768){
-      //console.log('resize width: '+event.target.innerWidth);
       this.ismobile = false;
     }
   }
   open(box:number){
     this.checkIsMobile();
+    var height;
+    var top;
     if(this.mobile == box){
-      //console.log('box number same: '+box+" mobile: "+this.mobile);
       this.mobile = 0;
+      window.scrollTo(0,0);
     }else{
-      //console.log('box number differnet: '+box+" mobile: "+this.mobile);
+      height = this.element.getBoundingClientRect().top;
       this.mobile = box;
+      window.scrollTo(0,this.getCurrentOffsetTop(height));
     }
-    
   }
   ngOnChanges(){
     this.checkIsMobile();
   }
-
+  getCurrentOffsetTop(element:number){
+    return (element + window.pageYOffset - document.documentElement.clientTop);   //get move to position
+  }
 }

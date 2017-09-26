@@ -13,87 +13,68 @@
 <!-- drawer boxes -->
 
 <!--sponsor teaser mobile-->
-<div *ngIf="displayHome">
+<div id="sponsorsMobile"></div>
+<div *ngIf="displayHome">                                                       <!--switch to swap between mobile and laptop -->
   <section role="button" (click)="open(1)" class="one-fourth" id="html">
     <i class="icon fa fa-handshake-o"></i>
     <h3 class="disable_text_highlighting">SPONSORS</h3>
   </section>
   <div [@dropdown] *ngIf="ismobile && mobile == 1">
     <section class="inner-wrapper">
-      <aside id="sponsoraside">
-        <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
-        <h5 style="margin-top:20px;">Your Organisation here</h5>
-        <p>the details about your organisation and products here</p>
-        <h6>WWW.YourWebSite.co.nz</h6>
-      </aside>
-      <article id="sponsorarticle">
+      
         <h2 style="text-align:center;"> Become a Sponsor </h2>
+        <br />
+        <button style="margin-left:30px;" type="button" class="homepageButton" routerLink="sponsors" (click)="open(0)">View Our Sponsors</button>
+        <br />
         <p>We welcome your interest in being a sponsor for these Awards. There may be a particular area of interest or discipline
           your organisation is interested in sponsoring. Typically the value of industry prizes are from $1,000-$2,000.Students
           are extremely grateful for your support in this area.
         </p>
-      </article>
+        <a routerLink="sponsors/enquiry" class="homepageButton" style="margin-left:50px;">Be A Sponsor</a>
+     
     </section>
   </div>
 
   <!--awards teaser mobile-->
-
+  <div id="awardsMobile">
   <section role="button" (click)="open(2)" class="one-fourth" id="css">
     <i class="icon fa fa-trophy"></i>
     <h3 class="disable_text_highlighting">AWARDS</h3>
   </section>
   <div [@dropdown] *ngIf="ismobile && mobile == 2">
     <section class="inner-wrapper">
-      <article id="awardsarticle">
+    
         <h2 style="text-align:center;"> ECMS Awards </h2>
+        <br />
+        <button style="margin-left:40px;" type="button" class="homepageButton" routerLink="awards" (click)="open(0)">View the Awards</button>
+        <br />
         <app-award-teaser-message></app-award-teaser-message>
-      </article>
-      <aside id="awardsaside">
-        <div class="card">
-          <section class="holder">
-            <div id="card" [ngClass]="isFlipped == true ? 'flipped' : '' ">
-              <!-- front -->
-              <figure class="front" (click)="cardFlip()">
-                <img class="image" src="../../assets/images/i1.jpg" alt="Card image cap">
-                <h5>Name an award</h5>
-                <h5>given to a student</h5>
-                <h6>who majors in</h6>
-                <p>Create an award blurb to show support</p>
-              </figure>
-              <!-- back  -->
-              <figure class="back" (click)="cardFlip()">
-                <img class="image" src="../../assets/images/frucor.jpg" alt="Card image cap">
-                <h5 style="margin-top:20px;">Your Organisation here</h5>
-                <p>the details about your organisation and products here</p>
-                <h6>WWW.YourWebSite.co.nz</h6>
-              </figure>
-            </div>
-          </section>
-        </div>
-      </aside>
+     
     </section>
   </div>
+</div>
 
   <!--photos teaser mobile-->
-
+  <div id="photosMobile">
   <section role="button" (click)="open(3)" class="one-fourth" id="seo">
     <i class="icon fa fa-camera-retro"></i>
     <h3 class="disable_text_highlighting">PHOTOS</h3>
   </section>
   <div class="test3" [@dropdown] *ngIf="ismobile && mobile == 3">
     <section class="inner-wrapper">
-      <aside id="photoaside">
-        <img src="../../assets/images/i1.jpg">
-      </aside>
-      <article id="photoarticle">
+      
         <h2> Photos</h2>
+        <br />
+        <button style="margin-left:40px;" type="button" class="homepageButton" [routerLink]="['/photos', current]" (click)="open(0)">View the Photos</button>
+        <br />
         <p>Browse through photos from the previous event or use the slideshow.</p>
-      </article>
+      
     </section>
   </div>
+</div>
 
   <!--contact teaser mobile-->
-
+  <div id="contactsMobile">
   <section role="button" (click)="open(4)" class="one-fourth" id="social">
     <i class="icon fa fa-phone-square"></i>
     <h3 class="disable_text_highlighting">CONTACT</h3>
@@ -101,21 +82,21 @@
 
   <div class="test4" [@dropdown] *ngIf="ismobile && mobile == 4">
     <section class="inner-wrapper-2">
-      <article id="contactarticle">
+    
         <h2> Contacts </h2>
+        <br />
+        <button style="margin-left:40px;" type="button" class="homepageButton" routerLink="contact" (click)="open(0)">View the Contacts</button>
+        <br />
         <p>Contacts for awards can be viewed by the footer or press the button to get the details from the administration staff.</p>
-      </article>
-      <aside id="contactaside">
-        <img src="../../assets/images/i3.jpg">
-      </aside>
+     
     </section>
   </div>
 </div>
-<!-- router outlet desktop -->
+</div>
 
 <!--sponsor teaser laptop-->
-
-<div [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 1">
+<div id="laptopTop"></div>
+<div  [@heightdown] [@heightup] *ngIf="!ismobile && mobile == 1" >
   <section class="inner-wrapper">
     <article id="sponsorarticle">
       <h2 style="text-align:center;"> Award Sponsors </h2>
@@ -129,15 +110,21 @@
         are extremely grateful for your support in this area.</p>
     </article>
     <aside id="sponsoraside">
-      <div class="card">
-        <img class="card-img-top" src="../../assets/images/frucor.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title" style="text-align:center;">Card title</h4>
-          <p class="card-text" style="color:black;">Your organisation can use this oportunity to promote your brand or to explain your business and links to the University.
-            You can engage the next generation.</p>
+        <div id="card">
+            <div class="sponsorCard">
+              <img class="headerImage" src="{{head | assetsAppendGeneral}}">
+              <div class="card-block">
+                <p class="awardName">{{create}}</p>
+              </div>
+              <img class="sponsorImage" src="{{logo | assetsAppendGeneral}}">
+              <div class="card-block">
+                <h5 style="padding:10px;" class="awardBlurb">{{blurb}}</h5>
+                
+                <button style="margin-left:60px;" type="button" class="homepageButton" routerLink="../sponsors/enquiry">Enquiry</button>
+               
+              </div>
+            </div>
         </div>
-        <a routerLink="sponsors/enquiry" style="text-align:center; float:right; height:50px;" class="btn btn-primary">Be A Sponsor</a>
-      </div>
     </aside>
   </section>
 </div>
@@ -282,8 +269,6 @@
   </section>
 </div>
 <!--end of display home-->
-
-
 
 <br/>
 <section style="width:100%;" id="foot">

@@ -30,14 +30,14 @@ interface PhotoModel {
         transform: 'translate(0)'
       })),
       transition('off => on', animate('350ms ease-in-out', keyframes([
-        style({transform: 'translate(-50%)', opacity: '0'}),
-        style({transform: 'translate(-40%)', opacity: '0.25'}),
-        style({transform: 'translate(-30%)', opacity: '0.5'}),
-        style({transform: 'translate(-20%)', opacity: '0.6'}),
-        style({transform: 'translate(-15%)', opacity: '0.7'}),
-        style({transform: 'translate(-10%)', opacity: '0.8'}),
-        style({transform: 'translate(-5%)', opacity: '0.9'}),
-        style({transform: 'translate(0%)', opacity: '1'}),
+        style({transform: 'translate(-50%)'}),
+        style({transform: 'translate(-40%)'}),
+        style({transform: 'translate(-30%)'}),
+        style({transform: 'translate(-20%)'}),
+        style({transform: 'translate(-15%)'}),
+        style({transform: 'translate(-10%)'}),
+        style({transform: 'translate(-5%)'}),
+        style({transform: 'translate(0%)'}),
       ]))),
       transition('on => off', animate('350ms ease-in-out', keyframes([
         style({transform: 'translate(0%)', opacity: '1'}),
