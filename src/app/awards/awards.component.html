@@ -16,7 +16,7 @@
         
         <!-- FRONT OF AWARD CARD -->
         <md-card class="front">
-          <img class="frontImage" src="http://ecms-award.aut.ac.nz/web/assets/card-header-300px.jpg">
+          <img class="frontImage" src="{{header | assetsAppendGeneral}}">
           <p class="student">{{award.StudentName}}</p>
           <div class="logoContainer">
             <a href="{{award.SponsorLink | stripurl}}" title="Visit Sponsor Website"> <img class="smallLogo" src="{{award.SponsorLogo | appendSponsor}}"> </a>
@@ -34,22 +34,6 @@
             <button type="button" class="flipButton" [routerLink]="['search/award', award.AwardId]"> View Award </button>
           </div>
         </md-card>
-
-        <!-- BACK OF AWARD CARD -->
-<!--         <md-card class="back">
-          <p class="sponsorTitle">Sponsored By:</p>
-          <img class="backImage" src="{{award.SponsorLogo | appendSponsor}}">
-          <div *ngIf="award.SponsorName != 'Placeholder'">
-            <p class="student">{{award.SponsorName}}</p>
-          </div>
-          <p class="award">{{award.AwardName}}</p>
-          <p class="blurb">{{award.AwardSponsorBlurb}}</p>
-          <a href="{{award.SponsorLink | stripurl}}">{{award.SponsorLink | stripurl}}</a>
-          <div align="center">
-            <button type="button" class="flipButton" (click)="award.isflipped = !award.isflipped;"> Flip </button>
-            <button type="button" class="flipButton" [routerLink]="['search/award', award.AwardId]"> View </button>
-          </div>
-        </md-card> -->
       </div>
   </masonry-brick>
 </masonry>
