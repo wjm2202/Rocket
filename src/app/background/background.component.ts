@@ -24,6 +24,7 @@ export class BackgroundComponent implements OnChanges, AfterViewInit {
   logo:string = 'sponsorLogoPlaceholder.jpg';
   create:string = 'Create An Award';
   blurb:string = 'Describe your company and products';
+  awardImage:string = 'ICT-Awards-2015-9.jpg';
   viewPort;
   element:Element;
   sponsorEL:Element;
