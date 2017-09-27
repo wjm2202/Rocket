@@ -122,20 +122,7 @@ export class GalleryComponent implements OnChanges, OnInit {
       }
     )
   }
-  PICTURES = [
-    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 1},
-    {'Created': 2016,'Filename': '../../assets/images/2.jpg','PhotoID': 2},
-    {'Created': 2015,'Filename': '../../assets/images/3.jpg','PhotoID': 3},
-    {'Created': 2015,'Filename': '../../assets/images/4.jpg','PhotoID': 4},
-    {'Created': 2014,'Filename': '../../assets/images/5.jpg','PhotoID': 5},
-    {'Created': 2014,'Filename': '../../assets/images/1.jpg','PhotoID': 6},
-    {'Created': 2017,'Filename': '../../assets/images/1.jpg','PhotoID': 7},
-    {'Created': 2017,'Filename': '../../assets/images/1.jpg','PhotoID': 8},
-    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 9},
-    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 10},
-    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 11},
-    {'Created': 2016,'Filename': '../../assets/images/1.jpg','PhotoID': 12}
-  ]
+
 }
 
 

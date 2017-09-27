@@ -53,12 +53,4 @@ export class SearchComponent implements OnChanges, OnInit {
       error => console.log("Error :: " + error)
       )
   }
-  AWARDS1 = [
-    {
-      'AwardBlurb': 'best best', 'AwardDate': 'best best', 'AwardDegree': 'best best',
-      'AwardDegreeLevel': 'best best', 'AwardId': 1, 'AwardIsVisable': true, 'AwardName': 'best best', 'SponsorLink': 'best best',
-      'SponsorLogo': 'best best', 'SponsorName': 'best best', 'StudentName': 'best best',
-      'AwardSponsorBlurb': 'best best', 'NeedsSponsor': true
-    },
-  ];
 }

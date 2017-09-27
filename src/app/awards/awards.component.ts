@@ -34,34 +34,7 @@ export class AwardsComponent implements OnInit {
   
 
   ngOnInit() {
-    //console.log(this.dateService.getDate())
     this.getAwards(); 
-    //this.awards = this.AWARDS;               //for testing
   }
-  AWARDS = [
-    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardMajor':'Software','AwardName':'best best','SponsorLink':'best best',
-    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
-    'AwardSponsorBlurb':'best best','NeedsSponsor':true},
-    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardMajor':'Software','AwardName':'best best','SponsorLink':'best best',
-    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
-    'AwardSponsorBlurb':'best best','NeedsSponsor':true},
-    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardMajor':'Software','AwardName':'best best','SponsorLink':'best best',
-    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
-    'AwardSponsorBlurb':'best best','NeedsSponsor':true},
-    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardMajor':'Software','AwardName':'best best','SponsorLink':'best best',
-    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
-    'AwardSponsorBlurb':'best best','NeedsSponsor':true},
-    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardMajor':'Software','AwardName':'best best','SponsorLink':'best best',
-    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
-    'AwardSponsorBlurb':'best best','NeedsSponsor':true},
-    {'AwardBlurb':'best best','AwardDate':'best best','AwardDegree':'best best',
-    'AwardDegreeLevel':'best best','AwardId':1,'AwardIsVisable':true,'AwardMajor':'Software','AwardName':'best best','SponsorLink':'best best',
-    'SponsorLogo':'best best','SponsorName':'best best','StudentName':'best best',
-    'AwardSponsorBlurb':'best best','NeedsSponsor':true}
-  ];
+
 }
