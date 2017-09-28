@@ -40,9 +40,7 @@ export class WordSearchComponent implements OnInit {
   }
   test(id, selected){
     this.criteria = selected;
-    //console.log(this.criteria);
     this.selected = id;
-    //console.log(this.selected);
   }
   newSearch(term){                                        //term from input
     if(!isNaN(term)){                                     //look for date input
@@ -53,7 +51,6 @@ export class WordSearchComponent implements OnInit {
     this.status = 'Typing';
     this.showResults = true;
     this.latestSearch.next(term);                        //emit the latest term enterd
-    //console.log(environment.baseURI+`search/${this.criteria}/${term}`)
   }
 
   ngOnInit() {

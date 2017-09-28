@@ -109,11 +109,19 @@ export class BackgroundComponent implements OnChanges, AfterViewInit {
     var top;
     if(this.mobile == box){
       this.mobile = 0;
-      window.scrollTo(0,0);
+      if(window.screen.width > 768){
+        console.log('window.screen.width' + window.screen.width);
+        window.scrollTo(0,0);
+      }
+      
     }else{
       height = this.element.getBoundingClientRect().top;
       this.mobile = box;
-      window.scrollTo(0,this.getCurrentOffsetTop(height));
+      if(window.screen.width > 768){
+        console.log('window.screen.width' + window.screen.width);
+        window.scrollTo(0,this.getCurrentOffsetTop(height));
+      }
+      
     }
   }
   ngOnChanges(){
