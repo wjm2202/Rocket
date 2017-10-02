@@ -6,6 +6,7 @@ import { GetawardsService } from '../services/getawards.service';
 import { AwardModel } from '../interfaces/awardcard';
 import { Http, Response } from '@angular/http';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-award-detail',
@@ -31,6 +32,7 @@ export class AwardDetailComponent implements OnInit {
 
   getSingleAward(){
     this.http.get(environment.baseURI+'awards/'+this.route.snapshot.params['id'])
+    .catch(this.handleError)
     .subscribe(
       (res: Response) => {
         this.obj = res.json();
@@ -41,10 +43,11 @@ export class AwardDetailComponent implements OnInit {
         this.AwardDegree = this.obj.AwardDegree;
         this.AwardDate = this.obj.AwardDate;
         this.AwardBlurb = this.obj.AwardBlurb;
-      }
-    )
+      })
   }
-
+  private handleError(error: Response){
+    return Observable.throw(error.statusText);
+  }
   ngOnInit() {
   }
   back(){

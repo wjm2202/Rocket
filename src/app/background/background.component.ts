@@ -110,7 +110,7 @@ export class BackgroundComponent implements OnChanges, AfterViewInit {
     if(this.mobile == box){
       this.mobile = 0;
       if(window.screen.width > 768){
-        console.log('window.screen.width' + window.screen.width);
+        //console.log('window.screen.width' + window.screen.width);
         window.scrollTo(0,0);
       }
       
@@ -118,7 +118,7 @@ export class BackgroundComponent implements OnChanges, AfterViewInit {
       height = this.element.getBoundingClientRect().top;
       this.mobile = box;
       if(window.screen.width > 768){
-        console.log('window.screen.width' + window.screen.width);
+        //console.log('window.screen.width' + window.screen.width);
         window.scrollTo(0,this.getCurrentOffsetTop(height));
       }
       

@@ -27,8 +27,18 @@ export class WordSearchComponent implements OnInit {
   constructor(private http:Http,
     public dateService:DateService) {                         //import Http singleton
     this.results = this.latestSearch                       //latest to results
+    
     .debounceTime(500)                                     //500ms after typing to api call
     .filter(term =>!!term)                                 //result is truthy not empty
+    .map(input => {
+      let result = '';
+      for(let char of input){
+        if((char != '%')&&(char != '&')&&(char != '*')&&(char != '+')&&(char != ':')){   //remove html special chars RESERVED
+          result += char;
+        }
+      }
+      return result;
+    }) 
     //to use a variable in a string use back ticks`string${variable}string`  
     .switchMap(term => this.http.get(environment.baseURI+`search/${this.criteria}/${term}`) //get request github
     .map(res => res.json())    //map the response to json get item => item.name

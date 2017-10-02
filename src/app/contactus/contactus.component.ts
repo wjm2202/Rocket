@@ -3,6 +3,7 @@ import { ContactModel } from '../interfaces/contact';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { GetContactService } from '../services/getContact.service';
 
+
 @Component({
   selector: 'app-contactus',
   templateUrl: './contactus.component.html',
