@@ -78,7 +78,7 @@ export class BackgroundComponent implements OnChanges, AfterViewInit {
    }
    ngAfterViewInit(){
     this.element = document.getElementById("laptopTop");
-    console.log('laptop '+this.element.getBoundingClientRect().top);
+    //console.log('laptop '+this.element.getBoundingClientRect().top);
    }
 
   checkIsMobile(){
