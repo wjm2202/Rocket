@@ -1,13 +1,13 @@
 <div class="border">
   <H1 style="margin:20px;">Search Criteria</H1>
-  <md-radio-group layout="row" [(ngModel)]="selected" style="margin:10px 10px;">
-    <md-radio-button [value]=0 (change)="test(0,'StudentName')"  class="md-primary">Student Name &emsp;</md-radio-button>
-    <md-radio-button [value]=1 (change)="test(1,'AwardName')">Award Name &emsp;</md-radio-button>
-    <md-radio-button [value]=2 (change)="test(2,'DegreeLevel')">Degree Level &emsp;</md-radio-button>
-    <md-radio-button [value]=3 (change)="test(3,'Degree')">Degree &emsp;</md-radio-button>
-    <md-radio-button [value]=4 (change)="test(4,'Date')">Year &emsp;</md-radio-button>
-    <md-radio-button [value]=5 (change)="test(5,'Sponsor')">Sponsor &emsp;</md-radio-button>
-  </md-radio-group>
+  <mat-radio-group layout="row" [(ngModel)]="selected" style="margin:10px 10px;">
+    <mat-radio-button [value]=0 (change)="test(0,'StudentName')"  class="md-primary">Student Name &emsp;</mat-radio-button>
+    <mat-radio-button [value]=1 (change)="test(1,'AwardName')">Award Name &emsp;</mat-radio-button>
+    <mat-radio-button [value]=2 (change)="test(2,'DegreeLevel')">Degree Level &emsp;</mat-radio-button>
+    <mat-radio-button [value]=3 (change)="test(3,'Degree')">Degree &emsp;</mat-radio-button>
+    <mat-radio-button [value]=4 (change)="test(4,'Date')">Year &emsp;</mat-radio-button>
+    <mat-radio-button [value]=5 (change)="test(5,'Sponsor')">Sponsor &emsp;</mat-radio-button>
+  </mat-radio-group>
   <div class="form-group">
       <H1 style="margin:20px;">Search Term</H1>
     <label for="formGroupExampleInput" style="margin:10px;">Search</label>

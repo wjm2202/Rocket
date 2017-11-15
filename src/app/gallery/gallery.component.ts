@@ -1,7 +1,7 @@
 import { ImageService } from '../services/Image.Service';
 import { Component, OnChanges, Input, OnInit } from '@angular/core';
 import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http';
-import { NgFor } from '@angular/common';
+//import { NgFor } from '@angular/common';
 import { Observable } from 'rxjs/Rx';
 import { getSponsorCaraService } from '../services/getSponsorCara.service';
 import { Moment } from 'moment'; 

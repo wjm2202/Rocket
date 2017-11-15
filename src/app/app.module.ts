@@ -50,7 +50,7 @@ import { SponsorCaraComponent } from './sponsor-cara/sponsor-cara.component';
 
 import { SignsponsorComponent } from './signsponsor/signsponsor.component';
 //material design module
-import { MaterialModule } from '@angular/material';
+import { MaterialModule } from './modules/MaterialModule';
 //third party modules
 import { MasonryModule } from 'angular2-masonry';
 import { AnimatedhamburgerComponent } from './animatedhamburger/animatedhamburger.component';

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Image } from '../interfaces/image';
-import { NgFor } from '@angular/common';
+//import { NgFor } from '@angular/common';
 import { Observable } from 'rxjs/Rx';
 import { HttpClient, HttpResponse ,HttpErrorResponse } from '@angular/common/http';
 import { getSponsorCaraService } from '../services/getSponsorCara.service';

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Image } from '../interfaces/image';
-import { NgFor } from '@angular/common';
+//import { NgFor } from '@angular/common';
 import { Observable } from 'rxjs/Rx';
 import { HttpClient } from '@angular/common/http';
 import { GetMainCaraService } from '../services/getMainCara.service';
